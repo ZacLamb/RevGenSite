@@ -19,4 +19,20 @@
       if (note) note.textContent = "Opening your email app to send this — or call/text us directly at (617) 877-5608.";
     });
   }
+
+  // Mobile nav toggle
+  var header = document.querySelector('.site-header');
+  var toggle = document.querySelector('.nav-toggle');
+  if (header && toggle) {
+    toggle.addEventListener('click', function () {
+      var isOpen = header.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('.mobile-nav a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        header.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 })();
