@@ -1,0 +1,171 @@
+[
+  {
+    "slug": "plumbing",
+    "name": "Plumbing",
+    "heroLine": "Turn every emergency call into a booked job — even at 2 a.m.",
+    "image": "industry-plumbing.jpg",
+    "painPoints": [
+      "Missed after-hours calls go straight to a competitor",
+      "Dispatch and scheduling still run out of a group text",
+      "No easy way to show up for \"plumber near me\" searches in every town you cover"
+    ],
+    "howWeHelp": "Plumbing is an emergency business — the company that answers first usually wins the job. We build AI call-answering and CRM dispatch systems that catch every after-hours call, plus websites with a dedicated page for every service (drain cleaning, water heaters, repiping) and every town in your coverage area, so you show up when someone's basement is flooding at midnight.",
+    "relevantServices": ["ai-services-automations", "crm-build-management", "web-design", "digital-marketing"]
+  },
+  {
+    "slug": "electrical",
+    "name": "Electrical",
+    "heroLine": "Book more panel upgrades and service calls without adding office staff.",
+    "image": "industry-electrical.jpg",
+    "painPoints": [
+      "Estimate requests sit unanswered for days",
+      "No system tracking which leads turned into paid jobs",
+      "Website doesn't separate residential, commercial, and emergency service"
+    ],
+    "howWeHelp": "Electrical contractors lose jobs to slow follow-up more than almost any other trade. We build CRM pipelines that route residential, commercial, and emergency requests differently, automate the follow-up that turns a quote request into a signed job, and run local ad campaigns aimed at your highest-margin work like panel upgrades and EV charger installs.",
+    "relevantServices": ["crm-build-management", "digital-marketing", "web-design", "ai-services-automations"]
+  },
+  {
+    "slug": "hvac",
+    "name": "HVAC",
+    "heroLine": "Fill your maintenance calendar in the off-season and your service calls in the heat.",
+    "image": "industry-hvac.jpg",
+    "painPoints": [
+      "Seasonal demand swings make the phone go quiet for months at a time",
+      "Maintenance plan renewals get forgotten",
+      "Ad spend isn't tracked back to installs vs. tune-ups"
+    ],
+    "howWeHelp": "HVAC revenue lives and dies by two things: catching the emergency call and staying in front of customers between seasons. We build maintenance-plan renewal automations, CRM pipelines that separate installs from service calls, and seasonal ad campaigns tied to actual weather and search demand — plus a website built to rank for every town and service you cover.",
+    "relevantServices": ["crm-build-management", "ai-services-automations", "digital-marketing", "web-design", "custom-tool-building"]
+  },
+  {
+    "slug": "masonry",
+    "name": "Masonry",
+    "heroLine": "Show off the work — and get found by the people who want it.",
+    "image": "industry-masonry.jpg",
+    "painPoints": [
+      "Beautiful project photos are stuck on a phone instead of a website",
+      "Estimate requests for big jobs (patios, walls, chimneys) get lost in texts",
+      "No presence for high-intent searches like \"paver patio installer near me\""
+    ],
+    "howWeHelp": "Masonry sells on photos and trust. We build galleries and project pages that show the work, dedicated pages for every service — patios, retaining walls, chimneys, stonework — and every town you serve, and a CRM that keeps a big-ticket estimate request from going cold while a homeowner is still comparing quotes.",
+    "relevantServices": ["web-design", "crm-build-management", "digital-marketing"]
+  },
+  {
+    "slug": "landscaping",
+    "name": "Landscaping",
+    "heroLine": "Turn seasonal one-off jobs into recurring maintenance contracts.",
+    "image": "industry-landscaping.jpg",
+    "painPoints": [
+      "Design/build leads and recurring maintenance leads get treated the same",
+      "No automated way to re-book seasonal clients year after year",
+      "Website doesn't separate high-margin design work from routine mowing"
+    ],
+    "howWeHelp": "Landscaping businesses run two different businesses at once — recurring maintenance and higher-margin design/build. We build CRM pipelines that separate the two, automate seasonal re-booking so spring cleanups turn into standing contracts, and design websites that lead with your design/build portfolio while still capturing maintenance leads.",
+    "relevantServices": ["crm-build-management", "web-design", "ai-services-automations", "digital-marketing"]
+  },
+  {
+    "slug": "deck-building",
+    "name": "Deck Building",
+    "heroLine": "Win more big-ticket projects with a site that sells the finished deck, not just the estimate.",
+    "image": "industry-deck-building.jpg",
+    "painPoints": [
+      "High-ticket estimate requests need faster, more personal follow-up",
+      "Material and design options are hard to explain over text",
+      "Seasonal demand means slow months need a marketing push"
+    ],
+    "howWeHelp": "Deck projects are big-ticket, considered purchases — homeowners compare 2-3 builders before deciding. We build project galleries and material/style breakdowns that do the selling before you ever call back, CRM follow-up sequences built for a longer sales cycle, and seasonal ad campaigns that keep your calendar full through the shoulder seasons.",
+    "relevantServices": ["web-design", "crm-build-management", "digital-marketing"]
+  },
+  {
+    "slug": "glass-glazing",
+    "name": "Glass & Glazing",
+    "heroLine": "Be the first call for both the emergency board-up and the storefront bid.",
+    "image": "industry-glass.jpg",
+    "painPoints": [
+      "Emergency glass repair calls need an instant response, not a callback tomorrow",
+      "Commercial storefront and residential window jobs get mixed together",
+      "No dedicated pages for high-value services like custom shower enclosures"
+    ],
+    "howWeHelp": "Glass and glazing work spans emergency board-ups, residential window replacement, and commercial storefront bids — each with a different buyer and urgency level. We build AI call-answering for after-hours emergencies, a CRM that routes commercial and residential leads differently, and a website with dedicated pages for shower enclosures, storefronts, and window replacement.",
+    "relevantServices": ["ai-services-automations", "crm-build-management", "web-design"]
+  },
+  {
+    "slug": "painting",
+    "name": "Painting",
+    "heroLine": "Fill your schedule with interior work in winter and exterior work in summer.",
+    "image": "industry-painting.jpg",
+    "painPoints": [
+      "Estimate requests pile up faster than a small crew can quote them",
+      "No system nudging past customers to re-book for the next room or the next house",
+      "Website doesn't separate interior, exterior, and commercial work"
+    ],
+    "howWeHelp": "Painting businesses win on responsiveness and repeat customers. We build automated quote-request follow-up so no estimate goes cold, re-engagement campaigns that bring past customers back for their next project, and websites with separate paths for interior, exterior, and commercial painting so every visitor lands on the page that fits their job.",
+    "relevantServices": ["crm-build-management", "ai-services-automations", "web-design", "digital-marketing"]
+  },
+  {
+    "slug": "carpentry-remodeling",
+    "name": "Carpentry & Remodeling",
+    "heroLine": "Manage the full remodel pipeline — from first call to final walkthrough.",
+    "image": "industry-carpentry-remodeling.jpg",
+    "painPoints": [
+      "Long project timelines need a CRM that tracks stages, not just leads",
+      "Design and material decisions get lost across texts, emails, and calls",
+      "Website portfolio doesn't reflect the range of work you actually do"
+    ],
+    "howWeHelp": "Remodeling projects run for weeks or months, with a dozen decision points along the way. We build CRM pipelines that track a job from first estimate through material selection, scheduling, and final walkthrough, and websites that showcase kitchen, bath, and full-home remodels with the kind of before/after galleries that win the next bid.",
+    "relevantServices": ["crm-build-management", "custom-tool-building", "web-design", "digital-marketing"]
+  },
+  {
+    "slug": "hardscaping-tree-service",
+    "name": "Hardscaping & Tree Service",
+    "heroLine": "Two businesses, one system — from stone walls to storm cleanup.",
+    "image": "industry-hardscaping-tree.jpg",
+    "painPoints": [
+      "Hardscaping (planned, high-ticket) and tree service (urgent, weather-driven) need different follow-up speeds",
+      "Storm damage spikes overwhelm the phone with no triage system",
+      "One website has to sell both a patio project and an emergency tree removal"
+    ],
+    "howWeHelp": "Hardscaping and tree service businesses juggle planned installations and storm-driven emergencies at the same time. We build CRM pipelines that triage urgent tree work separately from multi-week hardscape projects, AI call-answering that catches the after-hours storm surge, and a website that sells both sides of the business clearly.",
+    "relevantServices": ["ai-services-automations", "crm-build-management", "web-design"]
+  },
+  {
+    "slug": "gutter-pressure-washing",
+    "name": "Gutter & Pressure Washing",
+    "heroLine": "Turn one-time cleanings into standing seasonal contracts.",
+    "image": "industry-gutter-pressure-washing.jpg",
+    "painPoints": [
+      "Jobs are quick and low-ticket, so volume and repeat business are everything",
+      "No automated way to re-book customers every spring and fall",
+      "Hard to stand out in a crowded, low-differentiation local market"
+    ],
+    "howWeHelp": "Gutter cleaning and pressure washing live or die on volume and repeat bookings. We build automated seasonal re-booking so last spring's customer gets an offer again this spring without you lifting a finger, local ad campaigns built for fast, high-volume booking, and a website designed to convert quickly for a service people book on impulse.",
+    "relevantServices": ["ai-services-automations", "digital-marketing", "web-design", "crm-build-management"]
+  },
+  {
+    "slug": "auto-restoration-detailing",
+    "name": "Auto Restoration & Detailing",
+    "heroLine": "Sell the craftsmanship, book the bay, and keep clients coming back.",
+    "image": "industry-auto-restoration.jpg",
+    "painPoints": [
+      "Restoration work needs a portfolio site that sells craftsmanship, not just services",
+      "Detailing needs fast, high-volume online booking",
+      "No system for tracking a multi-month restoration project from intake to delivery"
+    ],
+    "howWeHelp": "Restoration and detailing are opposite ends of the same industry — one is a months-long craft project, the other is a same-day, high-volume service. We build portfolio-driven websites for restoration work, fast online booking flows for detailing, and a custom job tracker that keeps a long restoration project organized from intake to final delivery.",
+    "relevantServices": ["web-design", "custom-tool-building", "crm-build-management", "digital-marketing"]
+  },
+  {
+    "slug": "healthcare",
+    "name": "Healthcare & Wellness Practices",
+    "heroLine": "Fill the schedule and keep patients coming back — without adding front-desk hours.",
+    "image": "industry-healthcare.jpg",
+    "painPoints": [
+      "Missed calls during appointments mean missed new-patient bookings",
+      "No-shows and cancellations go unfilled",
+      "Patient intake and follow-up still run on paper or spreadsheets"
+    ],
+    "howWeHelp": "Independent practices compete for patients the same way any local business competes for customers. We build AI call-answering that catches new-patient calls during appointments, automated appointment reminders and no-show recovery, and custom intake tools that get patient information into your system before they ever walk in the door.",
+    "relevantServices": ["ai-services-automations", "custom-tool-building", "crm-build-management", "digital-marketing"]
+  }
+]

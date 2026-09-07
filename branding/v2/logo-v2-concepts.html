@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background: #F0F3FA; padding: 48px; }
+  h1 { font-size: 22px; margin: 0 0 6px; color: #0A1A2F; }
+  h1 span { color: #5A6B85; font-weight: 500; font-size: 15px; display: block; margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+  .card { background: #fff; border-radius: 18px; padding: 24px; box-shadow: 0 12px 30px -14px rgba(10,26,47,.25); }
+  .card .label { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #0B5FFF; margin-bottom: 4px; }
+  .card .concept-name { font-size: 16px; font-weight: 800; color: #0A1A2F; margin-bottom: 14px; }
+  .mark-box { width: 100%; height: 140px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: #F6F9FF; border: 1px solid #E4EAF6; margin-bottom: 14px; }
+  .mark-box.dark { background: #0A1A2F; }
+  .mark-box svg { width: 78px; height: 78px; }
+  .lockup-row { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 10px; margin-bottom: 8px; }
+  .lockup-row.light { background: #F6F9FF; }
+  .lockup-row.dark { background: #0A1A2F; }
+  .lockup-row .mark-sm { width: 30px; height: 30px; flex-shrink: 0; }
+  .lockup-row .word { font-weight: 800; font-size: 13.5px; }
+  .lockup-row.light .word { color: #0A1A2F; }
+  .lockup-row.dark .word { color: #fff; }
+  .desc { font-size: 12px; color: #5A6B85; margin-top: 10px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<h1>RGS Mark — Based On Your Current Logo<span>Vector recreation of the arrow-and-swoosh icon you're already using, plus two color directions. If you have the original AI/SVG/EPS file, send it over and I'll match it exactly instead of eyeballing it from the screenshot.</span></h1>
+<div class="grid">
+
+  <div class="card">
+    <div class="label">Option 1</div>
+    <div class="concept-name">Original Colors, Cleaned Up</div>
+    <div class="mark-box">
+      <svg viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="o1a" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#6b8299"/><stop offset="1" stop-color="#2c3e50"/></linearGradient>
+          <linearGradient id="o1b" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3d5266"/><stop offset="1" stop-color="#141d27"/></linearGradient>
+        </defs>
+        <path d="M12,92 Q22,58 60,26 Q42,56 28,94 Z" fill="url(#o1a)"/>
+        <path d="M28,94 Q38,56 66,26 Q52,54 42,96 Z" fill="url(#o1b)"/>
+        <path d="M44,42 L64,10 L84,42" fill="none" stroke="url(#o1b)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="lockup-row light">
+      <svg class="mark-sm" viewBox="0 0 100 100"><path d="M12,92 Q22,58 60,26 Q42,56 28,94 Z" fill="url(#o1a)"/><path d="M28,94 Q38,56 66,26 Q52,54 42,96 Z" fill="url(#o1b)"/><path d="M44,42 L64,10 L84,42" fill="none" stroke="url(#o1b)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="word">Revenue Generating Solutions</span>
+    </div>
+    <div class="desc">Same slate-navy gradient as your current icon — closest match to what's live today.</div>
+  </div>
+
+  <div class="card">
+    <div class="label">Option 2</div>
+    <div class="concept-name">Recolored To Site Brand</div>
+    <div class="mark-box">
+      <svg viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="o2a" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#00C2B8"/><stop offset="1" stop-color="#0B5FFF"/></linearGradient>
+          <linearGradient id="o2b" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0B5FFF"/><stop offset="1" stop-color="#083ECB"/></linearGradient>
+        </defs>
+        <path d="M12,92 Q22,58 60,26 Q42,56 28,94 Z" fill="url(#o2a)"/>
+        <path d="M28,94 Q38,56 66,26 Q52,54 42,96 Z" fill="url(#o2b)"/>
+        <path d="M44,42 L64,10 L84,42" fill="none" stroke="url(#o2b)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="lockup-row dark">
+      <svg class="mark-sm" viewBox="0 0 100 100"><path d="M12,92 Q22,58 60,26 Q42,56 28,94 Z" fill="url(#o2a)"/><path d="M28,94 Q38,56 66,26 Q52,54 42,96 Z" fill="url(#o2b)"/><path d="M44,42 L64,10 L84,42" fill="none" stroke="url(#o2b)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="word">Revenue Generating Solutions</span>
+    </div>
+    <div class="desc">Same exact icon, recolored into the blue → teal gradient already used across the website — one consistent brand color everywhere.</div>
+  </div>
+
+  <div class="card">
+    <div class="label">Option 3</div>
+    <div class="concept-name">Simplified Single-Wing</div>
+    <div class="mark-box">
+      <svg viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="o3a" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#00C2B8"/><stop offset="1" stop-color="#0B5FFF"/></linearGradient>
+        </defs>
+        <path d="M14,92 Q26,55 64,22 Q46,54 34,96 Z" fill="url(#o3a)"/>
+        <path d="M46,40 L64,12 L82,40" fill="none" stroke="url(#o3a)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="lockup-row light">
+      <svg class="mark-sm" viewBox="0 0 100 100"><path d="M14,92 Q26,55 64,22 Q46,54 34,96 Z" fill="url(#o3a)"/><path d="M46,40 L64,12 L82,40" fill="none" stroke="url(#o3a)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="word">Revenue Generating Solutions</span>
+    </div>
+    <div class="desc">A cleaner one-wing evolution of the same idea — simpler at small sizes (favicon, app icon, social avatar) since there's less fine detail to lose.</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "rgs-site",
+  "version": "1.0.0",
+  "description": "Revenue Generating Solutions marketing website — static site generator + Express server.",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "build": "node scripts/generate-site.js",
+    "postinstall": "node scripts/generate-site.js && node scripts/fetch-images.js",
+    "start": "node server.js",
+    "dev": "npm run build && node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

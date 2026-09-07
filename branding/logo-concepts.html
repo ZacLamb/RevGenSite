@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background: #F0F3FA; padding: 48px; }
+  h1 { font-size: 22px; margin: 0 0 6px; color: #0A1A2F; }
+  h1 span { color: #5A6B85; font-weight: 500; font-size: 15px; display: block; margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 32px; }
+  .card { background: #fff; border-radius: 18px; padding: 28px; box-shadow: 0 12px 30px -14px rgba(10,26,47,.25); }
+  .card .label { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #0B5FFF; margin-bottom: 4px; }
+  .card .concept-name { font-size: 17px; font-weight: 800; color: #0A1A2F; margin-bottom: 14px; }
+  .mark-row { display: flex; gap: 20px; align-items: center; margin-bottom: 16px; }
+  .mark-box { width: 88px; height: 88px; border-radius: 20px; display: flex; align-items: center; justify-content: center; background: #F6F9FF; border: 1px solid #E4EAF6; }
+  .mark-box svg { width: 72px; height: 72px; }
+  .lockup { display: flex; flex-direction: column; gap: 10px; }
+  .lockup-row { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 10px; }
+  .lockup-row.light { background: #F6F9FF; }
+  .lockup-row.dark { background: #0A1A2F; }
+  .lockup-row .mark-sm { width: 34px; height: 34px; flex-shrink: 0; }
+  .lockup-row .word { font-weight: 800; font-size: 15px; }
+  .lockup-row.light .word { color: #0A1A2F; }
+  .lockup-row.dark .word { color: #fff; }
+  .desc { font-size: 12.5px; color: #5A6B85; margin-top: 12px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<h1>Revenue Generating Solutions — Logo Concepts<span>Four directions: one close to the current site's badge, three redesign explorations. All use the existing brand blue → teal gradient.</span></h1>
+<div class="grid">
+
+  <div class="card">
+    <div class="label">Concept A</div>
+    <div class="concept-name">Current Badge, Refined</div>
+    <div class="mark-row">
+      <div class="mark-box">
+        <svg viewBox="0 0 120 120"><defs><linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B5FFF"/><stop offset="1" stop-color="#00C2B8"/></linearGradient></defs>
+          <rect width="120" height="120" rx="28" fill="url(#gA)"/>
+          <text x="60" y="76" font-family="Arial, sans-serif" font-weight="800" font-size="40" fill="#fff" text-anchor="middle">RGS</text>
+          <path d="M88 34 L101 21 M101 21 L101 32 M101 21 L90 21" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+        </svg>
+      </div>
+      <div class="lockup" style="flex:1;">
+        <div class="lockup-row light">
+          <svg class="mark-sm" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="url(#gA)"/><text x="60" y="76" font-family="Arial, sans-serif" font-weight="800" font-size="40" fill="#fff" text-anchor="middle">RGS</text><path d="M88 34 L101 21 M101 21 L101 32 M101 21 L90 21" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+        <div class="lockup-row dark">
+          <svg class="mark-sm" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="url(#gA)"/><text x="60" y="76" font-family="Arial, sans-serif" font-weight="800" font-size="40" fill="#fff" text-anchor="middle">RGS</text><path d="M88 34 L101 21 M101 21 L101 32 M101 21 L90 21" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Same rounded-square badge already on the site, with a small upward-arrow accent added for a subtle growth cue. Safest option — zero relearning for anyone who already knows the site.</div>
+  </div>
+
+  <div class="card">
+    <div class="label">Concept B</div>
+    <div class="concept-name">The Growth "R"</div>
+    <div class="mark-row">
+      <div class="mark-box">
+        <svg viewBox="0 0 120 120"><defs><linearGradient id="gB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B5FFF"/><stop offset="1" stop-color="#00C2B8"/></linearGradient></defs>
+          <circle cx="60" cy="60" r="58" fill="url(#gB)"/>
+          <text x="38" y="83" font-family="Arial, sans-serif" font-weight="800" font-size="62" fill="#fff">R</text>
+          <path d="M64 44 L90 18 M90 18 L90 33 M90 18 L75 18" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="lockup" style="flex:1;">
+        <div class="lockup-row light">
+          <svg class="mark-sm" viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" fill="url(#gB)"/><text x="38" y="83" font-family="Arial, sans-serif" font-weight="800" font-size="62" fill="#fff">R</text><path d="M64 44 L90 18 M90 18 L90 33 M90 18 L75 18" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+        <div class="lockup-row dark">
+          <svg class="mark-sm" viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" fill="url(#gB)"/><text x="38" y="83" font-family="Arial, sans-serif" font-weight="800" font-size="62" fill="#fff">R</text><path d="M64 44 L90 18 M90 18 L90 33 M90 18 L75 18" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">A single bold "R" in a circle with an arrow shooting off it — reads as one distinct letterform instead of three tight initials. Works well small (favicon, social avatar).</div>
+  </div>
+
+  <div class="card">
+    <div class="label">Concept C</div>
+    <div class="concept-name">Ascending Bars</div>
+    <div class="mark-row">
+      <div class="mark-box">
+        <svg viewBox="0 0 120 120"><defs><linearGradient id="gC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B5FFF"/><stop offset="1" stop-color="#00C2B8"/></linearGradient></defs>
+          <rect width="120" height="120" rx="28" fill="url(#gC)"/>
+          <rect x="26" y="66" width="15" height="28" rx="4" fill="#fff" opacity="0.85"/>
+          <rect x="48" y="50" width="15" height="44" rx="4" fill="#fff" opacity="0.93"/>
+          <rect x="70" y="32" width="15" height="62" rx="4" fill="#fff"/>
+          <path d="M82 34 L99 17 M99 17 L99 29 M99 17 L87 17" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="lockup" style="flex:1;">
+        <div class="lockup-row light">
+          <svg class="mark-sm" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="url(#gC)"/><rect x="26" y="66" width="15" height="28" rx="4" fill="#fff" opacity="0.85"/><rect x="48" y="50" width="15" height="44" rx="4" fill="#fff" opacity="0.93"/><rect x="70" y="32" width="15" height="62" rx="4" fill="#fff"/><path d="M82 34 L99 17 M99 17 L99 29 M99 17 L87 17" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+        <div class="lockup-row dark">
+          <svg class="mark-sm" viewBox="0 0 120 120"><rect width="120" height="120" rx="28" fill="url(#gC)"/><rect x="26" y="66" width="15" height="28" rx="4" fill="#fff" opacity="0.85"/><rect x="48" y="50" width="15" height="44" rx="4" fill="#fff" opacity="0.93"/><rect x="70" y="32" width="15" height="62" rx="4" fill="#fff"/><path d="M82 34 L99 17 M99 17 L99 29 M99 17 L87 17" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">Literal, no-explanation-needed revenue growth chart with an arrow breaking out the top. No letters at all — most "generic SaaS icon" of the four, but instantly reads as growth.</div>
+  </div>
+
+  <div class="card">
+    <div class="label">Concept D</div>
+    <div class="concept-name">The Seal</div>
+    <div class="mark-row">
+      <div class="mark-box">
+        <svg viewBox="0 0 120 120"><defs><linearGradient id="gD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B5FFF"/><stop offset="1" stop-color="#00C2B8"/></linearGradient></defs>
+          <circle cx="60" cy="60" r="56" fill="#fff" stroke="url(#gD)" stroke-width="6"/>
+          <circle cx="60" cy="60" r="44" fill="url(#gD)" opacity="0.10"/>
+          <text x="60" y="71" font-family="Arial, sans-serif" font-weight="800" font-size="30" fill="#0A1A2F" text-anchor="middle" letter-spacing="1">RGS</text>
+        </svg>
+      </div>
+      <div class="lockup" style="flex:1;">
+        <div class="lockup-row light">
+          <svg class="mark-sm" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="#fff" stroke="url(#gD)" stroke-width="6"/><circle cx="60" cy="60" r="44" fill="url(#gD)" opacity="0.10"/><text x="60" y="71" font-family="Arial, sans-serif" font-weight="800" font-size="30" fill="#0A1A2F" text-anchor="middle" letter-spacing="1">RGS</text></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+        <div class="lockup-row dark">
+          <svg class="mark-sm" viewBox="0 0 120 120"><circle cx="60" cy="60" r="56" fill="#fff" stroke="url(#gD)" stroke-width="6"/><circle cx="60" cy="60" r="44" fill="url(#gD)" opacity="0.10"/><text x="60" y="71" font-family="Arial, sans-serif" font-weight="800" font-size="30" fill="#0A1A2F" text-anchor="middle" letter-spacing="1">RGS</text></svg>
+          <span class="word">Revenue Generating Solutions</span>
+        </div>
+      </div>
+    </div>
+    <div class="desc">A quieter, more corporate seal/ring treatment — reads as established and trustworthy rather than "startup." Best if you ever want a more traditional, agency-of-record feel.</div>
+  </div>
+
+</div>
+</body>
+</html>

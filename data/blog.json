@@ -1,0 +1,283 @@
+[
+  {
+    "slug": "ai-automation-saves-service-businesses-hours",
+    "title": "How AI Automation Saves Local Service Businesses 10+ Hours a Week",
+    "description": "A practical look at where AI automation actually saves time for plumbers, HVAC companies, electricians, and other local service businesses — and where it doesn't.",
+    "date": "2026-08-03",
+    "category": "AI & Automations",
+    "relatedServices": ["ai-services-automations"],
+    "relatedIndustries": ["plumbing", "hvac", "electrical"],
+    "body": [
+      { "type": "p", "text": "Most local service business owners hear \"AI automation\" and picture something abstract — a chatbot, a buzzword, a slide deck. In practice, the time savings come from a much shorter list of very specific, very boring tasks that eat hours every week without anyone noticing." },
+      { "type": "h2", "text": "Where the hours actually go" },
+      { "type": "p", "text": "Track your own week honestly and a pattern shows up fast: answering the same three questions on every call, typing the same follow-up text after every estimate, manually moving a lead from 'quoted' to 'booked' in a spreadsheet, and chasing no-shows one at a time. None of it is hard. All of it adds up." },
+      { "type": "ul", "items": [
+        "Answering after-hours and overflow calls",
+        "Sending the same follow-up text or email after every quote",
+        "Reminding customers about upcoming appointments",
+        "Re-engaging customers who went quiet mid-conversation",
+        "Requesting reviews after a job is marked complete"
+      ] },
+      { "type": "h2", "text": "What automation actually replaces" },
+      { "type": "p", "text": "A well-built automation doesn't replace your team's judgment — it replaces the repetitive keystrokes around it. An AI voice agent doesn't decide pricing; it captures the caller's name, address, and problem, and either books the job on your calendar or texts you the details in real time. A follow-up sequence doesn't negotiate; it sends the third and fourth reminder that a busy office manager never gets around to." },
+      { "type": "p", "text": "The businesses that get the most value are the ones with high call volume and thin office staff — a two-person plumbing outfit answering its own phones between jobs, or a solo electrician who loses estimate requests to the inbox black hole. Add up the missed calls, the un-sent reminders, and the reviews nobody asked for, and you're usually looking at 10-15 hours a week of tasks that never needed a human doing them one at a time." },
+      { "type": "h2", "text": "Where automation falls short" },
+      { "type": "p", "text": "Automation is bad at anything that requires real judgment — negotiating a price on a complicated job, talking a nervous customer through a big decision, or handling a genuine complaint. The businesses that get automation wrong are usually the ones that tried to automate those conversations instead of the repetitive ones around them." },
+      { "type": "h2", "text": "Getting started" },
+      { "type": "p", "text": "The fastest place to start is usually missed-call text-back and automated review requests — both are simple to set up, both show up in your numbers within a week, and both build the case for going further. From there, most businesses move to full call-answering and follow-up sequences once they trust the system." }
+    ]
+  },
+  {
+    "slug": "crm-checklist-for-contractors",
+    "title": "CRM Systems for Contractors: What to Look for Before You Buy",
+    "description": "A no-nonsense checklist for contractors evaluating a CRM — what actually matters for a service business versus what's just a sales pitch.",
+    "date": "2026-08-10",
+    "category": "CRM & Systems",
+    "relatedServices": ["crm-build-management"],
+    "relatedIndustries": ["hvac", "carpentry-remodeling", "landscaping"],
+    "body": [
+      { "type": "p", "text": "Most CRM software is built for sales teams selling software, not for a five-person crew running plumbing calls or a landscaping company juggling recurring maintenance and one-off design jobs. That mismatch is why so many contractors buy a CRM, use it for three months, and quietly go back to a shared spreadsheet." },
+      { "type": "h2", "text": "Start with your actual sales process, not the software's" },
+      { "type": "p", "text": "Before comparing platforms, write down what actually happens between a lead coming in and a job getting paid. Most trades follow some version of: inquiry, estimate, scheduled, in progress, invoiced, paid. If a CRM can't be configured to match that exact flow — not a generic 'lead, opportunity, customer' pipeline — you'll fight it every day." },
+      { "type": "h2", "text": "The five things that actually matter" },
+      { "type": "ul", "items": [
+        "Two-way texting from a business number your team already uses",
+        "A calendar that handles reschedules and no-shows without manual cleanup",
+        "Automated follow-up sequences you can turn on without hiring a developer",
+        "Job-stage pipelines that match how your business actually works, not a sales template",
+        "Reporting that shows which lead sources turn into paid jobs, not just which ones fill a form"
+      ] },
+      { "type": "h2", "text": "The trap of buying more than you'll use" },
+      { "type": "p", "text": "Enterprise CRMs sell on feature lists. A five-person crew doesn't need a forecasting dashboard or a territory management module — it needs the phone to stop ringing into a void and the estimate that went out Tuesday to get followed up on Thursday. Pick the platform that does the basics automatically, not the one with the longest feature list." },
+      { "type": "h2", "text": "Migration is where most CRM projects actually fail" },
+      { "type": "p", "text": "The software rarely kills a CRM project — the migration does. Contacts get lost, automations get built but never turned on, and the team goes back to old habits within a month because nobody had time to actually configure it. If you're evaluating a CRM, ask who does the setup and who trains your team, not just what the software can theoretically do." },
+      { "type": "h2", "text": "Our take" },
+      { "type": "p", "text": "We build most contractor CRMs on GoHighLevel because it combines the pipeline, calendar, texting, and automation layer that trades actually need into one system — but the platform matters less than whether someone actually configures it around your process and trains your team to use it." }
+    ]
+  },
+  {
+    "slug": "why-trade-businesses-need-local-service-pages",
+    "title": "Why Every Trade Business Needs a Website With Local Service-Area Pages",
+    "description": "The case for dedicated town-by-town service pages instead of a single homepage listing your service area — and how it changes local search results.",
+    "date": "2026-08-17",
+    "category": "Web Design & SEO",
+    "relatedServices": ["web-design", "digital-marketing"],
+    "relatedIndustries": ["masonry", "landscaping", "deck-building"],
+    "body": [
+      { "type": "p", "text": "Search a specific service plus a specific town — \"masonry contractor Rockland MA\" instead of just \"masonry contractor\" — and you'll notice the results are almost always businesses with a page built specifically for that search, not a homepage that mentions the town once in a paragraph about their service area." },
+      { "type": "h2", "text": "How people actually search" },
+      { "type": "p", "text": "Homeowners rarely search your trade name alone. They search their problem plus their location — \"patio installer near me,\" \"emergency electrician Lynn MA,\" \"deck builder South Shore.\" A single homepage that lists ten towns in a sentence can't compete with a dedicated page built around each of those specific searches." },
+      { "type": "h2", "text": "What a good location page actually includes" },
+      { "type": "ul", "items": [
+        "The town name in the title, headline, and page content — not just a footer mention",
+        "Real, specific details about that town or region rather than a copy-pasted template",
+        "Links to the specific services you offer in that area",
+        "Local trust signals — nearby towns served, local project photos if available",
+        "A clear call to action built for that page, not a generic contact link"
+      ] },
+      { "type": "h2", "text": "The duplicate content trap" },
+      { "type": "p", "text": "The most common mistake is building ten town pages that are identical except for the town name swapped in. Search engines can tell, and it caps how well any of the pages perform. Good location pages share a structure but include genuinely different, specific content for each town — what makes that market different, which services are most requested there, what nearby areas you also cover." },
+      { "type": "h2", "text": "This is what \"programmatic SEO\" actually means" },
+      { "type": "p", "text": "Programmatic SEO gets a bad reputation because it's often done badly — hundreds of thin, near-identical pages built purely to game rankings. Done well, it means building a real content system: a template with genuine local detail, applied consistently across every town and every service you actually offer, so your site naturally covers the exact searches your customers are typing." },
+      { "type": "h2", "text": "Where to start" },
+      { "type": "p", "text": "If you only serve three or four towns today, start there — depth beats breadth. A handful of genuinely well-built location pages will outperform twenty thin ones every time, and you can always expand the list as your service area grows." }
+    ]
+  },
+  {
+    "slug": "google-ads-vs-meta-ads-home-services",
+    "title": "Google Ads vs. Meta Ads for Home Service Businesses: Where to Spend First",
+    "description": "A practical comparison of Google Ads and Meta ads for plumbers, HVAC companies, and other home service businesses deciding where to put their first ad dollars.",
+    "date": "2026-08-24",
+    "category": "Digital Marketing",
+    "relatedServices": ["digital-marketing"],
+    "relatedIndustries": ["hvac", "electrical", "plumbing"],
+    "body": [
+      { "type": "p", "text": "Every home service business owner eventually asks the same question: Google or Facebook? The honest answer is that they solve different problems, and most businesses eventually need both — but if you're starting with a limited budget, the right first move depends on what kind of job you're trying to fill." },
+      { "type": "h2", "text": "Google Ads: capturing demand that already exists" },
+      { "type": "p", "text": "Google Ads and Local Service Ads put you in front of someone who already has a problem and is actively searching for a solution right now — a burst pipe, a dead AC unit, an electrical panel that's tripping. This is high-intent traffic, which means it's also the most expensive per click, but it converts fast because the customer is already motivated." },
+      { "type": "h2", "text": "Meta Ads: creating demand for jobs people haven't started searching for yet" },
+      { "type": "p", "text": "Facebook and Instagram work differently — nobody's scrolling Instagram searching for a deck builder, but a well-targeted ad showing a finished project can plant the idea. Meta ads are the better fit for considered, higher-ticket purchases like kitchen remodels, patios, or full HVAC system replacements, where the sales cycle is longer and photos of finished work do the convincing." },
+      { "type": "h2", "text": "Matching the platform to the job type" },
+      { "type": "ul", "items": [
+        "Emergency or urgent repairs (burst pipes, no heat, no AC): Google Ads and Local Service Ads first",
+        "High-ticket, considered projects (remodels, patios, full system replacements): Meta ads first",
+        "Recurring or seasonal services (maintenance plans, gutter cleaning): a mix, weighted toward retargeting past customers",
+        "New service area or new business with no reviews yet: Google Local Service Ads, since reviews and licensing carry extra weight there"
+      ] },
+      { "type": "h2", "text": "The number that actually matters" },
+      { "type": "p", "text": "Impressions and clicks feel good but don't pay bills. The only number that should decide where you spend next month's budget is cost per booked job, tracked all the way from the ad click through your CRM to a paid invoice. Without that tracking in place, you're guessing — which is why we build ad campaigns and CRM tracking together rather than as separate projects." },
+      { "type": "h2", "text": "Starting small and scaling what works" },
+      { "type": "p", "text": "You don't need a large budget to find out which platform works for your business — you need clean tracking on a modest budget for 60-90 days, and the discipline to shift spend toward whichever channel is actually producing booked jobs, not just cheap clicks." }
+    ]
+  },
+  {
+    "slug": "cost-of-a-missed-call",
+    "title": "The Real Cost of a Missed Call for Plumbers and Electricians (and How Automation Fixes It)",
+    "description": "What a missed call actually costs a plumbing or electrical business over a year, and the simple automation fix that recovers most of it.",
+    "date": "2026-08-31",
+    "category": "AI & Automations",
+    "relatedServices": ["ai-services-automations", "crm-build-management"],
+    "relatedIndustries": ["plumbing", "electrical"],
+    "body": [
+      { "type": "p", "text": "A missed call doesn't feel like a big deal in the moment — you were on a job, your hands were full, you'll call back later. But do the math across a year and most plumbing and electrical businesses are surprised by how much revenue disappears into calls that were never answered and never returned in time." },
+      { "type": "h2", "text": "The math most businesses never run" },
+      { "type": "p", "text": "Studies on service-industry call handling consistently find that a large share of callers who reach voicemail simply call the next company on the list instead of leaving a message. If your average job is worth a few hundred dollars and you're missing even five calls a week, that's a meaningful number of jobs walking to a competitor every month — not because your work is worse, but because you didn't pick up." },
+      { "type": "h2", "text": "Why voicemail doesn't fix it" },
+      { "type": "p", "text": "Voicemail assumes the caller will wait for a callback. In an emergency trade, most won't — they're calling three companies at once and going with whoever responds first. A missed call that sits for even twenty minutes is often already lost." },
+      { "type": "h2", "text": "The fix: instant text-back and AI call answering" },
+      { "type": "ul", "items": [
+        "Missed-call text-back: an automatic text sent within seconds of a missed call, so the caller knows you got it and can text back details",
+        "AI call answering: captures the caller's name, address, and problem, and either books the job directly or alerts your team instantly",
+        "Overflow routing: a second or third team member gets pulled in automatically if the first line is busy",
+        "After-hours coverage: emergency calls get triaged and routed instead of going straight to voicemail"
+      ] },
+      { "type": "h2", "text": "What this looks like in practice" },
+      { "type": "p", "text": "A homeowner calls about a leaking water heater at 7 p.m. Instead of voicemail, an AI agent answers, confirms the address and the problem, and either books a next-morning appointment directly on your calendar or texts your on-call plumber the details in real time. The homeowner isn't calling anyone else — they already have a confirmed appointment." },
+      { "type": "h2", "text": "Getting started without overbuilding it" },
+      { "type": "p", "text": "You don't need a full AI phone system on day one. Missed-call text-back alone recovers a meaningful share of lost calls and takes almost no time to set up. From there, most businesses expand into full AI call answering once they see the recovered jobs show up in their pipeline." }
+    ]
+  },
+  {
+    "slug": "what-is-a-custom-business-tool",
+    "title": "What Is a Custom Business Tool (and Does Your Company Need One)?",
+    "description": "A plain-English explanation of custom software and internal tools, when off-the-shelf software is enough, and when it's time to build something specific to your business.",
+    "date": "2026-09-07",
+    "category": "Custom Tools",
+    "relatedServices": ["custom-tool-building"],
+    "relatedIndustries": ["healthcare", "hvac", "auto-restoration-detailing"],
+    "body": [
+      { "type": "p", "text": "\"Custom software\" sounds like something only large companies need, but most businesses that end up building a custom tool didn't start out looking for one — they started with a spreadsheet, a workaround, or three different apps duct-taped together, and eventually the duct tape stopped holding." },
+      { "type": "h2", "text": "The signs you've outgrown off-the-shelf software" },
+      { "type": "ul", "items": [
+        "You maintain a spreadsheet that's really the backbone of a core process",
+        "Your team re-types the same information into two or three different systems",
+        "You've customized a piece of software so heavily it barely resembles what you bought",
+        "A key process only works because one person remembers all the steps"
+      ] },
+      { "type": "h2", "text": "Custom doesn't mean starting from scratch" },
+      { "type": "p", "text": "Most valuable custom builds aren't entire platforms — they're a single focused tool that closes one specific gap. A document generator that turns a form submission into a finished PDF. A lookup tool that pulls a customer's history in one click instead of five. A dashboard that shows the one number an owner actually checks every morning. Small, specific tools solve real problems faster than trying to replace every piece of software you own." },
+      { "type": "h2", "text": "What it actually costs to build one" },
+      { "type": "p", "text": "Custom tools get a reputation for being expensive because people picture enterprise software projects. A focused internal tool — a calculator, a document generator, a client portal — is a very different scope, usually measured in weeks, not months, and priced closer to a website build than an enterprise software contract." },
+      { "type": "h2", "text": "Build vs. buy vs. integrate" },
+      { "type": "p", "text": "Before recommending a custom build, the right question is always whether an integration between tools you already own would solve it instead. Sometimes the answer really is a five-minute integration, not a new tool. We'll tell you that honestly rather than pitching a bigger project than you need." },
+      { "type": "h2", "text": "A few examples of what this looks like in practice" },
+      { "type": "p", "text": "We've built bank statement underwriting tools that read a PDF and generate a report automatically, custom field lookup tools that save an office team hours a week, and client-facing portals that replace a folder of emailed documents with a single login. The pattern is always the same: one clear, specific problem, solved with software built around your actual workflow." }
+    ]
+  },
+  {
+    "slug": "seo-checklist-hvac-companies",
+    "title": "SEO for HVAC Companies: A Practical Checklist for 2026",
+    "description": "A no-fluff SEO checklist for HVAC companies covering Google Business Profile, website structure, reviews, and content that actually moves rankings.",
+    "date": "2026-09-14",
+    "category": "Web Design & SEO",
+    "relatedServices": ["digital-marketing", "web-design"],
+    "relatedIndustries": ["hvac"],
+    "body": [
+      { "type": "p", "text": "HVAC is one of the most competitive local search categories there is — high-value jobs and a limited number of contractors in every market mean SEO mistakes cost real money. This checklist covers the fundamentals that actually move rankings, in the order most HVAC companies should tackle them." },
+      { "type": "h2", "text": "1. Google Business Profile" },
+      { "type": "ul", "items": [
+        "Complete every field — services, service area, hours, business description",
+        "Upload real photos of your trucks, team, and completed installs",
+        "Respond to every review, positive and negative, within a few days",
+        "Post updates regularly rather than leaving the profile untouched for months"
+      ] },
+      { "type": "h2", "text": "2. Website structure" },
+      { "type": "ul", "items": [
+        "Separate pages for installation, repair, and maintenance — not one page covering everything",
+        "A dedicated page for every town in your service area",
+        "Fast load times — HVAC searches skew heavily mobile and impatient",
+        "Clear click-to-call and booking options on every page, not just the homepage"
+      ] },
+      { "type": "h2", "text": "3. Reviews" },
+      { "type": "p", "text": "Review volume and recency both matter more than most HVAC owners realize. A profile with 40 reviews from two years ago loses to a competitor with 25 reviews, half of them from the last three months. Automated review requests sent right after a job is completed are the single highest-leverage SEO tactic most HVAC companies aren't using." },
+      { "type": "h2", "text": "4. Seasonal content" },
+      { "type": "p", "text": "Search volume for AC repair and furnace repair swing dramatically by season. Publishing content ahead of each season — a maintenance checklist before summer, a furnace inspection guide before winter — builds pages that rank right when demand is about to spike, instead of scrambling to write about it once the phone is already ringing." },
+      { "type": "h2", "text": "5. Local backlinks and citations" },
+      { "type": "p", "text": "Consistent business name, address, and phone number across every directory, plus a handful of genuine local backlinks — a supplier, a local chamber of commerce, a manufacturer's dealer locator — still matter for local rankings, even if they're less glamorous than content or ads." },
+      { "type": "h2", "text": "Putting it together" },
+      { "type": "p", "text": "None of these tactics individually will transform your rankings overnight. Done consistently together over a few months — a complete profile, a well-structured site, a steady flow of fresh reviews, and seasonal content — they compound into a search presence that's hard for a competitor to out-rank." }
+    ]
+  },
+  {
+    "slug": "turning-google-reviews-into-marketing",
+    "title": "How to Turn Google Reviews Into Your Best Marketing Asset",
+    "description": "A practical system for generating more reviews and putting them to work across your website, ads, and sales conversations.",
+    "date": "2026-09-21",
+    "category": "Digital Marketing",
+    "relatedServices": ["digital-marketing", "ai-services-automations"],
+    "relatedIndustries": ["painting", "gutter-pressure-washing", "carpentry-remodeling"],
+    "body": [
+      { "type": "p", "text": "Reviews influence local rankings, but their bigger job is convincing a stranger to trust you with their home or their money before you've ever spoken to them. Most local service businesses have a handful of great reviews sitting on Google doing nothing but sitting there." },
+      { "type": "h2", "text": "Getting more reviews without being awkward about it" },
+      { "type": "p", "text": "The businesses that generate the most reviews don't have pushier owners — they have a system. A review request text sent automatically within an hour of a job being marked complete, while the work is fresh and the customer is happy, consistently outperforms an owner remembering to ask a week later." },
+      { "type": "h2", "text": "Making it easy matters more than asking well" },
+      { "type": "ul", "items": [
+        "Send a direct link to your Google review page — not just \"leave us a review\"",
+        "Ask right after the job, not days later when the moment has passed",
+        "Follow up once, politely, if there's no response — don't badger past that",
+        "Never offer money or discounts for reviews — it violates Google's policies and can get reviews removed"
+      ] },
+      { "type": "h2", "text": "Where reviews should actually show up" },
+      { "type": "p", "text": "Most businesses let reviews sit on Google and stop there. The highest-value placements are on the service pages people land on from ads — a plumbing page for emergency repairs should show reviews specifically about emergency response, not a generic testimonial carousel. Reviews mentioning a specific service or town also reinforce the SEO relevance of that exact page." },
+      { "type": "h2", "text": "Handling a negative review" },
+      { "type": "p", "text": "A single negative review doesn't sink a business — an unanswered one does. Respond calmly, acknowledge the specific issue, and describe what you did or will do about it. Future customers read the response more carefully than the complaint itself." },
+      { "type": "h2", "text": "The compounding effect" },
+      { "type": "p", "text": "A steady stream of recent, specific reviews does three jobs at once: it improves local rankings, it raises conversion rates on the pages people actually land on, and it gives your sales conversations social proof you don't have to manufacture. Most of it can run on autopilot once the request system is in place." }
+    ]
+  },
+  {
+    "slug": "website-speed-and-local-rankings",
+    "title": "Website Speed and Local Rankings: Why Slow Sites Lose Contractor Leads",
+    "description": "How page speed affects both search rankings and conversion rates for contractor websites, and the most common causes of a slow site.",
+    "date": "2026-09-28",
+    "category": "Web Design & SEO",
+    "relatedServices": ["web-design"],
+    "relatedIndustries": ["masonry", "glass-glazing", "deck-building"],
+    "body": [
+      { "type": "p", "text": "A contractor website built on a heavy template with a dozen plugins can look fine on a desktop monitor and still lose leads every single day on a phone with a weak signal — which describes most people searching for a contractor from a driveway or a job site." },
+      { "type": "h2", "text": "Why speed matters twice" },
+      { "type": "p", "text": "Page speed affects search rankings directly, but it affects conversion rates even more. A visitor who searched for an emergency plumber isn't going to wait five seconds for a page to load — they'll hit the back button and call the next result instead. Every extra second of load time measurably reduces the odds someone actually reaches your phone number or contact form." },
+      { "type": "h2", "text": "The usual causes of a slow contractor site" },
+      { "type": "ul", "items": [
+        "Oversized, uncompressed photos of finished projects",
+        "Page builder plugins loading far more code than the page actually needs",
+        "Embedded videos or sliders that load automatically on every visit",
+        "Third-party scripts (chat widgets, tracking pixels, review plugins) stacking up over time",
+        "Shared hosting that slows down under normal traffic"
+      ] },
+      { "type": "h2", "text": "What a fast contractor site actually requires" },
+      { "type": "p", "text": "Speed isn't a plugin you install — it's a result of how the site is built. Custom-coded pages, properly compressed images, and a hosting setup sized for the traffic the site actually gets will consistently outperform a page-builder site loaded with plugins, even if the builder site looks similar on the surface." },
+      { "type": "h2", "text": "A quick way to check your own site" },
+      { "type": "p", "text": "Search your business name from your phone on cellular data, not wifi, and time how long it takes for the page to become usable — not just visible, but actually tappable. If it takes more than a couple of seconds, you're likely losing a meaningful share of visitors before they ever see your phone number." },
+      { "type": "h2", "text": "The bigger picture" },
+      { "type": "p", "text": "Speed is one piece of a larger picture that includes mobile design, clear calls to action, and pages built around specific services and towns. But it's often the piece that's easiest to overlook and most directly tied to lost leads — a beautifully designed page that loads too slowly never gets the chance to convert anyone." }
+    ]
+  },
+  {
+    "slug": "automating-follow-up-lost-booked-jobs",
+    "title": "Automating Follow-Up: The #1 Reason Service Businesses Lose Booked Jobs",
+    "description": "Why so many quoted jobs never get booked, and the follow-up automation that recovers most of them without adding office work.",
+    "date": "2026-09-05",
+    "category": "AI & Automations",
+    "relatedServices": ["ai-services-automations", "crm-build-management"],
+    "relatedIndustries": ["deck-building", "carpentry-remodeling", "hvac"],
+    "body": [
+      { "type": "p", "text": "Ask most contractors how many quoted jobs turn into paid work, and the honest answer is usually lower than they'd like — not because the price was wrong, but because nobody followed up after the estimate went out." },
+      { "type": "h2", "text": "The gap between \"quoted\" and \"booked\"" },
+      { "type": "p", "text": "A homeowner gets three estimates for a deck or a remodel and takes a week or two to decide. In that window, whoever follows up — a quick check-in call, a text answering a question, a reminder that the quote expires at the end of the month — has a real edge over the contractor who quoted the job and moved on to the next one." },
+      { "type": "h2", "text": "Why manual follow-up doesn't happen consistently" },
+      { "type": "p", "text": "It's not that owners don't know follow-up matters — it's that follow-up is the first thing that gets skipped when the phone is busy and the crew needs managing. A system that requires someone to remember to follow up on day three, day seven, and day fourteen will always lose to the busy week that makes it fall through." },
+      { "type": "h2", "text": "What an automated follow-up sequence actually does" },
+      { "type": "ul", "items": [
+        "Sends a check-in text or email a few days after every estimate, automatically",
+        "Answers common objections (financing, timeline, materials) without a manual message each time",
+        "Flags a quote as \"going cold\" so a real follow-up call happens before it's too late",
+        "Reminds a customer when a quote is about to expire, creating gentle urgency"
+      ] },
+      { "type": "h2", "text": "This isn't about spamming customers" },
+      { "type": "p", "text": "Good follow-up sequences are short, useful, and stop the moment someone responds. The goal isn't more messages — it's making sure the one or two follow-ups that actually move a decision happen every time, instead of only when someone remembers." },
+      { "type": "h2", "text": "The math on why this matters more than more leads" },
+      { "type": "p", "text": "It's almost always cheaper to book a higher share of the leads you already have than to buy more leads that get the same weak follow-up. Before increasing ad spend, most businesses find more revenue by fixing what happens after the estimate goes out." }
+    ]
+  }
+]

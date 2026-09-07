@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "ai-services-automations",
+    "name": "AI Services & Automations",
+    "shortName": "AI & Automations",
+    "tagline": "Put your busywork on autopilot.",
+    "summary": "Custom AI tools and workflow automation that answer calls, qualify leads, follow up on jobs, and handle the repetitive work that eats your day — so your team can focus on the jobs that pay.",
+    "image": "service-ai-automations.jpg",
+    "features": [
+      "AI voice and chat agents that answer missed calls and website chats 24/7",
+      "Automated lead follow-up sequences across text, email, and voicemail drop",
+      "Document and data automation — quotes, invoices, job files, and reports generated for you",
+      "AI-assisted review requests, appointment reminders, and no-show recovery",
+      "Custom GPT-powered tools trained on your business, pricing, and processes"
+    ],
+    "process": [
+      { "title": "Audit", "detail": "We map every repetitive task in your sales and operations flow and flag what's costing you the most time." },
+      { "title": "Design", "detail": "We design the automation or AI agent around how your business actually runs — not a generic template." },
+      { "title": "Build & Connect", "detail": "We wire it into your CRM, phones, and calendar so it works with the tools you already use." },
+      { "title": "Tune & Support", "detail": "We monitor performance for the first 60 days and keep tuning it as your business changes." }
+    ],
+    "faq": [
+      { "q": "Will an AI agent sound robotic to my customers?", "a": "No — every voice and chat agent is scripted and trained on your business, your tone, and your services before it ever talks to a real lead. Most callers don't realize they're not talking to a person until you tell them." },
+      { "q": "What if I lose a lead because the AI can't answer something?", "a": "Every automation we build has a clear handoff path — a live transfer, an instant text alert to your phone, or a booked callback — so nothing falls through a gap." },
+      { "q": "Do I need a CRM already in place?", "a": "No. We can build the automation layer on top of your existing CRM or set one up for you as part of the project — see CRM Build & Management." }
+    ],
+    "idealFor": ["plumbing", "electrical", "hvac", "healthcare"]
+  },
+  {
+    "slug": "crm-build-management",
+    "name": "CRM Build & Management",
+    "shortName": "CRM Build & Management",
+    "tagline": "One system for every lead, job, and follow-up.",
+    "summary": "We build and manage your CRM — pipelines, automations, calendars, and reporting — so leads stop living in text threads and sticky notes and start turning into booked, tracked, repeatable revenue.",
+    "image": "service-crm.jpg",
+    "features": [
+      "Full CRM build-out (GoHighLevel and other platforms) tailored to your sales process",
+      "Pipeline and job-stage tracking from first inquiry to invoice paid",
+      "Automated appointment booking, reminders, and rescheduling",
+      "Team inboxes so every call, text, and form fill lands in one place",
+      "Done-for-you monthly management, cleanup, and optimization"
+    ],
+    "process": [
+      { "title": "Map Your Process", "detail": "We document exactly how a lead becomes a customer today, warts and all." },
+      { "title": "Build the Pipeline", "detail": "We configure stages, forms, calendars, and automations to match that process — not a generic template." },
+      { "title": "Migrate & Train", "detail": "We move your existing contacts and data in, then train your team on the parts they'll touch daily." },
+      { "title": "Manage Month-to-Month", "detail": "We keep it clean, updated, and improving as your business grows — you're never left to figure it out alone." }
+    ],
+    "faq": [
+      { "q": "We already have a CRM. Can you just fix it?", "a": "Yes — a lot of our CRM work is cleanup and rebuild on systems that were set up once and never touched again. We'll audit what you have before recommending a rebuild." },
+      { "q": "Do you only work with GoHighLevel?", "a": "GoHighLevel is our primary platform because of what it can automate in one place, but we've built and managed CRMs on other platforms too — we'll recommend what fits your business." },
+      { "q": "Is ongoing management required?", "a": "No — we offer one-time build-outs and monthly management separately. Most clients start with a build and add management once they see the volume it creates." }
+    ],
+    "idealFor": ["hvac", "plumbing", "electrical", "carpentry-remodeling", "landscaping"]
+  },
+  {
+    "slug": "custom-tool-building",
+    "name": "Custom Tool Building",
+    "shortName": "Custom Tool Building",
+    "tagline": "Software built around your business, not the other way around.",
+    "summary": "When off-the-shelf software almost fits but not quite, we build the custom tool, dashboard, or integration that closes the gap — from internal job trackers to client-facing portals.",
+    "image": "service-custom-tools.jpg",
+    "features": [
+      "Custom web apps and internal tools built for your exact workflow",
+      "Integrations that connect your CRM, payments, scheduling, and reporting into one flow",
+      "Client-facing portals — quotes, invoices, job status, and document uploads",
+      "Data tools: dashboards, calculators, lookup tools, and reporting built on your numbers",
+      "Ongoing hosting, updates, and support once the tool is live"
+    ],
+    "process": [
+      { "title": "Scope the Gap", "detail": "We identify exactly what off-the-shelf software isn't doing for you and what a custom build needs to solve." },
+      { "title": "Design the Workflow", "detail": "We map the tool around how your team actually works, not a rebuild of software you already have." },
+      { "title": "Build & Deploy", "detail": "We build it, test it against real scenarios from your business, and deploy it to a live environment." },
+      { "title": "Support & Iterate", "detail": "We keep it running and add features as your business needs change." }
+    ],
+    "faq": [
+      { "q": "What kind of tools have you built before?", "a": "Bank statement underwriting tools, custom field lookup apps, SMS blast platforms, document generators, and internal dashboards — the common thread is software built for one specific business's workflow." },
+      { "q": "How long does a custom build take?", "a": "Most focused tools take 2-6 weeks depending on scope. We'll give you a clear timeline and milestones before work starts." },
+      { "q": "Do you host and maintain the tool afterward?", "a": "Yes — we can host it, monitor it, and handle updates, or hand off the code to your own team if you prefer to run it in-house." }
+    ],
+    "idealFor": ["healthcare", "hvac", "auto-restoration-detailing"]
+  },
+  {
+    "slug": "web-design",
+    "name": "Web Design",
+    "shortName": "Web Design",
+    "tagline": "A website built to be found, and built to convert.",
+    "summary": "Fast, mobile-first websites designed around the way your customers actually search — with dedicated pages for every service you offer and every town you serve, so you show up for the searches that matter.",
+    "image": "service-web-design.jpg",
+    "features": [
+      "Custom-designed, mobile-first websites — no drag-and-drop templates",
+      "Dedicated service and industry pages instead of one crowded homepage",
+      "Local service-area pages built for every town in your coverage zone",
+      "Built-in lead capture: forms, click-to-call, and booking widgets",
+      "Fast load times and clean code structured for search visibility"
+    ],
+    "process": [
+      { "title": "Discovery", "detail": "We learn your services, service area, and what makes you different from the next company in the search results." },
+      { "title": "Design", "detail": "We design a site around your brand and your customers — not a recycled template with your logo swapped in." },
+      { "title": "Build", "detail": "We build every service, industry, and location page needed to cover how people actually search for you." },
+      { "title": "Launch & Grow", "detail": "We launch, connect it to your CRM and tracking, and keep adding pages as your business expands." }
+    ],
+    "faq": [
+      { "q": "Do you write the content too?", "a": "Yes — copywriting for every page is included, built around your actual services and service area rather than generic filler text." },
+      { "q": "Can you rebuild my current site instead of starting over?", "a": "Yes — a rebuild that keeps what's working and fixes what isn't is often faster and cheaper than starting from a blank page." },
+      { "q": "Will my site include pages for every town I serve?", "a": "Yes, that's standard on every build — location pages are one of the biggest drivers of local search traffic for service businesses." }
+    ],
+    "idealFor": ["masonry", "landscaping", "deck-building", "glass-glazing", "painting", "hardscaping-tree-service", "gutter-pressure-washing"]
+  },
+  {
+    "slug": "digital-marketing",
+    "name": "Digital Marketing",
+    "shortName": "Digital Marketing",
+    "tagline": "Ads and SEO that bring in jobs, not just clicks.",
+    "summary": "Campaign management across Google, Meta, and search — built to fill your calendar with qualified jobs in your service area, tracked back to real revenue, not vanity metrics.",
+    "image": "service-digital-marketing.jpg",
+    "features": [
+      "Google Ads and Local Service Ads management for service-area businesses",
+      "Meta (Facebook & Instagram) campaigns built around your best-performing jobs",
+      "Local SEO — Google Business Profile optimization and review growth",
+      "Programmatic SEO content and location pages that compound over time",
+      "Monthly reporting tied to booked jobs and revenue, not just impressions"
+    ],
+    "process": [
+      { "title": "Audit", "detail": "We review your current ad accounts, website, and search visibility to find the fastest wins." },
+      { "title": "Build Campaigns", "detail": "We build or rebuild campaigns targeting your actual service area and highest-margin jobs." },
+      { "title": "Launch & Track", "detail": "We connect every campaign to your CRM so every lead is tracked from click to closed job." },
+      { "title": "Optimize Monthly", "detail": "We report on what's working, cut what isn't, and reinvest in what's bringing in revenue." }
+    ],
+    "faq": [
+      { "q": "How fast will I see results?", "a": "Paid ads can bring leads within days of launch. SEO and programmatic content are longer plays that typically build meaningful traffic over 3-6 months." },
+      { "q": "Do you handle both the ads and the website?", "a": "Yes — because we also build the sites and CRMs behind the campaigns, we can track a lead from the ad click all the way to the booked job." },
+      { "q": "What's the minimum ad spend to get started?", "a": "It depends on your market and service area size — we'll recommend a starting budget during the audit based on your local competition." }
+    ],
+    "idealFor": ["hvac", "electrical", "plumbing", "carpentry-remodeling", "auto-restoration-detailing"]
+  }
+]

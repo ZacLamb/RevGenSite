@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><style>
+body { background:#e8ecf3; display:flex; gap:24px; padding:40px; font-family:sans-serif; }
+.tile { width:200px; height:200px; background:#fff; border:2px solid #1a2530; display:flex; align-items:center; justify-content:center; }
+.tile svg { width:75%; height:75%; }
+</style></head>
+<body>
+
+<div class="tile">
+  <svg viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="origA" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#6b8299"/>
+        <stop offset="1" stop-color="#2c3e50"/>
+      </linearGradient>
+      <linearGradient id="origB" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#3d5266"/>
+        <stop offset="1" stop-color="#141d27"/>
+      </linearGradient>
+    </defs>
+    <path d="M12,92 Q22,58 60,26 Q42,56 28,94 Z" fill="url(#origA)"/>
+    <path d="M28,94 Q38,56 66,26 Q52,54 42,96 Z" fill="url(#origB)"/>
+    <path d="M44,42 L64,10 L84,42" fill="none" stroke="url(#origB)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+<div class="tile">
+  <svg viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="brandA" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#00C2B8"/>
+        <stop offset="1" stop-color="#0B5FFF"/>
+      </linearGradient>
+      <linearGradient id="brandB" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#0B5FFF"/>
+        <stop offset="1" stop-color="#083ECB"/>
+      </linearGradient>
+    </defs>
+    <path d="M12,92 Q22,58 60,26 Q42,56 28,94 Z" fill="url(#brandA)"/>
+    <path d="M28,94 Q38,56 66,26 Q52,54 42,96 Z" fill="url(#brandB)"/>
+    <path d="M44,42 L64,10 L84,42" fill="none" stroke="url(#brandB)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+</body></html>

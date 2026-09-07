@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "raynham-ma",
+    "name": "Raynham",
+    "state": "MA",
+    "region": "Southeastern Massachusetts",
+    "blurb": "Raynham and the surrounding Route 44 corridor are home to a dense mix of home service businesses competing for the same searches. We've built websites and CRM systems for HVAC and contracting companies based right in town.",
+    "nearby": ["Taunton", "Bridgewater", "Easton", "Middleborough"],
+    "image": "town-suburban.jpg"
+  },
+  {
+    "slug": "lynn-ma",
+    "name": "Lynn",
+    "state": "MA",
+    "region": "North Shore, Massachusetts",
+    "blurb": "Lynn's mix of dense residential neighborhoods and older housing stock keeps hardscaping, tree service, and remodeling crews busy year-round — and makes local search visibility especially competitive.",
+    "nearby": ["Swampscott", "Saugus", "Salem", "Revere"],
+    "image": "town-coastal.jpg"
+  },
+  {
+    "slug": "rehoboth-ma",
+    "name": "Rehoboth",
+    "state": "MA",
+    "region": "Bristol County, Massachusetts",
+    "blurb": "Rehoboth's larger residential lots make it a strong market for hardscaping, patios, and outdoor living projects — the kind of work that sells on photos and a fast-loading project gallery.",
+    "nearby": ["Seekonk", "Dighton", "Attleboro", "Swansea"],
+    "image": "town-suburban.jpg"
+  },
+  {
+    "slug": "south-yarmouth-ma",
+    "name": "South Yarmouth",
+    "state": "MA",
+    "region": "Cape Cod, Massachusetts",
+    "blurb": "Cape Cod's seasonal population swings mean local service businesses in South Yarmouth need marketing that ramps up ahead of summer and a CRM that keeps second-home clients on the books year after year.",
+    "nearby": ["Dennis", "Hyannis", "Barnstable", "West Yarmouth"],
+    "image": "town-coastal.jpg"
+  },
+  {
+    "slug": "plymouth-ma",
+    "name": "Plymouth",
+    "state": "MA",
+    "region": "South Shore, Massachusetts",
+    "blurb": "Plymouth's mix of historic homes and new construction keeps carpentry, painting, and remodeling contractors busy with two very different kinds of projects — and two very different kinds of customers to market to.",
+    "nearby": ["Kingston", "Duxbury", "Carver", "Plympton"],
+    "image": "town-coastal.jpg"
+  },
+  {
+    "slug": "northborough-ma",
+    "name": "Northborough",
+    "state": "MA",
+    "region": "MetroWest, Massachusetts",
+    "blurb": "Northborough sits at the center of a MetroWest market with strong demand for both residential and commercial glass and glazing work, from storefront installs to custom shower enclosures.",
+    "nearby": ["Westborough", "Marlborough", "Shrewsbury", "Southborough"],
+    "image": "town-suburban.jpg"
+  },
+  {
+    "slug": "harwich-ma",
+    "name": "Harwich",
+    "state": "MA",
+    "region": "Cape Cod, Massachusetts",
+    "blurb": "Harwich's classic-car and craftsman community supports specialty trades that sell on reputation and visible quality of work — exactly the kind of business a portfolio-driven website is built for.",
+    "nearby": ["Chatham", "Brewster", "Dennis", "Orleans"],
+    "image": "town-coastal.jpg"
+  },
+  {
+    "slug": "rockland-ma",
+    "name": "Rockland",
+    "state": "MA",
+    "region": "South Shore, Massachusetts",
+    "blurb": "Rockland and the surrounding South Shore towns are steady territory for masonry and hardscape contractors, with enough new construction and renovation work to keep a well-marketed crew booked solid.",
+    "nearby": ["Abington", "Hanover", "Whitman", "Weymouth"],
+    "image": "town-suburban.jpg"
+  },
+  {
+    "slug": "beverly-ma",
+    "name": "Beverly",
+    "state": "MA",
+    "region": "North Shore, Massachusetts",
+    "blurb": "Beverly and the North Shore combine coastal weather exposure with older housing stock — a market where masonry, exterior, and restoration businesses stay busy if they can be found by the right searches.",
+    "nearby": ["Salem", "Danvers", "Manchester-by-the-Sea", "Wenham"],
+    "image": "town-coastal.jpg"
+  },
+  {
+    "slug": "derry-nh",
+    "name": "Derry",
+    "state": "NH",
+    "region": "Southern New Hampshire",
+    "blurb": "Derry anchors a fast-growing corner of southern New Hampshire where masonry, tree work, and remodeling businesses are competing against a wave of new residents searching for local contractors online for the first time.",
+    "nearby": ["Londonderry", "Windham", "Salem NH", "Manchester"],
+    "image": "town-suburban.jpg"
+  }
+]
