@@ -45,9 +45,46 @@ function img(src, alt, cls) {
 
 // ---------- layout ----------
 
-function layout({ title, description, canonicalPath, bodyContent, ogImage }) {
+function ldJson(obj) {
+  return `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
+}
+
+function orgSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `https://${site.domain}/#organization`,
+    name: site.name,
+    url: `https://${site.domain}/`,
+    logo: `https://${site.domain}/images/logo-square-512.png`,
+    image: `https://${site.domain}/images/logo-square-512.png`,
+    telephone: site.phone,
+    email: site.email,
+    areaServed: site.region,
+    founder: { '@type': 'Person', name: site.founder },
+    sameAs: Object.values(site.social || {}),
+    description: site.subTagline,
+  };
+}
+
+function breadcrumbSchema(items) {
+  // items: [{name, path}] in order, path relative (e.g. '/', '/services/')
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: it.name,
+      item: `https://${site.domain}${it.path}`,
+    })),
+  };
+}
+
+function layout({ title, description, canonicalPath, bodyContent, ogImage, schemas }) {
   const fullTitle = title ? `${title} | ${site.name}` : `${site.name} — ${site.tagline}`;
   const ogImg = `https://${site.domain}/images/${ogImage || 'og-image.jpg'}`;
+  const allSchemas = [orgSchema(), ...(schemas || [])];
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -57,6 +94,7 @@ function layout({ title, description, canonicalPath, bodyContent, ogImage }) {
 <meta name="description" content="${description}">
 <link rel="canonical" href="https://${site.domain}${canonicalPath}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="${site.name}">
 <meta property="og:title" content="${fullTitle}">
 <meta property="og:description" content="${description}">
 <meta property="og:image" content="${ogImg}">
@@ -68,6 +106,7 @@ function layout({ title, description, canonicalPath, bodyContent, ogImage }) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+${allSchemas.map(ldJson).join('\n')}
 </head>
 <body>
 ${header()}
@@ -91,8 +130,16 @@ function header() {
     <div class="header-actions">
       <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="header-phone">${site.phone}</a>
       <a href="/contact/" class="btn btn-primary" style="padding:11px 20px;font-size:14px;">Get a Free Consult</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <nav id="mobile-nav" class="mobile-nav">
+    ${site.nav.map((n) => `<a href="${n.href}">${n.label}</a>`).join('\n    ')}
+    <a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a>
+    <a href="/contact/" class="btn btn-primary">Get a Free Consult</a>
+  </nav>
 </header>`;
 }
 
@@ -134,7 +181,7 @@ function footer() {
     </div>
     <div class="footer-bottom">
       <span>© ${YEAR} ${site.name}. All rights reserved.</span>
-      <span>${site.address.line1}, ${site.address.city}, ${site.address.state} ${site.address.zip}</span>
+      <span>Serving ${site.region}</span>
     </div>
   </div>
 </footer>`;
@@ -423,7 +470,7 @@ ${heroSection({
           <div class="feature-list">
             <div class="feature-item"><span class="feature-icon">📞</span><p><a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a></p></div>
             <div class="feature-item"><span class="feature-icon">✉️</span><p><a href="mailto:${site.email}">${site.email}</a></p></div>
-            <div class="feature-item"><span class="feature-icon">📍</span><p>${site.address.line1}<br>${site.address.city}, ${site.address.state} ${site.address.zip}</p></div>
+            <div class="feature-item"><span class="feature-icon">📍</span><p>Proudly serving ${site.region}</p></div>
           </div>
           <hr class="divider">
           <p style="font-size:14px;">Serving businesses across ${site.region} and beyond — most of our work is done remotely, with on-site visits available for local clients.</p>
@@ -527,12 +574,37 @@ ${idealIndustries.length ? `<section>
 </section>
 ${ctaBanner({ title: `Ready to talk ${s.shortName}?`, text: `Book a free consult and we'll show you exactly what ${s.shortName} would look like for your business.` })}
 `;
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: s.name,
+    name: `${s.name} | ${site.name}`,
+    description: s.summary,
+    provider: { '@type': 'ProfessionalService', name: site.name, telephone: site.phone, url: `https://${site.domain}/` },
+    areaServed: site.region,
+    url: `https://${site.domain}/services/${s.slug}/`,
+  };
+  const faqSchema = (s.faq || []).length ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: s.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  } : null;
+  const crumbs = breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services/' },
+    { name: s.shortName, path: `/services/${s.slug}/` },
+  ]);
   write(`services/${s.slug}/index.html`, layout({
-    title: s.name,
+    title: `${s.name} for Local Service Businesses`,
     description: s.summary,
     canonicalPath: `/services/${s.slug}/`,
     bodyContent: body,
     ogImage: s.image,
+    schemas: [serviceSchema, crumbs, ...(faqSchema ? [faqSchema] : [])],
   }));
 }
 
@@ -610,11 +682,16 @@ ${relServices.length ? `<section>
 ${ctaBanner({ title: `Run a ${i.name.toLowerCase()} business?`, text: `Book a free consult and we'll show you exactly how this applies to your business.` })}
 `;
   write(`industries/${i.slug}/index.html`, layout({
-    title: i.name,
+    title: `${i.name} Websites, CRM & Marketing`,
     description: `${i.heroLine} ${site.name} builds websites, CRM systems, and automation for ${i.name.toLowerCase()} businesses.`,
     canonicalPath: `/industries/${i.slug}/`,
     bodyContent: body,
     ogImage: i.image,
+    schemas: [breadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Industries', path: '/industries/' },
+      { name: i.name, path: `/industries/${i.slug}/` },
+    ])],
   }));
 }
 
@@ -646,6 +723,9 @@ ${ctaBanner({ title: "Outside these towns?", text: "Most of our work is done rem
 }
 
 function buildLocationDetail(t) {
+  const focusIndustries = (t.focusIndustries || []).map((slug) => industryBySlug[slug]).filter(Boolean);
+  const otherIndustries = industries.filter((i) => !(t.focusIndustries || []).includes(i.slug));
+  const displayIndustries = [...focusIndustries, ...otherIndustries].slice(0, 8);
   const body = `
 ${heroSection({
   eyebrow: `${t.region}`,
@@ -655,41 +735,146 @@ ${heroSection({
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / <a href="/locations/">Locations</a> / ${t.name}`,
 })}
-<section>
+${t.featuredWork ? `<section>
   <div class="container">
     <div class="split">
       <div>
-        <div class="eyebrow">Serving ${t.name} & Nearby</div>
-        <h2>Also covering ${t.nearby.join(', ')}</h2>
-        <p>Whether you're based in ${t.name} or one of the surrounding towns, we build the same full growth system — a website with dedicated local pages, a CRM that tracks every lead, and the automation and marketing to keep your calendar full.</p>
+        <div class="eyebrow">What We Build in ${t.name}</div>
+        <h2>The kind of work that actually moves the needle here</h2>
+        <p>${t.featuredWork}</p>
         <div class="cta-row">
           <a href="/contact/" class="btn btn-primary">Get a Free Consult</a>
           <a href="/services/" class="btn btn-outline-dark">See Our Services</a>
         </div>
       </div>
-      <div class="media">${img(t.image, t.name)}</div>
+      <div class="media">${img(t.image, `${t.name} ${t.state} local service business project`)}</div>
     </div>
   </div>
-</section>
+</section>` : ''}
 <section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Serving ${t.name} & Nearby</div>
+      <h2>Also covering ${t.nearby.join(', ')}</h2>
+    </div>
+    <p style="max-width:760px;font-size:17px;color:var(--ink);">Whether you're based in ${t.name} or one of the surrounding towns, we build the same full growth system — a website with dedicated local pages, a CRM that tracks every lead, and the automation and marketing to keep your calendar full.</p>
+  </div>
+</section>
+<section>
   <div class="container">
     <div class="section-head left">
       <div class="eyebrow">Popular in ${t.name}</div>
       <h2>Industries we work with in this area</h2>
     </div>
     <div class="chip-grid">
-      ${industries.slice(0, 8).map((i) => `<a href="/industries/${i.slug}/" class="chip">${i.name}</a>`).join('\n      ')}
+      ${displayIndustries.map((i) => `<a href="/industries/${i.slug}/" class="chip">${i.name}</a>`).join('\n      ')}
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Services in ${t.name}</div>
+      <h2>Pick a service to see how it works locally</h2>
+    </div>
+    <div class="chip-grid">
+      ${services.map((s) => `<a href="/locations/${t.slug}/${s.slug}/" class="chip">${s.shortName} in ${t.name}</a>`).join('\n      ')}
     </div>
   </div>
 </section>
 ${ctaBanner({ title: `Based in ${t.name}?`, text: 'Book a free consult and let\'s talk about what growth looks like for your business.' })}
 `;
   write(`locations/${t.slug}/index.html`, layout({
-    title: `${t.name}, ${t.state}`,
+    title: `Website, CRM & Marketing in ${t.name}, ${t.state}`,
     description: `${site.name} serves local service businesses in ${t.name}, ${t.state} and nearby ${t.nearby.slice(0, 2).join(' and ')} with websites, CRM systems, and marketing.`,
     canonicalPath: `/locations/${t.slug}/`,
     bodyContent: body,
     ogImage: t.image,
+    schemas: [breadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Locations', path: '/locations/' },
+      { name: `${t.name}, ${t.state}`, path: `/locations/${t.slug}/` },
+    ])],
+  }));
+}
+
+function buildLocationServiceDetail(t, s) {
+  const focusIndustries = (t.focusIndustries || []).map((slug) => industryBySlug[slug]).filter(Boolean);
+  const overlap = focusIndustries.filter((i) => (s.idealFor || []).includes(i.slug));
+  const matchedIndustries = overlap.length ? overlap : focusIndustries;
+  const industryNames = matchedIndustries.map((i) => i.name.toLowerCase());
+  const localAngle = matchedIndustries.length
+    ? `Around ${t.name}, that most often means ${industryNames.slice(0, 3).join(', ')} businesses using it to ${s.shortName === 'AI & Automations' ? 'stop losing jobs to missed calls and slow follow-up' : s.shortName === 'CRM Build & Management' ? 'keep every lead and job tracked instead of scattered across texts and sticky notes' : s.shortName === 'Custom Tool Building' ? 'close the gaps their off-the-shelf software leaves open' : s.shortName === 'Web Design' ? 'show up first when someone searches for their trade nearby' : 'turn ad spend into booked jobs instead of just clicks'}.`
+    : `We build it the same way for local service businesses throughout ${t.region} — no generic template, just the pieces your business actually needs.`;
+  const otherTowns = towns.filter((ot) => ot.slug !== t.slug).slice(0, 4);
+  const body = `
+${heroSection({
+  eyebrow: `${s.name} · ${t.name}, ${t.state}`,
+  title: `${s.name} in ${t.name}, ${t.state}`,
+  lede: `${s.summary} ${localAngle}`,
+  image: t.image,
+  narrow: true,
+  breadcrumb: `<a href="/">Home</a> / <a href="/locations/">Locations</a> / <a href="/locations/${t.slug}/">${t.name}</a> / ${s.shortName}`,
+})}
+<section>
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2>What's included</h2>
+        <div class="feature-list">
+          ${s.features.map((f) => `<div class="feature-item"><span class="feature-icon">✓</span><p>${f}</p></div>`).join('\n          ')}
+        </div>
+      </div>
+      <div class="media">${img(s.image, `${s.name} for local service businesses in ${t.name}, ${t.state}`)}</div>
+    </div>
+  </div>
+</section>
+${t.featuredWork ? `<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Local Context</div>
+      <h2>Why this matters in ${t.name}</h2>
+    </div>
+    <p style="max-width:760px;font-size:17px;color:var(--ink);">${t.featuredWork}</p>
+  </div>
+</section>` : ''}
+<section>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Also Serving</div>
+      <h2>${s.shortName} in nearby towns</h2>
+    </div>
+    <div class="chip-grid">
+      ${otherTowns.map((ot) => `<a href="/locations/${ot.slug}/${s.slug}/" class="chip">${s.shortName} in ${ot.name}</a>`).join('\n      ')}
+      <a href="/services/${s.slug}/" class="chip">${s.shortName} — full overview</a>
+    </div>
+  </div>
+</section>
+${ctaBanner({ title: `Ready for ${s.shortName} in ${t.name}?`, text: `Book a free consult and we'll show you exactly what it looks like for your business.` })}
+`;
+  const crumbs = breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Locations', path: '/locations/' },
+    { name: t.name, path: `/locations/${t.slug}/` },
+    { name: s.shortName, path: `/locations/${t.slug}/${s.slug}/` },
+  ]);
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: s.name,
+    name: `${s.name} in ${t.name}, ${t.state}`,
+    description: s.summary,
+    provider: { '@type': 'ProfessionalService', name: site.name, telephone: site.phone, url: `https://${site.domain}/` },
+    areaServed: { '@type': 'City', name: `${t.name}, ${t.state}` },
+    url: `https://${site.domain}/locations/${t.slug}/${s.slug}/`,
+  };
+  write(`locations/${t.slug}/${s.slug}/index.html`, layout({
+    title: `${s.name} in ${t.name}, ${t.state}`,
+    description: `${s.shortName} for local service businesses in ${t.name}, ${t.state}. ${s.tagline}`,
+    canonicalPath: `/locations/${t.slug}/${s.slug}/`,
+    bodyContent: body,
+    ogImage: t.image,
+    schemas: [serviceSchema, crumbs],
   }));
 }
 
@@ -755,12 +940,30 @@ ${heroSection({
 </section>
 ${ctaBanner({ title: 'Want this working for your business?', text: 'Book a free consult and we\'ll show you where to start.' })}
 `;
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: p.title,
+    description: p.description,
+    datePublished: p.date,
+    dateModified: p.date,
+    author: { '@type': 'Organization', name: site.name },
+    publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: `https://${site.domain}/images/logo-square-512.png` } },
+    image: `https://${site.domain}/images/${image}`,
+    mainEntityOfPage: `https://${site.domain}/blog/${p.slug}/`,
+  };
+  const crumbs = breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog/' },
+    { name: p.title, path: `/blog/${p.slug}/` },
+  ]);
   write(`blog/${p.slug}/index.html`, layout({
     title: p.title,
     description: p.description,
     canonicalPath: `/blog/${p.slug}/`,
     bodyContent: body,
     ogImage: image,
+    schemas: [articleSchema, crumbs],
   }));
 }
 
@@ -787,6 +990,7 @@ function buildSitemap() {
   services.forEach((s) => urls.push(`/services/${s.slug}/`));
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
+  towns.forEach((t) => services.forEach((s) => urls.push(`/locations/${t.slug}/${s.slug}/`)));
   blog.forEach((p) => urls.push(`/blog/${p.slug}/`));
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -822,6 +1026,22 @@ function buildJs() {
       if (note) note.textContent = "Opening your email app to send this — or call/text us directly at ${site.phone}.";
     });
   }
+
+  // Mobile nav toggle
+  var header = document.querySelector('.site-header');
+  var toggle = document.querySelector('.nav-toggle');
+  if (header && toggle) {
+    toggle.addEventListener('click', function () {
+      var isOpen = header.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.querySelectorAll('.mobile-nav a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        header.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 })();
 `;
   write('js/main.js', js);
@@ -837,13 +1057,14 @@ function run() {
   industries.forEach(buildIndustryDetail);
   buildLocationsIndex();
   towns.forEach(buildLocationDetail);
+  towns.forEach((t) => services.forEach((s) => buildLocationServiceDetail(t, s)));
   buildBlogIndex();
   blog.forEach(buildBlogPost);
   build404();
   buildSitemap();
   buildJs();
 
-  const pageCount = 7 + services.length + industries.length + towns.length + blog.length;
+  const pageCount = 7 + services.length + industries.length + towns.length + blog.length + (towns.length * services.length);
   console.log(`[generate-site] Built ${pageCount} pages into /public`);
 }
 
