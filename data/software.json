@@ -14,7 +14,7 @@
       "icon": "search",
       "grad": "linear-gradient(180deg,#3B8CFF,#0A64FF)",
       "tagline": "Every custom field key, merge tag and custom value in any sub-account, searchable, comparable and exportable.",
-      "url": "https://fields.yourbizzassist.co/"
+      "url": "https://fields.revenuegeneratingsolutions.com/"
     },
     {
       "slug": "field-builder",
@@ -24,7 +24,7 @@
       "icon": "list",
       "grad": "linear-gradient(180deg,#8B7CFF,#5E4BF2)",
       "tagline": "Set up and run sub-accounts in bulk: fields, folders, dropdowns, users, permissions, media and workflows.",
-      "url": "https://builder.yourbizzassist.co/"
+      "url": "https://builder.revenuegeneratingsolutions.com/"
     },
     {
       "slug": "blast-tools",
@@ -34,7 +34,7 @@
       "icon": "message",
       "grad": "linear-gradient(180deg,#3DDC84,#1DB45F)",
       "tagline": "Find everyone who never replied to your last SMS blast and tag them for a resend, automatically every morning.",
-      "url": "https://blast.yourbizzassist.co/"
+      "url": "https://blast.revenuegeneratingsolutions.com/"
     },
     {
       "slug": "message-exporter",
@@ -44,7 +44,7 @@
       "icon": "download",
       "grad": "linear-gradient(180deg,#FFA94D,#FF7A1A)",
       "tagline": "Export calls, SMS and email history to CSV, with call recording links that actually play.",
-      "url": "https://export.yourbizzassist.co/"
+      "url": "https://export.revenuegeneratingsolutions.com/"
     },
     {
       "slug": "data-vault",
@@ -54,7 +54,7 @@
       "icon": "database",
       "grad": "linear-gradient(180deg,#8E9AAF,#5F6B80)",
       "tagline": "Back up every file GHL's export leaves behind, then search it, report on usage and move it between sub-accounts.",
-      "url": "https://vault.yourbizzassist.co/"
+      "url": "https://vault.revenuegeneratingsolutions.com/"
     },
     {
       "slug": "power-ups",
