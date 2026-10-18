@@ -74,3 +74,14 @@ the site never depends on that URL still being alive.
   message (no backend wired up). If you want it to post into a GHL CRM webhook the
   way your client sites do, that's a small change to `public/js/main.js` — happy to
   wire that up.
+
+## Blog posts and industry playbooks (content/)
+
+Articles and industry × service pages are Markdown files with YAML front matter:
+
+- `content/blog/<slug>.md` → `/blog/<slug>/`
+- `content/industry-services/<industry>--<service>.md` → `/industries/<industry>/<service>/`
+
+The rules for writing them (facts you may use, voice, front matter, allowed links) are in `content/CONTENT-SPEC.md`. To add one, add a file through GitHub. Railway rebuilds the site on deploy. Before opening a PR, run `npm run check`: it builds the site and flags missing fields, broken internal links, banned hype words and unsourced statistics.
+
+Related articles, "playbook" cards on industry and service pages, FAQ schema and the sitemap are all generated automatically from the front matter.

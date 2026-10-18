@@ -436,3 +436,20 @@ section.tight { padding: 56px 0; }
 @media (max-width: 1440px) { .header-phone { display: none; } .main-nav a { padding: 10px 11px; } }
 @media (max-width: 1180px) { .main-nav { display: none; } .nav-toggle { display: flex; } }
 @media (min-width: 901px) and (max-width: 1180px) { .site-header.nav-open .mobile-nav { display: flex !important; } }
+
+/* ---------- Markdown articles and industry playbooks ---------- */
+.article-body h2 { scroll-margin-top: 90px; }
+.article-body h3 { font-size: 19px; margin: 28px 0 8px; }
+.article-body a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+.article-body a:hover { color: var(--primary-dark, #083ECB); }
+.article-body ol { margin: 0 0 20px; padding-left: 22px; }
+.article-body ol li { font-size: 16.5px; color: var(--ink); margin: 0 0 10px; padding-left: 4px; }
+.article-body li p { margin: 0; }
+.article-body strong { color: var(--ink); }
+.article-body blockquote { margin: 20px 0; padding: 4px 0 4px 18px; border-left: 3px solid var(--accent); color: var(--gray); }
+.article-body .tbl { overflow-x: auto; margin: 0 0 24px; -webkit-overflow-scrolling: touch; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 480px; }
+.article-body th, .article-body td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #E3E9F3; vertical-align: top; }
+.article-body th { background: var(--paper); font-weight: 700; color: var(--ink); }
+.article-body code { font-size: 0.92em; background: var(--paper); padding: 1px 5px; border-radius: 4px; }
+.article-wrap { min-width: 0; }

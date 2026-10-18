@@ -8,12 +8,15 @@
     "build": "node scripts/generate-site.js",
     "postinstall": "node scripts/generate-site.js && node scripts/fetch-images.js",
     "start": "node server.js",
-    "dev": "npm run build && node server.js"
+    "dev": "npm run build && node server.js",
+    "check": "node scripts/generate-site.js && node scripts/check-content.js"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "js-yaml": "^4.3.2",
+    "marked": "^15.0.12"
   }
 }
