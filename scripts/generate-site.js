@@ -19,11 +19,42 @@ const site = JSON.parse(fs.readFileSync(path.join(DATA, 'site.json'), 'utf8'));
 const services = JSON.parse(fs.readFileSync(path.join(DATA, 'services.json'), 'utf8'));
 const industries = JSON.parse(fs.readFileSync(path.join(DATA, 'industries.json'), 'utf8'));
 const towns = JSON.parse(fs.readFileSync(path.join(DATA, 'towns.json'), 'utf8'));
-const blog = JSON.parse(fs.readFileSync(path.join(DATA, 'blog.json'), 'utf8'));
+const { marked } = require('marked');
+const yaml = require('js-yaml');
+
+// ---------- Markdown content (content/*.md) ----------
+// Blog posts live in content/blog/<slug>.md and industry × service pages in
+// content/industry-services/<industry>--<service>.md. See content/CONTENT-SPEC.md.
+const CONTENT = path.join(ROOT, 'content');
+function readMdDir(dir) {
+  const d = path.join(CONTENT, dir);
+  if (!fs.existsSync(d)) return [];
+  return fs.readdirSync(d).filter((f) => f.endsWith('.md')).sort().map((f) => {
+    const raw = fs.readFileSync(path.join(d, f), 'utf8').replace(/\r\n/g, '\n');
+    const m = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
+    if (!m) throw new Error(`content/${dir}/${f}: missing front matter`);
+    // JSON schema keeps dates as plain "YYYY-MM-DD" strings.
+    const front = yaml.load(m[1], { schema: yaml.JSON_SCHEMA }) || {};
+    return { ...front, file: f, md: m[2].trim() };
+  });
+}
+const legacyBlog = fs.existsSync(path.join(DATA, 'blog.json')) ? JSON.parse(fs.readFileSync(path.join(DATA, 'blog.json'), 'utf8')) : [];
+const mdBlog = readMdDir('blog').map((p) => ({ ...p, slug: p.file.replace(/\.md$/, '') }));
+const blog = [...mdBlog, ...legacyBlog.filter((p) => !mdBlog.some((m) => m.slug === p.slug))]
+  .sort((a, b) => String(b.date).localeCompare(String(a.date)) || a.title.localeCompare(b.title));
 const software = JSON.parse(fs.readFileSync(path.join(DATA, 'software.json'), 'utf8'));
 
 const serviceBySlug = Object.fromEntries(services.map((s) => [s.slug, s]));
 const industryBySlug = Object.fromEntries(industries.map((i) => [i.slug, i]));
+
+const combos = readMdDir('industry-services').map((c) => {
+  const [ind, svc] = c.file.replace(/\.md$/, '').split('--');
+  const industry = industryBySlug[c.industry || ind];
+  const service = serviceBySlug[c.service || svc];
+  if (!industry || !service) throw new Error(`content/industry-services/${c.file}: unknown industry or service`);
+  return { ...c, industry, service, path: `/industries/${industry.slug}/${service.slug}/` };
+});
+const comboFor = (iSlug, sSlug) => combos.find((c) => c.industry.slug === iSlug && c.service.slug === sSlug);
 
 const YEAR = new Date().getFullYear();
 
@@ -44,10 +75,78 @@ function img(src, alt, cls) {
   return `<img src="/images/${src}" alt="${alt}"${cls ? ` class="${cls}"` : ''} loading="lazy">`;
 }
 
+const escAttr = (v) => String(v ?? '').replace(/&(?![a-z#0-9]+;)/gi, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const escHtml = (v) => String(v ?? '').replace(/&(?![a-z#0-9]+;)/gi, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+const slugify = (t) => String(t).toLowerCase().replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+marked.use({
+  renderer: {
+    // Content files are Markdown only: any raw HTML is shown as text, never run.
+    html(token) { return escHtml(token.text); },
+  },
+});
+function renderMd(md) {
+  let html = marked.parse(md, { gfm: true });
+  const seen = new Set();
+  html = html.replace(/<h2>([\s\S]*?)<\/h2>/g, (_, inner) => {
+    let id = slugify(inner) || 'section';
+    while (seen.has(id)) id += '-2';
+    seen.add(id);
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+  html = html.replace(/<a href="(javascript|data|vbscript):[^"]*"/gi, '<a href="#"');
+  html = html.replace(/<a href="(https?:\/\/[^"]+)"/g, (m, href) => {
+    try { if (new URL(href).hostname.endsWith(site.domain)) return m; } catch { /* external */ }
+    return `<a href="${href}" target="_blank" rel="noopener"`;
+  });
+  return html.replace(/<table>/g, '<div class="tbl"><table>').replace(/<\/table>/g, '</table></div>');
+}
+
+function faqSection(faq, heading = 'Common questions') {
+  if (!faq || !faq.length) return '';
+  return `<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">FAQ</div>
+      <h2>${heading}</h2>
+    </div>
+    <div style="max-width:760px;">
+      ${faq.map((f) => `<details class="faq-item"><summary>${escHtml(f.q)}</summary><p>${escHtml(f.a)}</p></details>`).join('\n      ')}
+    </div>
+  </div>
+</section>`;
+}
+function faqSchemaFor(faq) {
+  if (!faq || !faq.length) return null;
+  return { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+}
+
+// Posts that share the most services and industries with the given sets.
+function relatedPosts({ services: sv = [], industries: ind = [], exclude, limit = 3 }) {
+  return blog.filter((p) => p.slug !== exclude).map((p) => ({
+    p,
+    score: (p.relatedIndustries || []).filter((x) => ind.includes(x)).length * 2 + (p.relatedServices || []).filter((x) => sv.includes(x)).length,
+  })).filter((x) => x.score > 0).sort((a, b) => b.score - a.score || String(b.p.date).localeCompare(String(a.p.date))).slice(0, limit).map((x) => x.p);
+}
+
+// byIndustry: show the trade's photo (for lists that mix trades); otherwise the service's.
+function comboCard(c, byIndustry) {
+  const pic = byIndustry === true ? [c.industry.image, c.industry.name] : [c.service.image, c.service.name];
+  return `<a href="${c.path}" class="card">
+    <div class="card-media">${img(pic[0], pic[1])}</div>
+    <div class="card-body">
+      <span class="tag">${c.service.shortName}</span>
+      <h3 style="margin-top:12px;">${escHtml(c.title)}</h3>
+      <p>${escHtml(c.intro || c.description)}</p>
+      <span class="card-link">See the playbook</span>
+    </div>
+  </a>`;
+}
+
 // ---------- layout ----------
 
 function ldJson(obj) {
-  return `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
+  return `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, '\\u003c')}</script>`;
 }
 
 function orgSchema() {
@@ -82,7 +181,7 @@ function breadcrumbSchema(items) {
   };
 }
 
-function layout({ title, description, canonicalPath, bodyContent, ogImage, schemas }) {
+function layout({ title, description, canonicalPath, bodyContent, ogImage, schemas, ogType }) {
   const fullTitle = title ? `${title} | ${site.name}` : `${site.name} — ${site.tagline}`;
   const ogImg = `https://${site.domain}/images/${ogImage || 'og-image.jpg'}`;
   const allSchemas = [orgSchema(), ...(schemas || [])];
@@ -91,13 +190,13 @@ function layout({ title, description, canonicalPath, bodyContent, ogImage, schem
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${fullTitle}</title>
-<meta name="description" content="${description}">
+<title>${escHtml(fullTitle)}</title>
+<meta name="description" content="${escAttr(description)}">
 <link rel="canonical" href="https://${site.domain}${canonicalPath}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${ogType || 'website'}">
 <meta property="og:site_name" content="${site.name}">
-<meta property="og:title" content="${fullTitle}">
-<meta property="og:description" content="${description}">
+<meta property="og:title" content="${escAttr(fullTitle)}">
+<meta property="og:description" content="${escAttr(description)}">
 <meta property="og:image" content="${ogImg}">
 <meta property="og:url" content="https://${site.domain}${canonicalPath}">
 <meta name="twitter:card" content="summary_large_image">
@@ -258,8 +357,8 @@ function blogCard(p) {
     <div class="card-media">${img(p.image || `blog-${p.slug}.jpg`, p.title)}</div>
     <div class="card-body">
       <span class="tag">${p.category}</span>
-      <h3 style="margin-top:12px;">${p.title}</h3>
-      <p>${p.description}</p>
+      <h3 style="margin-top:12px;">${escHtml(p.title)}</h3>
+      <p>${escHtml(p.description)}</p>
       <span class="card-link">Read the article</span>
     </div>
   </a>`;
@@ -592,14 +691,16 @@ ${heroSection({
     </div>
   </div>
 </section>
-${idealIndustries.length ? `<section>
+${(idealIndustries.length || combos.some((c) => c.service.slug === s.slug)) ? `<section>
   <div class="container">
     <div class="section-head left">
-      <div class="eyebrow">Great Fit For</div>
-      <h2>Industries where this service pays off fastest</h2>
+      <div class="eyebrow">By Trade</div>
+      <h2>${s.shortName} for your industry</h2>
     </div>
     <div class="chip-grid">
-      ${idealIndustries.map((i) => `<a href="/industries/${i.slug}/" class="chip">${i.name}</a>`).join('\n      ')}
+      ${(() => { const list = combos.filter((c) => c.service.slug === s.slug); return list.length
+        ? list.map((c) => `<a href="${c.path}" class="chip">${c.industry.name}</a>`).join('\n      ')
+        : idealIndustries.map((i) => `<a href="/industries/${i.slug}/" class="chip">${i.name}</a>`).join('\n      '); })()}
     </div>
   </div>
 </section>` : ''}
@@ -728,10 +829,19 @@ ${relServices.length ? `<section>
       <h2>What we'd typically start with</h2>
     </div>
     <div class="grid grid-3">
-      ${relServices.map(serviceCard).join('\n      ')}
+      ${relServices.map((s) => { const c = comboFor(i.slug, s.slug); return c ? comboCard(c) : serviceCard(s); }).join('\n      ')}
     </div>
   </div>
 </section>` : ''}
+${(() => { const posts = relatedPosts({ services: i.relevantServices, industries: [i.slug] }); return posts.length ? `<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Guides</div>
+      <h2>Articles for ${i.name.toLowerCase()} businesses</h2>
+    </div>
+    <div class="grid grid-3">${posts.map(blogCard).join('')}</div>
+  </div>
+</section>` : ''; })()}
 ${ctaBanner({ title: `Run a ${i.name.toLowerCase()} business?`, text: `Book a free consult and we'll show you exactly how this applies to your business.` })}
 `;
   write(`industries/${i.slug}/index.html`, layout({
@@ -970,19 +1080,23 @@ function buildBlogPost(p) {
   const image = p.image || `blog-${p.slug}.jpg`;
   const relServices = (p.relatedServices || []).map((slug) => serviceBySlug[slug]).filter(Boolean);
   const relIndustries = (p.relatedIndustries || []).map((slug) => industryBySlug[slug]).filter(Boolean);
+  const playbooks = [];
+  relIndustries.forEach((i) => relServices.forEach((sv) => { const c = comboFor(i.slug, sv.slug); if (c) playbooks.push(c); }));
+  const more = relatedPosts({ services: p.relatedServices, industries: p.relatedIndustries, exclude: p.slug });
+  const dateLine = p.updated && p.updated !== p.date ? `Updated ${fmtDate(p.updated)}` : fmtDate(p.date);
   const body = `
 ${heroSection({
   eyebrow: p.category,
-  title: p.title,
+  title: escHtml(p.title),
   image,
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / <a href="/blog/">Blog</a> / ${p.category}`,
 })}
 <section>
   <div class="container article-wrap">
-    <div class="blog-meta">${fmtDate(p.date)} · ${p.category}</div>
+    <div class="blog-meta">${dateLine} · ${p.category}</div>
     <div class="article-body">
-      ${renderBlogBody(p.body)}
+      ${p.md != null ? renderMd(p.md) : renderBlogBody(p.body)}
     </div>
     ${(relServices.length || relIndustries.length) ? `<hr class="divider">
     <div class="chip-grid">
@@ -991,6 +1105,25 @@ ${heroSection({
     </div>` : ''}
   </div>
 </section>
+${faqSection(p.faq)}
+${playbooks.length ? `<section>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Playbooks</div>
+      <h2>How this works in your trade</h2>
+    </div>
+    <div class="grid grid-3">${playbooks.slice(0, 3).map((c) => comboCard(c, true)).join('')}</div>
+  </div>
+</section>` : ''}
+${more.length ? `<section${playbooks.length ? ' class="bg-paper"' : ''}>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Keep reading</div>
+      <h2>Related articles</h2>
+    </div>
+    <div class="grid grid-3">${more.map(blogCard).join('')}</div>
+  </div>
+</section>` : ''}
 ${ctaBanner({ title: 'Want this working for your business?', text: 'Book a free consult and we\'ll show you where to start.' })}
 `;
   const articleSchema = {
@@ -999,7 +1132,7 @@ ${ctaBanner({ title: 'Want this working for your business?', text: 'Book a free 
     headline: p.title,
     description: p.description,
     datePublished: p.date,
-    dateModified: p.date,
+    dateModified: p.updated || p.date,
     author: { '@type': 'Organization', name: site.name },
     publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: `https://${site.domain}/images/logo-square-512.png` } },
     image: `https://${site.domain}/images/${image}`,
@@ -1016,7 +1149,89 @@ ${ctaBanner({ title: 'Want this working for your business?', text: 'Book a free 
     canonicalPath: `/blog/${p.slug}/`,
     bodyContent: body,
     ogImage: image,
-    schemas: [articleSchema, crumbs],
+    ogType: 'article',
+    schemas: [articleSchema, crumbs, faqSchemaFor(p.faq)].filter(Boolean),
+  }));
+}
+
+function buildIndustryService(c) {
+  const i = c.industry; const sv = c.service;
+  const siblings = combos.filter((x) => x.industry.slug === i.slug && x !== c);
+  const sameService = combos.filter((x) => x.service.slug === sv.slug && x !== c);
+  const posts = relatedPosts({ services: [sv.slug], industries: [i.slug] });
+  const body = `
+${heroSection({
+  eyebrow: `${i.name} · ${sv.shortName}`,
+  title: escHtml(c.title),
+  lede: escHtml(c.intro || c.description),
+  image: i.image,
+  narrow: true,
+  breadcrumb: `<a href="/">Home</a> / <a href="/industries/">Industries</a> / <a href="/industries/${i.slug}/">${i.name}</a> / ${sv.shortName}`,
+})}
+<section>
+  <div class="container article-wrap">
+    <div class="article-body">
+      ${renderMd(c.md)}
+    </div>
+    <div class="cta-row" style="margin-top:28px;">
+      <a href="/contact/" class="btn btn-primary">Book a Free Consult</a>
+      <a href="/services/${sv.slug}/" class="btn btn-outline-dark">About ${sv.shortName}</a>
+    </div>
+  </div>
+</section>
+${faqSection(c.faq)}
+${siblings.length ? `<section>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">More for ${i.name.toLowerCase()}</div>
+      <h2>Other ways we help ${i.name.toLowerCase()} businesses</h2>
+    </div>
+    <div class="grid grid-3">${siblings.map(comboCard).join('')}</div>
+  </div>
+</section>` : ''}
+${posts.length ? `<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Guides</div>
+      <h2>Related articles</h2>
+    </div>
+    <div class="grid grid-3">${posts.map(blogCard).join('')}</div>
+  </div>
+</section>` : ''}
+${sameService.length ? `<section>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">${sv.shortName}</div>
+      <h2>${sv.shortName} for other trades</h2>
+    </div>
+    <div class="chip-grid">${sameService.map((x) => `<a href="${x.path}" class="chip">${x.industry.name}</a>`).join('')}</div>
+  </div>
+</section>` : ''}
+${ctaBanner({ title: `Run a ${i.name.toLowerCase()} business?`, text: `Book a free consult and we'll map out what ${sv.shortName} would look like for you.` })}
+`;
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: sv.name,
+    name: c.title,
+    description: c.description,
+    audience: { '@type': 'BusinessAudience', name: `${i.name} businesses` },
+    provider: { '@type': 'ProfessionalService', name: site.name, telephone: site.phone, url: `https://${site.domain}/` },
+    areaServed: site.region,
+    url: `https://${site.domain}${c.path}`,
+  };
+  write(`industries/${i.slug}/${sv.slug}/index.html`, layout({
+    title: c.title,
+    description: c.description,
+    canonicalPath: c.path,
+    bodyContent: body,
+    ogImage: i.image,
+    schemas: [serviceSchema, breadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Industries', path: '/industries/' },
+      { name: i.name, path: `/industries/${i.slug}/` },
+      { name: sv.shortName, path: c.path },
+    ]), faqSchemaFor(c.faq)].filter(Boolean),
   }));
 }
 
@@ -1133,6 +1348,7 @@ function buildSitemap() {
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
   towns.forEach((t) => services.forEach((s) => urls.push(`/locations/${t.slug}/${s.slug}/`)));
+  combos.forEach((c) => urls.push(c.path));
   blog.forEach((p) => urls.push(`/blog/${p.slug}/`));
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -1197,6 +1413,7 @@ function run() {
   services.forEach(buildServiceDetail);
   buildIndustriesIndex();
   industries.forEach(buildIndustryDetail);
+  combos.forEach(buildIndustryService);
   buildLocationsIndex();
   towns.forEach(buildLocationDetail);
   towns.forEach((t) => services.forEach((s) => buildLocationServiceDetail(t, s)));
@@ -1207,7 +1424,7 @@ function run() {
   buildSitemap();
   buildJs();
 
-  const pageCount = 8 + services.length + industries.length + towns.length + blog.length + (towns.length * services.length);
+  const pageCount = 8 + services.length + industries.length + towns.length + blog.length + combos.length + (towns.length * services.length);
   console.log(`[generate-site] Built ${pageCount} pages into /public`);
 }
 
