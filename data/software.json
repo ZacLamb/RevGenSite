@@ -1,0 +1,70 @@
+{
+  "note": "RGS Tools: the GoHighLevel software line. Names, feature counts and prices mirror the tools hub (src/tools.js in MasterGHLToolset). Landing URLs switch to revenuegeneratingsolutions.com subdomains after the domain move.",
+  "bundle": {
+    "name": "All Tools Bundle",
+    "monthly": 149,
+    "trialDays": 7
+  },
+  "tools": [
+    {
+      "slug": "field-finder",
+      "name": "Field Finder",
+      "features": 5,
+      "monthly": 29,
+      "icon": "search",
+      "grad": "linear-gradient(180deg,#3B8CFF,#0A64FF)",
+      "tagline": "Every custom field key, merge tag and custom value in any sub-account, searchable, comparable and exportable.",
+      "url": "https://fields.yourbizzassist.co/"
+    },
+    {
+      "slug": "field-builder",
+      "name": "Sub-Account Manager",
+      "features": 8,
+      "monthly": 49,
+      "icon": "list",
+      "grad": "linear-gradient(180deg,#8B7CFF,#5E4BF2)",
+      "tagline": "Set up and run sub-accounts in bulk: fields, folders, dropdowns, users, permissions, media and workflows.",
+      "url": "https://builder.yourbizzassist.co/"
+    },
+    {
+      "slug": "blast-tools",
+      "name": "Blast Follow-Up",
+      "features": 5,
+      "monthly": 39,
+      "icon": "message",
+      "grad": "linear-gradient(180deg,#3DDC84,#1DB45F)",
+      "tagline": "Find everyone who never replied to your last SMS blast and tag them for a resend, automatically every morning.",
+      "url": "https://blast.yourbizzassist.co/"
+    },
+    {
+      "slug": "message-exporter",
+      "name": "Conversation Exporter",
+      "features": 4,
+      "monthly": 67,
+      "icon": "download",
+      "grad": "linear-gradient(180deg,#FFA94D,#FF7A1A)",
+      "tagline": "Export calls, SMS and email history to CSV, with call recording links that actually play.",
+      "url": "https://export.yourbizzassist.co/"
+    },
+    {
+      "slug": "data-vault",
+      "name": "Backup & Insights",
+      "features": 8,
+      "monthly": 99,
+      "icon": "database",
+      "grad": "linear-gradient(180deg,#8E9AAF,#5F6B80)",
+      "tagline": "Back up every file GHL's export leaves behind, then search it, report on usage and move it between sub-accounts.",
+      "url": "https://vault.yourbizzassist.co/"
+    },
+    {
+      "slug": "power-ups",
+      "name": "Power-Ups",
+      "features": 4,
+      "monthly": 19,
+      "icon": "sparkles",
+      "grad": "linear-gradient(180deg,#FF6FA8,#F2397D)",
+      "tagline": "Contact Peek, File Preview, per-sub-account Dark Mode and Duplicate Contact, right inside GHL.",
+      "url": "/features#power-ups"
+    }
+  ]
+}

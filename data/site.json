@@ -3,7 +3,7 @@
   "shortName": "RGS",
   "domain": "revenuegeneratingsolutions.com",
   "tagline": "We Help You Make More Revenue. Period.",
-  "subTagline": "AI, CRM, custom software, websites, and marketing — built for local service businesses that want to grow.",
+  "subTagline": "AI, CRM, custom software, websites, and marketing \u2014 built for local service businesses that want to grow.",
   "phone": "(617) 877-5608",
   "email": "hello@revenuegeneratingsolutions.com",
   "address": {
@@ -29,17 +29,52 @@
     "linkedin": "https://linkedin.com/company/revenuegeneratingsolutions"
   },
   "nav": [
-    { "label": "Services", "href": "/services/" },
-    { "label": "Industries", "href": "/industries/" },
-    { "label": "Locations", "href": "/locations/" },
-    { "label": "Blog", "href": "/blog/" },
-    { "label": "About", "href": "/about/" },
-    { "label": "Contact", "href": "/contact/" }
+    {
+      "label": "Services",
+      "href": "/services/"
+    },
+    {
+      "label": "Industries",
+      "href": "/industries/"
+    },
+    {
+      "label": "Locations",
+      "href": "/locations/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "For Agencies",
+      "href": "/software/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
   ],
   "stats": [
-    { "value": "5", "label": "Core Services Under One Roof" },
-    { "value": "13", "label": "Trades & Industries Served" },
-    { "value": "100%", "label": "Built for Local Service Businesses" },
-    { "value": "1", "label": "Team That Builds It All — No Handoffs" }
-  ]
+    {
+      "value": "5",
+      "label": "Core Services Under One Roof"
+    },
+    {
+      "value": "13",
+      "label": "Trades & Industries Served"
+    },
+    {
+      "value": "100%",
+      "label": "Built for Local Service Businesses"
+    },
+    {
+      "value": "1",
+      "label": "Team That Builds It All \u2014 No Handoffs"
+    }
+  ],
+  "toolsUrl": "https://app.yourbizzassist.co"
 }
