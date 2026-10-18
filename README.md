@@ -85,3 +85,18 @@ Articles and industry × service pages are Markdown files with YAML front matter
 The rules for writing them (facts you may use, voice, front matter, allowed links) are in `content/CONTENT-SPEC.md`. To add one, add a file through GitHub. Railway rebuilds the site on deploy. Before opening a PR, run `npm run check`: it builds the site and flags missing fields, broken internal links, banned hype words and unsourced statistics.
 
 Related articles, "playbook" cards on industry and service pages, FAQ schema and the sitemap are all generated automatically from the front matter.
+
+## Daily article (automatic)
+
+`.github/workflows/daily-article.yml` runs every morning at about 8:15am Boston time:
+
+1. `scripts/auto-article.js` picks a topic the blog hasn't covered (favoring the least-covered trades), and Claude researches and writes it following `content/CONTENT-SPEC.md`.
+2. `npm run check` builds the site and checks the new post.
+3. If the check passes, the post is committed to `main` and Railway redeploys. If it fails, the job opens a pull request with the problems listed, and nothing goes live.
+
+**Setup:** add the repository secret `ANTHROPIC_API_KEY` under Settings › Secrets and variables › Actions.
+
+**Controls:**
+- **Pause:** Actions › Daily article › "…" › Disable workflow.
+- **Write one now:** Actions › Daily article › Run workflow. You can type a topic.
+- **Take a post down:** delete its file in `content/blog/`.

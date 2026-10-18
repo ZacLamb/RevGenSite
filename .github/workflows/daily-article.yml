@@ -1,0 +1,88 @@
+# Writes one new blog article every morning with Claude (scripts/auto-article.js), checks it with
+# `npm run check`, then commits it to main so Railway redeploys the site. If the check finds a
+# problem, it opens a pull request instead so nothing broken goes live.
+#
+# Setup: add the repository secret ANTHROPIC_API_KEY (Settings › Secrets and variables › Actions).
+# Optional repository variable ANTHROPIC_MODEL. To pause it: Actions › Daily article › "..." › Disable.
+# To run one now: Actions › Daily article › Run workflow (you can give it a topic).
+name: Daily article
+
+on:
+  schedule:
+    - cron: '17 12 * * *' # 8:17am Boston time in summer (7:17am in winter)
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Optional: write about this topic instead of picking one'
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-article
+  cancel-in-progress: false
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci --ignore-scripts
+
+      - name: Write the article
+        id: write
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          TOPIC: ${{ github.event.inputs.topic }}
+        run: node scripts/auto-article.js
+
+      - name: Build and check
+        id: check
+        run: |
+          if npm run check > check.log 2>&1; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+          cat check.log
+
+      - name: Publish to main
+        if: steps.check.outputs.ok == 'true'
+        env:
+          TITLE: ${{ steps.write.outputs.title }}
+        run: |
+          git config user.name "RGS daily article"
+          git config user.email "actions@users.noreply.github.com"
+          git add content public
+          git commit -m "Daily article: $TITLE"
+          git push origin HEAD:main
+
+      - name: Open a PR for review instead
+        if: steps.check.outputs.ok != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ steps.write.outputs.title }}
+          SLUG: ${{ steps.write.outputs.slug }}
+        run: |
+          BR="daily-article/$SLUG"
+          git config user.name "RGS daily article"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$BR"
+          git add content public
+          git commit -m "Daily article (needs review): $TITLE"
+          git push origin "$BR"
+          {
+            echo "Today's article didn't pass \`npm run check\`, so it wasn't published. Fix the issues below (or close this PR to skip it)."
+            echo
+            echo '```'
+            grep -A40 -E "^(Errors|Warnings)" check.log | head -60
+            echo '```'
+          } > pr.md
+          gh pr create --base main --head "$BR" --title "Daily article needs review: $TITLE" --body-file pr.md
