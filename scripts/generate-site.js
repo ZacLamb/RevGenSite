@@ -724,6 +724,8 @@ ${s.slug === 'custom-tool-building' ? `<section>
     </div>
     <div class="grid grid-3">${software.tools.slice(0, 3).map(toolCard).join('')}</div>
     <div style="margin-top:28px;"><a href="/software/" class="btn btn-outline-dark">See all ${softwareTotals().tools} tools</a></div>
+    <p style="margin-top:28px;"><strong>Agencies on GoHighLevel:</strong> request a custom HighLevel tool. Tell us what it should do and you get a fixed quote after a free scoping call.</p>
+    <div style="margin-top:14px;"><a href="https://app.revenuegeneratingsolutions.com/custom-tools" class="btn btn-primary">Request a custom HighLevel tool</a></div>
   </div>
 </section>` : ''}
 ${ctaBanner({ title: `Ready to talk ${s.shortName}?`, text: `Book a free consult and we'll show you exactly what ${s.shortName} would look like for your business.` })}
