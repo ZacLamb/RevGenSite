@@ -20,6 +20,7 @@ const services = JSON.parse(fs.readFileSync(path.join(DATA, 'services.json'), 'u
 const industries = JSON.parse(fs.readFileSync(path.join(DATA, 'industries.json'), 'utf8'));
 const towns = JSON.parse(fs.readFileSync(path.join(DATA, 'towns.json'), 'utf8'));
 const blog = JSON.parse(fs.readFileSync(path.join(DATA, 'blog.json'), 'utf8'));
+const software = JSON.parse(fs.readFileSync(path.join(DATA, 'software.json'), 'utf8'));
 
 const serviceBySlug = Object.fromEntries(services.map((s) => [s.slug, s]));
 const industryBySlug = Object.fromEntries(industries.map((i) => [i.slug, i]));
@@ -172,6 +173,7 @@ function footer() {
         <h4>Company</h4>
         <ul>
           <li><a href="/about/">About</a></li>
+          <li><a href="/software/">RGS Tools for agencies</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/contact/">Contact</a></li>
           <li><a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a></li>
@@ -263,6 +265,32 @@ function blogCard(p) {
   </a>`;
 }
 
+
+// ---------- RGS Tools (software for GoHighLevel agencies) ----------
+const TOOL_ICON = {
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  list: '<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',
+  message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  download: '<path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>',
+  database: '<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
+  sparkles: '<path d="M12 3 13.9 8.1 19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/>',
+};
+const toolsUrl = (p = '') => site.toolsUrl.replace(/\/$/, '') + p;
+const toolHref = (t) => (/^https?:/.test(t.url) ? t.url : toolsUrl(t.url));
+const toolGlyph = (t, cls = '') => `<span class="tool-gl ${cls}" style="background:${t.grad}"><svg viewBox="0 0 24 24" aria-hidden="true">${TOOL_ICON[t.icon]}</svg></span>`;
+const softwareTotals = () => ({ tools: software.tools.length, features: software.tools.reduce((n, t) => n + t.features, 0), sum: software.tools.reduce((n, t) => n + t.monthly, 0) });
+function toolCard(t) {
+  return `<a href="${toolHref(t)}" class="card tool-card">
+    <div class="card-body">
+      ${toolGlyph(t)}
+      <h3>${t.name}</h3>
+      <span class="tool-meta">${t.features} features · $${t.monthly}/month</span>
+      <p>${t.tagline}</p>
+      <span class="card-link">See ${t.name}</span>
+    </div>
+  </a>`;
+}
+
 // ---------- pages ----------
 
 function buildHome() {
@@ -293,6 +321,20 @@ ${heroSection({
     </div>
   </div>
 </section>
+
+${(() => { const T = softwareTotals(); return `<section class="software-band">
+  <div class="container">
+    <div class="software-band-inner">
+      <div>
+        <div class="eyebrow" style="color:#7DB2FF;">For GoHighLevel agencies · RGS Tools</div>
+        <h2>We built our own tools to run our agency. Now you can use them.</h2>
+        <p>${T.tools} tools and ${T.features} features for agencies on GoHighLevel: custom field lookup, bulk sub-account setup, SMS blast follow-up, conversation exports, backups and in-app upgrades. Priced per agency, with unlimited sub-accounts.</p>
+        <div class="cta-row"><a href="/software/" class="btn btn-primary">Explore RGS Tools</a><a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-outline">Start a ${software.bundle.trialDays}-day free trial</a></div>
+      </div>
+      <div class="software-icons">${software.tools.map((t) => `<a href="${toolHref(t)}" title="${t.name}">${toolGlyph(t, 'lg')}<span>${t.name}</span></a>`).join('')}</div>
+    </div>
+  </div>
+</section>`; })()}
 
 <section class="bg-paper">
   <div class="container">
@@ -572,6 +614,17 @@ ${idealIndustries.length ? `<section>
     </div>
   </div>
 </section>
+${s.slug === 'custom-tool-building' ? `<section>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Proof, not promises</div>
+      <h2>See what we build: RGS Tools</h2>
+      <p>The same team that builds custom tools for clients built a ${softwareTotals().tools}-tool suite for running GoHighLevel agencies, and uses it every day. If you'd rather start from something that already exists, it's available on its own.</p>
+    </div>
+    <div class="grid grid-3">${software.tools.slice(0, 3).map(toolCard).join('')}</div>
+    <div style="margin-top:28px;"><a href="/software/" class="btn btn-outline-dark">See all ${softwareTotals().tools} tools</a></div>
+  </div>
+</section>` : ''}
 ${ctaBanner({ title: `Ready to talk ${s.shortName}?`, text: `Book a free consult and we'll show you exactly what ${s.shortName} would look like for your business.` })}
 `;
   const serviceSchema = {
@@ -967,6 +1020,95 @@ ${ctaBanner({ title: 'Want this working for your business?', text: 'Book a free 
   }));
 }
 
+
+function buildSoftware() {
+  const T = softwareTotals();
+  const body = `
+${heroSection({
+  eyebrow: 'RGS Tools · Software for GoHighLevel agencies',
+  title: 'Software we built for our own agency. Now it runs yours.',
+  lede: `${T.tools} tools and ${T.features} features for agencies running GoHighLevel. Each tool stands alone, one login covers all of them, and pricing is per agency with unlimited sub-accounts.`,
+  image: 'service-custom-tools.jpg',
+  narrow: true,
+  breadcrumb: '<a href="/">Home</a> / For Agencies',
+})}
+<div class="container">
+  <div class="cta-row" style="margin-top:-48px;position:relative;z-index:2;background:#fff;padding:20px 24px;border-radius:16px;box-shadow:0 20px 50px -20px rgba(10,26,47,.2);">
+    <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialDays}-day free trial</a>
+    <a href="${toolsUrl('/features')}" class="btn btn-outline-dark">See all ${T.features} features</a>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">The tools</div>
+      <h2>${T.tools} tools. ${T.features} features. One login.</h2>
+      <p>Buy only the one you need, or get every tool with the bundle. Everything connects to your whole agency in one step.</p>
+    </div>
+    <div class="grid grid-3">
+      ${software.tools.map(toolCard).join('\n      ')}
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="eyebrow">Why we built them</div>
+        <h2>Every tool started as a problem in our own sub-accounts</h2>
+        <p>We run GoHighLevel for our clients every day. The same jobs kept eating hours: hunting for field keys, building sub-accounts by hand, chasing people who never replied to a text blast, exporting call recordings, and backing up the files GHL's export leaves behind. So we built tools for each one, used them in production, and then made them available to other agencies.</p>
+        <div class="feature-list" style="margin-top:24px;">
+          <div class="feature-item"><span class="feature-icon">✓</span><p>One account for every tool, with one connection for your whole agency</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p>Per-agency pricing: the price doesn't change at 3 sub-accounts or 300</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p>${software.bundle.trialDays}-day free trial and cancel any time</p></div>
+        </div>
+      </div>
+      <div class="software-icons light">${software.tools.map((t) => `<a href="${toolHref(t)}" title="${t.name}">${toolGlyph(t, 'lg')}<span>${t.name}</span></a>`).join('')}</div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Every tool for $${software.bundle.monthly}/month</h2>
+      <p>All ${T.tools} tools and everything we release next, instead of $${T.sum}/month bought one by one. ${software.bundle.trialDays} days free.</p>
+      <div class="cta-row">
+        <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start the bundle free</a>
+        <a href="${toolsUrl('/blog')}" class="btn btn-outline">Read the GoHighLevel guides</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Need something these don't do?</div>
+      <h2>We build custom tools too</h2>
+      <p>RGS Tools came out of our <a href="/services/custom-tool-building/">custom tool building</a> work. If your agency or business needs something specific, we can build it.</p>
+    </div>
+    <div style="text-align:center;"><a href="/services/custom-tool-building/" class="btn btn-outline-dark">Custom Tool Building</a></div>
+  </div>
+</section>
+`;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'RGS Tools for GoHighLevel agencies',
+    itemListElement: software.tools.map((t, i) => ({
+      '@type': 'ListItem', position: i + 1,
+      item: { '@type': 'SoftwareApplication', name: `RGS ${t.name}`, applicationCategory: 'BusinessApplication', operatingSystem: 'Web', description: t.tagline, url: toolHref(t), offers: { '@type': 'Offer', price: String(t.monthly), priceCurrency: 'USD' } },
+    })),
+  };
+  write('software/index.html', layout({
+    title: 'RGS Tools: Software for GoHighLevel Agencies',
+    description: `${T.tools} tools and ${T.features} features for GoHighLevel agencies, built and used by Revenue Generating Solutions. Per agency, unlimited sub-accounts, ${software.bundle.trialDays}-day free trial.`,
+    canonicalPath: '/software/',
+    bodyContent: body,
+    ogImage: 'service-custom-tools.jpg',
+    schemas: [schema, breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'For Agencies', path: '/software/' }])],
+  }));
+}
+
 function build404() {
   const body = `
 <section style="padding:140px 0;text-align:center;">
@@ -986,7 +1128,7 @@ function build404() {
 }
 
 function buildSitemap() {
-  const urls = ['/', '/about/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/'];
+  const urls = ['/', '/about/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/'];
   services.forEach((s) => urls.push(`/services/${s.slug}/`));
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
@@ -1060,11 +1202,12 @@ function run() {
   towns.forEach((t) => services.forEach((s) => buildLocationServiceDetail(t, s)));
   buildBlogIndex();
   blog.forEach(buildBlogPost);
+  buildSoftware();
   build404();
   buildSitemap();
   buildJs();
 
-  const pageCount = 7 + services.length + industries.length + towns.length + blog.length + (towns.length * services.length);
+  const pageCount = 8 + services.length + industries.length + towns.length + blog.length + (towns.length * services.length);
   console.log(`[generate-site] Built ${pageCount} pages into /public`);
 }
 

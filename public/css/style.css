@@ -189,7 +189,7 @@ p { margin: 0 0 1em; color: var(--gray); }
   .brand span { font-size: 15px; }
   .site-header .header-actions .btn { padding: 9px 14px !important; font-size: 12.5px !important; }
 }
-@media (min-width: 901px) {
+@media (min-width: 1181px) {
   .mobile-nav { display: none !important; }
 }
 
@@ -410,3 +410,29 @@ section.tight { padding: 56px 0; }
 .tag { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(11,95,255,0.08); color: var(--primary); font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
 .divider { height: 1px; background: var(--gray-light); border: none; margin: 32px 0; }
 .mobile-menu-note { display: none; }
+
+/* ---------- RGS Tools (software for GoHighLevel agencies) ---------- */
+.tool-gl { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 13px; color: #fff; box-shadow: inset 0 .5px 0 rgba(255,255,255,.4), 0 8px 18px -8px rgba(10,26,47,.45); flex: none; }
+.tool-gl svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tool-gl.lg { width: 60px; height: 60px; border-radius: 16px; } .tool-gl.lg svg { width: 30px; height: 30px; }
+.tool-card .card-body .tool-gl { margin-bottom: 16px; }
+.tool-card .tool-meta { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+.software-band { background: var(--ink); color: #fff; background-image: radial-gradient(700px 340px at 100% 0%, rgba(11,95,255,.35), transparent 60%), radial-gradient(600px 300px at 0% 100%, rgba(0,194,184,.22), transparent 60%); }
+.software-band h2 { color: #fff; } .software-band p { color: #C3CEE0; }
+.software-band-inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.software-band .cta-row { margin-top: 26px; }
+.software-icons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 14px; text-align: center; }
+.software-icons a { display: flex; flex-direction: column; align-items: center; gap: 10px; color: #fff; font-size: 13.5px; font-weight: 600; transition: transform .15s; }
+.software-icons a:hover { transform: translateY(-3px); }
+.software-icons.light { background: #fff; border-radius: 20px; padding: 30px 20px; box-shadow: var(--shadow); }
+.software-icons.light a { color: var(--ink); }
+@media (max-width: 900px) { .software-band-inner { grid-template-columns: 1fr; } }
+/* Header with seven menu items: nothing wraps or overlaps. The phone number drops out first,
+   then the menu moves into the hamburger below 1180px. */
+.site-header .container { gap: 18px; }
+@media (min-width: 701px) { .site-header .brand { flex-shrink: 0; } .site-header .brand > span { white-space: nowrap; } .header-actions .btn { white-space: nowrap; } }
+.main-nav a, .header-phone { white-space: nowrap; }
+@media (max-width: 1500px) { .site-header .brand small { display: none; } }
+@media (max-width: 1440px) { .header-phone { display: none; } .main-nav a { padding: 10px 11px; } }
+@media (max-width: 1180px) { .main-nav { display: none; } .nav-toggle { display: flex; } }
+@media (min-width: 901px) and (max-width: 1180px) { .site-header.nav-open .mobile-nav { display: flex !important; } }
