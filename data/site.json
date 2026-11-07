@@ -76,5 +76,10 @@
       "label": "Team That Builds It All \u2014 No Handoffs"
     }
   ],
-  "toolsUrl": "https://app.revenuegeneratingsolutions.com"
+  "toolsUrl": "https://app.revenuegeneratingsolutions.com",
+  "booking": {
+    "calendarId": "PO0SbPb2KRKfRn8wf3BD",
+    "minutes": 15,
+    "path": "/book/"
+  }
 }

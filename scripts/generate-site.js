@@ -229,7 +229,7 @@ function header() {
     </nav>
     <div class="header-actions">
       <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="header-phone">${site.phone}</a>
-      <a href="/contact/" class="btn btn-primary" style="padding:11px 20px;font-size:14px;">Get a Free Consult</a>
+      <a href="/book/" class="btn btn-primary" style="padding:11px 20px;font-size:14px;">Book a Free Consult</a>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
@@ -238,7 +238,7 @@ function header() {
   <nav id="mobile-nav" class="mobile-nav">
     ${site.nav.map((n) => `<a href="${n.href}">${n.label}</a>`).join('\n    ')}
     <a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a>
-    <a href="/contact/" class="btn btn-primary">Get a Free Consult</a>
+    <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
   </nav>
 </header>`;
 }
@@ -311,7 +311,7 @@ function ctaBanner({ title, text, primaryLabel, primaryHref }) {
       <h2>${title}</h2>
       <p>${text}</p>
       <div class="cta-row">
-        <a href="${primaryHref || '/contact/'}" class="btn btn-primary">${primaryLabel || 'Book a Free Consult'}</a>
+        <a href="${primaryHref || '/book/'}" class="btn btn-primary">${primaryLabel || 'Book a Free Consult'}</a>
         <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="btn btn-outline">Call ${site.phone}</a>
       </div>
     </div>
@@ -403,7 +403,7 @@ ${heroSection({
 })}
 <div class="container">
   <div class="cta-row" style="margin-top:-48px;position:relative;z-index:2;background:#fff;padding:20px 24px;border-radius:16px;box-shadow:0 20px 50px -20px rgba(10,26,47,.2);">
-    <a href="/contact/" class="btn btn-primary">Get a Free Consult</a>
+    <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
     <a href="/services/" class="btn btn-outline-dark">See All Services</a>
   </div>
 </div>
@@ -580,6 +580,7 @@ ${heroSection({
       <div>
         <h2>Get a free consult</h2>
         <p>Fill out the form and we'll reach out to schedule a short call — no pressure, no generic sales pitch, just a real look at your website, CRM, and marketing and where the fastest wins are.</p>
+        <p style="margin-top:12px;"><strong>Rather skip the back-and-forth?</strong> <a href="/book/">Pick a time on our calendar</a> and you're booked instantly.</p>
         <form id="contact-form" style="display:grid;gap:16px;margin-top:24px;">
           <div>
             <label style="font-weight:600;font-size:14px;display:block;margin-bottom:6px;">Name</label>
@@ -625,6 +626,51 @@ ${heroSection({
     title: 'Contact',
     description: `Get in touch with ${site.name} — call ${site.phone}, email ${site.email}, or send us a message to book a free consult.`,
     canonicalPath: '/contact/',
+    bodyContent: body,
+  }));
+}
+
+// Booking page: the GoHighLevel calendar embedded on our own domain (data/site.json -> booking.calendarId).
+// Bookings land straight in the RGS sub-account's "RGS Booking Calendar".
+function buildBook() {
+  const b = site.booking || {};
+  const src = `https://api.leadconnectorhq.com/widget/booking/${b.calendarId}`;
+  const body = `
+${heroSection({
+  eyebrow: 'Book a Free Consult',
+  title: 'Pick a time that works for you',
+  lede: `A ${b.minutes || 15}-minute call with ${site.founder}. We'll look at your website, CRM and marketing and tell you where the fastest wins are. No pressure, no generic pitch.`,
+  image: 'hero-home.jpg',
+  narrow: true,
+})}
+<section>
+  <div class="container">
+    <div class="split" style="align-items:start;">
+      <div class="card" style="padding:8px;min-height:640px;">
+        <iframe src="${src}" title="Book a free consult with ${site.name}" style="width:100%;border:none;overflow:hidden;min-height:640px;" scrolling="no" id="${b.calendarId}_booking" allow="payment"></iframe>
+        <noscript><p style="padding:24px;">Open the calendar here: <a href="${src}">${src}</a></p></noscript>
+      </div>
+      <div>
+        <div class="card" style="padding:32px;">
+          <h3 style="margin-bottom:20px;">What happens on the call</h3>
+          <div class="feature-list">
+            <div class="feature-item"><span class="feature-icon">🔍</span><p>A quick look at how leads find you, and where they fall through the cracks</p></div>
+            <div class="feature-item"><span class="feature-icon">⚡</span><p>The two or three fixes that would bring in more revenue fastest</p></div>
+            <div class="feature-item"><span class="feature-icon">🧾</span><p>A straight answer on cost and timing if you want our help, and no follow-up pressure if you don't</p></div>
+          </div>
+          <hr class="divider">
+          <p style="font-size:14px;">No time that works? Call or text <a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a>, or <a href="/contact/">send us a message</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+`;
+  write('book/index.html', layout({
+    title: 'Book a Free Consult',
+    description: `Book a free ${b.minutes || 15}-minute consult with ${site.name}. Pick a time online and we'll look at your website, CRM and marketing together.`,
+    canonicalPath: '/book/',
     bodyContent: body,
   }));
 }
@@ -908,7 +954,7 @@ ${t.featuredWork ? `<section>
         <h2>The kind of work that actually moves the needle here</h2>
         <p>${t.featuredWork}</p>
         <div class="cta-row">
-          <a href="/contact/" class="btn btn-primary">Get a Free Consult</a>
+          <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
           <a href="/services/" class="btn btn-outline-dark">See Our Services</a>
         </div>
       </div>
@@ -1176,7 +1222,7 @@ ${heroSection({
       ${renderMd(c.md)}
     </div>
     <div class="cta-row" style="margin-top:28px;">
-      <a href="/contact/" class="btn btn-primary">Book a Free Consult</a>
+      <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
       <a href="/services/${sv.slug}/" class="btn btn-outline-dark">About ${sv.shortName}</a>
     </div>
   </div>
@@ -1345,7 +1391,7 @@ function build404() {
 }
 
 function buildSitemap() {
-  const urls = ['/', '/about/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/'];
+  const urls = ['/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/'];
   services.forEach((s) => urls.push(`/services/${s.slug}/`));
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
@@ -1411,6 +1457,7 @@ function run() {
   buildHome();
   buildAbout();
   buildContact();
+  buildBook();
   buildServicesIndex();
   services.forEach(buildServiceDetail);
   buildIndustriesIndex();
@@ -1426,7 +1473,7 @@ function run() {
   buildSitemap();
   buildJs();
 
-  const pageCount = 8 + services.length + industries.length + towns.length + blog.length + combos.length + (towns.length * services.length);
+  const pageCount = 9 + services.length + industries.length + towns.length + blog.length + combos.length + (towns.length * services.length);
   console.log(`[generate-site] Built ${pageCount} pages into /public`);
 }
 
