@@ -83,14 +83,14 @@
     "path": "/book/"
   },
   "book1": {
-    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/d0421679-9b20-46a6-8a8c-ab34aa157421.mp4",
-    "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/e9282b17-d82e-4198-b28a-3eccbd0ce102.jpg",
-    "seconds": 240,
-    "offerAt": 204,
+    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/c26eadf9-233b-46b7-ad95-4f2d43577db7.mp4",
+    "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/75ae0d84-4d5c-4487-985d-6467c8b62c51.jpg",
+    "seconds": 218,
+    "offerAt": 190,
     "chapters": [
       {
         "t": 0,
-        "title": "Why you feel behind"
+        "title": "Sound familiar?"
       },
       {
         "t": 53,
@@ -101,11 +101,11 @@
         "title": "The 4 money leaks"
       },
       {
-        "t": 158,
+        "t": 155,
         "title": "Your questions answered"
       },
       {
-        "t": 204,
+        "t": 190,
         "title": "Your free consult"
       }
     ]

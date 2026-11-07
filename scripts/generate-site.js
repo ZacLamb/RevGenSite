@@ -710,11 +710,11 @@ function buildBook1() {
   const cta = (label = 'Book My Free AI Consult') => `<a href="#book" class="btn btn-primary w1-cta">${label} &rarr;</a>`;
   const ticks = `<div class="w1-ticks"><span>&#10003; 100% free</span><span>&#10003; ${b.minutes || 15} minutes, on Zoom or phone</span><span>&#10003; No pitch, no obligation</span></div>`;
   const faq = [
-    { q: 'Is it actually free?', a: "Yes. No card, no catch. It's free this month because I want to see where AI is actually paying off for local businesses right now. If you want help putting it in place afterwards, we can talk about that. If not, you still leave with the answer." },
-    { q: "I'm not technical. Is this for me?", a: "Especially for you. You don't need to know what ChatGPT, agents or automations are. Tell me how your business runs and I'll tell you, in plain English, where AI fits and where it doesn't." },
+    { q: 'Is it actually free?', a: "Yes. No card, no catch. It's free this month because we want to show owners where AI actually pays off, before they spend a dollar on it. If you want help putting it in place afterwards, we can talk about that. If not, you still leave with the answer." },
+    { q: "I'm not technical. Is this for me?", a: "Especially for you. You don't need to know what ChatGPT, agents or automations are. Tell us how your business runs and we'll show you, in plain English, where AI fits and where it doesn't." },
     { q: 'What do I need to bring?', a: 'Nothing but 15 minutes. If you can, think about the one task that eats most of your week, or the leads you lose. That is usually where the money is.' },
-    { q: 'What if AI is not a fit for my business?', a: "Then I'll tell you. Straight up. You'll still leave knowing the one thing worth fixing first, AI or not." },
-    { q: 'Why only this month?', a: "Because each call is me, one-on-one, and I can only do so many. When the month's over, the free calls are over." },
+    { q: 'What if AI is not a fit for my business?', a: "Then we'll tell you. Straight up. You'll still leave knowing the one thing worth fixing first, AI or not." },
+    { q: 'Why only this month?', a: "Because every call is one-on-one, and we can only do so many. When the month's over, the free calls are over." },
   ];
   const body = `
 <style>
@@ -857,9 +857,9 @@ function buildBook1() {
 <section class="w1-sec alt">
   <div class="container w1-narrow">
     <div class="w1-promise">
-      <h2>My "Straight Answer" promise</h2>
-      <p>If AI isn't a fit for your business, I'll tell you. No upsell, no follow-up spam. You'll still walk away knowing the one thing worth fixing first.</p>
-      <p style="margin-top:14px;color:#FFD43B;font-weight:700;">&mdash; Zac, ${site.name}</p>
+      <h2>Our "Straight Answer" promise</h2>
+      <p>If AI isn't a fit for your business, we'll tell you. No upsell, no follow-up spam. You'll still walk away knowing the one thing worth fixing first.</p>
+      <p style="margin-top:14px;color:#FFD43B;font-weight:700;">&mdash; ${site.name}</p>
     </div>
   </div>
 </section>
@@ -876,7 +876,7 @@ function buildBook1() {
         <p>Free consults end when the month does:</p>
         <div class="w1-count" data-w1-count><div><b data-d>0</b><small>days</small></div><div><b data-h>0</b><small>hours</small></div><div><b data-m>0</b><small>min</small></div></div>
         <ul class="w1-pains" style="margin-bottom:20px;">
-          <li style="border-left-color:var(--accent);">${b.minutes || 15} minutes, one-on-one with Zac</li>
+          <li style="border-left-color:var(--accent);">${b.minutes || 15} minutes, one-on-one, Zoom or phone</li>
           <li style="border-left-color:var(--accent);">Your ONE highest-value AI opportunity</li>
           <li style="border-left-color:var(--accent);">A plain-English plan you can act on</li>
         </ul>
@@ -928,7 +928,7 @@ function buildBook1() {
 `;
   write('book-1/index.html', layout({
     title: 'Free Training: The 4 Money Leaks AI Fixes (+ Free 1-on-1 Consult)',
-    description: `Free ${mmss(v.seconds)} training: the 4 money leaks in every small business and how to find the ONE place AI pays you back. Then book a free one-on-one AI consult with Zac. This month only.`,
+    description: `Free ${mmss(v.seconds)} training: the 4 money leaks in every small business and how to find the ONE place AI pays you back. Then book a free one-on-one AI consult. This month only.`,
     canonicalPath: '/book-1/',
     bodyContent: body,
     ogImage: v.poster,
