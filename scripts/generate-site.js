@@ -732,6 +732,11 @@ function buildBook1() {
   .w1-play .disc::after { content: ''; border-left: 28px solid var(--ink); border-top: 17px solid transparent; border-bottom: 17px solid transparent; margin-left: 7px; }
   .w1-play span { font-weight: 800; font-size: 18px; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
   .w1-cta { font-size: 19px; padding: 20px 34px; margin-top: 30px; box-shadow: 0 18px 40px -10px rgba(11,95,255,.7); }
+  .w1-proof { max-width: 900px; margin: 34px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; overflow: hidden; }
+  .w1-proof > div { background: rgba(10,26,47,.92); padding: 18px 14px; }
+  .w1-proof b { display: block; font-size: 30px; color: #FFD43B; letter-spacing: -.02em; }
+  .w1-proof span { font-size: 13.5px; color: #C9D6EE; }
+  @media (max-width: 640px) { .w1-proof { grid-template-columns: 1fr; } }
   .w1-ticks { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 16px; font-size: 14px; font-weight: 600; color: #C9D6EE; }
   .w1-sec { padding: 72px 0; }
   .w1-sec.alt { background: var(--paper); }
@@ -783,7 +788,7 @@ function buildBook1() {
 <div class="w1-bar">&#128293; <b>Free training + free 1-on-1 AI consult</b> &middot; <span data-w1-left>this month only</span></div>
 <section class="w1-hero">
   <div class="container">
-    <span class="eyebrow-pill">&#9654; Free ${mmss(v.seconds)} Training &middot; For Business Owners</span>
+    <span class="eyebrow-pill">&#9654; Free ${Math.round((v.seconds||0)/60)}-Minute Training &middot; For Business Owners</span>
     <h1>The 4 money leaks in every small business, and how to find the <span class="hl">ONE place</span> AI pays you back</h1>
     <p class="sub">Feel like you're falling behind on AI, or have no clue where to start? Watch this short training, then book a free one-on-one call and we'll find yours together.</p>
     <div class="w1-video">
@@ -793,6 +798,11 @@ function buildBook1() {
     ${(v.chapters || []).length ? `<div class="w1-chap">${v.chapters.map((c) => `<button type="button" data-t="${c.t}"><b>${mmss(c.t)}</b>${c.title}</button>`).join('')}</div>` : ''}
     ${cta()}
     ${ticks}
+    <div class="w1-proof">
+      <div><b>240+</b><span>businesses run on our systems</span></div>
+      <div><b>$10Ks</b><span>in added revenue from our AI agents</span></div>
+      <div><b>Custom</b><span>invoicing, management &amp; local SEO builds</span></div>
+    </div>
   </div>
 </section>
 
