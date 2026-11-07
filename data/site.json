@@ -83,10 +83,10 @@
     "path": "/book/"
   },
   "book1": {
-    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/7a38e9ea-3d22-44e4-bf2f-9b3d023d9488.mp4",
-    "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/08c13bce-a824-4d40-97a7-fdadbc0f0708.jpg",
-    "seconds": 232,
-    "offerAt": 176,
+    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/96f05e0c-5ee9-4f3e-bb88-51f8d55c46ed.mp4",
+    "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/5be2ccc5-3115-45c7-9316-9409baf1aa2a.jpg",
+    "seconds": 214,
+    "offerAt": 162,
     "chapters": [
       {
         "t": 0,
@@ -101,11 +101,11 @@
         "title": "The 4 money leaks"
       },
       {
-        "t": 143,
+        "t": 131,
         "title": "Find your ONE place"
       },
       {
-        "t": 176,
+        "t": 162,
         "title": "Your free consult"
       }
     ]

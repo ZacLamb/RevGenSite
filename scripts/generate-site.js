@@ -849,7 +849,7 @@ function buildBook1() {
     <div class="w1-promise">
       <h2>My "Straight Answer" promise</h2>
       <p>If AI isn't a fit for your business, I'll tell you. No upsell, no follow-up spam. You'll still walk away knowing the one thing worth fixing first.</p>
-      <p style="margin-top:14px;color:#FFD43B;font-weight:700;">&mdash; ${site.founder}, ${site.name}</p>
+      <p style="margin-top:14px;color:#FFD43B;font-weight:700;">&mdash; Zac, ${site.name}</p>
     </div>
   </div>
 </section>
@@ -866,7 +866,7 @@ function buildBook1() {
         <p>Free consults end when the month does:</p>
         <div class="w1-count" data-w1-count><div><b data-d>0</b><small>days</small></div><div><b data-h>0</b><small>hours</small></div><div><b data-m>0</b><small>min</small></div></div>
         <ul class="w1-pains" style="margin-bottom:20px;">
-          <li style="border-left-color:var(--accent);">${b.minutes || 15} minutes, one-on-one with ${site.founder}</li>
+          <li style="border-left-color:var(--accent);">${b.minutes || 15} minutes, one-on-one with Zac</li>
           <li style="border-left-color:var(--accent);">Your ONE highest-value AI opportunity</li>
           <li style="border-left-color:var(--accent);">A plain-English plan you can act on</li>
         </ul>
@@ -918,7 +918,7 @@ function buildBook1() {
 `;
   write('book-1/index.html', layout({
     title: 'Free Training: The 4 Money Leaks AI Fixes (+ Free 1-on-1 Consult)',
-    description: `Free ${mmss(v.seconds)} training: the 4 money leaks in every small business and how to find the ONE place AI pays you back. Then book a free one-on-one AI consult with ${site.founder}. This month only.`,
+    description: `Free ${mmss(v.seconds)} training: the 4 money leaks in every small business and how to find the ONE place AI pays you back. Then book a free one-on-one AI consult with Zac. This month only.`,
     canonicalPath: '/book-1/',
     bodyContent: body,
     ogImage: v.poster,
