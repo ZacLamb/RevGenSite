@@ -81,5 +81,33 @@
     "calendarId": "PO0SbPb2KRKfRn8wf3BD",
     "minutes": 15,
     "path": "/book/"
+  },
+  "book1": {
+    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/d0421679-9b20-46a6-8a8c-ab34aa157421.mp4",
+    "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/e9282b17-d82e-4198-b28a-3eccbd0ce102.jpg",
+    "seconds": 240,
+    "offerAt": 204,
+    "chapters": [
+      {
+        "t": 0,
+        "title": "Why you feel behind"
+      },
+      {
+        "t": 53,
+        "title": "Old way vs. new way"
+      },
+      {
+        "t": 71,
+        "title": "The 4 money leaks"
+      },
+      {
+        "t": 158,
+        "title": "Your questions answered"
+      },
+      {
+        "t": 204,
+        "title": "Your free consult"
+      }
+    ]
   }
 }

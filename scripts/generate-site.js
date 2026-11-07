@@ -181,9 +181,9 @@ function breadcrumbSchema(items) {
   };
 }
 
-function layout({ title, description, canonicalPath, bodyContent, ogImage, schemas, ogType }) {
+function layout({ title, description, canonicalPath, bodyContent, ogImage, schemas, ogType, bare }) {
   const fullTitle = title ? `${title} | ${site.name}` : `${site.name} — ${site.tagline}`;
-  const ogImg = `https://${site.domain}/images/${ogImage || 'og-image.jpg'}`;
+  const ogImg = /^https?:/.test(ogImage || '') ? ogImage : `https://${site.domain}/images/${ogImage || 'og-image.jpg'}`;
   const allSchemas = [orgSchema(), ...(schemas || [])];
   return `<!doctype html>
 <html lang="en">
@@ -209,12 +209,36 @@ function layout({ title, description, canonicalPath, bodyContent, ogImage, schem
 ${allSchemas.map(ldJson).join('\n')}
 </head>
 <body>
-${header()}
+${bare ? bareHeader(bare) : header()}
 ${bodyContent}
-${footer()}
+${bare ? bareFooter() : footer()}
 <script src="/js/main.js"></script>
 </body>
 </html>`;
+}
+
+// Landing-page header/footer: logo, phone and one CTA, no navigation to leak clicks away from the offer.
+function bareHeader({ ctaHref = '#book', ctaLabel = 'Book My Free Consult' } = {}) {
+  return `<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand">
+      <img src="/images/logo-mark.png" alt="${site.name}" class="brand-mark">
+      <span>${site.name}<small>${site.tagline}</small></span>
+    </a>
+    <div class="header-actions">
+      <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="header-phone">${site.phone}</a>
+      <a href="${ctaHref}" class="btn btn-primary" style="padding:11px 20px;font-size:14px;">${ctaLabel}</a>
+    </div>
+  </div>
+</header>`;
+}
+function bareFooter() {
+  return `<footer class="site-footer" style="padding:32px 0;">
+  <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;opacity:.8;">
+    <span>&copy; ${new Date().getFullYear()} ${site.name}. All rights reserved.</span>
+    <span><a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a> &middot; <a href="mailto:${site.email}">${site.email}</a></span>
+  </div>
+</footer>`;
 }
 
 function header() {
@@ -672,6 +696,243 @@ ${heroSection({
     description: `Book a free ${b.minutes || 15}-minute consult with ${site.name}. Pick a time online and we'll look at your website, CRM and marketing together.`,
     canonicalPath: '/book/',
     bodyContent: body,
+  }));
+}
+
+// /book-1: webinar-style sales page for the free AI consult offer (Hormozi layout: one promise, one video,
+// one CTA repeated, objection handling, a straight-talk guarantee, then the calendar).
+// Video + poster come from data/site.json -> book1.video / book1.poster.
+function buildBook1() {
+  const b = site.booking || {};
+  const v = site.book1 || {};
+  const cal = `https://api.leadconnectorhq.com/widget/booking/${b.calendarId}`;
+  const mmss = (s) => `${Math.floor((s || 0) / 60)}:${String(Math.round(s || 0) % 60).padStart(2, '0')}`;
+  const cta = (label = 'Book My Free AI Consult') => `<a href="#book" class="btn btn-primary w1-cta">${label} &rarr;</a>`;
+  const ticks = `<div class="w1-ticks"><span>&#10003; 100% free</span><span>&#10003; ${b.minutes || 15} minutes, on Zoom or phone</span><span>&#10003; No pitch, no obligation</span></div>`;
+  const faq = [
+    { q: 'Is it actually free?', a: "Yes. No card, no catch. It's free this month because I want to see where AI is actually paying off for local businesses right now. If you want help putting it in place afterwards, we can talk about that. If not, you still leave with the answer." },
+    { q: "I'm not technical. Is this for me?", a: "Especially for you. You don't need to know what ChatGPT, agents or automations are. Tell me how your business runs and I'll tell you, in plain English, where AI fits and where it doesn't." },
+    { q: 'What do I need to bring?', a: 'Nothing but 15 minutes. If you can, think about the one task that eats most of your week, or the leads you lose. That is usually where the money is.' },
+    { q: 'What if AI is not a fit for my business?', a: "Then I'll tell you. Straight up. You'll still leave knowing the one thing worth fixing first, AI or not." },
+    { q: 'Why only this month?', a: "Because each call is me, one-on-one, and I can only do so many. When the month's over, the free calls are over." },
+  ];
+  const body = `
+<style>
+  .w1-bar { background: var(--ink); color: #fff; text-align: center; font-size: 14px; font-weight: 600; padding: 10px 16px; }
+  .w1-bar b { color: #FFD43B; }
+  .w1-hero { background: radial-gradient(1200px 500px at 50% -10%, #12305e 0%, var(--ink) 60%); color: #fff; padding: 56px 0 72px; text-align: center; }
+  .w1-hero .eyebrow-pill { display: inline-block; background: rgba(255,212,59,.14); color: #FFD43B; border: 1px solid rgba(255,212,59,.4); font-weight: 800; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; padding: 7px 14px; border-radius: 999px; margin-bottom: 18px; }
+  .w1-hero h1 { font-size: clamp(32px, 5.2vw, 58px); line-height: 1.05; letter-spacing: -.03em; max-width: 980px; margin: 0 auto 18px; color: #fff; }
+  .w1-hero h1 .hl { background: linear-gradient(transparent 60%, rgba(255,212,59,.55) 60%); padding: 0 4px; }
+  .w1-hero .sub { color: #C9D6EE; font-size: clamp(16px, 2vw, 20px); max-width: 760px; margin: 0 auto 32px; }
+  .w1-video { position: relative; max-width: 900px; margin: 0 auto; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px -20px rgba(0,0,0,.6); border: 3px solid rgba(255,255,255,.12); background: #000; aspect-ratio: 16/9; }
+  .w1-video video { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .w1-play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: rgba(5,12,24,.35); border: 0; cursor: pointer; color: #fff; font: inherit; }
+  .w1-play .disc { width: 92px; height: 92px; border-radius: 50%; background: #FFD43B; display: grid; place-items: center; box-shadow: 0 0 0 12px rgba(255,212,59,.25); }
+  .w1-play .disc::after { content: ''; border-left: 28px solid var(--ink); border-top: 17px solid transparent; border-bottom: 17px solid transparent; margin-left: 7px; }
+  .w1-play span { font-weight: 800; font-size: 18px; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
+  .w1-cta { font-size: 19px; padding: 20px 34px; margin-top: 30px; box-shadow: 0 18px 40px -10px rgba(11,95,255,.7); }
+  .w1-proof { max-width: 900px; margin: 34px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; overflow: hidden; }
+  .w1-proof > div { background: rgba(10,26,47,.92); padding: 18px 14px; }
+  .w1-proof b { display: block; font-size: 30px; color: #FFD43B; letter-spacing: -.02em; }
+  .w1-proof span { font-size: 13.5px; color: #C9D6EE; }
+  @media (max-width: 640px) { .w1-proof { grid-template-columns: 1fr; } }
+  .w1-ticks { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 16px; font-size: 14px; font-weight: 600; color: #C9D6EE; }
+  .w1-sec { padding: 72px 0; }
+  .w1-sec.alt { background: var(--paper); }
+  .w1-narrow { max-width: 820px; margin: 0 auto; }
+  .w1-sec h2 { font-size: clamp(28px, 3.6vw, 40px); text-align: center; margin-bottom: 28px; }
+  .w1-pains { display: grid; gap: 14px; }
+  .w1-pains li { background: #fff; border: 1px solid var(--gray-light); border-left: 5px solid #ef4444; border-radius: 12px; padding: 16px 20px; font-weight: 600; color: var(--ink); }
+  .w1-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .w1-step { background: #fff; border: 1px solid var(--gray-light); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-sm); }
+  .w1-step .n { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-weight: 800; margin-bottom: 14px; }
+  .w1-step h3 { font-size: 19px; }
+  .w1-fit { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .w1-fit > div { border-radius: var(--radius); padding: 26px; }
+  .w1-fit .yes { background: #ecfdf3; border: 1px solid #abefc6; }
+  .w1-fit .no { background: #fef3f2; border: 1px solid #fecdca; }
+  .w1-fit li { padding: 6px 0; font-weight: 500; color: var(--ink); }
+  .w1-promise { background: var(--ink); color: #fff; border-radius: 20px; padding: 40px; text-align: center; border: 3px dashed #FFD43B; }
+  .w1-promise h2 { color: #fff; margin-bottom: 12px; }
+  .w1-promise p { color: #C9D6EE; font-size: 18px; max-width: 640px; margin: 0 auto; }
+  .w1-book { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: start; }
+  .w1-cal { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 8px; min-height: 640px; }
+  .w1-count { display: inline-flex; gap: 10px; margin: 6px 0 22px; }
+  .w1-count div { background: var(--ink); color: #fff; border-radius: 10px; padding: 8px 12px; text-align: center; min-width: 64px; }
+  .w1-count b { display: block; font-size: 24px; line-height: 1; } .w1-count small { font-size: 11px; opacity: .7; text-transform: uppercase; letter-spacing: .06em; }
+  .w1-faq details { border-bottom: 1px solid var(--gray-light); padding: 16px 0; }
+  .w1-faq summary { font-weight: 700; cursor: pointer; color: var(--ink); }
+  .w1-faq p { margin: 10px 0 0; }
+  .w1-chap { max-width: 900px; margin: 14px auto 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .w1-chap button { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); color: #C9D6EE; border-radius: 999px; padding: 7px 13px; font: inherit; font-size: 13.5px; cursor: pointer; }
+  .w1-chap button b { color: #FFD43B; margin-right: 7px; }
+  .w1-chap button:hover { border-color: #FFD43B; color: #fff; }
+  .w1-leaks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .w1-leaks > div { background: #fff; border: 1px solid var(--gray-light); border-top: 5px solid #FFD43B; border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm); }
+  .w1-leaks small { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--gray); font-size: 12px; }
+  .w1-leaks h3 { font-size: 20px; margin: 6px 0 8px; }
+  .w1-leaks p { font-size: 15px; margin: 0; }
+  .w1-rule { margin: 30px auto 0; max-width: 900px; background: var(--ink); color: #C9D6EE; border-radius: 20px; padding: 32px; text-align: center; }
+  .w1-rule h3 { color: #fff; font-size: clamp(20px, 2.6vw, 28px); margin-bottom: 12px; }
+  .w1-rule h3 span { color: #FFD43B; }
+  .w1-rule b { color: #fff; }
+  .w1-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--ink); color: #fff; padding: 12px 16px; display: flex; gap: 14px; align-items: center; justify-content: center; box-shadow: 0 -10px 30px rgba(0,0,0,.3); transform: translateY(110%); visibility: hidden; transition: transform .35s ease, visibility .35s; }
+  .w1-sticky.on { transform: none; visibility: visible; }
+  .w1-sticky span { font-weight: 700; font-size: 15px; }
+  .w1-sticky .btn { padding: 12px 20px; font-size: 15px; white-space: nowrap; }
+  @media (max-width: 860px) { .w1-leaks { grid-template-columns: 1fr 1fr; } .w1-sticky span { display: none; } .w1-sticky .btn { width: 100%; justify-content: center; } }
+  @media (max-width: 520px) { .w1-leaks { grid-template-columns: 1fr; } .w1-rule { padding: 24px 18px; } }
+  @media (max-width: 860px) { .w1-steps, .w1-fit, .w1-book { grid-template-columns: 1fr; } .w1-promise { padding: 28px 20px; } .w1-cta { width: 100%; justify-content: center; } }
+</style>
+<div class="w1-bar">&#128293; <b>Free training + free 1-on-1 AI consult</b> &middot; <span data-w1-left>this month only</span></div>
+<section class="w1-hero">
+  <div class="container">
+    <span class="eyebrow-pill">&#9654; Free ${Math.round((v.seconds||0)/60)}-Minute Training &middot; For Business Owners</span>
+    <h1>The 4 money leaks in every small business, and how to find the <span class="hl">ONE place</span> AI pays you back</h1>
+    <p class="sub">Feel like you're falling behind on AI, or have no clue where to start? Watch this short training, then book a free one-on-one call and we'll find yours together.</p>
+    <div class="w1-video">
+      <video id="w1v" playsinline preload="metadata" ${v.poster ? `poster="${v.poster}"` : ''} src="${v.video || ''}"></video>
+      <button class="w1-play" id="w1p" type="button" aria-label="Play the training"><span class="disc"></span><span>Watch the free training (${mmss(v.seconds)})</span></button>
+    </div>
+    ${(v.chapters || []).length ? `<div class="w1-chap">${v.chapters.map((c) => `<button type="button" data-t="${c.t}"><b>${mmss(c.t)}</b>${c.title}</button>`).join('')}</div>` : ''}
+    ${cta()}
+    ${ticks}
+    <div class="w1-proof">
+      <div><b>240+</b><span>businesses run on our systems</span></div>
+      <div><b>$10Ks</b><span>in added revenue from our AI agents</span></div>
+      <div><b>Custom</b><span>invoicing, management &amp; local SEO builds</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="w1-sec">
+  <div class="container">
+    <span class="eyebrow" style="display:block;text-align:center;">In the training</span>
+    <h2>The 4 places AI actually pays a small business back</h2>
+    <div class="w1-leaks">
+      <div><small>Leak #1</small><h3>Speed to lead</h3><p>Leads wait hours for a reply and call your competitor. AI answers, texts back in seconds and books the job while you're working.</p></div>
+      <div><small>Leak #2</small><h3>Follow-up</h3><p>Most sales take several follow-ups. Most businesses stop after one. AI follows up on every quote and no-show, in your voice.</p></div>
+      <div><small>Leak #3</small><h3>Past customers</h3><p>They already trust you. AI wakes that list back up, asks for reviews and brings in repeat work.</p></div>
+      <div><small>Leak #4</small><h3>Admin time</h3><p>Quotes, invoices, scheduling, data entry. AI takes a big chunk off your plate so you get your nights back.</p></div>
+    </div>
+    <div class="w1-rule">
+      <h3>The rule: don't fix all four. Fix <span>ONE</span>. The biggest one. First.</h3>
+      <p>To find it, ask: <b>Where do my leads go cold?</b> &middot; <b>What do I do over and over every week?</b> &middot; <b>What would I pay to never do again?</b></p>
+      <p style="margin-top:10px;">Not sure? That's exactly what the free call is for.</p>
+      ${cta('Find My ONE Place, Free')}
+    </div>
+  </div>
+</section>
+
+<section class="w1-sec alt">
+  <div class="container">
+    <h2>What happens on your free call</h2>
+    <div class="w1-steps">
+      <div class="w1-step"><div class="n">1</div><h3>We map your week</h3><p>Where leads come in, where they leak out, and the jobs that eat your hours.</p></div>
+      <div class="w1-step"><div class="n">2</div><h3>We find the ONE thing</h3><p>The single place AI would make you the most money or give you back the most time. Just one.</p></div>
+      <div class="w1-step"><div class="n">3</div><h3>You leave with a plan</h3><p>What to set up, roughly what it costs and how long it takes. Do it yourself, or have us do it. Your call.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="w1-sec">
+  <div class="container w1-narrow">
+    <h2>Is this for you?</h2>
+    <div class="w1-fit">
+      <div class="yes"><h3>&#9989; This is for you if&hellip;</h3><ul>
+        <li>You own or run a service business</li>
+        <li>You're busy, and want more revenue or more time back</li>
+        <li>You want a straight answer, not a 40-slide AI pitch</li>
+      </ul></div>
+      <div class="no"><h3>&#10060; Not for you if&hellip;</h3><ul>
+        <li>You want a magic button that runs the business for you</li>
+        <li>You're not willing to change anything you do today</li>
+        <li>You just want to talk about AI, not use it</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="w1-sec alt">
+  <div class="container w1-narrow">
+    <div class="w1-promise">
+      <h2>My "Straight Answer" promise</h2>
+      <p>If AI isn't a fit for your business, I'll tell you. No upsell, no follow-up spam. You'll still walk away knowing the one thing worth fixing first.</p>
+      <p style="margin-top:14px;color:#FFD43B;font-weight:700;">&mdash; Zac, ${site.name}</p>
+    </div>
+  </div>
+</section>
+
+<section class="w1-sec" id="book">
+  <div class="container">
+    <div class="w1-book">
+      <div class="w1-cal">
+        <iframe src="${cal}" title="Book your free AI consult" style="width:100%;border:none;overflow:hidden;min-height:640px;" scrolling="no" id="${b.calendarId}_book1" allow="payment"></iframe>
+      </div>
+      <div>
+        <span class="eyebrow">Book your call</span>
+        <h2 style="text-align:left;margin-bottom:12px;">Grab a time before this month's calls are gone</h2>
+        <p>Free consults end when the month does:</p>
+        <div class="w1-count" data-w1-count><div><b data-d>0</b><small>days</small></div><div><b data-h>0</b><small>hours</small></div><div><b data-m>0</b><small>min</small></div></div>
+        <ul class="w1-pains" style="margin-bottom:20px;">
+          <li style="border-left-color:var(--accent);">${b.minutes || 15} minutes, one-on-one with Zac</li>
+          <li style="border-left-color:var(--accent);">Your ONE highest-value AI opportunity</li>
+          <li style="border-left-color:var(--accent);">A plain-English plan you can act on</li>
+        </ul>
+        <p style="font-size:14px;">Rather message first? Text <a href="sms:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a> and say "AI".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="w1-sec alt">
+  <div class="container w1-narrow w1-faq">
+    <h2>Questions</h2>
+    ${faq.map((f) => `<details><summary>${f.q}</summary><p>${f.a}</p></details>`).join('\n    ')}
+    <div style="text-align:center;">${cta()}</div>
+  </div>
+</section>
+<div class="w1-sticky" id="w1s"><span>Free 1-on-1 AI consult &middot; this month only</span><a href="#book" class="btn btn-primary">Book My Free Consult &rarr;</a></div>
+<script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+<script>
+(function () {
+  var v = document.getElementById('w1v'), p = document.getElementById('w1p'), st = document.getElementById('w1s'), book = document.getElementById('book');
+  var offerAt = ${Number(v.offerAt) || 0};
+  function start(t) { if (!v) return; v.controls = true; if (p) p.style.display = 'none'; if (typeof t === 'number') v.currentTime = t; v.play(); }
+  if (v && p) {
+    p.addEventListener('click', function () { start(); });
+    v.addEventListener('ended', function () { if (book) book.scrollIntoView({ behavior: 'smooth' }); });
+  }
+  document.querySelectorAll('.w1-chap [data-t]').forEach(function (b) { b.addEventListener('click', function () { start(Number(b.dataset.t)); }); });
+  // Sticky "book" bar: shows once the training reaches the offer, or once the visitor scrolls past the video; hides at the calendar.
+  var reached = false, inBook = false;
+  function sync() { if (st) st.classList.toggle('on', reached && !inBook); }
+  if (v) v.addEventListener('timeupdate', function () { if (!reached && offerAt && v.currentTime >= offerAt) { reached = true; sync(); } });
+  if ('IntersectionObserver' in window) {
+    var hero = document.querySelector('.w1-video');
+    if (hero) new IntersectionObserver(function (e) { if (!e[0].isIntersecting && e[0].boundingClientRect.top < 0) { reached = true; sync(); } }).observe(hero);
+    if (book) new IntersectionObserver(function (e) { inBook = e[0].isIntersecting; sync(); }, { threshold: 0.15 }).observe(book);
+  }
+  // Countdown to the end of this month (the offer runs "this month").
+  var now = new Date(), end = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+  var box = document.querySelector('[data-w1-count]'), left = document.querySelector('[data-w1-left]');
+  function tick() {
+    var ms = Math.max(0, end - new Date()), d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
+    if (box) { box.querySelector('[data-d]').textContent = d; box.querySelector('[data-h]').textContent = h; box.querySelector('[data-m]').textContent = m; }
+    if (left) left.textContent = d + ' day' + (d === 1 ? '' : 's') + ' left this month';
+  }
+  tick(); setInterval(tick, 30000);
+})();
+</script>
+`;
+  write('book-1/index.html', layout({
+    title: 'Free Training: The 4 Money Leaks AI Fixes (+ Free 1-on-1 Consult)',
+    description: `Free ${mmss(v.seconds)} training: the 4 money leaks in every small business and how to find the ONE place AI pays you back. Then book a free one-on-one AI consult with Zac. This month only.`,
+    canonicalPath: '/book-1/',
+    bodyContent: body,
+    ogImage: v.poster,
+    bare: { ctaHref: '#book', ctaLabel: 'Book My Free Consult' },
   }));
 }
 
@@ -1458,6 +1719,7 @@ function run() {
   buildAbout();
   buildContact();
   buildBook();
+  buildBook1();
   buildServicesIndex();
   services.forEach(buildServiceDetail);
   buildIndustriesIndex();
@@ -1473,7 +1735,7 @@ function run() {
   buildSitemap();
   buildJs();
 
-  const pageCount = 9 + services.length + industries.length + towns.length + blog.length + combos.length + (towns.length * services.length);
+  const pageCount = 10 + services.length + industries.length + towns.length + blog.length + combos.length + (towns.length * services.length);
   console.log(`[generate-site] Built ${pageCount} pages into /public`);
 }
 
