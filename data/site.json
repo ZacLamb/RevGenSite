@@ -83,29 +83,29 @@
     "path": "/book/"
   },
   "book1": {
-    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/c26eadf9-233b-46b7-ad95-4f2d43577db7.mp4",
+    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/5895c392-dcca-4e91-9df8-ce00021ae106.mp4",
     "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/75ae0d84-4d5c-4487-985d-6467c8b62c51.jpg",
-    "seconds": 218,
-    "offerAt": 190,
+    "seconds": 214,
+    "offerAt": 187,
     "chapters": [
       {
         "t": 0,
         "title": "Sound familiar?"
       },
       {
-        "t": 53,
+        "t": 54,
         "title": "Old way vs. new way"
       },
       {
-        "t": 71,
+        "t": 72,
         "title": "The 4 money leaks"
       },
       {
-        "t": 155,
+        "t": 153,
         "title": "Your questions answered"
       },
       {
-        "t": 190,
+        "t": 187,
         "title": "Your free consult"
       }
     ]
