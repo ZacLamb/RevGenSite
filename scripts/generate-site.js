@@ -706,6 +706,7 @@ function buildBook1() {
   const b = site.booking || {};
   const v = site.book1 || {};
   const cal = `https://api.leadconnectorhq.com/widget/booking/${b.calendarId}`;
+  const mmss = (s) => `${Math.floor((s || 0) / 60)}:${String(Math.round(s || 0) % 60).padStart(2, '0')}`;
   const cta = (label = 'Book My Free AI Consult') => `<a href="#book" class="btn btn-primary w1-cta">${label} &rarr;</a>`;
   const ticks = `<div class="w1-ticks"><span>&#10003; 100% free</span><span>&#10003; ${b.minutes || 15} minutes, on Zoom or phone</span><span>&#10003; No pitch, no obligation</span></div>`;
   const faq = [
@@ -758,40 +759,65 @@ function buildBook1() {
   .w1-faq details { border-bottom: 1px solid var(--gray-light); padding: 16px 0; }
   .w1-faq summary { font-weight: 700; cursor: pointer; color: var(--ink); }
   .w1-faq p { margin: 10px 0 0; }
+  .w1-chap { max-width: 900px; margin: 14px auto 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .w1-chap button { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); color: #C9D6EE; border-radius: 999px; padding: 7px 13px; font: inherit; font-size: 13.5px; cursor: pointer; }
+  .w1-chap button b { color: #FFD43B; margin-right: 7px; }
+  .w1-chap button:hover { border-color: #FFD43B; color: #fff; }
+  .w1-leaks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .w1-leaks > div { background: #fff; border: 1px solid var(--gray-light); border-top: 5px solid #FFD43B; border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm); }
+  .w1-leaks small { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--gray); font-size: 12px; }
+  .w1-leaks h3 { font-size: 20px; margin: 6px 0 8px; }
+  .w1-leaks p { font-size: 15px; margin: 0; }
+  .w1-rule { margin: 30px auto 0; max-width: 900px; background: var(--ink); color: #C9D6EE; border-radius: 20px; padding: 32px; text-align: center; }
+  .w1-rule h3 { color: #fff; font-size: clamp(20px, 2.6vw, 28px); margin-bottom: 12px; }
+  .w1-rule h3 span { color: #FFD43B; }
+  .w1-rule b { color: #fff; }
+  .w1-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--ink); color: #fff; padding: 12px 16px; display: flex; gap: 14px; align-items: center; justify-content: center; box-shadow: 0 -10px 30px rgba(0,0,0,.3); transform: translateY(110%); visibility: hidden; transition: transform .35s ease, visibility .35s; }
+  .w1-sticky.on { transform: none; visibility: visible; }
+  .w1-sticky span { font-weight: 700; font-size: 15px; }
+  .w1-sticky .btn { padding: 12px 20px; font-size: 15px; white-space: nowrap; }
+  @media (max-width: 860px) { .w1-leaks { grid-template-columns: 1fr 1fr; } .w1-sticky span { display: none; } .w1-sticky .btn { width: 100%; justify-content: center; } }
+  @media (max-width: 520px) { .w1-leaks { grid-template-columns: 1fr; } .w1-rule { padding: 24px 18px; } }
   @media (max-width: 860px) { .w1-steps, .w1-fit, .w1-book { grid-template-columns: 1fr; } .w1-promise { padding: 28px 20px; } .w1-cta { width: 100%; justify-content: center; } }
 </style>
-<div class="w1-bar">&#128293; <b>Free this month only:</b> one-on-one AI consults for business owners &middot; <span data-w1-left>limited calls left this month</span></div>
+<div class="w1-bar">&#128293; <b>Free training + free 1-on-1 AI consult</b> &middot; <span data-w1-left>this month only</span></div>
 <section class="w1-hero">
   <div class="container">
-    <span class="eyebrow-pill">Free 1-on-1 AI Consult &middot; For Business Owners</span>
-    <h1>Find the <span class="hl">ONE place</span> AI will make you the most money, or save you the most time</h1>
-    <p class="sub">Feel like you're falling behind on AI, or have no clue where to start? In ${b.minutes || 15} minutes we'll go through your business together and find it. No fluff. No obligation.</p>
+    <span class="eyebrow-pill">&#9654; Free ${mmss(v.seconds)} Training &middot; For Business Owners</span>
+    <h1>The 4 money leaks in every small business, and how to find the <span class="hl">ONE place</span> AI pays you back</h1>
+    <p class="sub">Feel like you're falling behind on AI, or have no clue where to start? Watch this short training, then book a free one-on-one call and we'll find yours together.</p>
     <div class="w1-video">
       <video id="w1v" playsinline preload="metadata" ${v.poster ? `poster="${v.poster}"` : ''} src="${v.video || ''}"></video>
-      <button class="w1-play" id="w1p" type="button" aria-label="Play the video"><span class="disc"></span><span>Watch this first (${v.seconds || 35} seconds)</span></button>
+      <button class="w1-play" id="w1p" type="button" aria-label="Play the training"><span class="disc"></span><span>Watch the free training (${mmss(v.seconds)})</span></button>
     </div>
+    ${(v.chapters || []).length ? `<div class="w1-chap">${v.chapters.map((c) => `<button type="button" data-t="${c.t}"><b>${mmss(c.t)}</b>${c.title}</button>`).join('')}</div>` : ''}
     ${cta()}
     ${ticks}
   </div>
 </section>
 
 <section class="w1-sec">
-  <div class="container w1-narrow">
-    <h2>Sound familiar?</h2>
-    <ul class="w1-pains">
-      <li>Everyone's talking about AI and you don't know which of it actually matters for <em>your</em> business.</li>
-      <li>You tried ChatGPT a few times. It was cool. Nothing in the business changed.</li>
-      <li>You're still answering the same questions, chasing the same leads and doing the same admin every single week.</li>
-      <li>You're worried your competitors are figuring it out first.</li>
-    </ul>
-    <p style="text-align:center;margin-top:26px;font-size:18px;color:var(--ink);font-weight:600;">Here's the truth: you don't need ten AI tools. You need the <u>one</u> that pays you back.</p>
-    <div style="text-align:center;">${cta('Find My #1 AI Opportunity')}</div>
+  <div class="container">
+    <span class="eyebrow" style="display:block;text-align:center;">In the training</span>
+    <h2>The 4 places AI actually pays a small business back</h2>
+    <div class="w1-leaks">
+      <div><small>Leak #1</small><h3>Speed to lead</h3><p>Leads wait hours for a reply and call your competitor. AI answers, texts back in seconds and books the job while you're working.</p></div>
+      <div><small>Leak #2</small><h3>Follow-up</h3><p>Most sales take several follow-ups. Most businesses stop after one. AI follows up on every quote and no-show, in your voice.</p></div>
+      <div><small>Leak #3</small><h3>Past customers</h3><p>They already trust you. AI wakes that list back up, asks for reviews and brings in repeat work.</p></div>
+      <div><small>Leak #4</small><h3>Admin time</h3><p>Quotes, invoices, scheduling, data entry. AI takes a big chunk off your plate so you get your nights back.</p></div>
+    </div>
+    <div class="w1-rule">
+      <h3>The rule: don't fix all four. Fix <span>ONE</span>. The biggest one. First.</h3>
+      <p>To find it, ask: <b>Where do my leads go cold?</b> &middot; <b>What do I do over and over every week?</b> &middot; <b>What would I pay to never do again?</b></p>
+      <p style="margin-top:10px;">Not sure? That's exactly what the free call is for.</p>
+      ${cta('Find My ONE Place, Free')}
+    </div>
   </div>
 </section>
 
 <section class="w1-sec alt">
   <div class="container">
-    <h2>What happens on the call</h2>
+    <h2>What happens on your free call</h2>
     <div class="w1-steps">
       <div class="w1-step"><div class="n">1</div><h3>We map your week</h3><p>Where leads come in, where they leak out, and the jobs that eat your hours.</p></div>
       <div class="w1-step"><div class="n">2</div><h3>We find the ONE thing</h3><p>The single place AI would make you the most money or give you back the most time. Just one.</p></div>
@@ -857,13 +883,26 @@ function buildBook1() {
     <div style="text-align:center;">${cta()}</div>
   </div>
 </section>
+<div class="w1-sticky" id="w1s"><span>Free 1-on-1 AI consult &middot; this month only</span><a href="#book" class="btn btn-primary">Book My Free Consult &rarr;</a></div>
 <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 <script>
 (function () {
-  var v = document.getElementById('w1v'), p = document.getElementById('w1p');
+  var v = document.getElementById('w1v'), p = document.getElementById('w1p'), st = document.getElementById('w1s'), book = document.getElementById('book');
+  var offerAt = ${Number(v.offerAt) || 0};
+  function start(t) { if (!v) return; v.controls = true; if (p) p.style.display = 'none'; if (typeof t === 'number') v.currentTime = t; v.play(); }
   if (v && p) {
-    p.addEventListener('click', function () { v.controls = true; v.play(); p.style.display = 'none'; });
-    v.addEventListener('ended', function () { var b = document.getElementById('book'); if (b) b.scrollIntoView({ behavior: 'smooth' }); });
+    p.addEventListener('click', function () { start(); });
+    v.addEventListener('ended', function () { if (book) book.scrollIntoView({ behavior: 'smooth' }); });
+  }
+  document.querySelectorAll('.w1-chap [data-t]').forEach(function (b) { b.addEventListener('click', function () { start(Number(b.dataset.t)); }); });
+  // Sticky "book" bar: shows once the training reaches the offer, or once the visitor scrolls past the video; hides at the calendar.
+  var reached = false, inBook = false;
+  function sync() { if (st) st.classList.toggle('on', reached && !inBook); }
+  if (v) v.addEventListener('timeupdate', function () { if (!reached && offerAt && v.currentTime >= offerAt) { reached = true; sync(); } });
+  if ('IntersectionObserver' in window) {
+    var hero = document.querySelector('.w1-video');
+    if (hero) new IntersectionObserver(function (e) { if (!e[0].isIntersecting && e[0].boundingClientRect.top < 0) { reached = true; sync(); } }).observe(hero);
+    if (book) new IntersectionObserver(function (e) { inBook = e[0].isIntersecting; sync(); }, { threshold: 0.15 }).observe(book);
   }
   // Countdown to the end of this month (the offer runs "this month").
   var now = new Date(), end = new Date(now.getFullYear(), now.getMonth() + 1, 1);
@@ -878,8 +917,8 @@ function buildBook1() {
 </script>
 `;
   write('book-1/index.html', layout({
-    title: 'Free AI Consult: Find the ONE Place AI Pays You Back',
-    description: `Free this month: a ${b.minutes || 15}-minute one-on-one AI consult with ${site.founder}. We'll find the one place AI will make your business the most money or save you the most time. No fluff, no obligation.`,
+    title: 'Free Training: The 4 Money Leaks AI Fixes (+ Free 1-on-1 Consult)',
+    description: `Free ${mmss(v.seconds)} training: the 4 money leaks in every small business and how to find the ONE place AI pays you back. Then book a free one-on-one AI consult with ${site.founder}. This month only.`,
     canonicalPath: '/book-1/',
     bodyContent: body,
     ogImage: v.poster,

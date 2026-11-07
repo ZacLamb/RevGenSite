@@ -83,8 +83,31 @@
     "path": "/book/"
   },
   "book1": {
-    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/ec89e69a-660c-4577-b887-cfedac636293.mp4",
-    "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/71aa42dd-e5cf-4671-8955-130e00c10c60.jpg",
-    "seconds": 35
+    "video": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/7a38e9ea-3d22-44e4-bf2f-9b3d023d9488.mp4",
+    "poster": "https://d2ol7oe51mr4n9.cloudfront.net/user_3EmROCl8evT8aLsxpJaXd5oq6pI/08c13bce-a824-4d40-97a7-fdadbc0f0708.jpg",
+    "seconds": 232,
+    "offerAt": 176,
+    "chapters": [
+      {
+        "t": 0,
+        "title": "Why you feel behind"
+      },
+      {
+        "t": 28,
+        "title": "The tool-stacking trap"
+      },
+      {
+        "t": 55,
+        "title": "The 4 money leaks"
+      },
+      {
+        "t": 143,
+        "title": "Find your ONE place"
+      },
+      {
+        "t": 176,
+        "title": "Your free consult"
+      }
+    ]
   }
 }
