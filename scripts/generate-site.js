@@ -181,7 +181,9 @@ function breadcrumbSchema(items) {
   };
 }
 
+const PAGE_LABELS = {}; // canonical path -> page title, written to data/page-labels.json for the visitor dashboard
 function layout({ title, description, canonicalPath, bodyContent, ogImage, schemas, ogType, bare }) {
+  if (title && canonicalPath) PAGE_LABELS[canonicalPath] = title;
   const fullTitle = title ? `${title} | ${site.name}` : `${site.name} — ${site.tagline}`;
   const ogImg = /^https?:/.test(ogImage || '') ? ogImage : `https://${site.domain}/images/${ogImage || 'og-image.jpg'}`;
   const allSchemas = [orgSchema(), ...(schemas || [])];
@@ -235,7 +237,7 @@ function bareHeader({ ctaHref = '#book', ctaLabel = 'Book My Free Consult' } = {
 function bareFooter() {
   return `<footer class="site-footer" style="padding:32px 0;">
   <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;opacity:.8;">
-    <span>&copy; ${new Date().getFullYear()} ${site.name}. All rights reserved.</span>
+    <span>&copy; ${new Date().getFullYear()} ${site.name}. All rights reserved. &middot; <a href="/privacy/">Privacy</a></span>
     <span><a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a> &middot; <a href="mailto:${site.email}">${site.email}</a></span>
   </div>
 </footer>`;
@@ -305,7 +307,7 @@ function footer() {
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© ${YEAR} ${site.name}. All rights reserved.</span>
+      <span>© ${YEAR} ${site.name}. All rights reserved. · <a href="/privacy/">Privacy</a></span>
       <span>Serving ${site.region}</span>
     </div>
   </div>
@@ -626,6 +628,7 @@ ${heroSection({
             <label style="font-weight:600;font-size:14px;display:block;margin-bottom:6px;">What are you looking for help with?</label>
             <textarea name="message" rows="4" style="width:100%;padding:13px 16px;border:1px solid var(--gray-light);border-radius:10px;font-family:inherit;font-size:15px;resize:vertical;"></textarea>
           </div>
+          <div style="position:absolute;left:-9999px;" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
           <button type="submit" class="btn btn-primary" style="width:fit-content;">Send It</button>
           <p id="contact-form-note" style="font-size:13px;color:var(--gray);"></p>
         </form>
@@ -650,6 +653,31 @@ ${heroSection({
     title: 'Contact',
     description: `Get in touch with ${site.name} — call ${site.phone}, email ${site.email}, or send us a message to book a free consult.`,
     canonicalPath: '/contact/',
+    bodyContent: body,
+  }));
+}
+
+function buildPrivacy() {
+  const body = `
+${heroSection({ eyebrow: 'Privacy', title: 'Privacy, in plain English', lede: `What ${site.name} collects on this website, and why.`, image: 'hero-home.jpg', narrow: true })}
+<section>
+  <div class="container" style="max-width:780px;">
+    <h2>Website visits</h2>
+    <p>We count visits so we know which pages people read. To do that, this site sets one small first-party cookie containing a random ID, which lets us recognize a repeat visit. We record the pages viewed, the time, the general type of device (phone, tablet or computer) and how you arrived, such as a Google search or a link from another site. We do not store your IP address and we don't run third-party advertising or analytics scripts on these pages.</p>
+    <h2>When you contact us</h2>
+    <p>If you send us the contact form, we keep what you give us (name, business, email, phone and your message) so we can reply. After you've sent it, later visits from the same browser may be linked to your request, so we can see you're still interested and follow up promptly. We also note which source brought you to the site, such as Google or a referral, to see what's working.</p>
+    <h2>Booking a call</h2>
+    <p>Our booking calendar is provided by GoHighLevel and loads inside the page. What you enter there goes to our CRM. On our own site we only note that someone clicked a button to book, not who they are.</p>
+    <h2>Sharing</h2>
+    <p>We don't sell your information. Contact requests are stored in our CRM (GoHighLevel) so our team can respond.</p>
+    <h2>Questions or removal</h2>
+    <p>To ask about or remove your information, email <a href="mailto:${site.email}">${site.email}</a> or call <a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a>. You can also clear this site's cookies in your browser at any time.</p>
+  </div>
+</section>`;
+  write('privacy/index.html', layout({
+    title: 'Privacy',
+    description: `How ${site.name} handles website data: one first-party cookie, no IP addresses, no third-party trackers.`,
+    canonicalPath: '/privacy/',
     bodyContent: body,
   }));
 }
@@ -1652,7 +1680,7 @@ function build404() {
 }
 
 function buildSitemap() {
-  const urls = ['/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/'];
+  const urls = ['/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/', '/privacy/'];
   services.forEach((s) => urls.push(`/services/${s.slug}/`));
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
@@ -1674,25 +1702,51 @@ ${urls.map((u) => `  <url><loc>https://${site.domain}${u}</loc></url>`).join('\n
 function buildJs() {
   const js = `// Minimal, dependency-free site JS
 (function () {
-  // Contact form: no backend wired up yet, so hand off to email with a prefilled message.
+  // Contact form: sent to our server (which files it in the CRM). If that fails, fall back to the visitor's email app.
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var data = new FormData(form);
-      var subject = encodeURIComponent('New inquiry from ' + (data.get('business') || data.get('name')));
-      var body = encodeURIComponent(
-        'Name: ' + data.get('name') + '\\n' +
-        'Business: ' + data.get('business') + '\\n' +
-        'Email: ' + data.get('email') + '\\n' +
-        'Phone: ' + (data.get('phone') || '') + '\\n\\n' +
-        (data.get('message') || '')
-      );
-      window.location.href = 'mailto:${site.email}?subject=' + subject + '&body=' + body;
       var note = document.getElementById('contact-form-note');
-      if (note) note.textContent = "Opening your email app to send this — or call/text us directly at ${site.phone}.";
+      var btn = form.querySelector('button[type=submit]');
+      if (btn) btn.disabled = true;
+      var payload = { page: location.pathname };
+      data.forEach(function (v, k) { payload[k] = v; });
+      function viaEmail() {
+        var subject = encodeURIComponent('New inquiry from ' + (data.get('business') || data.get('name')));
+        var body = encodeURIComponent(
+          'Name: ' + data.get('name') + '\\n' +
+          'Business: ' + data.get('business') + '\\n' +
+          'Email: ' + data.get('email') + '\\n' +
+          'Phone: ' + (data.get('phone') || '') + '\\n\\n' +
+          (data.get('message') || '')
+        );
+        window.location.href = 'mailto:${site.email}?subject=' + subject + '&body=' + body;
+        if (note) note.textContent = "Opening your email app to send this. Or call/text us directly at ${site.phone}.";
+        if (btn) btn.disabled = false;
+      }
+      fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+        .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); })
+        .then(function () {
+          form.reset();
+          if (note) note.textContent = "Thanks! We got it and will reach out shortly. Want to skip the wait? Pick a time at /book/.";
+          if (btn) btn.disabled = false;
+        })
+        .catch(viaEmail);
     });
   }
+
+  // Booking intent: the GoHighLevel calendar is an embedded widget we can't see into, so we note clicks on booking buttons.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (!/^(\\/book(-1)?\\/?(#.*)?|#book)$/.test(h)) return;
+    try {
+      fetch('/api/event', { method: 'POST', headers: { 'Content-Type': 'application/json' }, keepalive: true, body: JSON.stringify({ kind: 'booking_intent', path: location.pathname }) });
+    } catch (err) { /* never block the click */ }
+  });
 
   // Mobile nav toggle
   var header = document.querySelector('.site-header');
@@ -1720,6 +1774,7 @@ function run() {
   buildContact();
   buildBook();
   buildBook1();
+  buildPrivacy();
   buildServicesIndex();
   services.forEach(buildServiceDetail);
   buildIndustriesIndex();
@@ -1734,8 +1789,9 @@ function run() {
   build404();
   buildSitemap();
   buildJs();
+  fs.writeFileSync(path.join(DATA, 'page-labels.json'), JSON.stringify(PAGE_LABELS));
 
-  const pageCount = 10 + services.length + industries.length + towns.length + blog.length + combos.length + (towns.length * services.length);
+  const pageCount = 11 + services.length + industries.length + towns.length + blog.length + combos.length + (towns.length * services.length);
   console.log(`[generate-site] Built ${pageCount} pages into /public`);
 }
 
