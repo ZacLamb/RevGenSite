@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lawn Care Route Scheduling: Dense Routes and Outlier Pricing | Revenue Generating Solutions</title>
+<meta name="description" content="Lawn care route scheduling that works: build dense routes by zone and day, spot the outlier properties, and price them so they pay. Includes a simple formula.">
+<link rel="canonical" href="https://revenuegeneratingsolutions.com/blog/lawn-care-route-scheduling/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Revenue Generating Solutions">
+<meta property="og:title" content="Lawn Care Route Scheduling: Dense Routes and Outlier Pricing | Revenue Generating Solutions">
+<meta property="og:description" content="Lawn care route scheduling that works: build dense routes by zone and day, spot the outlier properties, and price them so they pay. Includes a simple formula.">
+<meta property="og:image" content="https://revenuegeneratingsolutions.com/images/blog-custom-business-tool.jpg">
+<meta property="og:url" content="https://revenuegeneratingsolutions.com/blog/lawn-care-route-scheduling/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/images/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://revenuegeneratingsolutions.com/#organization","name":"Revenue Generating Solutions","url":"https://revenuegeneratingsolutions.com/","logo":"https://revenuegeneratingsolutions.com/images/logo-square-512.png","image":"https://revenuegeneratingsolutions.com/images/logo-square-512.png","telephone":"(617) 877-5608","email":"hello@revenuegeneratingsolutions.com","areaServed":"Massachusetts & New England","founder":{"@type":"Person","name":"Zac Lamb"},"sameAs":["https://facebook.com/revenuegeneratingsolutions","https://instagram.com/revenuegeneratingsolutions","https://linkedin.com/company/revenuegeneratingsolutions"],"description":"AI, CRM, custom software, websites, and marketing — built for local service businesses that want to grow."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Lawn Care Route Scheduling: Dense Routes and Outlier Pricing","description":"Lawn care route scheduling that works: build dense routes by zone and day, spot the outlier properties, and price them so they pay. Includes a simple formula.","datePublished":"2026-11-16","dateModified":"2026-11-16","author":{"@type":"Organization","name":"Revenue Generating Solutions"},"publisher":{"@type":"Organization","name":"Revenue Generating Solutions","logo":{"@type":"ImageObject","url":"https://revenuegeneratingsolutions.com/images/logo-square-512.png"}},"image":"https://revenuegeneratingsolutions.com/images/blog-custom-business-tool.jpg","mainEntityOfPage":"https://revenuegeneratingsolutions.com/blog/lawn-care-route-scheduling/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://revenuegeneratingsolutions.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://revenuegeneratingsolutions.com/blog/"},{"@type":"ListItem","position":3,"name":"Lawn Care Route Scheduling: Dense Routes and Outlier Pricing","item":"https://revenuegeneratingsolutions.com/blog/lawn-care-route-scheduling/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many lawns should a mowing crew hit in a day?","acceptedAnswer":{"@type":"Answer","text":"There's no honest universal number, because it depends on lot size, equipment and drive time between stops. Track your own average minutes on site and minutes driving per stop for a few weeks, then build the day around those numbers instead of a target someone else gave you."}},{"@type":"Question","name":"How do I price a lawn that's far from the rest of my route?","acceptedAnswer":{"@type":"Answer","text":"Work out what the extra drive time costs you per visit, add it to your normal price, and quote that number. If the customer won't pay it, either offer a specific day when you're already nearby or pass on the job."}},{"@type":"Question","name":"Can I use Google Maps to plan lawn care routes?","acceptedAnswer":{"@type":"Answer","text":"For a single day with a handful of stops, yes. Google Maps caps a route at about 10 stops and doesn't reorder them for you, so a full week of routes needs a spreadsheet, a route planner app or a custom tool."}}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand">
+      <img src="/images/logo-mark.png" alt="Revenue Generating Solutions" class="brand-mark">
+      <span>Revenue Generating Solutions<small>We Help You Make More Revenue. Period.</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="/services/">Services</a>
+      <a href="/industries/">Industries</a>
+      <a href="/locations/">Locations</a>
+      <a href="/blog/">Blog</a>
+      <a href="/software/">For Agencies</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:6178775608" class="header-phone">(617) 877-5608</a>
+      <a href="/book/" class="btn btn-primary" style="padding:11px 20px;font-size:14px;">Book a Free Consult</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav">
+    <a href="/services/">Services</a>
+    <a href="/industries/">Industries</a>
+    <a href="/locations/">Locations</a>
+    <a href="/blog/">Blog</a>
+    <a href="/software/">For Agencies</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="tel:6178775608">(617) 877-5608</a>
+    <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('/images/blog-custom-business-tool.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content narrow">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Custom Tools</div>
+      <div class="eyebrow" style="color:#7DB2FF;">Custom Tools</div>
+      <h1>Lawn Care Route Scheduling: Dense Routes and Outlier Pricing</h1>
+      
+      
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container article-wrap">
+    <div class="blog-meta">November 16, 2026 · Custom Tools</div>
+    <div class="article-body">
+      <p>Most lawn care companies don&#39;t lose money on the mowing. They lose it on the driving between mowing. This post shows you how to build dense routes by zone and day, find the properties that are costing you money, and price them fairly.</p>
+<h2 id="why-density-matters-more-than-the-stop-order">Why density matters more than the stop order</h2>
+<p>A crew that mows a quarter-acre lot in 30 minutes makes the same money whether the next stop is 3 minutes away or 25. The crew, truck and trailer cost the same either way. Only the margin changes.</p>
+<p>Here&#39;s a hypothetical. Say your crew, truck and equipment cost you $75 an hour all-in, and you charge $60 for a standard weekly cut that takes 30 minutes on site.</p>
+<ul>
+<li><strong>Dense route:</strong> 6 minutes of drive time per stop means 36 minutes per visit. Cost is about $45, so you keep $15, which is 25% of the price.</li>
+<li><strong>Outlier property:</strong> 20 extra minutes of drive time per visit means 56 minutes. Cost is about $70, so you lose $10 every week.</li>
+</ul>
+<p>Same lawn, same price, same work. The only difference is where it sits on the map. That&#39;s why scheduling is a pricing problem as much as a logistics one.</p>
+<h2 id="step-1-build-zones-and-anchor-each-one-to-a-day">Step 1: Build zones and anchor each one to a day</h2>
+<p>Don&#39;t start by optimizing a route. Start by deciding which neighborhoods you work on which days.</p>
+<ol>
+<li><strong>Export your customer list with addresses.</strong> Put every active account on a map, either with a spreadsheet add-on or a free map tool.</li>
+<li><strong>Draw zones around natural clusters.</strong> Use highways, rivers and town lines as borders, because those are the things that add drive time. A town split by a rotary or a bridge is really two zones.</li>
+<li><strong>Assign each zone a day.</strong> Zone A is Monday and Tuesday, Zone B is Wednesday, and so on. A crew should rarely cross zone lines in a day.</li>
+<li><strong>Size each day to a number of billable hours.</strong> Count on-site time plus a realistic drive allowance, then leave a buffer for rain, gate problems and equipment trouble.</li>
+<li><strong>Keep a rain-day plan.</strong> Decide in advance which zone slides to Friday or Saturday so you aren&#39;t rebuilding the week at 6 a.m.</li>
+</ol>
+<p>Once zones exist, sales gets simpler too. When a new customer calls, you only offer the days you&#39;re already in their neighborhood. That one rule does more for density than any software.</p>
+<h2 id="step-2-sequence-the-stops-inside-each-day">Step 2: Sequence the stops inside each day</h2>
+<p>Inside a zone, the order still matters, but less than the zone itself. A sensible order is to start at the far edge of the zone and work back toward the yard, or the reverse if you&#39;re ending at a dump site.</p>
+<p>A few practical points:</p>
+<ul>
+<li><strong>Respect time windows.</strong> Some customers want mornings, some have dogs out until noon, and some commercial properties need work done before opening.</li>
+<li><strong>Group by equipment.</strong> If one stop needs a larger mower or an edger for a big bed line, cluster those so you aren&#39;t swapping gear all day.</li>
+<li><strong>Put the fussy accounts first.</strong> Properties with gate codes, pets or an owner who watches the clock should go early, while the day is still on schedule.</li>
+</ul>
+<p>On tools: Google Maps is fine for planning a short day, but it lets you add up to 10 stops per route, including start and finish, and doesn&#39;t optimize the order, so you drag stops around by hand. For a week of routes across several crews, you&#39;ll outgrow it quickly. Some of the sources I checked also cite 9 stops plus a starting point, so treat 10 as the ceiling either way.</p>
+<h2 id="rules-that-vary-by-town">Rules that vary by town</h2>
+<p>Routing isn&#39;t just about miles. Some properties need different equipment. As of 2026, Arlington and Lexington restrict leaf blower use to electric models, and limited exceptions cover wheeled four-stroke blowers on properties over one acre and gas equipment during emergencies. In Arlington, even electric blowers are subject to time restrictions. Other towns work differently. For example, Marblehead&#39;s bylaw prohibits gas-powered leaf blowers from Memorial Day to Labor Day each year. You can read the coverage at <a href="https://www.boston.com/news/local-news/2026/03/25/no-one-can-use-a-gas-powered-leaf-blower-in-these-2-mass-towns-thanks-to-new-laws/" target="_blank" rel="noopener">Boston.com</a> and the <a href="https://marbleheadma.gov/yearly-reminder-gas-powered-leaf-blower-ban-starts-may-25th-2026/" target="_blank" rel="noopener">Marblehead notice</a>.</p>
+<p>Rules change and differ town by town, so check with each town before you commit. What matters for scheduling is that you tag every property with its town rules, then send a crew with the right equipment to that zone. Our <a href="/blog/landscaping-seasonal-marketing-calendar/">landscaping seasonal marketing calendar</a> covers how fall cleanup work stacks on top of this.</p>
+<h2 id="step-3-find-the-outliers">Step 3: Find the outliers</h2>
+<p>An outlier is any property whose real cost per visit is well above what you charge. Don&#39;t judge by gut feel. Run the numbers on every account once, ideally in the off-season.</p>
+<p>For each property, capture:</p>
+<ul>
+<li>Minutes on site, from your crew&#39;s actual logs</li>
+<li>Minutes of added drive time compared to a neighbor in the same zone</li>
+<li>Equipment or labor needs, such as a second person or specialty gear</li>
+<li>Price per visit and visits per season</li>
+</ul>
+<p>Then sort by margin per visit. A table like this makes the problem obvious:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Property type</th>
+<th>What usually goes wrong</th>
+<th>First fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Isolated lot, 15+ minutes from the zone</td>
+<td>Drive time eats the margin</td>
+<td>Drive-time surcharge or a set day</td>
+</tr>
+<tr>
+<td>Big lot priced like a small one</td>
+<td>On-site time was never re-measured</td>
+<td>Re-measure and re-quote</td>
+</tr>
+<tr>
+<td>Steep or complicated site</td>
+<td>Needs a second person or slower equipment</td>
+<td>Price by hours, not by square footage</td>
+</tr>
+<tr>
+<td>Gated or time-window customer</td>
+<td>Crew waits or comes back</td>
+<td>Add an access fee or flexible window</td>
+</tr>
+<tr>
+<td>Stragglers in a new town</td>
+<td>One stop, no neighbors</td>
+<td>Hold until you have 3 to 5 nearby</td>
+</tr>
+</tbody></table></div>
+<h2 id="step-4-price-the-outliers">Step 4: Price the outliers</h2>
+<p>Keep the method simple enough that you can explain it to a customer in two sentences.</p>
+<ol>
+<li><strong>Find your hourly cost.</strong> Include crew wages, truck, trailer, fuel, equipment wear and insurance, divided by billable hours.</li>
+<li><strong>Add the real time.</strong> On-site minutes plus drive minutes, multiplied by that hourly cost.</li>
+<li><strong>Divide by one minus your target margin.</strong> If you want 25% margin, divide cost by 0.75.</li>
+</ol>
+<p>In the hypothetical above, the outlier costs $70 per visit. At a 25% margin, you&#39;d quote $70 ÷ 0.75, which is about $93 per visit instead of $60. That&#39;s a big jump. If the customer balks, you have three honest options:</p>
+<ul>
+<li><strong>Offer a fixed day</strong> when your crew is already in that area, which lowers your drive cost and your price.</li>
+<li><strong>Offer biweekly service</strong> on a slower rhythm, so the drive cost spreads across fewer visits.</li>
+<li><strong>Walk away.</strong> A job that loses money every week isn&#39;t a customer you&#39;re trying to keep.</li>
+</ul>
+<p>For a quick benchmark on vehicle cost alone, the IRS standard mileage rate for self-employed and business use is 76 cents per mile for the second half of 2026, per the <a href="https://www.irs.gov/tax-professionals/standard-mileage-rates" target="_blank" rel="noopener">IRS</a>. A 12-mile round-trip detour is about $9 in vehicle cost at that rate. Your real cost for a truck and trailer will differ, and that figure leaves out labor, so use your own number.</p>
+<h2 id="when-a-spreadsheet-stops-being-enough">When a spreadsheet stops being enough</h2>
+<p>A good spreadsheet carries a small company a long way. The trouble starts when you add crews, seasons and 200 accounts. Signs you&#39;ve hit that point:</p>
+<ul>
+<li>You re-sort the week by hand whenever it rains.</li>
+<li>Nobody can tell you the margin on a given property without an hour of math.</li>
+<li>New-customer calls get a day offered that has nothing to do with the zone.</li>
+<li>Crew leads keep their own notes and your data drifts.</li>
+</ul>
+<p>This is where a <a href="/blog/what-is-a-custom-business-tool/">custom business tool</a> earns its keep, and it doesn&#39;t need to be huge. A useful one for route scheduling would:</p>
+<ul>
+<li>Hold every property with its zone, day, town rules, lot size and gate notes</li>
+<li>Calculate cost and margin per visit from logged time</li>
+<li>Flag any property below your target margin</li>
+<li>Show a new customer which days are open in their zone</li>
+<li>Feed quote requests into a pipeline, which ties in with <a href="/blog/crm-pipeline-stages-service-business/">CRM pipeline stages</a></li>
+</ul>
+<p>If you take on winter work, <a href="/blog/snow-removal-contracts-landscaping/">snow removal contracts</a> bring their own routing rules, and the same zone logic applies. An <a href="/blog/instant-quote-calculator-for-your-website/">instant quote calculator</a> can also use your drive-time rules to quote outliers correctly before anyone calls.</p>
+<h2 id="how-rgs-can-help">How RGS can help</h2>
+<p>If you&#39;d rather not stitch this together yourself, RGS builds <a href="/services/custom-tool-building/">custom tools</a> for local service businesses, including scheduling and quoting tools shaped around how your crews actually run. We can also connect them to a <a href="/industries/landscaping/crm-build-management/">CRM for landscaping companies</a> so quotes, customers and schedules live in one place. See what we do for <a href="/industries/landscaping/">landscaping businesses</a> or call (617) 877-5608 to talk it through.</p>
+
+    </div>
+    <hr class="divider">
+    <div class="chip-grid">
+      <a href="/services/custom-tool-building/" class="chip">Custom Tool Building</a><a href="/services/crm-build-management/" class="chip">CRM Build & Management</a>
+      <a href="/industries/landscaping/" class="chip">Landscaping</a>
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common questions</h2>
+    </div>
+    <div style="max-width:760px;">
+      <details class="faq-item"><summary>How many lawns should a mowing crew hit in a day?</summary><p>There's no honest universal number, because it depends on lot size, equipment and drive time between stops. Track your own average minutes on site and minutes driving per stop for a few weeks, then build the day around those numbers instead of a target someone else gave you.</p></details>
+      <details class="faq-item"><summary>How do I price a lawn that's far from the rest of my route?</summary><p>Work out what the extra drive time costs you per visit, add it to your normal price, and quote that number. If the customer won't pay it, either offer a specific day when you're already nearby or pass on the job.</p></details>
+      <details class="faq-item"><summary>Can I use Google Maps to plan lawn care routes?</summary><p>For a single day with a handful of stops, yes. Google Maps caps a route at about 10 stops and doesn't reorder them for you, so a full week of routes needs a spreadsheet, a route planner app or a custom tool.</p></details>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Playbooks</div>
+      <h2>How this works in your trade</h2>
+    </div>
+    <div class="grid grid-3"><a href="/industries/landscaping/crm-build-management/" class="card">
+    <div class="card-media"><img src="/images/industry-landscaping.jpg" alt="Landscaping" loading="lazy"></div>
+    <div class="card-body">
+      <span class="tag">CRM Build & Management</span>
+      <h3 style="margin-top:12px;">CRM for Landscaping Companies: Contracts, Routes &amp; Renewals</h3>
+      <p>A landscaping company is really two businesses: recurring maintenance and project work. A CRM that treats them differently keeps contracts renewing and design leads moving.</p>
+      <span class="card-link">See the playbook</span>
+    </div>
+  </a></div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Keep reading</div>
+      <h2>Related articles</h2>
+    </div>
+    <div class="grid grid-3"><a href="/blog/snow-removal-contracts-landscaping/" class="card">
+    <div class="card-media"><img src="/images/blog-crm-checklist.jpg" alt="Snow Removal Contracts: How to Sell, Renew and Manage Them" loading="lazy"></div>
+    <div class="card-body">
+      <span class="tag">CRM & Systems</span>
+      <h3 style="margin-top:12px;">Snow Removal Contracts: How to Sell, Renew and Manage Them</h3>
+      <p>How landscapers can sell, renew and manage snow removal contracts: pick a structure, write tight terms, track every account and renew early. Massachusetts notes.</p>
+      <span class="card-link">Read the article</span>
+    </div>
+  </a><a href="/blog/crm-pipeline-stages-service-business/" class="card">
+    <div class="card-media"><img src="/images/service-crm.jpg" alt="CRM Pipeline Stages for a Service Business (With Automations)" loading="lazy"></div>
+    <div class="card-body">
+      <span class="tag">CRM & Systems</span>
+      <h3 style="margin-top:12px;">CRM Pipeline Stages for a Service Business (With Automations)</h3>
+      <p>How to design CRM pipeline stages for a service business, from new lead to review requested, with the automation to run at each stage and example tables.</p>
+      <span class="card-link">Read the article</span>
+    </div>
+  </a><a href="/blog/track-where-your-leads-come-from/" class="card">
+    <div class="card-media"><img src="/images/service-digital-marketing.jpg" alt="How to Track Where Your Leads Come From (Local Business Guide)" loading="lazy"></div>
+    <div class="card-body">
+      <span class="tag">CRM & Systems</span>
+      <h3 style="margin-top:12px;">How to Track Where Your Leads Come From (Local Business Guide)</h3>
+      <p>Lead source tracking for local businesses: call tracking numbers, UTM links, hidden form fields, 'how did you hear' pitfalls, CRM attribution and reports.</p>
+      <span class="card-link">Read the article</span>
+    </div>
+  </a></div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Want this working for your business?</h2>
+      <p>Book a free consult and we'll show you where to start.</p>
+      <div class="cta-row">
+        <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
+        <a href="tel:6178775608" class="btn btn-outline">Call (617) 877-5608</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand" style="color:#fff;margin-bottom:14px;display:inline-flex;">
+          <img src="/images/logo-mark.png" alt="Revenue Generating Solutions" class="brand-mark">
+          <span>Revenue Generating Solutions</span>
+        </a>
+        <p>AI, CRM, custom software, websites, and marketing — built for local service businesses that want to grow.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="/services/ai-services-automations/">AI & Automations</a></li><li><a href="/services/crm-build-management/">CRM Build & Management</a></li><li><a href="/services/custom-tool-building/">Custom Tool Building</a></li><li><a href="/services/web-design/">Web Design</a></li><li><a href="/services/digital-marketing/">Digital Marketing</a></li></ul>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <ul><li><a href="/industries/plumbing/">Plumbing</a></li><li><a href="/industries/electrical/">Electrical</a></li><li><a href="/industries/hvac/">HVAC</a></li><li><a href="/industries/masonry/">Masonry</a></li><li><a href="/industries/landscaping/">Landscaping</a></li><li><a href="/industries/deck-building/">Deck Building</a></li><li><a href="/industries/glass-glazing/">Glass & Glazing</a></li><li><a href="/industries/painting/">Painting</a></li>
+        <li><a href="/industries/">View all industries →</a></li></ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul><li><a href="/locations/raynham-ma/">Raynham, MA</a></li><li><a href="/locations/lynn-ma/">Lynn, MA</a></li><li><a href="/locations/rehoboth-ma/">Rehoboth, MA</a></li><li><a href="/locations/south-yarmouth-ma/">South Yarmouth, MA</a></li><li><a href="/locations/plymouth-ma/">Plymouth, MA</a></li><li><a href="/locations/northborough-ma/">Northborough, MA</a></li>
+        <li><a href="/locations/">View all locations →</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/software/">RGS Tools for agencies</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="tel:6178775608">(617) 877-5608</a></li>
+          <li><a href="mailto:hello@revenuegeneratingsolutions.com">hello@revenuegeneratingsolutions.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Revenue Generating Solutions. All rights reserved. · <a href="/privacy/">Privacy</a></span>
+      <span>Serving Massachusetts & New England</span>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
