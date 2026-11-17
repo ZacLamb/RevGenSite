@@ -1588,6 +1588,7 @@ ${heroSection({
   <div class="cta-row" style="margin-top:-48px;position:relative;z-index:2;background:#fff;padding:20px 24px;border-radius:16px;box-shadow:0 20px 50px -20px rgba(10,26,47,.2);">
     <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialDays}-day free trial</a>
     <a href="${toolsUrl('/features')}" class="btn btn-outline-dark">See all ${T.features} features</a>
+    <a href="/software/setup/" class="btn btn-outline-dark">Watch the setup videos</a>
   </div>
 </div>
 <section>
@@ -1661,6 +1662,88 @@ ${heroSection({
   }));
 }
 
+
+// ---------- RGS Tools setup videos (/software/setup/) ----------
+// Videos are hosted on the RGS Tools app (same files the in-app Setup guide plays).
+function buildSetupVideos() {
+  const sv = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'setup-videos.json'), 'utf8'));
+  const vid = (v) => `${sv.videosBase}/${v.file}.mp4`;
+  const poster = (v) => `${sv.videosBase}/${v.file}.jpg`;
+  const esc2 = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const videoSchema = (v) => ({
+    '@context': 'https://schema.org', '@type': 'VideoObject', name: v.title, description: v.description,
+    thumbnailUrl: [poster(v)], uploadDate: sv.uploadDate, duration: v.duration, contentUrl: vid(v),
+    embedUrl: `https://${site.domain}/software/setup/${v.slug}/`, transcript: v.transcript,
+    publisher: { '@type': 'Organization', name: site.name },
+  });
+  const player = (v) => `<video controls preload="metadata" playsinline poster="${poster(v)}" style="width:100%;border-radius:16px;background:#0A1A2F;box-shadow:0 20px 50px -20px rgba(10,26,47,.35);"><source src="${vid(v)}" type="video/mp4"></video>`;
+  const crumbs = (extra) => breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'For Agencies', path: '/software/' }, { name: 'Setup videos', path: '/software/setup/' }, ...(extra || [])]);
+
+  sv.videos.forEach((v, i) => {
+    const prev = sv.videos[i - 1], next = sv.videos[i + 1];
+    const body = `
+${heroSection({ eyebrow: `RGS Tools setup · Video ${i + 1} of ${sv.videos.length}`, title: v.title, lede: v.description, image: 'service-custom-tools.jpg', narrow: true, breadcrumb: '<a href="/">Home</a> / <a href="/software/">For Agencies</a> / <a href="/software/setup/">Setup videos</a>' })}
+<section>
+  <div class="container" style="max-width:960px;">
+    ${player(v)}
+    <div class="cta-row" style="margin-top:20px;">
+      <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialDays}-day free trial</a>
+      <a href="${toolsUrl('/getting-started')}" class="btn btn-outline-dark">Full written setup guide</a>
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container" style="max-width:860px;">
+    <div class="eyebrow">Step by step</div>
+    <h2>${esc2(v.short)}</h2>
+    <ol style="margin:18px 0 0;padding-left:22px;line-height:1.7;">${v.steps.map((s) => `<li style="margin-bottom:8px;">${esc2(s)}</li>`).join('')}</ol>
+  </div>
+</section>
+<section>
+  <div class="container" style="max-width:860px;">
+    <div class="eyebrow">Transcript</div>
+    <p style="line-height:1.75;">${esc2(v.transcript)}</p>
+    <div class="cta-row" style="margin-top:28px;justify-content:space-between;">
+      ${prev ? `<a href="/software/setup/${prev.slug}/" class="btn btn-outline-dark">← ${esc2(prev.short)}</a>` : '<span></span>'}
+      ${next ? `<a href="/software/setup/${next.slug}/" class="btn btn-primary">Next: ${esc2(next.short)} →</a>` : `<a href="/software/" class="btn btn-primary">See all RGS Tools →</a>`}
+    </div>
+  </div>
+</section>`;
+    write(`software/setup/${v.slug}/index.html`, layout({
+      title: `${v.title} | RGS Tools`,
+      description: v.description,
+      canonicalPath: `/software/setup/${v.slug}/`,
+      bodyContent: body,
+      ogImage: 'service-custom-tools.jpg',
+      ogType: 'video.other',
+      schemas: [videoSchema(v), crumbs([{ name: v.short, path: `/software/setup/${v.slug}/` }])],
+    }));
+  });
+
+  const body = `
+${heroSection({ eyebrow: 'RGS Tools · Setup videos', title: 'Set up RGS Tools in about five minutes', lede: `${sv.videos.length} short videos: connect HighLevel, install Power-Ups and turn them on for the sub-accounts you choose.`, image: 'service-custom-tools.jpg', narrow: true, breadcrumb: '<a href="/">Home</a> / <a href="/software/">For Agencies</a> / Setup videos' })}
+<section>
+  <div class="container">
+    <div class="grid grid-3">
+      ${sv.videos.map((v, i) => `<a href="/software/setup/${v.slug}/" class="card" style="display:block;text-decoration:none;color:inherit;"><img src="${poster(v)}" alt="${esc2(v.title)}" loading="lazy" style="width:100%;border-radius:12px;aspect-ratio:16/9;object-fit:cover;"><div style="padding:14px 4px 4px;"><div class="eyebrow">Video ${i + 1}</div><h3 style="margin:6px 0;">${esc2(v.short)}</h3><p style="margin:0;">${esc2(v.description)}</p></div></a>`).join('\n      ')}
+    </div>
+    <div class="cta-row" style="margin-top:32px;justify-content:center;">
+      <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialDays}-day free trial</a>
+      <a href="${toolsUrl('/getting-started')}" class="btn btn-outline-dark">Written setup guide</a>
+    </div>
+  </div>
+</section>`;
+  write('software/setup/index.html', layout({
+    title: 'RGS Tools Setup Videos for GoHighLevel Agencies',
+    description: 'Short setup videos for RGS Tools: connect your GoHighLevel agency, install Power-Ups with one Custom JS line and turn them on per sub-account.',
+    canonicalPath: '/software/setup/',
+    bodyContent: body,
+    ogImage: 'service-custom-tools.jpg',
+    schemas: [{ '@context': 'https://schema.org', '@type': 'ItemList', name: 'RGS Tools setup videos', itemListElement: sv.videos.map((v, i) => ({ '@type': 'ListItem', position: i + 1, url: `https://${site.domain}/software/setup/${v.slug}/`, name: v.title })) }, crumbs()],
+  }));
+  return sv.videos.map((v) => `/software/setup/${v.slug}/`);
+}
+
 function build404() {
   const body = `
 <section style="padding:140px 0;text-align:center;">
@@ -1679,8 +1762,9 @@ function build404() {
   }));
 }
 
+let setupVideoPaths = [];
 function buildSitemap() {
-  const urls = ['/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/', '/privacy/'];
+  const urls = ['/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/', '/software/setup/', ...setupVideoPaths, '/privacy/'];
   services.forEach((s) => urls.push(`/services/${s.slug}/`));
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
@@ -1786,6 +1870,7 @@ function run() {
   buildBlogIndex();
   blog.forEach(buildBlogPost);
   buildSoftware();
+  setupVideoPaths = buildSetupVideos();
   build404();
   buildSitemap();
   buildJs();
