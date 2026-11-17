@@ -1,0 +1,55 @@
+{
+  "videosBase": "https://app.revenuegeneratingsolutions.com/guide/videos",
+  "uploadDate": "2026-11-17",
+  "videos": [
+    {
+      "slug": "connect-highlevel",
+      "file": "01-create-account-connect-highlevel",
+      "title": "How to set up RGS Tools and connect HighLevel",
+      "short": "Create your account and connect HighLevel",
+      "description": "Create your RGS Tools account and connect your GoHighLevel agency in one step, or connect a single sub-account with a Private Integration token.",
+      "duration": "PT1M24S",
+      "steps": [
+        "Go to app.revenuegeneratingsolutions.com and click Start free trial. Sign up with your work email.",
+        "Open Sub-accounts and click Connect.",
+        "Running an agency? Choose Whole agency. It installs the RGS Tools app from the HighLevel Marketplace: pick your agency (not a single sub-account) and approve the permissions.",
+        "Tick the sub-accounts you want the tools on and click Connect. Add more any time.",
+        "Only one sub-account, or no agency access? Choose One sub-account, create a Private Integration in HighLevel with the scopes listed in the Connect window, then paste the token and the Location ID.",
+        "Your sub-accounts now show in the switcher at the top left of every tool."
+      ],
+      "transcript": "Hey, it's Zac. In this video I'll get you set up on RGS Tools and connected to HighLevel. It takes about five minutes. Go to app dot revenue generating solutions dot com and click Start free trial. Sign up with your work email and you'll land on your dashboard. Next, connect HighLevel. Open Sub-accounts and click Connect. If you run an agency, pick Whole agency. That installs the RGS Tools app from the HighLevel Marketplace. Choose your agency, not a single sub-account, and approve the permissions. You come back to a list of your sub-accounts. Tick the ones you want the tools on and click Connect. You can add more any time. Only manage one sub-account, or don't have agency access? Pick One sub-account instead. In HighLevel, go to Settings, Private Integrations, create a new integration called RGS Tools, tick the scopes listed in the Connect window, and copy the token. Then copy the Location ID from Business Profile, paste both into RGS Tools, and click Connect. That's it. Your sub-accounts now show in the switcher at the top left of every tool. Next video, we'll put Power-Ups inside HighLevel."
+    },
+    {
+      "slug": "install-power-ups",
+      "file": "02-install-power-ups",
+      "title": "How to install RGS Power-Ups in GoHighLevel (Custom JS)",
+      "short": "Install Power-Ups in HighLevel",
+      "description": "Add the one-line RGS Power-Ups install to your GoHighLevel agency's Custom JS, or use the bookmark when you can't edit Custom JS.",
+      "duration": "PT54S",
+      "steps": [
+        "In RGS Tools, open Power-Ups and click Copy next to the install line.",
+        "In HighLevel, switch to your agency view and open Settings, Company, White Label, then Custom JS.",
+        "Paste the line at the very bottom, below anything already there. Don't change or remove existing code.",
+        "Click Save changes and refresh HighLevel.",
+        "Can't edit Custom JS? Drag the RGS Power-Ups bookmark to your bookmarks bar and click it on any HighLevel page."
+      ],
+      "transcript": "Power-Ups run inside HighLevel itself, so they need one line added to your agency. Here's how. In RGS Tools, open Power-Ups and click Copy next to the install line. Now in HighLevel, switch to your agency view. Open Settings, Company, then White Label, and scroll to Custom JS. Paste the line at the very bottom, under anything that's already there. Don't change or delete existing code. Click Save changes. Refresh HighLevel and open a sub-account. Power-Ups are now live. Can't edit Custom JS? Drag the Power-Ups bookmark to your bookmarks bar instead and click it on any HighLevel page. Next, we'll choose which Power-Ups are on, and where."
+    },
+    {
+      "slug": "turn-on-power-ups",
+      "file": "03-turn-on-power-ups",
+      "title": "How to turn on RGS Power-Ups and choose sub-accounts",
+      "short": "Turn Power-Ups on and choose sub-accounts",
+      "description": "Switch RGS Power-Ups on, limit each one to the sub-accounts you pick, and see File Preview and Note Sync in action in GoHighLevel.",
+      "duration": "PT1M24S",
+      "steps": [
+        "Every Power-Up has its own switch. Turn on the ones you want.",
+        "A Power-Up runs on all your sub-accounts by default. Click the button next to the switch to pick only the sub-accounts it should run on.",
+        "File Preview: hover a file on a contact to preview it, or click to open it in the page. Works on file fields and the Documents panel.",
+        "Note Sync: copies each contact's notes into Latest Note and All Notes. Switch it on, pick your sub-account, then open Status and backfill and click Backfill for contacts that already have notes.",
+        "Changes save on their own and show in HighLevel within a minute. Refresh the page."
+      ],
+      "transcript": "Every Power-Up has its own switch. Read the description, then turn on the ones you want. By default a Power-Up runs on all your sub-accounts. Click the button next to the switch to pick just the sub-accounts it should run on. That's handy for testing on one account first. For example, File Preview. Hover a file on a contact to preview it, or click to open it right there, without a new tab. It works on file fields and the Documents panel. Note Sync copies each contact's notes into two fields, Latest Note and All Notes, so you can use them in workflows, texts, emails and sheets. Switch it on, pick your sub-account, then open Status and backfill and click Backfill to fill in contacts that already have notes. In a workflow, pick Latest Note or All Notes from the merge-field picker, like any other field. Changes save on their own and show up in HighLevel within a minute. Just refresh the page."
+    }
+  ]
+}
