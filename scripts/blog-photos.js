@@ -34,13 +34,24 @@ function writePost(p) {
 const allSlugs = () => fs.readdirSync(BLOG).filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, ''));
 const usedPhotoIds = () => new Set(allSlugs().map((s) => { try { return readPost(s).front.photo?.id; } catch { return null; } }).filter(Boolean).map(String));
 
+// Openverse without a key: at most 20 results a request and a few requests a minute, so space them out
+// and wait when told to. A run that still hits the limit stops early; run it again to finish the rest.
+let last = 0;
 async function search(query, source) {
-  const qs = new URLSearchParams({ q: query, license_type: 'commercial', aspect_ratio: 'wide', page_size: '40', mature: 'false' });
+  const qs = new URLSearchParams({ q: query, license_type: 'commercial', aspect_ratio: 'wide', page_size: '20', mature: 'false' });
   qs.set('source', source || 'stocksnap,wikimedia,flickr');
-  const r = await fetch(`https://api.openverse.org/v1/images/?${qs}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
-  if (!r.ok) throw new Error(`Openverse ${r.status}: ${(await r.text()).slice(0, 200)}`);
-  return (await r.json()).results || [];
+  for (let attempt = 0; ; attempt++) {
+    const wait = last + 3500 - Date.now();
+    if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+    last = Date.now();
+    const r = await fetch(`https://api.openverse.org/v1/images/?${qs}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
+    if (r.status === 429 && attempt < 3) { await new Promise((res) => setTimeout(res, Math.min(Number(r.headers.get('retry-after')) || 60, 120) * 1000)); continue; }
+    if (r.status === 429) throw Object.assign(new Error('Openverse rate limit reached'), { rate: true });
+    if (!r.ok) throw new Error(`Openverse ${r.status}: ${(await r.text()).slice(0, 200)}`);
+    return (await r.json()).results || [];
+  }
 }
+
 // Usable: big enough for a page header, not a document/map/logo, sensible title.
 const BAD = /\b(map|logo|diagram|chart|seal|flag|poster|advert|document|letter|crack|beer|nude|protest|accident|fire|crash|dead|funeral)\b/i;
 function usable(r) {
@@ -97,11 +108,11 @@ async function backfill(all) {
   const used = usedPhotoIds();
   let done = 0;
   for (const p of todo) {
-    const ph = await photoFor(p, used);
+    let ph;
+    try { ph = await photoFor(p, used); } catch (e) { if (e.rate) { console.warn(`${e.message}: stopping here, run again for the rest`); break; } throw e; }
     if (!ph) { console.warn(`no photo found: ${p.slug}`); continue; }
     used.add(ph.id); apply(p, ph); done++;
     console.log(`${p.slug} <- ${ph.query} (${ph.credit})`);
-    await new Promise((r) => setTimeout(r, 400));
   }
   console.log(`Done: ${done} of ${todo.length} posts got their own photo.`);
 }
