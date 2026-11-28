@@ -2,8 +2,8 @@
   "name": "Revenue Generating Solutions",
   "shortName": "RGS",
   "domain": "revenuegeneratingsolutions.com",
-  "tagline": "We Help You Make More Revenue. Period.",
-  "subTagline": "AI, CRM, custom software, websites, and marketing \u2014 built for local service businesses that want to grow.",
+  "tagline": "New England’s AI consultancy for growing local businesses",
+  "subTagline": "We find the hours and the revenue your business is losing to missed calls, slow follow-up and busywork, then build the AI and automations that win them back. For owners across Massachusetts, New Hampshire, Rhode Island, Connecticut, Maine and Vermont.",
   "phone": "(617) 877-5608",
   "email": "hello@revenuegeneratingsolutions.com",
   "address": {
@@ -13,7 +13,7 @@
     "zip": "82801"
   },
   "founder": "Zac Lamb",
-  "region": "Massachusetts & New England",
+  "region": "New England",
   "colors": {
     "primary": "#0B5FFF",
     "primaryDark": "#083ECB",
@@ -29,6 +29,10 @@
     "linkedin": "https://linkedin.com/company/revenuegeneratingsolutions"
   },
   "nav": [
+    {
+      "label": "AI Audit",
+      "href": "/ai-audit/"
+    },
     {
       "label": "Services",
       "href": "/services/"
@@ -46,10 +50,6 @@
       "href": "/blog/"
     },
     {
-      "label": "For Agencies",
-      "href": "/software/"
-    },
-    {
       "label": "About",
       "href": "/about/"
     },
@@ -60,20 +60,20 @@
   ],
   "stats": [
     {
-      "value": "5",
-      "label": "Core Services Under One Roof"
+      "value": "6",
+      "label": "New England states served"
     },
     {
-      "value": "13",
-      "label": "Trades & Industries Served"
-    },
-    {
-      "value": "100%",
-      "label": "Built for Local Service Businesses"
+      "value": "Free",
+      "label": "AI audit to start, no obligation"
     },
     {
       "value": "1",
-      "label": "Team That Builds It All \u2014 No Handoffs"
+      "label": "Team builds it all, no handoffs"
+    },
+    {
+      "value": "60 days",
+      "label": "Of tuning after every launch"
     }
   ],
   "toolsUrl": "https://app.revenuegeneratingsolutions.com",
@@ -109,5 +109,31 @@
         "title": "Your free consult"
       }
     ]
-  }
+  },
+  "states": [
+    {
+      "code": "MA",
+      "name": "Massachusetts"
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire"
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island"
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut"
+    },
+    {
+      "code": "ME",
+      "name": "Maine"
+    },
+    {
+      "code": "VT",
+      "name": "Vermont"
+    }
+  ]
 }

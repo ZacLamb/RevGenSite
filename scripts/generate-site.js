@@ -255,7 +255,7 @@ function header() {
     </nav>
     <div class="header-actions">
       <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="header-phone">${site.phone}</a>
-      <a href="/book/" class="btn btn-primary" style="padding:11px 20px;font-size:14px;">Book a Free Consult</a>
+      <a href="/ai-audit/" class="btn btn-primary" style="padding:11px 20px;font-size:14px;">Free AI Audit</a>
       <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
@@ -264,7 +264,7 @@ function header() {
   <nav id="mobile-nav" class="mobile-nav">
     ${site.nav.map((n) => `<a href="${n.href}">${n.label}</a>`).join('\n    ')}
     <a href="tel:${site.phone.replace(/[^\d+]/g, '')}">${site.phone}</a>
-    <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
+    <a href="/ai-audit/" class="btn btn-primary">Get a Free AI Audit</a>
   </nav>
 </header>`;
 }
@@ -314,7 +314,12 @@ function footer() {
 </footer>`;
 }
 
-function heroSection({ eyebrow, title, lede, image, stats, breadcrumb, narrow }) {
+// Credit line for a photo used under a Creative Commons licence (town photos from Wikimedia Commons).
+function photoCredit(p) {
+  return p && p.credit ? `<a class="photo-credit" href="${p.source}" target="_blank" rel="noopener nofollow">Photo: ${p.credit} · ${p.license}</a>` : '';
+}
+
+function heroSection({ eyebrow, title, lede, image, stats, breadcrumb, narrow, credit }) {
   return `<section class="hero">
   <div class="hero-bg" style="background-image:url('/images/${image}')"></div>
   <div class="hero-overlay"></div>
@@ -327,6 +332,7 @@ function heroSection({ eyebrow, title, lede, image, stats, breadcrumb, narrow })
       ${stats ? `<div class="hero-stats">${stats.map((s) => `<div class="hero-stat"><div class="value">${s.value}</div><div class="label">${s.label}</div></div>`).join('')}</div>` : ''}
     </div>
   </div>
+  ${photoCredit(credit)}
 </section>`;
 }
 
@@ -337,7 +343,7 @@ function ctaBanner({ title, text, primaryLabel, primaryHref }) {
       <h2>${title}</h2>
       <p>${text}</p>
       <div class="cta-row">
-        <a href="${primaryHref || '/book/'}" class="btn btn-primary">${primaryLabel || 'Book a Free Consult'}</a>
+        <a href="${primaryHref || '/ai-audit/'}" class="btn btn-primary">${primaryLabel || 'Get a Free AI Audit'}</a>
         <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="btn btn-outline">Call ${site.phone}</a>
       </div>
     </div>
@@ -418,10 +424,35 @@ function toolCard(t) {
 
 // ---------- pages ----------
 
+// What AI takes off an owner's plate: the home page and the AI audit page lead with these.
+const AI_WINS = [
+  { icon: '📞', title: 'Every call and chat answered', text: 'An AI receptionist picks up missed calls, after-hours calls and website chats, answers the common questions and books the appointment or job.' },
+  { icon: '⚡', title: 'Every lead followed up in minutes', text: 'New inquiries get a text and email back right away, then a follow-up sequence until they book or say no. No more leads that just went quiet.' },
+  { icon: '🧾', title: 'Quotes, invoices and paperwork', text: 'Estimates, intake forms, job notes and reports drafted for you from what your team already types or says.' },
+  { icon: '⭐', title: 'Reviews, reminders and no-shows', text: 'Review requests after every job, reminders before every appointment, and a polite nudge to rebook when someone misses.' },
+  { icon: '📊', title: 'Numbers you can actually see', text: 'One dashboard for leads, bookings and revenue, so you stop guessing which marketing works and who on the team is following up.' },
+  { icon: '🎓', title: 'Your team using AI safely', text: 'Hands-on training so your staff use ChatGPT, Claude and the tools you already pay for every day, with clear rules on customer data.' },
+];
+// Kinds of local business we work with. Existing industry pages are linked by slug.
+const WHO_WE_HELP = [
+  { name: 'Home services & trades', text: 'Plumbing, HVAC, electrical, landscaping, roofing, painting, masonry, remodeling and more.', href: '/industries/' },
+  { name: 'Medical, dental & wellness', text: 'Practices and clinics that lose patients to voicemail and no-shows.', slug: 'healthcare' },
+  { name: 'Restaurants & cafés', text: 'Catering requests, reservations, reviews and the phone that rings during the rush.' },
+  { name: 'Salons, spas & studios', text: 'Booking, rebooking, reminders and memberships without the front-desk scramble.' },
+  { name: 'Retail & specialty shops', text: 'Repeat customers, local search and the questions you answer fifty times a week.' },
+  { name: 'Professional services', text: 'Law, accounting, insurance and real estate offices buried in intake and follow-up.' },
+  { name: 'Auto shops & detailers', text: 'Quotes, scheduling and reminders that bring customers back.', slug: 'auto-restoration-detailing' },
+  { name: 'Growing companies of any kind', text: 'If your team spends hours on work that repeats, there is probably an AI fix for it.' },
+];
+
 function buildHome() {
+  const who = (w) => {
+    const href = w.slug ? `/industries/${w.slug}/` : w.href;
+    return `<div class="card"><div class="card-body"><h3>${href ? `<a href="${href}">${w.name}</a>` : w.name}</h3><p>${w.text}</p></div></div>`;
+  };
   const body = `
 ${heroSection({
-  eyebrow: 'RGS — GROWTH SYSTEMS FOR LOCAL SERVICE BUSINESSES',
+  eyebrow: 'AI CONSULTING · MASSACHUSETTS & NEW ENGLAND',
   title: site.tagline,
   lede: site.subTagline,
   image: 'hero-home.jpg',
@@ -429,47 +460,59 @@ ${heroSection({
 })}
 <div class="container">
   <div class="cta-row" style="margin-top:-48px;position:relative;z-index:2;background:#fff;padding:20px 24px;border-radius:16px;box-shadow:0 20px 50px -20px rgba(10,26,47,.2);">
-    <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
-    <a href="/services/" class="btn btn-outline-dark">See All Services</a>
+    <a href="/ai-audit/" class="btn btn-primary">Get Your Free AI Audit</a>
+    <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="btn btn-outline-dark">Call ${site.phone}</a>
   </div>
 </div>
 
 <section>
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">What We Do</div>
-      <h2>Five services. One team. Zero handoffs.</h2>
-      <p>Most agencies specialize in one piece of your marketing stack and hand you off for the rest. We build the website, the CRM, the automations, the ad campaigns, and the custom tools — all under one roof, all talking to each other.</p>
+      <div class="eyebrow">What AI Can Take Off Your Plate</div>
+      <h2>Practical AI for a small business, not a science project</h2>
+      <p>Most owners we meet are not short on ideas. They are short on hours. These are the jobs we hand to AI first, because they pay back fastest.</p>
     </div>
     <div class="grid grid-3">
-      ${services.map(serviceCard).join('\n      ')}
+      ${AI_WINS.map((w) => `<div class="card"><div class="card-body"><div style="font-size:28px;line-height:1">${w.icon}</div><h3 style="margin-top:12px">${w.title}</h3><p>${w.text}</p></div></div>`).join('\n      ')}
     </div>
+    <div style="text-align:center;margin-top:32px;"><a href="/ai-audit/" class="btn btn-primary">See what AI could do for your business</a></div>
   </div>
 </section>
-
-${(() => { const T = softwareTotals(); return `<section class="software-band">
-  <div class="container">
-    <div class="software-band-inner">
-      <div>
-        <div class="eyebrow" style="color:#7DB2FF;">For GoHighLevel agencies · RGS Tools</div>
-        <h2>We built our own tools to run our agency. Now you can use them.</h2>
-        <p>${T.tools} tools and ${T.features} features for agencies on GoHighLevel: custom field lookup, bulk sub-account setup, SMS blast follow-up, conversation exports, backups and in-app upgrades. Priced per agency, with unlimited sub-accounts.</p>
-        <div class="cta-row"><a href="/software/" class="btn btn-primary">Explore RGS Tools</a><a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-outline">Start a ${software.bundle.trialDays}-day free trial</a></div>
-      </div>
-      <div class="software-icons">${software.tools.map((t) => `<a href="${toolHref(t)}" title="${t.name}">${toolGlyph(t, 'lg')}<span>${t.name}</span></a>`).join('')}</div>
-    </div>
-  </div>
-</section>`; })()}
 
 <section class="bg-paper">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Industries We Serve</div>
-      <h2>Built for the trades, not generic small business</h2>
-      <p>We've built systems for plumbers, electricians, HVAC companies, masons, landscapers, and a dozen other trades — each with its own pipeline, pain points, and playbook.</p>
+      <div class="eyebrow">How It Works</div>
+      <h2>Start with an audit. Build what pays back first.</h2>
     </div>
-    <div class="chip-grid" style="justify-content:center;">
-      ${industries.map((i) => `<a href="/industries/${i.slug}/" class="chip">${i.name}</a>`).join('\n      ')}
+    <div class="grid grid-4">
+      ${[['1', 'Free AI audit', 'A 30-minute call where we walk through how leads come in, how work gets done and where time goes.'], ['2', 'Your AI plan', 'A short written list of the automations worth building, in order, with the hours each one should save.'], ['3', 'We build it', 'We set it up inside the tools you already use: your phones, calendar, CRM, website and inbox.'], ['4', 'Train and tune', 'We train your team and keep tuning for 60 days after launch, so it keeps working as you grow.']].map(([n, t, d]) => `<div class="card"><div class="card-body"><div class="eyebrow">Step ${n}</div><h3>${t}</h3><p>${d}</p></div></div>`).join('\n      ')}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Who We Help</div>
+      <h2>Built for every kind of growing local business</h2>
+      <p>Contractors, clinics, restaurants, salons, shops and offices across New England. Different businesses, the same leaks: missed calls, slow follow-up and too much busywork.</p>
+    </div>
+    <div class="grid grid-4">
+      ${WHO_WE_HELP.map(who).join('\n      ')}
+    </div>
+  </div>
+</section>
+
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">The Systems Behind It</div>
+      <h2>Everything AI needs to actually work</h2>
+      <p>AI only helps if it is connected to the rest of your business. We build the pieces it runs on, all under one roof, all talking to each other.</p>
+    </div>
+    <div class="grid grid-3">
+      ${services.map(serviceCard).join('\n      ')}
     </div>
   </div>
 </section>
@@ -479,12 +522,12 @@ ${(() => { const T = softwareTotals(); return `<section class="software-band">
     <div class="split">
       <div>
         <div class="eyebrow">Why RGS</div>
-        <h2>We build the whole growth system, not just one piece of it</h2>
-        <p>A website with no CRM behind it just collects names nobody follows up on. A CRM with no automation just becomes another thing to log into. Ads without tracking are a guess. We build all of it together — website, CRM, automations, custom tools, and the campaigns that feed them — so every lead lands somewhere real and gets followed up on automatically.</p>
+        <h2>A local AI partner, not a chatbot vendor</h2>
+        <p>Plenty of companies will sell you an AI tool. We start from your business: how customers find you, how your team works and where money slips away. Then we build only what pays for itself, connect it to the systems you already have, and teach your people to use it.</p>
         <div class="feature-list" style="margin-top:24px;">
-          <div class="feature-item"><span class="feature-icon">✓</span><p>One team building your site, CRM, and campaigns — nothing gets lost in a handoff</p></div>
-          <div class="feature-item"><span class="feature-icon">✓</span><p>Dedicated pages for every service and every town you serve, built for local search</p></div>
-          <div class="feature-item"><span class="feature-icon">✓</span><p>Automation and AI tools that catch the leads a busy office can't get to</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p>Plain-English advice for owners who are not technical</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p>One team builds the AI, the CRM, the website and the marketing, so nothing gets lost in a handoff</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p>Your data stays yours, and we set clear rules for how AI handles customer information</p></div>
         </div>
       </div>
       <div class="media">${img('about-team.jpg', 'The Revenue Generating Solutions team')}</div>
@@ -496,11 +539,11 @@ ${(() => { const T = softwareTotals(); return `<section class="software-band">
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Service Area</div>
-      <h2>Rooted in Massachusetts & New England</h2>
-      <p>We're based in the region we serve — here are a few of the towns and markets we know well.</p>
+      <h2>Serving all six New England states</h2>
+      <p>${site.states.map((s) => s.name).join(', ').replace(/, ([^,]*)$/, ' and $1')}. Most of the work happens remotely, with on-site visits when it helps. A few of the towns we work in:</p>
     </div>
     <div class="grid grid-4">
-      ${towns.slice(0, 4).map(townCard).join('\n      ')}
+      ${towns.slice(0, 8).map(townCard).join('\n      ')}
     </div>
     <div style="text-align:center;margin-top:32px;">
       <a href="/locations/" class="btn btn-outline-dark">View All Locations</a>
@@ -512,7 +555,7 @@ ${(() => { const T = softwareTotals(); return `<section class="software-band">
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">From the Blog</div>
-      <h2>Straight talk on growth, automation, and local marketing</h2>
+      <h2>Straight talk on AI, automation and local growth</h2>
     </div>
     <div class="grid grid-3">
       ${blog.slice(0, 3).map(blogCard).join('\n      ')}
@@ -521,15 +564,82 @@ ${(() => { const T = softwareTotals(); return `<section class="software-band">
 </section>
 
 ${ctaBanner({
-  title: 'Ready to make more revenue?',
-  text: "Tell us about your business and we'll show you exactly where the leads, follow-up, and time are slipping through the cracks — and what it'd take to fix it.",
+  title: 'Find out what AI could do for your business',
+  text: "Book a free 30-minute AI audit. We'll show you where calls, leads and hours are slipping away, and which fixes are worth building first. No pressure, no jargon.",
 })}
 `;
   write('index.html', layout({
-    title: null,
-    description: `${site.name} builds websites, CRM systems, AI automations, and marketing for local service businesses across ${site.region}. ${site.tagline}`,
+    title: 'AI Consulting for Small Businesses in Massachusetts & New England',
+    description: `${site.name} is an AI consultancy for growing local businesses in Massachusetts and across New England: AI receptionists, automated follow-up, CRM, websites and staff training. Start with a free AI audit.`,
     canonicalPath: '/',
     bodyContent: body,
+  }));
+}
+
+function buildAiAudit() {
+  const faq = [
+    { q: 'What does the free AI audit cost?', a: 'Nothing. It is a 30-minute call. If we can help, we will tell you what we would build and what it would cost. If we cannot, we will say so.' },
+    { q: 'Do I need to be technical?', a: 'No. We ask how your business runs today: how customers reach you, what your team does every day and which tools you already use. We do the technical part.' },
+    { q: 'What kind of businesses is this for?', a: 'Small and growing local businesses of any kind: home services, clinics, restaurants, salons, shops, offices and more, anywhere in New England.' },
+    { q: 'Will AI replace my staff?', a: 'That is rarely the goal. Most owners use it to stop missing calls and leads and to give their team back the hours they spend on repetitive work.' },
+    { q: 'What happens to my customer data?', a: 'We build on tools you control and set clear rules for what AI can see and do. Nothing is shared or used to train public models without your say-so.' },
+    { q: 'Do you only work in Massachusetts?', a: 'No. We work with businesses in all six New England states. Most of the work is remote, with on-site visits when they help.' },
+  ];
+  const body = `
+${heroSection({
+  eyebrow: 'Free AI Audit',
+  title: 'Find out where AI can save your business time and money',
+  lede: 'A free 30-minute call with a plain-English plan at the end: which tasks to hand to AI first, what each one should save, and what it takes to set up.',
+  image: 'service-ai-automations.jpg',
+  narrow: true,
+  breadcrumb: '<a href="/">Home</a> / AI Audit',
+})}
+<section>
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="eyebrow">What We Look At</div>
+        <h2>Where your hours and revenue are leaking</h2>
+        <div class="feature-list" style="margin-top:16px;">
+          <div class="feature-item"><span class="feature-icon">✓</span><p><b>Calls and messages:</b> how many go unanswered, and what happens after hours</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p><b>Lead follow-up:</b> how fast new inquiries hear back, and how many go quiet</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p><b>Busywork:</b> quotes, intake, scheduling, reminders and data entry your team repeats every day</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p><b>Your tools:</b> what you already pay for and how much of it is actually used</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p><b>Repeat business:</b> reviews, rebooking and staying in touch with past customers</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow">What You Get</div>
+        <h2>A short, honest AI plan</h2>
+        <p>After the call we send a one-page plan: the three to five automations worth building for your business, in the order we would build them, with the hours each one should give back and a ballpark cost. It is yours to keep, whether or not you work with us.</p>
+        <div class="cta-row" style="margin-top:24px;">
+          <a href="/book/" class="btn btn-primary">Book My Free AI Audit</a>
+          <a href="tel:${site.phone.replace(/[^\d+]/g, '')}" class="btn btn-outline-dark">Call ${site.phone}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Common First Projects</div>
+      <h2>What owners usually hand to AI first</h2>
+    </div>
+    <div class="grid grid-3">
+      ${AI_WINS.map((w) => `<div class="card"><div class="card-body"><div style="font-size:28px;line-height:1">${w.icon}</div><h3 style="margin-top:12px">${w.title}</h3><p>${w.text}</p></div></div>`).join('\n      ')}
+    </div>
+  </div>
+</section>
+${faqSection(faq, 'Questions about the AI audit')}
+${ctaBanner({ title: 'Thirty minutes. A clear plan. No obligation.', text: 'Pick a time that works and we will take it from there.', primaryLabel: 'Book My Free AI Audit', primaryHref: '/book/' })}
+`;
+  write('ai-audit/index.html', layout({
+    title: 'Free AI Audit for Small Businesses in New England',
+    description: 'Book a free 30-minute AI audit for your small business. Get a plain-English plan of what to automate first, what it saves and what it costs. Serving MA, NH, RI, CT, ME and VT.',
+    canonicalPath: '/ai-audit/',
+    bodyContent: body,
+    schemas: [breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'AI Audit', path: '/ai-audit/' }]), faqSchemaFor(faq)],
   }));
 }
 
@@ -538,7 +648,7 @@ function buildAbout() {
 ${heroSection({
   eyebrow: 'About Us',
   title: `The team behind ${site.name}`,
-  lede: `We're a small, hands-on team that builds the full growth stack for local service businesses — websites, CRM systems, automation, custom software, and the marketing campaigns that feed them.`,
+  lede: `We're a small, hands-on team that builds the full growth stack for local businesses — websites, CRM systems, automation, custom software, and the marketing campaigns that feed them.`,
   image: 'about-team.jpg',
   narrow: true,
 })}
@@ -548,7 +658,7 @@ ${heroSection({
       <div>
         <div class="eyebrow">How We Got Here</div>
         <h2>Built by people who've actually run the systems we sell</h2>
-        <p>${site.name} was founded by ${site.founder} after years spent building and managing GoHighLevel CRM systems, custom software, and marketing campaigns for businesses of every size — from single-truck contractors to multi-location franchises. We started RGS because too many local service businesses were stuck buying a website from one company, a CRM from another, and ads from a third, with none of it talking to each other.</p>
+        <p>${site.name} was founded by ${site.founder} after years spent building and managing GoHighLevel CRM systems, custom software, and marketing campaigns for businesses of every size — from single-truck contractors to multi-location franchises. We started RGS because too many local businesses were stuck buying a website from one company, a CRM from another, and ads from a third, with none of it talking to each other.</p>
         <p>Today we build all of it under one roof: the website that gets found, the CRM that keeps every lead tracked, the AI automation that catches what a busy office can't, the custom tools that close the gaps off-the-shelf software leaves open, and the ad campaigns that keep the calendar full — all connected, all reporting back to the same system.</p>
       </div>
       <div class="media">${img('hero-home.jpg', 'RGS team on a client job site')}</div>
@@ -584,7 +694,7 @@ ${ctaBanner({
 `;
   write('about/index.html', layout({
     title: 'About',
-    description: `Meet the team behind ${site.name} — builders of websites, CRM systems, AI automation, and marketing for local service businesses in ${site.region}.`,
+    description: `Meet the team behind ${site.name} — builders of websites, CRM systems, AI automation, and marketing for local businesses in ${site.region}.`,
     canonicalPath: '/about/',
     bodyContent: body,
     ogImage: 'about-team.jpg',
@@ -968,7 +1078,7 @@ function buildServicesIndex() {
   const body = `
 ${heroSection({
   eyebrow: 'Services',
-  title: 'Everything it takes to grow a local service business',
+  title: 'Everything it takes to grow a local business',
   lede: 'Five services, built to work together — website, CRM, automation, custom tools, and marketing.',
   image: 'hero-home.jpg',
   narrow: true,
@@ -985,7 +1095,7 @@ ${ctaBanner({ title: 'Not sure which service you need?', text: 'Book a free cons
 `;
   write('services/index.html', layout({
     title: 'Services',
-    description: `AI automations, CRM build & management, custom tool building, web design, and digital marketing for local service businesses — all from ${site.name}.`,
+    description: `AI automations, CRM build & management, custom tool building, web design, and digital marketing for local businesses — all from ${site.name}.`,
     canonicalPath: '/services/',
     bodyContent: body,
   }));
@@ -1116,7 +1226,7 @@ ${heroSection({
     </div>
   </div>
 </section>
-${ctaBanner({ title: "Don't see your trade listed?", text: "We work with local service businesses beyond this list too — reach out and tell us what you do." })}
+${ctaBanner({ title: "Don't see your trade listed?", text: "We work with local businesses beyond this list too — reach out and tell us what you do." })}
 `;
   write('industries/index.html', layout({
     title: 'Industries',
@@ -1199,7 +1309,7 @@ function buildLocationsIndex() {
   const body = `
 ${heroSection({
   eyebrow: 'Locations',
-  title: `Serving local service businesses across ${site.region}`,
+  title: `Serving local businesses across ${site.region}`,
   lede: "Here's a look at some of the towns and markets we know best — with more added as our client base grows.",
   image: 'town-coastal.jpg',
   narrow: true,
@@ -1216,7 +1326,7 @@ ${ctaBanner({ title: "Outside these towns?", text: "Most of our work is done rem
 `;
   write('locations/index.html', layout({
     title: 'Locations',
-    description: `${site.name} serves local service businesses across ${site.region}, including ${towns.slice(0, 5).map((t) => t.name).join(', ')}, and more.`,
+    description: `${site.name} serves local businesses across ${site.region}, including ${towns.slice(0, 5).map((t) => t.name).join(', ')}, and more.`,
     canonicalPath: '/locations/',
     bodyContent: body,
   }));
@@ -1229,9 +1339,10 @@ function buildLocationDetail(t) {
   const body = `
 ${heroSection({
   eyebrow: `${t.region}`,
-  title: `Growth systems for local service businesses in ${t.name}, ${t.state}`,
+  title: `AI consulting and automation for businesses in ${t.name}, ${t.state}`,
   lede: t.blurb,
   image: t.image,
+  credit: t.photo,
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / <a href="/locations/">Locations</a> / ${t.name}`,
 })}
@@ -1243,11 +1354,11 @@ ${t.featuredWork ? `<section>
         <h2>The kind of work that actually moves the needle here</h2>
         <p>${t.featuredWork}</p>
         <div class="cta-row">
-          <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
+          <a href="/ai-audit/" class="btn btn-primary">Get a Free AI Audit</a>
           <a href="/services/" class="btn btn-outline-dark">See Our Services</a>
         </div>
       </div>
-      <div class="media">${img(t.image, `${t.name} ${t.state} local service business project`)}</div>
+      <div class="media">${img((focusIndustries[0] || industries[0]).image, `${(focusIndustries[0] || industries[0]).name} business in ${t.name}, ${t.state}`)}</div>
     </div>
   </div>
 </section>` : ''}
@@ -1285,8 +1396,8 @@ ${t.featuredWork ? `<section>
 ${ctaBanner({ title: `Based in ${t.name}?`, text: 'Book a free consult and let\'s talk about what growth looks like for your business.' })}
 `;
   write(`locations/${t.slug}/index.html`, layout({
-    title: `Website, CRM & Marketing in ${t.name}, ${t.state}`,
-    description: `${site.name} serves local service businesses in ${t.name}, ${t.state} and nearby ${t.nearby.slice(0, 2).join(' and ')} with websites, CRM systems, and marketing.`,
+    title: `AI Consulting & Automation in ${t.name}, ${t.state}`,
+    description: `AI consulting for small businesses in ${t.name}, ${t.state} and nearby ${t.nearby.slice(0, 2).join(' and ')}: AI receptionists, automated follow-up, CRM, websites and marketing. Free AI audit.`,
     canonicalPath: `/locations/${t.slug}/`,
     bodyContent: body,
     ogImage: t.image,
@@ -1305,7 +1416,7 @@ function buildLocationServiceDetail(t, s) {
   const industryNames = matchedIndustries.map((i) => i.name.toLowerCase());
   const localAngle = matchedIndustries.length
     ? `Around ${t.name}, that most often means ${industryNames.slice(0, 3).join(', ')} businesses using it to ${s.shortName === 'AI & Automations' ? 'stop losing jobs to missed calls and slow follow-up' : s.shortName === 'CRM Build & Management' ? 'keep every lead and job tracked instead of scattered across texts and sticky notes' : s.shortName === 'Custom Tool Building' ? 'close the gaps their off-the-shelf software leaves open' : s.shortName === 'Web Design' ? 'show up first when someone searches for their trade nearby' : 'turn ad spend into booked jobs instead of just clicks'}.`
-    : `We build it the same way for local service businesses throughout ${t.region} — no generic template, just the pieces your business actually needs.`;
+    : `We build it the same way for local businesses throughout ${t.region} — no generic template, just the pieces your business actually needs.`;
   const otherTowns = towns.filter((ot) => ot.slug !== t.slug).slice(0, 4);
   const body = `
 ${heroSection({
@@ -1313,6 +1424,7 @@ ${heroSection({
   title: `${s.name} in ${t.name}, ${t.state}`,
   lede: `${s.summary} ${localAngle}`,
   image: t.image,
+  credit: t.photo,
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / <a href="/locations/">Locations</a> / <a href="/locations/${t.slug}/">${t.name}</a> / ${s.shortName}`,
 })}
@@ -1325,7 +1437,7 @@ ${heroSection({
           ${s.features.map((f) => `<div class="feature-item"><span class="feature-icon">✓</span><p>${f}</p></div>`).join('\n          ')}
         </div>
       </div>
-      <div class="media">${img(s.image, `${s.name} for local service businesses in ${t.name}, ${t.state}`)}</div>
+      <div class="media">${img(s.image, `${s.name} for local businesses in ${t.name}, ${t.state}`)}</div>
     </div>
   </div>
 </section>
@@ -1370,7 +1482,7 @@ ${ctaBanner({ title: `Ready for ${s.shortName} in ${t.name}?`, text: `Book a fre
   };
   write(`locations/${t.slug}/${s.slug}/index.html`, layout({
     title: `${s.name} in ${t.name}, ${t.state}`,
-    description: `${s.shortName} for local service businesses in ${t.name}, ${t.state}. ${s.tagline}`,
+    description: `${s.shortName} for local businesses in ${t.name}, ${t.state}. ${s.tagline}`,
     canonicalPath: `/locations/${t.slug}/${s.slug}/`,
     bodyContent: body,
     ogImage: t.image,
@@ -1392,7 +1504,7 @@ function buildBlogIndex() {
 ${heroSection({
   eyebrow: 'Blog',
   title: 'Growth, automation, and local marketing — no fluff',
-  lede: 'Practical, no-hype articles on what actually moves revenue for local service businesses.',
+  lede: 'Practical, no-hype articles on what actually moves revenue for local businesses.',
   image: 'blog-ai-automation-saves-hours.jpg',
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / Blog`,
@@ -1407,7 +1519,7 @@ ${heroSection({
 `;
   write('blog/index.html', layout({
     title: 'Blog',
-    description: `Practical articles on AI automation, CRM systems, web design, and digital marketing for local service businesses from ${site.name}.`,
+    description: `Practical articles on AI automation, CRM systems, web design, and digital marketing for local businesses from ${site.name}.`,
     canonicalPath: '/blog/',
     bodyContent: body,
   }));
@@ -1427,6 +1539,7 @@ ${heroSection({
   title: escHtml(p.title),
   image,
   narrow: true,
+  credit: p.photo && { ...p.photo, license: 'Pexels' },
   breadcrumb: `<a href="/">Home</a> / <a href="/blog/">Blog</a> / ${p.category}`,
 })}
 <section>
@@ -1511,7 +1624,7 @@ ${heroSection({
       ${renderMd(c.md)}
     </div>
     <div class="cta-row" style="margin-top:28px;">
-      <a href="/book/" class="btn btn-primary">Book a Free Consult</a>
+      <a href="/ai-audit/" class="btn btn-primary">Get a Free AI Audit</a>
       <a href="/services/${sv.slug}/" class="btn btn-outline-dark">About ${sv.shortName}</a>
     </div>
   </div>
@@ -1586,7 +1699,7 @@ ${heroSection({
 })}
 <div class="container">
   <div class="cta-row" style="margin-top:-48px;position:relative;z-index:2;background:#fff;padding:20px 24px;border-radius:16px;box-shadow:0 20px 50px -20px rgba(10,26,47,.2);">
-    <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialDays}-day free trial</a>
+    <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialFee ? `${software.bundle.trialDays}-day trial for $${software.bundle.trialFee}` : `${software.bundle.trialDays}-day free trial`}</a>
     <a href="${toolsUrl('/features')}" class="btn btn-outline-dark">See all ${T.features} features</a>
     <a href="/software/setup/" class="btn btn-outline-dark">Watch the setup videos</a>
   </div>
@@ -1613,7 +1726,7 @@ ${heroSection({
         <div class="feature-list" style="margin-top:24px;">
           <div class="feature-item"><span class="feature-icon">✓</span><p>One account for every tool, with one connection for your whole agency</p></div>
           <div class="feature-item"><span class="feature-icon">✓</span><p>Per-agency pricing: the price doesn't change at 3 sub-accounts or 300</p></div>
-          <div class="feature-item"><span class="feature-icon">✓</span><p>${software.bundle.trialDays}-day free trial and cancel any time</p></div>
+          <div class="feature-item"><span class="feature-icon">✓</span><p>${software.bundle.trialFee ? `${software.bundle.trialDays}-day trial for $${software.bundle.trialFee}` : `${software.bundle.trialDays}-day free trial`} and cancel any time</p></div>
         </div>
       </div>
       <div class="software-icons light">${software.tools.map((t) => `<a href="${toolHref(t)}" title="${t.name}">${toolGlyph(t, 'lg')}<span>${t.name}</span></a>`).join('')}</div>
@@ -1624,7 +1737,7 @@ ${heroSection({
   <div class="container">
     <div class="cta-banner">
       <h2>Every tool for $${software.bundle.monthly}/month</h2>
-      <p>All ${T.tools} tools and everything we release next, instead of $${T.sum}/month bought one by one. ${software.bundle.trialDays} days free.</p>
+      <p>All ${T.tools} tools and everything we release next, instead of $${T.sum}/month bought one by one. ${software.bundle.trialFee ? `${software.bundle.trialDays} days for $${software.bundle.trialFee}.` : `${software.bundle.trialDays} days free.`}</p>
       <div class="cta-row">
         <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start the bundle free</a>
         <a href="${toolsUrl('/blog')}" class="btn btn-outline">Read the GoHighLevel guides</a>
@@ -1654,7 +1767,7 @@ ${heroSection({
   };
   write('software/index.html', layout({
     title: 'RGS Tools: Software for GoHighLevel Agencies',
-    description: `${T.tools} tools and ${T.features} features for GoHighLevel agencies, built and used by Revenue Generating Solutions. Per agency, unlimited sub-accounts, ${software.bundle.trialDays}-day free trial.`,
+    description: `${T.tools} tools and ${T.features} features for GoHighLevel agencies, built and used by Revenue Generating Solutions. Per agency, unlimited sub-accounts, ${software.bundle.trialFee ? `${software.bundle.trialDays}-day trial for $${software.bundle.trialFee}` : `${software.bundle.trialDays}-day free trial`}.`,
     canonicalPath: '/software/',
     bodyContent: body,
     ogImage: 'service-custom-tools.jpg',
@@ -1687,7 +1800,7 @@ ${heroSection({ eyebrow: `RGS Tools setup · Video ${i + 1} of ${sv.videos.lengt
   <div class="container" style="max-width:960px;">
     ${player(v)}
     <div class="cta-row" style="margin-top:20px;">
-      <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialDays}-day free trial</a>
+      <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialFee ? `${software.bundle.trialDays}-day trial for $${software.bundle.trialFee}` : `${software.bundle.trialDays}-day free trial`}</a>
       <a href="${toolsUrl('/getting-started')}" class="btn btn-outline-dark">Full written setup guide</a>
     </div>
   </div>
@@ -1728,7 +1841,7 @@ ${heroSection({ eyebrow: 'RGS Tools · Setup videos', title: 'Set up RGS Tools i
       ${sv.videos.map((v, i) => `<a href="/software/setup/${v.slug}/" class="card" style="display:block;text-decoration:none;color:inherit;"><img src="${poster(v)}" alt="${esc2(v.title)}" loading="lazy" style="width:100%;border-radius:12px;aspect-ratio:16/9;object-fit:cover;"><div style="padding:14px 4px 4px;"><div class="eyebrow">Video ${i + 1}</div><h3 style="margin:6px 0;">${esc2(v.short)}</h3><p style="margin:0;">${esc2(v.description)}</p></div></a>`).join('\n      ')}
     </div>
     <div class="cta-row" style="margin-top:32px;justify-content:center;">
-      <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialDays}-day free trial</a>
+      <a href="${toolsUrl('/signup?tool=bundle')}" class="btn btn-primary">Start a ${software.bundle.trialFee ? `${software.bundle.trialDays}-day trial for $${software.bundle.trialFee}` : `${software.bundle.trialDays}-day free trial`}</a>
       <a href="${toolsUrl('/getting-started')}" class="btn btn-outline-dark">Written setup guide</a>
     </div>
   </div>
@@ -1764,7 +1877,7 @@ function build404() {
 
 let setupVideoPaths = [];
 function buildSitemap() {
-  const urls = ['/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/', '/software/setup/', ...setupVideoPaths, '/privacy/'];
+  const urls = ['/', '/ai-audit/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/', '/software/setup/', ...setupVideoPaths, '/privacy/'];
   services.forEach((s) => urls.push(`/services/${s.slug}/`));
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
@@ -1854,6 +1967,7 @@ function buildJs() {
 
 function run() {
   buildHome();
+  buildAiAudit();
   buildAbout();
   buildContact();
   buildBook();

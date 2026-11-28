@@ -1,0 +1,41 @@
+# Gives blog posts their own real photo from Pexels (scripts/blog-photos.js), then commits to main so
+# Railway redeploys. Run it from Actions › Blog photos › Run workflow. Needs the PEXELS_API_KEY secret.
+# By default it only fixes posts that share an image with another post; tick "all" to redo every post.
+name: Blog photos
+
+on:
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Redo every post, not only the ones sharing an image'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Pick photos
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/blog-photos.js ${{ github.event.inputs.all == 'true' && '--all' || '' }}
+      - name: Build and check
+        run: npm run check
+      - name: Publish to main
+        run: |
+          git config user.name "RGS blog photos"
+          git config user.email "actions@users.noreply.github.com"
+          git add content public data
+          git diff --cached --quiet && { echo "Nothing to change"; exit 0; }
+          git commit -m "Blog photos: give each post its own photo"
+          git push origin HEAD:main
