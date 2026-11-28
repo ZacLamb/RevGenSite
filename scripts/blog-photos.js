@@ -50,9 +50,9 @@ async function search(query, source) {
     if (wait > 0) await new Promise((r) => setTimeout(r, wait));
     last = Date.now();
     const r = await fetch(`https://api.openverse.org/v1/images/?${qs}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
-    if (r.status === 429 && attempt < 3) { await new Promise((res) => setTimeout(res, Math.min(Number(r.headers.get('retry-after')) || 60, 120) * 1000)); continue; }
+    if ((r.status === 429 || r.status >= 500) && attempt < 3) { await new Promise((res) => setTimeout(res, Math.min(Number(r.headers.get('retry-after')) || 60, 120) * 1000)); continue; }
     // 429 after retries, or Cloudflare's 403 challenge page: stop and keep what we have.
-    if (r.status === 429 || r.status === 403) throw Object.assign(new Error(`Openverse refused (${r.status})`), { rate: true });
+    if (r.status === 429 || r.status === 403 || r.status >= 500) throw Object.assign(new Error(`Openverse refused (${r.status})`), { rate: true });
     if (!r.ok) throw new Error(`Openverse ${r.status}: ${(await r.text()).slice(0, 200)}`);
     return (await r.json()).results || [];
   }
@@ -71,18 +71,21 @@ function sizedUrl(r) {
   return m ? `https://upload.wikimedia.org/wikipedia/commons/thumb/${m[1]}/${m[2]}/${m[3]}/1600px-${m[3]}` : r.url;
 }
 
-// A few searches from most to least specific; first photo nobody else uses wins.
+// A few searches from most to least specific; the first photo no other post uses wins. StockSnap only:
+// its CC0 stock photos look consistent, while the wider Wikimedia/Flickr pool returned odd picks
+// (historic paintings, random snapshots).
 function queriesFor(front) {
   const ind = (front.relatedIndustries || [])[0];
-  const INDUSTRY = { plumbing: 'plumber', electrical: 'electrician', hvac: 'hvac technician', masonry: 'stone mason', landscaping: 'landscaper', 'deck-building': 'deck builder', 'glass-glazing': 'glass installer', painting: 'house painter', 'carpentry-remodeling': 'carpenter', 'hardscaping-tree-service': 'tree service', 'gutter-pressure-washing': 'pressure washing', 'auto-restoration-detailing': 'car detailing', healthcare: 'medical clinic' };
-  const topic = String(front.keyword || front.title || '').replace(/\b(how|to|for|your|the|a|an|and|of|in|on|with|small|business|businesses|guide|2026)\b/gi, ' ').replace(/\s+/g, ' ').trim();
-  const CAT = { 'AI & Automations': 'small business owner laptop', 'CRM & Systems': 'office team computer', 'Web Design & SEO': 'website design laptop', 'Digital Marketing': 'marketing small business', 'Custom Tools': 'tablet small business' };
-  return [topic, ind && INDUSTRY[ind] ? `${INDUSTRY[ind]} at work` : null, ind && INDUSTRY[ind], CAT[front.category], 'small business owner'].filter(Boolean);
+  const INDUSTRY = { plumbing: 'tools', electrical: 'electrician', hvac: 'house', masonry: 'brick', landscaping: 'garden', 'deck-building': 'wood', 'glass-glazing': 'window', painting: 'paint', 'carpentry-remodeling': 'construction', 'hardscaping-tree-service': 'trees', 'gutter-pressure-washing': 'house', 'auto-restoration-detailing': 'car', healthcare: 'doctor', 'restaurants-cafes': 'restaurant', 'salons-spas': 'salon', 'retail-shops': 'shop', 'professional-services': 'office', 'real-estate': 'house', 'fitness-studios': 'gym' };
+  const topic = String(front.keyword || front.title || '').replace(/\b(how|to|for|your|the|a|an|and|of|in|on|with|small|business|businesses|guide|2026|vs|what|why|best)\b/gi, ' ').replace(/[^a-z0-9 ]/gi, ' ').replace(/\s+/g, ' ').trim();
+  const firstWords = topic.split(' ').slice(0, 2).join(' ');
+  const CAT = { 'AI & Automations': 'laptop', 'CRM & Systems': 'office', 'Web Design & SEO': 'computer', 'Digital Marketing': 'marketing', 'Custom Tools': 'tablet' };
+  return [...new Set([firstWords, ind && INDUSTRY[ind], CAT[front.category], 'business', 'workspace', 'phone', 'desk', 'team', 'city'].filter(Boolean))];
 }
 
 async function photoFor(post, used = usedPhotoIds()) {
   for (const q of queriesFor(post.front)) {
-    for (const source of ['stocksnap', 'stocksnap,wikimedia,flickr']) {
+    for (const source of ['stocksnap']) {
       const pick = (await search(q, source)).find((r) => r.id && !used.has(String(r.id)) && usable(r));
       if (pick) {
         const lic = String(pick.license || '').toLowerCase();
