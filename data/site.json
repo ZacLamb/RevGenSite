@@ -3,7 +3,7 @@
   "shortName": "RGS",
   "domain": "revenuegeneratingsolutions.com",
   "tagline": "New England’s AI consultancy for growing local businesses",
-  "subTagline": "We find the hours and the revenue your business is losing to missed calls, slow follow-up and busywork, then build the AI and automations that win them back. For owners across Massachusetts, New Hampshire, Rhode Island, Connecticut, Maine and Vermont.",
+  "subTagline": "We find the hours and revenue your business loses to missed calls, slow follow-up and busywork, then build the AI that wins them back. Serving all six New England states.",
   "phone": "(617) 877-5608",
   "email": "hello@revenuegeneratingsolutions.com",
   "address": {
@@ -60,20 +60,16 @@
   ],
   "stats": [
     {
-      "value": "6",
-      "label": "New England states served"
-    },
-    {
       "value": "Free",
-      "label": "AI audit to start, no obligation"
+      "label": "AI audit to start"
     },
     {
-      "value": "1",
-      "label": "Team builds it all, no handoffs"
+      "value": "6",
+      "label": "New England states"
     },
     {
       "value": "60 days",
-      "label": "Of tuning after every launch"
+      "label": "Of tuning after launch"
     }
   ],
   "toolsUrl": "https://app.revenuegeneratingsolutions.com",
