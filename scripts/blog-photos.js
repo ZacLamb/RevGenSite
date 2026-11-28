@@ -51,7 +51,8 @@ async function search(query, source) {
     last = Date.now();
     const r = await fetch(`https://api.openverse.org/v1/images/?${qs}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
     if (r.status === 429 && attempt < 3) { await new Promise((res) => setTimeout(res, Math.min(Number(r.headers.get('retry-after')) || 60, 120) * 1000)); continue; }
-    if (r.status === 429) throw Object.assign(new Error('Openverse rate limit reached'), { rate: true });
+    // 429 after retries, or Cloudflare's 403 challenge page: stop and keep what we have.
+    if (r.status === 429 || r.status === 403) throw Object.assign(new Error(`Openverse refused (${r.status})`), { rate: true });
     if (!r.ok) throw new Error(`Openverse ${r.status}: ${(await r.text()).slice(0, 200)}`);
     return (await r.json()).results || [];
   }
