@@ -109,27 +109,49 @@
   "states": [
     {
       "code": "MA",
-      "name": "Massachusetts"
+      "name": "Massachusetts",
+      "slug": "massachusetts",
+      "hero": "boston-ma",
+      "intro": "From Boston and Worcester to the South Coast, Cape Cod and the Pioneer Valley, Massachusetts small businesses compete in some of the most crowded local markets in the country. AI that answers every call, follows up every lead and handles the paperwork is how a small team keeps up.",
+      "privacy": "Massachusetts requires businesses that keep residents’ personal information to have a written security program (201 CMR 17.00). We set up AI tools with that in mind: clear rules on what customer data AI can see and where it is stored."
     },
     {
       "code": "NH",
-      "name": "New Hampshire"
+      "name": "New Hampshire",
+      "slug": "new-hampshire",
+      "hero": "manchester-nh",
+      "intro": "Southern New Hampshire is one of New England’s fastest-growing regions, and the Seacoast and capital area are busy too. Owners here tend to grow faster than they can hire, which is exactly where AI answering, booking and follow-up help most.",
+      "privacy": "New Hampshire now has its own consumer data privacy law. We design every AI setup so customer information is handled carefully and only where it needs to be."
     },
     {
       "code": "RI",
-      "name": "Rhode Island"
+      "name": "Rhode Island",
+      "slug": "rhode-island",
+      "hero": "providence-ri",
+      "intro": "Rhode Island packs restaurants, shops, practices and contractors into a small, close-knit market where reputation travels fast. AI that answers instantly and asks every happy customer for a review is a big advantage here.",
+      "privacy": "Rhode Island has a consumer data privacy law in effect. We set clear rules for what AI can see and keep customer data in tools you control."
     },
     {
       "code": "CT",
-      "name": "Connecticut"
+      "name": "Connecticut",
+      "slug": "connecticut",
+      "hero": "hartford-ct",
+      "intro": "From Fairfield County’s studios and offices to Hartford’s professional firms and New Haven’s restaurants, Connecticut customers expect fast, polished service. AI assistants deliver it around the clock without adding staff.",
+      "privacy": "Connecticut has a consumer data privacy law. We set up AI tools so customer data stays protected, with a human in the loop for anything sensitive."
     },
     {
       "code": "ME",
-      "name": "Maine"
+      "name": "Maine",
+      "slug": "maine",
+      "hero": "portland-me",
+      "intro": "Maine businesses ride big seasonal swings and cover long distances. AI that handles the summer rush of calls and bookings, and keeps in touch with year-round customers, helps a small team do both."
     },
     {
       "code": "VT",
-      "name": "Vermont"
+      "name": "Vermont",
+      "slug": "vermont",
+      "hero": "burlington-vt",
+      "intro": "Vermont’s small businesses run lean and care about doing things the local way. We set up simple, affordable AI that sounds like you, with a person always one step away."
     }
   ]
 }

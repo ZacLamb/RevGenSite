@@ -10,7 +10,12 @@
       "No easy way to show up for \"plumber near me\" searches in every town you cover"
     ],
     "howWeHelp": "Plumbing is an emergency business — the company that answers first usually wins the job. We build AI call-answering and CRM dispatch systems that catch every after-hours call, plus websites with a dedicated page for every service (drain cleaning, water heaters, repiping) and every town in your coverage area, so you show up when someone's basement is flooding at midnight.",
-    "relevantServices": ["ai-services-automations", "crm-build-management", "web-design", "digital-marketing"]
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "web-design",
+      "digital-marketing"
+    ]
   },
   {
     "slug": "electrical",
@@ -23,7 +28,12 @@
       "Website doesn't separate residential, commercial, and emergency service"
     ],
     "howWeHelp": "Electrical contractors lose jobs to slow follow-up more than almost any other trade. We build CRM pipelines that route residential, commercial, and emergency requests differently, automate the follow-up that turns a quote request into a signed job, and run local ad campaigns aimed at your highest-margin work like panel upgrades and EV charger installs.",
-    "relevantServices": ["crm-build-management", "digital-marketing", "web-design", "ai-services-automations"]
+    "relevantServices": [
+      "crm-build-management",
+      "digital-marketing",
+      "web-design",
+      "ai-services-automations"
+    ]
   },
   {
     "slug": "hvac",
@@ -36,7 +46,13 @@
       "Ad spend isn't tracked back to installs vs. tune-ups"
     ],
     "howWeHelp": "HVAC revenue lives and dies by two things: catching the emergency call and staying in front of customers between seasons. We build maintenance-plan renewal automations, CRM pipelines that separate installs from service calls, and seasonal ad campaigns tied to actual weather and search demand — plus a website built to rank for every town and service you cover.",
-    "relevantServices": ["crm-build-management", "ai-services-automations", "digital-marketing", "web-design", "custom-tool-building"]
+    "relevantServices": [
+      "crm-build-management",
+      "ai-services-automations",
+      "digital-marketing",
+      "web-design",
+      "custom-tool-building"
+    ]
   },
   {
     "slug": "masonry",
@@ -49,7 +65,11 @@
       "No presence for high-intent searches like \"paver patio installer near me\""
     ],
     "howWeHelp": "Masonry sells on photos and trust. We build galleries and project pages that show the work, dedicated pages for every service — patios, retaining walls, chimneys, stonework — and every town you serve, and a CRM that keeps a big-ticket estimate request from going cold while a homeowner is still comparing quotes.",
-    "relevantServices": ["web-design", "crm-build-management", "digital-marketing"]
+    "relevantServices": [
+      "web-design",
+      "crm-build-management",
+      "digital-marketing"
+    ]
   },
   {
     "slug": "landscaping",
@@ -62,7 +82,12 @@
       "Website doesn't separate high-margin design work from routine mowing"
     ],
     "howWeHelp": "Landscaping businesses run two different businesses at once — recurring maintenance and higher-margin design/build. We build CRM pipelines that separate the two, automate seasonal re-booking so spring cleanups turn into standing contracts, and design websites that lead with your design/build portfolio while still capturing maintenance leads.",
-    "relevantServices": ["crm-build-management", "web-design", "ai-services-automations", "digital-marketing"]
+    "relevantServices": [
+      "crm-build-management",
+      "web-design",
+      "ai-services-automations",
+      "digital-marketing"
+    ]
   },
   {
     "slug": "deck-building",
@@ -75,7 +100,11 @@
       "Seasonal demand means slow months need a marketing push"
     ],
     "howWeHelp": "Deck projects are big-ticket, considered purchases — homeowners compare 2-3 builders before deciding. We build project galleries and material/style breakdowns that do the selling before you ever call back, CRM follow-up sequences built for a longer sales cycle, and seasonal ad campaigns that keep your calendar full through the shoulder seasons.",
-    "relevantServices": ["web-design", "crm-build-management", "digital-marketing"]
+    "relevantServices": [
+      "web-design",
+      "crm-build-management",
+      "digital-marketing"
+    ]
   },
   {
     "slug": "glass-glazing",
@@ -88,7 +117,11 @@
       "No dedicated pages for high-value services like custom shower enclosures"
     ],
     "howWeHelp": "Glass and glazing work spans emergency board-ups, residential window replacement, and commercial storefront bids — each with a different buyer and urgency level. We build AI call-answering for after-hours emergencies, a CRM that routes commercial and residential leads differently, and a website with dedicated pages for shower enclosures, storefronts, and window replacement.",
-    "relevantServices": ["ai-services-automations", "crm-build-management", "web-design"]
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "web-design"
+    ]
   },
   {
     "slug": "painting",
@@ -101,7 +134,12 @@
       "Website doesn't separate interior, exterior, and commercial work"
     ],
     "howWeHelp": "Painting businesses win on responsiveness and repeat customers. We build automated quote-request follow-up so no estimate goes cold, re-engagement campaigns that bring past customers back for their next project, and websites with separate paths for interior, exterior, and commercial painting so every visitor lands on the page that fits their job.",
-    "relevantServices": ["crm-build-management", "ai-services-automations", "web-design", "digital-marketing"]
+    "relevantServices": [
+      "crm-build-management",
+      "ai-services-automations",
+      "web-design",
+      "digital-marketing"
+    ]
   },
   {
     "slug": "carpentry-remodeling",
@@ -114,7 +152,12 @@
       "Website portfolio doesn't reflect the range of work you actually do"
     ],
     "howWeHelp": "Remodeling projects run for weeks or months, with a dozen decision points along the way. We build CRM pipelines that track a job from first estimate through material selection, scheduling, and final walkthrough, and websites that showcase kitchen, bath, and full-home remodels with the kind of before/after galleries that win the next bid.",
-    "relevantServices": ["crm-build-management", "custom-tool-building", "web-design", "digital-marketing"]
+    "relevantServices": [
+      "crm-build-management",
+      "custom-tool-building",
+      "web-design",
+      "digital-marketing"
+    ]
   },
   {
     "slug": "hardscaping-tree-service",
@@ -127,7 +170,11 @@
       "One website has to sell both a patio project and an emergency tree removal"
     ],
     "howWeHelp": "Hardscaping and tree service businesses juggle planned installations and storm-driven emergencies at the same time. We build CRM pipelines that triage urgent tree work separately from multi-week hardscape projects, AI call-answering that catches the after-hours storm surge, and a website that sells both sides of the business clearly.",
-    "relevantServices": ["ai-services-automations", "crm-build-management", "web-design"]
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "web-design"
+    ]
   },
   {
     "slug": "gutter-pressure-washing",
@@ -140,7 +187,12 @@
       "Hard to stand out in a crowded, low-differentiation local market"
     ],
     "howWeHelp": "Gutter cleaning and pressure washing live or die on volume and repeat bookings. We build automated seasonal re-booking so last spring's customer gets an offer again this spring without you lifting a finger, local ad campaigns built for fast, high-volume booking, and a website designed to convert quickly for a service people book on impulse.",
-    "relevantServices": ["ai-services-automations", "digital-marketing", "web-design", "crm-build-management"]
+    "relevantServices": [
+      "ai-services-automations",
+      "digital-marketing",
+      "web-design",
+      "crm-build-management"
+    ]
   },
   {
     "slug": "auto-restoration-detailing",
@@ -153,7 +205,12 @@
       "No system for tracking a multi-month restoration project from intake to delivery"
     ],
     "howWeHelp": "Restoration and detailing are opposite ends of the same industry — one is a months-long craft project, the other is a same-day, high-volume service. We build portfolio-driven websites for restoration work, fast online booking flows for detailing, and a custom job tracker that keeps a long restoration project organized from intake to final delivery.",
-    "relevantServices": ["web-design", "custom-tool-building", "crm-build-management", "digital-marketing"]
+    "relevantServices": [
+      "web-design",
+      "custom-tool-building",
+      "crm-build-management",
+      "digital-marketing"
+    ]
   },
   {
     "slug": "healthcare",
@@ -166,6 +223,151 @@
       "Patient intake and follow-up still run on paper or spreadsheets"
     ],
     "howWeHelp": "Independent practices compete for patients the same way any local business competes for customers. We build AI call-answering that catches new-patient calls during appointments, automated appointment reminders and no-show recovery, and custom intake tools that get patient information into your system before they ever walk in the door.",
-    "relevantServices": ["ai-services-automations", "custom-tool-building", "crm-build-management", "digital-marketing"]
+    "relevantServices": [
+      "ai-services-automations",
+      "custom-tool-building",
+      "crm-build-management",
+      "digital-marketing"
+    ]
+  },
+  {
+    "slug": "restaurants-cafes",
+    "name": "Restaurants & Cafés",
+    "heroLine": "Answer every reservation, catering and takeout question, even during the dinner rush.",
+    "painPoints": [
+      "The phone rings nonstop during service and nobody can pick up",
+      "Catering and private-event inquiries sit in an inbox for days",
+      "Reviews come in on five platforms and nobody has time to reply"
+    ],
+    "howWeHelp": "Restaurants lose money in the moments when everyone is busy: the call during the Friday rush, the catering request that waits until Monday, the review nobody answers. We set up an AI host that answers calls and messages, takes reservations and catering details and sends them to the right person, plus review requests and replies, a simple guest list for your regulars, and a website that shows the current menu and hours everywhere people search.",
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "web-design",
+      "digital-marketing"
+    ],
+    "image": "industry-restaurants-cafes.jpg",
+    "photo": {
+      "id": "ff771d44-c530-46da-bde9-147724bb53fd",
+      "credit": "Michael Browning",
+      "license": "CC0",
+      "source": "https://stocksnap.io/photo/restaurant-kitchen-0HCMIT272C"
+    }
+  },
+  {
+    "slug": "salons-spas",
+    "name": "Salons, Spas & Studios",
+    "heroLine": "Fill the book and cut no-shows without living on the front-desk phone.",
+    "painPoints": [
+      "Stylists stop mid-appointment to answer the phone",
+      "No-shows and last-minute cancellations leave paid chairs empty",
+      "Clients drift away because nobody reminds them to rebook"
+    ],
+    "howWeHelp": "Salons, spas and studios run on a full book. We connect an AI receptionist to your booking system so calls, texts and Instagram messages get answered and booked while your team works, add reminders and a waitlist that fills cancellations, and set up rebooking nudges timed to each service, so regulars come back on schedule instead of whenever they remember.",
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "digital-marketing"
+    ],
+    "image": "industry-salons-spas.jpg",
+    "photo": {
+      "id": "a71bfd77-9f7e-45bb-a4dd-875d2fbc35e5",
+      "credit": "Freestocks.org",
+      "license": "CC0",
+      "source": "https://stocksnap.io/photo/people-hands-XX356Q6EI4"
+    }
+  },
+  {
+    "slug": "retail-shops",
+    "name": "Retail & Specialty Shops",
+    "heroLine": "Turn one-time shoppers into regulars and answer the same questions once.",
+    "painPoints": [
+      "Staff answer the same hours, stock and returns questions all day",
+      "No way to reach past customers when new stock arrives",
+      "Online search sends shoppers to big-box stores first"
+    ],
+    "howWeHelp": "Independent shops win on service and loyalty, but that takes time most owners don't have. We set up an AI assistant that answers stock, hours and order questions by text, chat and phone, a simple customer list with opt-in texts and emails for new arrivals and events, and a Google Business Profile and website that put your shop in front of local shoppers before the chains.",
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "web-design",
+      "digital-marketing"
+    ],
+    "image": "industry-retail-shops.jpg",
+    "photo": {
+      "id": "6585f909-513f-42e4-bab0-c74a9296ec48",
+      "credit": "Matthew Henry",
+      "license": "CC0",
+      "source": "https://stocksnap.io/photo/people-girl-IA1A0DATOJ"
+    }
+  },
+  {
+    "slug": "professional-services",
+    "name": "Law, Accounting & Insurance Offices",
+    "heroLine": "Spend your hours on clients, not intake forms and follow-up.",
+    "painPoints": [
+      "Intake calls and forms eat billable hours",
+      "Prospects go cold while waiting for a callback",
+      "Documents and signatures get chased by hand, one email at a time"
+    ],
+    "howWeHelp": "Professional offices sell expertise, but a lot of the day goes to intake, scheduling and chasing paperwork. We build AI intake that answers inquiries, asks the right screening questions and books consultations, automated reminders for missing documents and signatures, and a CRM that tracks every matter or client from first call to final invoice. We also set clear rules for what AI can see, because client confidentiality comes first.",
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "custom-tool-building"
+    ],
+    "image": "industry-professional-services.jpg",
+    "photo": {
+      "id": "b73d6a7e-37f4-4f5e-9468-5ac1d0ef30fe",
+      "credit": "Helloquence",
+      "license": "CC0",
+      "source": "https://stocksnap.io/photo/writing-papers-Y01VDYAX63"
+    }
+  },
+  {
+    "slug": "real-estate",
+    "name": "Real Estate Agents & Brokerages",
+    "heroLine": "Respond to every lead in minutes and stay in touch for years.",
+    "painPoints": [
+      "Portal leads go cold before an agent calls back",
+      "Past clients forget you before they sell again",
+      "Listing paperwork and showing schedules eat the week"
+    ],
+    "howWeHelp": "In real estate, the first agent to respond usually wins the conversation. We set up AI follow-up that texts and emails new leads within minutes and books showings and calls, long-term nurture so past clients and sphere hear from you on schedule, and automations that draft listing descriptions, showing feedback requests and transaction checklists.",
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "digital-marketing"
+    ],
+    "image": "industry-real-estate.jpg",
+    "photo": {
+      "id": "c0d73c56-e70d-45a1-8839-8e6930125736",
+      "credit": "The Building Envelope",
+      "license": "CC0",
+      "source": "https://stocksnap.io/photo/house-roof-SQQD7NUGYO"
+    }
+  },
+  {
+    "slug": "fitness-studios",
+    "name": "Gyms & Fitness Studios",
+    "heroLine": "Turn trial visits into members and keep them coming back.",
+    "painPoints": [
+      "Trial-class leads never hear back after their first visit",
+      "Members quietly stop showing up before they cancel",
+      "Class schedules, waitlists and payment reminders run on spreadsheets"
+    ],
+    "howWeHelp": "Studios and gyms grow by converting trials and keeping members engaged. We set up instant follow-up for every trial and inquiry, an AI assistant that answers schedule and pricing questions and books classes, and check-in automations that spot members who stopped coming and reach out before they cancel.",
+    "relevantServices": [
+      "ai-services-automations",
+      "crm-build-management",
+      "digital-marketing"
+    ],
+    "image": "industry-fitness-studios.jpg",
+    "photo": {
+      "id": "a9541001-99a6-4fd4-ac30-78a90dfdfe94",
+      "credit": "Khusen Rustamov",
+      "license": "CC0",
+      "source": "https://stocksnap.io/photo/girl-gym-00RNNUWGLM"
+    }
   }
 ]
