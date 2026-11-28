@@ -1539,7 +1539,7 @@ ${heroSection({
   title: escHtml(p.title),
   image,
   narrow: true,
-  credit: p.photo && { ...p.photo, license: 'Pexels' },
+  credit: p.photo,
   breadcrumb: `<a href="/">Home</a> / <a href="/blog/">Blog</a> / ${p.category}`,
 })}
 <section>

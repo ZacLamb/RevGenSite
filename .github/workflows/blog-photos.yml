@@ -1,5 +1,5 @@
-# Gives blog posts their own real photo from Pexels (scripts/blog-photos.js), then commits to main so
-# Railway redeploys. Run it from Actions › Blog photos › Run workflow. Needs the PEXELS_API_KEY secret.
+# Gives blog posts their own real photo from Openverse (scripts/blog-photos.js), then commits to main so
+# Railway redeploys. Run it from Actions › Blog photos › Run workflow. No key needed.
 # By default it only fixes posts that share an image with another post; tick "all" to redo every post.
 name: Blog photos
 
@@ -26,8 +26,6 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - name: Pick photos
-        env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: node scripts/blog-photos.js ${{ github.event.inputs.all == 'true' && '--all' || '' }}
       - name: Build and check
         run: npm run check

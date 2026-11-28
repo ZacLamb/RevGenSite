@@ -1,14 +1,15 @@
 /**
- * blog-photos.js: gives blog posts their own real photo from Pexels (free, no attribution required,
- * credited anyway) instead of reusing the same handful of site images.
+ * blog-photos.js: gives blog posts their own real photo instead of reusing the same handful of site images.
+ * Photos come from Openverse (api.openverse.org): openly licensed images that allow commercial use, no API
+ * key needed. StockSnap (CC0 stock photos) is preferred; Wikimedia Commons and Flickr fill the gaps. Every
+ * photo is credited on the post.
  *
  * - The daily article bot calls photoFor(post) for each new post.
- * - Run it directly to backfill: `PEXELS_API_KEY=... node scripts/blog-photos.js`
- *   gives every post that shares its image with another post (or uses a generic site image) its own
- *   photo. Add --all to redo every post.
+ * - Run it directly to backfill: `node scripts/blog-photos.js` gives every post that shares its image
+ *   with another post (or uses a generic site image) its own photo. Add --all to redo every post.
  *
- * Writes: the post's front matter (image: blog-<slug>.jpg, photo: {credit, source, id}) and
- * data/images-manifest.json (blog-<slug>.jpg -> Pexels URL), which scripts/fetch-images.js downloads at
+ * Writes: the post's front matter (image: blog-<slug>.jpg, photo: {id, credit, license, source}) and
+ * data/images-manifest.json (blog-<slug>.jpg -> image URL), which scripts/fetch-images.js downloads at
  * deploy. A photo already used by another post is never picked again.
  */
 const fs = require('fs');
@@ -18,7 +19,7 @@ const yaml = require('js-yaml');
 const ROOT = path.join(__dirname, '..');
 const BLOG = path.join(ROOT, 'content', 'blog');
 const MANIFEST = path.join(ROOT, 'data', 'images-manifest.json');
-const KEY = process.env.PEXELS_API_KEY;
+const UA = 'RevenueGeneratingSolutions-site/1.0 (https://www.revenuegeneratingsolutions.com; hello@revenuegeneratingsolutions.com)';
 
 const FRONT = /^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/;
 function readPost(slug) {
@@ -33,11 +34,24 @@ function writePost(p) {
 const allSlugs = () => fs.readdirSync(BLOG).filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, ''));
 const usedPhotoIds = () => new Set(allSlugs().map((s) => { try { return readPost(s).front.photo?.id; } catch { return null; } }).filter(Boolean).map(String));
 
-async function search(query, page = 1) {
-  const u = `https://api.pexels.com/v1/search?${new URLSearchParams({ query, orientation: 'landscape', per_page: '30', page: String(page) })}`;
-  const r = await fetch(u, { headers: { Authorization: KEY }, signal: AbortSignal.timeout(30000) });
-  if (!r.ok) throw new Error(`Pexels ${r.status}: ${(await r.text()).slice(0, 200)}`);
-  return (await r.json()).photos || [];
+async function search(query, source) {
+  const qs = new URLSearchParams({ q: query, license_type: 'commercial', aspect_ratio: 'wide', page_size: '40', mature: 'false' });
+  qs.set('source', source || 'stocksnap,wikimedia,flickr');
+  const r = await fetch(`https://api.openverse.org/v1/images/?${qs}`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
+  if (!r.ok) throw new Error(`Openverse ${r.status}: ${(await r.text()).slice(0, 200)}`);
+  return (await r.json()).results || [];
+}
+// Usable: big enough for a page header, not a document/map/logo, sensible title.
+const BAD = /\b(map|logo|diagram|chart|seal|flag|poster|advert|document|letter|crack|beer|nude|protest|accident|fire|crash|dead|funeral)\b/i;
+function usable(r) {
+  if (BAD.test(r.title || '')) return false;
+  if (r.source === 'stocksnap') return true; // CC0 stock, served at 960px wide
+  return (r.width || 0) >= 1600 && (r.height || 0) >= 900;
+}
+// Wikimedia originals can be huge: ask for a 1600px-wide copy.
+function sizedUrl(r) {
+  const m = r.source === 'wikimedia' && String(r.url).match(/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/(\w)\/(\w\w)\/([^/?#]+)$/);
+  return m ? `https://upload.wikimedia.org/wikipedia/commons/thumb/${m[1]}/${m[2]}/${m[3]}/1600px-${m[3]}` : r.url;
 }
 
 // A few searches from most to least specific; first photo nobody else uses wins.
@@ -50,13 +64,13 @@ function queriesFor(front) {
 }
 
 async function photoFor(post, used = usedPhotoIds()) {
-  if (!KEY) return null;
   for (const q of queriesFor(post.front)) {
-    for (const page of [1, 2]) {
-      const photos = await search(q, page);
-      const pick = photos.find((ph) => !used.has(String(ph.id)) && ph.width >= 1600);
-      if (pick) return { id: String(pick.id), url: pick.src.large2x || pick.src.large, credit: pick.photographer, source: pick.url, query: q };
-      if (photos.length < 30) break;
+    for (const source of ['stocksnap', 'stocksnap,wikimedia,flickr']) {
+      const pick = (await search(q, source)).find((r) => r.id && !used.has(String(r.id)) && usable(r));
+      if (pick) {
+        const lic = String(pick.license || '').toLowerCase();
+        return { id: String(pick.id), url: sizedUrl(pick), credit: pick.creator || pick.source, license: lic === 'cc0' ? 'CC0' : `CC ${lic.toUpperCase()}${pick.license_version ? ' ' + pick.license_version : ''}`, source: pick.foreign_landing_url || pick.url, query: q };
+      }
     }
   }
   return null;
@@ -65,7 +79,7 @@ async function photoFor(post, used = usedPhotoIds()) {
 function apply(post, ph) {
   const file = `blog-${post.slug}.jpg`;
   post.front.image = file;
-  post.front.photo = { id: ph.id, credit: ph.credit, source: ph.source };
+  post.front.photo = { id: ph.id, credit: ph.credit, license: ph.license, source: ph.source };
   writePost(post);
   const man = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
   man[file] = ph.url;
@@ -76,7 +90,6 @@ function apply(post, ph) {
 }
 
 async function backfill(all) {
-  if (!KEY) throw new Error('Set PEXELS_API_KEY');
   const posts = allSlugs().map(readPost);
   const count = {};
   posts.forEach((p) => { count[p.front.image] = (count[p.front.image] || 0) + 1; });

@@ -124,12 +124,12 @@ Output only the Markdown file, starting with the --- front matter line. No comme
   const out = `---\n${yaml.dump(front, { lineWidth: -1, quotingType: '"' }).trim()}\n---\n\n${m[2].trim()}\n`;
   fs.writeFileSync(path.join(BLOG, `${slug}.md`), out);
   console.log(`Wrote content/blog/${slug}.md (${m[2].split(/\s+/).length} words)`);
-  // Its own real photo (needs PEXELS_API_KEY); without a key it keeps the image Claude picked.
+  // Its own real photo from Openverse; if none is found it keeps the image Claude picked.
   try {
     const bp = require('./blog-photos');
     const post = bp.readPost(slug);
     const ph = await bp.photoFor(post);
-    if (ph) { bp.apply(post, ph); console.log(`Photo: ${ph.credit} (${ph.query})`); } else console.log('Photo: none (no PEXELS_API_KEY or no match); kept the listed image');
+    if (ph) { bp.apply(post, ph); console.log(`Photo: ${ph.credit} (${ph.query})`); } else console.log('Photo: no match; kept the listed image');
   } catch (e) { console.warn(`Photo step skipped: ${e.message}`); }
   if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `slug=${slug}\ntitle=${String(front.title || slug).replace(/\n/g, ' ')}\n`);
 }
