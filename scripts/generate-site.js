@@ -1213,8 +1213,8 @@ function buildIndustriesIndex() {
   const body = `
 ${heroSection({
   eyebrow: 'Industries',
-  title: 'Built for the trades you actually run',
-  lede: "We've built websites, CRM systems, and automation for these industries — each with its own playbook for what actually moves revenue.",
+  title: 'AI and automation for every kind of local business',
+  lede: 'Home services, clinics, restaurants, salons, shops, offices and gyms. Each business type has its own leaks; here is how AI plugs them.',
   image: 'industry-masonry.jpg',
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / Industries`,
@@ -1243,6 +1243,7 @@ ${heroSection({
   eyebrow: i.name,
   title: i.heroLine,
   image: i.image,
+  credit: i.photo,
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / <a href="/industries/">Industries</a> / ${i.name}`,
 })}
@@ -1305,30 +1306,112 @@ ${ctaBanner({ title: `Run a ${i.name.toLowerCase()} business?`, text: `Book a fr
   }));
 }
 
+const stateOf = (code) => site.states.find((s) => s.code === code);
+const townsIn = (code) => towns.filter((t) => t.state === code);
+
 function buildLocationsIndex() {
   const body = `
 ${heroSection({
   eyebrow: 'Locations',
-  title: `Serving local businesses across ${site.region}`,
-  lede: "Here's a look at some of the towns and markets we know best — with more added as our client base grows.",
-  image: 'town-coastal.jpg',
+  title: 'AI consulting for local businesses across New England',
+  lede: `We work with businesses in all six New England states. Most of the work is remote, with on-site visits when they help. Pick your state or city.`,
+  image: 'town-boston.jpg',
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / Locations`,
 })}
+${site.states.map((st, i) => `<section${i % 2 ? ' class="bg-paper"' : ''}>
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">${st.name}</div>
+      <h2><a href="/locations/${st.slug}/">AI consulting in ${st.name}</a></h2>
+    </div>
+    <div class="grid grid-4">
+      ${townsIn(st.code).map(townCard).join('\n      ')}
+    </div>
+  </div>
+</section>`).join('\n')}
+${ctaBanner({ title: "Don't see your town?", text: 'We work all over New England. Book a free AI audit and tell us where you are.' })}
+`;
+  write('locations/index.html', layout({
+    title: 'Locations: AI Consulting Across New England',
+    description: `${site.name} provides AI consulting and automation for small businesses in Massachusetts, New Hampshire, Rhode Island, Connecticut, Maine and Vermont, including ${towns.slice(10, 15).map((t) => t.name).join(', ')} and more.`,
+    canonicalPath: '/locations/',
+    bodyContent: body,
+  }));
+}
+
+function buildStatePage(st) {
+  const list = townsIn(st.code);
+  const hero = towns.find((t) => t.slug === st.hero) || list[0];
+  const faq = [
+    { q: `Do you work with businesses all over ${st.name}?`, a: `Yes. Most of our work is remote, so we help businesses anywhere in ${st.name}, with on-site visits when they help.` },
+    { q: 'What does it cost to get started?', a: 'The first step is a free 30-minute AI audit. After it you get a short written plan with what we would build first and a ballpark cost.' },
+    { q: 'What kinds of businesses do you work with?', a: 'Small and growing local businesses of every kind: home services, clinics, restaurants, salons, shops, professional offices, gyms and more.' },
+  ];
+  const body = `
+${heroSection({
+  eyebrow: `AI Consulting · ${st.name}`,
+  title: `AI consulting for small businesses in ${st.name}`,
+  lede: st.intro,
+  image: hero.image,
+  credit: hero.photo,
+  narrow: true,
+  breadcrumb: `<a href="/">Home</a> / <a href="/locations/">Locations</a> / ${st.name}`,
+})}
 <section>
   <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What We Build for ${st.name} Businesses</div>
+      <h2>The AI jobs that pay back first</h2>
+    </div>
     <div class="grid grid-3">
-      ${towns.map(townCard).join('\n      ')}
+      ${AI_WINS.map((w) => `<div class="card"><div class="card-body"><div style="font-size:28px;line-height:1">${w.icon}</div><h3 style="margin-top:12px">${w.title}</h3><p>${w.text}</p></div></div>`).join('\n      ')}
     </div>
   </div>
 </section>
-${ctaBanner({ title: "Outside these towns?", text: "Most of our work is done remotely — reach out and tell us where you're located." })}
+<section class="bg-paper">
+  <div class="container">
+    <div class="section-head left">
+      <div class="eyebrow">Cities & Towns</div>
+      <h2>Where we work in ${st.name}</h2>
+    </div>
+    <div class="grid grid-4">
+      ${list.map(townCard).join('\n      ')}
+    </div>
+  </div>
+</section>
+${st.privacy ? `<section>
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="eyebrow">Customer Data</div>
+        <h2>AI that respects ${st.name}${/s$/.test(st.name) ? "'" : "'s"} privacy rules</h2>
+        <p>${st.privacy}</p>
+        <p>This is general information, not legal advice. If your business handles sensitive data, we work alongside your attorney or IT provider.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Who We Help</div>
+        <h2>Every kind of local business</h2>
+        <div class="chip-grid">${industries.map((i) => `<a href="/industries/${i.slug}/" class="chip">${i.name}</a>`).join('')}</div>
+      </div>
+    </div>
+  </div>
+</section>` : `<section>
+  <div class="container">
+    <div class="section-head left"><div class="eyebrow">Who We Help</div><h2>Every kind of local business</h2></div>
+    <div class="chip-grid">${industries.map((i) => `<a href="/industries/${i.slug}/" class="chip">${i.name}</a>`).join('')}</div>
+  </div>
+</section>`}
+${faqSection(faq, `AI consulting in ${st.name}`)}
+${ctaBanner({ title: `Running a business in ${st.name}?`, text: 'Book a free AI audit and find out which tasks are worth handing to AI first.' })}
 `;
-  write('locations/index.html', layout({
-    title: 'Locations',
-    description: `${site.name} serves local businesses across ${site.region}, including ${towns.slice(0, 5).map((t) => t.name).join(', ')}, and more.`,
-    canonicalPath: '/locations/',
+  write(`locations/${st.slug}/index.html`, layout({
+    title: `AI Consulting for Small Businesses in ${st.name}`,
+    description: `AI consulting and automation for small businesses in ${st.name}: AI receptionists, lead follow-up, CRM and websites${list.length ? ` in ${list.slice(0, 3).map((t) => t.name).join(', ')} and more` : ''}. Start with a free AI audit.`,
+    canonicalPath: `/locations/${st.slug}/`,
     bodyContent: body,
+    ogImage: hero.image,
+    schemas: [breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations/' }, { name: st.name, path: `/locations/${st.slug}/` }]), faqSchemaFor(faq)],
   }));
 }
 
@@ -1344,7 +1427,7 @@ ${heroSection({
   image: t.image,
   credit: t.photo,
   narrow: true,
-  breadcrumb: `<a href="/">Home</a> / <a href="/locations/">Locations</a> / ${t.name}`,
+  breadcrumb: `<a href="/">Home</a> / <a href="/locations/">Locations</a> / <a href="/locations/${stateOf(t.state).slug}/">${stateOf(t.state).name}</a> / ${t.name}`,
 })}
 ${t.featuredWork ? `<section>
   <div class="container">
@@ -1615,6 +1698,7 @@ ${heroSection({
   title: escHtml(c.title),
   lede: escHtml(c.intro || c.description),
   image: i.image,
+  credit: i.photo,
   narrow: true,
   breadcrumb: `<a href="/">Home</a> / <a href="/industries/">Industries</a> / <a href="/industries/${i.slug}/">${i.name}</a> / ${sv.shortName}`,
 })}
@@ -1880,6 +1964,7 @@ function buildSitemap() {
   const urls = ['/', '/ai-audit/', '/about/', '/book/', '/contact/', '/services/', '/industries/', '/locations/', '/blog/', '/software/', '/software/setup/', ...setupVideoPaths, '/privacy/'];
   services.forEach((s) => urls.push(`/services/${s.slug}/`));
   industries.forEach((i) => urls.push(`/industries/${i.slug}/`));
+  site.states.forEach((st) => urls.push(`/locations/${st.slug}/`));
   towns.forEach((t) => urls.push(`/locations/${t.slug}/`));
   towns.forEach((t) => services.forEach((s) => urls.push(`/locations/${t.slug}/${s.slug}/`)));
   combos.forEach((c) => urls.push(c.path));
@@ -1979,6 +2064,7 @@ function run() {
   industries.forEach(buildIndustryDetail);
   combos.forEach(buildIndustryService);
   buildLocationsIndex();
+  site.states.forEach(buildStatePage);
   towns.forEach(buildLocationDetail);
   towns.forEach((t) => services.forEach((s) => buildLocationServiceDetail(t, s)));
   buildBlogIndex();

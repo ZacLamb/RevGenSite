@@ -32,7 +32,12 @@ function writePost(p) {
   fs.writeFileSync(path.join(BLOG, `${p.slug}.md`), `---\n${yaml.dump(p.front, { lineWidth: -1, quotingType: '"' }).trim()}\n---\n\n${p.body.trim()}\n`);
 }
 const allSlugs = () => fs.readdirSync(BLOG).filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, ''));
-const usedPhotoIds = () => new Set(allSlugs().map((s) => { try { return readPost(s).front.photo?.id; } catch { return null; } }).filter(Boolean).map(String));
+const usedPhotoIds = () => {
+  const ids = allSlugs().map((s) => { try { return readPost(s).front.photo?.id; } catch { return null; } });
+  // Industry pages' photos too, so a post never repeats one.
+  try { JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'industries.json'), 'utf8')).forEach((i) => ids.push(i.photo?.id)); } catch { /* none */ }
+  return new Set(ids.filter(Boolean).map(String));
+};
 
 // Openverse without a key: at most 20 results a request and a few requests a minute, so space them out
 // and wait when told to. A run that still hits the limit stops early; run it again to finish the rest.

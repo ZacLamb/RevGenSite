@@ -4,7 +4,7 @@
     "name": "Raynham",
     "state": "MA",
     "region": "Southeastern Massachusetts",
-    "blurb": "Raynham and the surrounding Route 44 corridor are home to a dense mix of home service businesses competing for the same searches. We've built websites and CRM systems for HVAC and contracting companies based right in town.",
+    "blurb": "Raynham and the Route 44 corridor are home to a dense mix of contractors, auto shops, restaurants and family businesses that serve all of Southeastern Massachusetts.",
     "nearby": [
       "Taunton",
       "Bridgewater",
@@ -17,7 +17,7 @@
       "plumbing",
       "electrical"
     ],
-    "featuredWork": "Most of our Raynham work has centered on HVAC and mechanical contractors — building out a CRM that tracks recurring maintenance contracts, not just one-off installs, and a website built to win the \"AC repair near me\" searches that spike every July.",
+    "featuredWork": "Raynham businesses usually start with missed-call text-back and instant lead follow-up, then a CRM that shows every estimate and booking in one place.",
     "photo": {
       "credit": "Kenneth C. Zirkel",
       "license": "CC BY-SA 4.0",
@@ -29,7 +29,7 @@
     "name": "Lynn",
     "state": "MA",
     "region": "North Shore, Massachusetts",
-    "blurb": "Lynn's mix of dense residential neighborhoods and older housing stock keeps hardscaping, tree service, and remodeling crews busy year-round — and makes local search visibility especially competitive.",
+    "blurb": "Lynn's busy downtown, diverse neighborhoods and older housing stock support restaurants, shops, clinics and the contractors who keep the North Shore's homes standing.",
     "nearby": [
       "Swampscott",
       "Saugus",
@@ -42,7 +42,7 @@
       "landscaping",
       "deck-building"
     ],
-    "featuredWork": "For hardscaping and tree crews in Lynn, the win is usually a photo-first website — before/after project galleries load fast and rank locally — paired with a CRM that keeps estimates from falling through the cracks during the spring rush.",
+    "featuredWork": "For Lynn businesses the first AI wins are bilingual answering and fast follow-up, so no call or message goes unanswered while the team is busy.",
     "photo": {
       "credit": "Terageorge",
       "license": "CC BY-SA 4.0",
@@ -54,7 +54,7 @@
     "name": "Rehoboth",
     "state": "MA",
     "region": "Bristol County, Massachusetts",
-    "blurb": "Rehoboth's larger residential lots make it a strong market for hardscaping, patios, and outdoor living projects — the kind of work that sells on photos and a fast-loading project gallery.",
+    "blurb": "Rehoboth's farms, contractors and home-based businesses serve customers spread across a large, rural stretch of Bristol County.",
     "nearby": [
       "Seekonk",
       "Dighton",
@@ -67,7 +67,7 @@
       "landscaping",
       "deck-building"
     ],
-    "featuredWork": "Rehoboth's larger properties mean bigger-ticket hardscape and patio projects — so the sites we build here lean hard on visual proof of work and a lead form built to pre-qualify project size before the first phone call.",
+    "featuredWork": "In a spread-out town like Rehoboth, owners are often on the road. AI answering and booking keeps the business open while the owner is out on a job.",
     "photo": {
       "credit": "John Phelan",
       "license": "CC BY-SA 3.0",
@@ -79,7 +79,7 @@
     "name": "South Yarmouth",
     "state": "MA",
     "region": "Cape Cod, Massachusetts",
-    "blurb": "Cape Cod's seasonal population swings mean local service businesses in South Yarmouth need marketing that ramps up ahead of summer and a CRM that keeps second-home clients on the books year after year.",
+    "blurb": "South Yarmouth's restaurants, rentals, shops and service companies ride Cape Cod's big seasonal swings in population.",
     "nearby": [
       "Dennis",
       "Hyannis",
@@ -91,7 +91,7 @@
       "painting",
       "carpentry-remodeling"
     ],
-    "featuredWork": "Painting and remodeling crews on this stretch of Cape Cod deal with a hard seasonal calendar — we build marketing that ramps ahead of the summer rush and a CRM that keeps second-home owners on the books year after year instead of starting from zero each spring.",
+    "featuredWork": "On the Cape we build for summer peaks: AI that answers and books during the rush, and off-season campaigns that keep year-round customers coming back.",
     "photo": {
       "credit": "Dougtone",
       "license": "CC BY-SA 2.0",
@@ -103,7 +103,7 @@
     "name": "Plymouth",
     "state": "MA",
     "region": "South Shore, Massachusetts",
-    "blurb": "Plymouth's mix of historic homes and new construction keeps carpentry, painting, and remodeling contractors busy with two very different kinds of projects — and two very different kinds of customers to market to.",
+    "blurb": "Plymouth's historic waterfront, fast-growing neighborhoods and visitor traffic support restaurants, shops, practices and contractors across the South Shore.",
     "nearby": [
       "Kingston",
       "Duxbury",
@@ -115,7 +115,7 @@
       "carpentry-remodeling",
       "painting"
     ],
-    "featuredWork": "Plymouth's split between historic-home restoration and new-construction finish work means the carpentry and remodeling businesses we work with here usually need two distinct pitches on one site — we build the pages and CRM pipelines to keep both leads separated and followed up on correctly.",
+    "featuredWork": "Plymouth businesses juggle tourists and locals. We set up AI assistants that answer common questions instantly and booking systems that handle both.",
     "photo": {
       "credit": "Raime",
       "license": "CC BY-SA 3.0",
@@ -127,7 +127,7 @@
     "name": "Northborough",
     "state": "MA",
     "region": "MetroWest, Massachusetts",
-    "blurb": "Northborough sits at the center of a MetroWest market with strong demand for both residential and commercial glass and glazing work, from storefront installs to custom shower enclosures.",
+    "blurb": "Northborough sits at the center of a MetroWest market full of professional offices, practices, contractors and family businesses.",
     "nearby": [
       "Westborough",
       "Marlborough",
@@ -138,7 +138,7 @@
     "focusIndustries": [
       "glass-glazing"
     ],
-    "featuredWork": "Glass and glazing work in Northborough splits between commercial storefront bids and residential shower/mirror installs — we build separate service pages and CRM pipelines for each, since a $40,000 storefront job and a $600 shower enclosure need completely different follow-up.",
+    "featuredWork": "For Northborough owners we focus on time: AI that takes intake, scheduling and follow-up off the team's plate, with one dashboard to see what's working.",
     "photo": {
       "credit": "John Phelan",
       "license": "CC BY-SA 4.0",
@@ -150,7 +150,7 @@
     "name": "Harwich",
     "state": "MA",
     "region": "Cape Cod, Massachusetts",
-    "blurb": "Harwich's classic-car and craftsman community supports specialty trades that sell on reputation and visible quality of work — exactly the kind of business a portfolio-driven website is built for.",
+    "blurb": "Harwich's restaurants, specialty shops and craftsmen serve a loyal mix of year-round residents and summer visitors on the Lower Cape.",
     "nearby": [
       "Chatham",
       "Brewster",
@@ -161,7 +161,7 @@
     "focusIndustries": [
       "auto-restoration-detailing"
     ],
-    "featuredWork": "Classic car and restoration shops in Harwich sell almost entirely on visible craftsmanship, so the sites we build here are portfolio-first — high-resolution project galleries and a CRM built around long, relationship-driven restoration timelines instead of quick one-off jobs.",
+    "featuredWork": "Harwich businesses sell on reputation. We automate review requests and follow-up so happy customers say so online, and AI answering covers the summer rush.",
     "photo": {
       "credit": "Dougtone",
       "license": "CC BY-SA 2.0",
@@ -173,7 +173,7 @@
     "name": "Rockland",
     "state": "MA",
     "region": "South Shore, Massachusetts",
-    "blurb": "Rockland and the surrounding South Shore towns are steady territory for masonry and hardscape contractors, with enough new construction and renovation work to keep a well-marketed crew booked solid.",
+    "blurb": "Rockland and the surrounding South Shore towns are home to contractors, restaurants, shops and offices that rely on local word of mouth.",
     "nearby": [
       "Abington",
       "Hanover",
@@ -185,7 +185,7 @@
       "masonry",
       "hardscaping-tree-service"
     ],
-    "featuredWork": "Masonry crews around Rockland run on steady South Shore renovation and new-construction demand — the sites and CRM systems we build here are focused on turning estimate requests into a real scheduled pipeline instead of a pile of unanswered texts.",
+    "featuredWork": "Rockland owners usually want to stop missing calls and start getting reviews. Both are simple automations we can have running in weeks.",
     "photo": {
       "credit": "Dougtone",
       "license": "CC BY-SA 2.0",
@@ -197,7 +197,7 @@
     "name": "Beverly",
     "state": "MA",
     "region": "North Shore, Massachusetts",
-    "blurb": "Beverly and the North Shore combine coastal weather exposure with older housing stock — a market where masonry, exterior, and restoration businesses stay busy if they can be found by the right searches.",
+    "blurb": "Beverly's downtown restaurants, studios, shops and the North Shore contractors around them compete for the same local customers.",
     "nearby": [
       "Salem",
       "Danvers",
@@ -209,7 +209,7 @@
       "masonry",
       "gutter-pressure-washing"
     ],
-    "featuredWork": "Coastal weather exposure keeps masonry, gutter, and exterior-restoration businesses on the North Shore busy — the challenge in Beverly is usually just being found first, so we lean on local service pages and review-driven marketing to win that first call.",
+    "featuredWork": "For Beverly businesses we combine fast AI follow-up with local search: a Google profile and website that rank, and an assistant that turns searchers into bookings.",
     "photo": {
       "credit": "Quintin Soloviev",
       "license": "CC BY 4.0",
@@ -221,7 +221,7 @@
     "name": "Derry",
     "state": "NH",
     "region": "Southern New Hampshire",
-    "blurb": "Derry anchors a fast-growing corner of southern New Hampshire where masonry, tree work, and remodeling businesses are competing against a wave of new residents searching for local contractors online for the first time.",
+    "blurb": "Derry anchors a fast-growing corner of southern New Hampshire where new families need contractors, practices, restaurants and services.",
     "nearby": [
       "Londonderry",
       "Windham",
@@ -234,11 +234,586 @@
       "hardscaping-tree-service",
       "carpentry-remodeling"
     ],
-    "featuredWork": "Derry's growth means a wave of new residents searching for a local contractor for the first time — the masonry, tree, and remodeling businesses we work with here win by showing up first in those searches and following up fast enough to lock in the job before a competitor calls back.",
+    "featuredWork": "Derry businesses grow fast and hire slowly. AI answering, booking and follow-up let a small team handle the volume without dropping customers.",
     "photo": {
       "credit": "John Phelan",
       "license": "CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:NH_Route_102,_Derry_NH.jpg"
+    }
+  },
+  {
+    "slug": "boston-ma",
+    "name": "Boston",
+    "state": "MA",
+    "region": "Greater Boston",
+    "blurb": "Boston's small businesses compete for attention with national brands on every block, from Back Bay salons to neighborhood restaurants and the clinics and offices downtown.",
+    "nearby": [
+      "Cambridge",
+      "Somerville",
+      "Brookline",
+      "Quincy"
+    ],
+    "image": "town-boston.jpg",
+    "focusIndustries": [
+      "professional-services",
+      "restaurants-cafes",
+      "healthcare"
+    ],
+    "featuredWork": "For Boston businesses the first AI win is usually speed: an assistant that answers calls and website chats in seconds, books the consultation or table, and sends every lead to a CRM, so nobody waits on hold while a competitor two streets over picks up.",
+    "photo": {
+      "credit": "Nelson48 at English Wikipedia",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Boston_Financial_District_skyline.jpg"
+    }
+  },
+  {
+    "slug": "worcester-ma",
+    "name": "Worcester",
+    "state": "MA",
+    "region": "Central Massachusetts",
+    "blurb": "Worcester's growing downtown, colleges and medical centers support a busy mix of restaurants, clinics, contractors and shops across Central Massachusetts.",
+    "nearby": [
+      "Shrewsbury",
+      "Auburn",
+      "Holden",
+      "Leicester"
+    ],
+    "image": "town-worcester.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "healthcare",
+      "hvac"
+    ],
+    "featuredWork": "Worcester owners we talk to are usually short on staff, not demand. AI follow-up and booking let a small team respond to every inquiry, and a weekly dashboard shows which marketing actually brings people through the door.",
+    "photo": {
+      "credit": "Terageorge",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Worcester,_Massachusetts.jpg"
+    }
+  },
+  {
+    "slug": "springfield-ma",
+    "name": "Springfield",
+    "state": "MA",
+    "region": "Western Massachusetts",
+    "blurb": "Springfield anchors the Pioneer Valley, where family-owned shops, practices and service companies serve customers on both sides of the Connecticut River.",
+    "nearby": [
+      "Chicopee",
+      "West Springfield",
+      "Longmeadow",
+      "Holyoke"
+    ],
+    "image": "town-springfield.jpg",
+    "focusIndustries": [
+      "healthcare",
+      "auto-restoration-detailing",
+      "plumbing"
+    ],
+    "featuredWork": "In the Springfield area we often start with the phone: an AI receptionist that answers in English and Spanish, books appointments and sends reminders, so practices and shops stop losing customers to voicemail.",
+    "photo": {
+      "credit": "Quintin Soloviev",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Springfield,_MA_city_skyline_2026.jpg"
+    }
+  },
+  {
+    "slug": "cambridge-ma",
+    "name": "Cambridge",
+    "state": "MA",
+    "region": "Greater Boston",
+    "blurb": "Cambridge's independent shops, studios, cafés and professional offices serve a customer base that expects to book, ask and pay online.",
+    "nearby": [
+      "Somerville",
+      "Boston",
+      "Arlington",
+      "Watertown"
+    ],
+    "image": "town-cambridge.jpg",
+    "focusIndustries": [
+      "professional-services",
+      "retail-shops",
+      "fitness-studios"
+    ],
+    "featuredWork": "Cambridge customers expect instant answers. We set up chat and text assistants that handle questions, bookings and orders around the clock and connect them to the tools the business already runs on.",
+    "photo": {
+      "credit": "Tony Webster from Portland, Oregon",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Signage_at_inbound_entrance_to_Central_station,_December_2014.jpg"
+    }
+  },
+  {
+    "slug": "lowell-ma",
+    "name": "Lowell",
+    "state": "MA",
+    "region": "Merrimack Valley",
+    "blurb": "Lowell's mill-district revival brought new restaurants, studios and shops alongside the established contractors and service companies of the Merrimack Valley.",
+    "nearby": [
+      "Chelmsford",
+      "Dracut",
+      "Tewksbury",
+      "Billerica"
+    ],
+    "image": "town-lowell.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "carpentry-remodeling"
+    ],
+    "featuredWork": "For Lowell businesses we focus on follow-up that runs itself: every call, form and message gets a reply within minutes, and past customers hear from you before they think about shopping around.",
+    "photo": {
+      "credit": "David Wilson",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:41_Lowell,_Massachusetts.jpg"
+    }
+  },
+  {
+    "slug": "quincy-ma",
+    "name": "Quincy",
+    "state": "MA",
+    "region": "South Shore, Massachusetts",
+    "blurb": "Quincy's busy downtown, Asian-American business community and transit links make it one of the South Shore's most competitive places to win local customers.",
+    "nearby": [
+      "Braintree",
+      "Milton",
+      "Weymouth",
+      "Dorchester"
+    ],
+    "image": "town-quincy.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "healthcare",
+      "professional-services"
+    ],
+    "featuredWork": "Quincy businesses get the most from multilingual AI: assistants that answer common questions and take bookings in the languages customers actually speak, backed by a CRM that keeps every conversation in one place.",
+    "photo": {
+      "credit": "Quintin Soloviev",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Quincy,_Massachusetts.jpg"
+    }
+  },
+  {
+    "slug": "brockton-ma",
+    "name": "Brockton",
+    "state": "MA",
+    "region": "Southeastern Massachusetts",
+    "blurb": "Brockton's auto shops, clinics, trades and family businesses serve one of Southeastern Massachusetts' largest and most diverse communities.",
+    "nearby": [
+      "Stoughton",
+      "Avon",
+      "Abington",
+      "West Bridgewater"
+    ],
+    "image": "town-brockton.jpg",
+    "focusIndustries": [
+      "auto-restoration-detailing",
+      "healthcare",
+      "plumbing"
+    ],
+    "featuredWork": "In Brockton the quick wins are missed-call text-back, appointment reminders and review requests: simple automations that keep a small office from losing jobs it already earned.",
+    "photo": {
+      "credit": "Tyoung0543",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Brockton,_MA,_intersection_of_Legion,_Centre,_and_Main_looking_north.jpg"
+    }
+  },
+  {
+    "slug": "new-bedford-ma",
+    "name": "New Bedford",
+    "state": "MA",
+    "region": "South Coast, Massachusetts",
+    "blurb": "New Bedford's working waterfront, historic downtown and growing food scene support restaurants, shops, clinics and the trades that keep the South Coast running.",
+    "nearby": [
+      "Dartmouth",
+      "Fairhaven",
+      "Acushnet",
+      "Westport"
+    ],
+    "image": "town-new-bedford.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "healthcare"
+    ],
+    "featuredWork": "For New Bedford businesses we usually combine an AI assistant that answers in English, Portuguese and Spanish with a website that shows current hours and menus everywhere people search.",
+    "photo": {
+      "credit": "Marcbela (Marc N. Belanger)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_New_Bedford_MA.jpg"
+    }
+  },
+  {
+    "slug": "fall-river-ma",
+    "name": "Fall River",
+    "state": "MA",
+    "region": "South Coast, Massachusetts",
+    "blurb": "Fall River's family restaurants, mill-building shops and contractors depend on loyal local customers and word of mouth.",
+    "nearby": [
+      "Somerset",
+      "Swansea",
+      "Westport",
+      "Tiverton"
+    ],
+    "image": "town-fall-river.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "carpentry-remodeling"
+    ],
+    "featuredWork": "Fall River owners tell us they can't keep up with messages. We set up one inbox for calls, texts and social messages, with AI drafting replies and booking work so nothing slips through.",
+    "photo": {
+      "credit": "Marcbela (Marc N. Belanger)",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Bank_Street_Fall_River.jpg"
+    }
+  },
+  {
+    "slug": "manchester-nh",
+    "name": "Manchester",
+    "state": "NH",
+    "region": "Southern New Hampshire",
+    "blurb": "Manchester's Millyard tech companies, Elm Street restaurants and the region's contractors make it New Hampshire's busiest small-business market.",
+    "nearby": [
+      "Bedford",
+      "Goffstown",
+      "Hooksett",
+      "Londonderry"
+    ],
+    "image": "town-manchester.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "healthcare",
+      "hvac"
+    ],
+    "featuredWork": "For Manchester businesses we start with an AI plan that pays back fast: answer every call, follow up every lead, and give the owner one dashboard for bookings and revenue.",
+    "photo": {
+      "credit": "Quintin Soloviev",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Manchester,_NH_skyline.jpg"
+    }
+  },
+  {
+    "slug": "nashua-nh",
+    "name": "Nashua",
+    "state": "NH",
+    "region": "Southern New Hampshire",
+    "blurb": "Nashua's retail corridors and downtown offices draw shoppers and clients from across the Massachusetts border every day.",
+    "nearby": [
+      "Hudson",
+      "Merrimack",
+      "Amherst",
+      "Hollis"
+    ],
+    "image": "town-nashua.jpg",
+    "focusIndustries": [
+      "retail-shops",
+      "healthcare",
+      "professional-services"
+    ],
+    "featuredWork": "Nashua businesses compete with Massachusetts and the big-box stores at once. AI-assisted local search, fast lead response and loyalty texts help independent shops and offices keep customers coming back.",
+    "photo": {
+      "credit": "Jane023",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Former_train_repair_facility,_downtown_Nashua,_NH_02.jpg"
+    }
+  },
+  {
+    "slug": "portsmouth-nh",
+    "name": "Portsmouth",
+    "state": "NH",
+    "region": "NH Seacoast",
+    "blurb": "Portsmouth's downtown restaurants, boutiques and salons see big seasonal swings between busy summers and quieter winters.",
+    "nearby": [
+      "Rye",
+      "Newington",
+      "Kittery",
+      "Dover"
+    ],
+    "image": "town-portsmouth.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "salons-spas"
+    ],
+    "featuredWork": "On the Seacoast we build for the seasons: AI that handles the summer rush of calls and bookings, and automated campaigns that bring locals back in the off-season.",
+    "photo": {
+      "credit": "Quintin Soloviev",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Portsmouth,_New_Hampshire_downtown_aerial_view.jpg"
+    }
+  },
+  {
+    "slug": "concord-nh",
+    "name": "Concord",
+    "state": "NH",
+    "region": "Central New Hampshire",
+    "blurb": "Concord's law and accounting offices, medical practices and contractors serve the capital region and much of central New Hampshire.",
+    "nearby": [
+      "Bow",
+      "Pembroke",
+      "Hopkinton",
+      "Loudon"
+    ],
+    "image": "town-concord.jpg",
+    "focusIndustries": [
+      "professional-services",
+      "healthcare",
+      "carpentry-remodeling"
+    ],
+    "featuredWork": "For Concord's professional offices we set up AI intake and document reminders with strict data rules, so staff spend their day on clients instead of chasing forms.",
+    "photo": {
+      "credit": "Warren LeMay from Covington, KY, United States",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:New_Hampshire_Savings_Bank_Building,_Concord,_NH_(49211342066).jpg"
+    }
+  },
+  {
+    "slug": "providence-ri",
+    "name": "Providence",
+    "state": "RI",
+    "region": "Rhode Island",
+    "blurb": "Providence's restaurants, design studios, practices and family businesses make up one of New England's densest small-business scenes.",
+    "nearby": [
+      "Cranston",
+      "Pawtucket",
+      "East Providence",
+      "North Providence"
+    ],
+    "image": "town-providence.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "healthcare",
+      "professional-services"
+    ],
+    "featuredWork": "Providence owners usually want two things from AI: stop missing calls and messages, and get time back from paperwork. We set up both, inside the tools they already use.",
+    "photo": {
+      "credit": "Kenneth C. Zirkel",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Providence_Rhode_Island_2008.jpg"
+    }
+  },
+  {
+    "slug": "newport-ri",
+    "name": "Newport",
+    "state": "RI",
+    "region": "Rhode Island",
+    "blurb": "Newport's restaurants, shops, rentals and event businesses run hard in summer and need to stay visible all year.",
+    "nearby": [
+      "Middletown",
+      "Portsmouth",
+      "Jamestown",
+      "Tiverton"
+    ],
+    "image": "town-newport.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "real-estate"
+    ],
+    "featuredWork": "In Newport we focus on capacity: AI that answers booking and event questions instantly during peak season, and campaigns that keep regulars and past guests coming back between seasons.",
+    "photo": {
+      "credit": "ajay_suresh",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Newport_Downtown_(51487111967).jpg"
+    }
+  },
+  {
+    "slug": "hartford-ct",
+    "name": "Hartford",
+    "state": "CT",
+    "region": "Central Connecticut",
+    "blurb": "Hartford's insurance and finance roots support a wide network of professional offices, practices and the restaurants and services around them.",
+    "nearby": [
+      "West Hartford",
+      "Wethersfield",
+      "East Hartford",
+      "Glastonbury"
+    ],
+    "image": "town-hartford.jpg",
+    "focusIndustries": [
+      "professional-services",
+      "healthcare",
+      "restaurants-cafes"
+    ],
+    "featuredWork": "For Hartford-area offices we build AI intake, scheduling and follow-up with clear privacy rules, so client information stays protected while response times drop from days to minutes.",
+    "photo": {
+      "credit": "Kenneth C. Zirkel",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hartford_Connecticut_downtown.jpg"
+    }
+  },
+  {
+    "slug": "new-haven-ct",
+    "name": "New Haven",
+    "state": "CT",
+    "region": "Southern Connecticut",
+    "blurb": "New Haven's restaurants, shops and practices serve students, hospital staff and residents with very different schedules.",
+    "nearby": [
+      "Hamden",
+      "West Haven",
+      "East Haven",
+      "North Haven"
+    ],
+    "image": "town-new-haven.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "healthcare"
+    ],
+    "featuredWork": "New Haven businesses get the most from 24/7 answering and online booking, because their customers ask questions at all hours, plus review automation that keeps them ahead in a crowded local search.",
+    "photo": {
+      "credit": "DimiTalen",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Looking_down_Broadway_from_Elm_and_York_Streets,_New_Haven,_2007.jpg"
+    }
+  },
+  {
+    "slug": "stamford-ct",
+    "name": "Stamford",
+    "state": "CT",
+    "region": "Fairfield County, Connecticut",
+    "blurb": "Stamford and lower Fairfield County are home to high-end studios, salons, offices and service companies with demanding clients.",
+    "nearby": [
+      "Greenwich",
+      "Darien",
+      "Norwalk",
+      "New Canaan"
+    ],
+    "image": "town-stamford.jpg",
+    "focusIndustries": [
+      "professional-services",
+      "fitness-studios",
+      "salons-spas"
+    ],
+    "featuredWork": "Stamford clients expect concierge-level response. We set up AI assistants that answer and book instantly in your brand's voice, with a CRM that remembers every client's history.",
+    "photo": {
+      "credit": "WikileaksIntern",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:2024.04_Stamford-038.jpg"
+    }
+  },
+  {
+    "slug": "bridgeport-ct",
+    "name": "Bridgeport",
+    "state": "CT",
+    "region": "Fairfield County, Connecticut",
+    "blurb": "Bridgeport, Connecticut's largest city, supports a hard-working mix of auto shops, restaurants, trades and family businesses.",
+    "nearby": [
+      "Fairfield",
+      "Stratford",
+      "Trumbull",
+      "Shelton"
+    ],
+    "image": "town-bridgeport.jpg",
+    "focusIndustries": [
+      "auto-restoration-detailing",
+      "restaurants-cafes",
+      "plumbing"
+    ],
+    "featuredWork": "For Bridgeport businesses we start with missed-call text-back, bilingual answering and reminders, then add the CRM and reviews once the phones are covered.",
+    "photo": {
+      "credit": "Quintin Soloviev",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Bridgeport,_Connecticut.jpg"
+    }
+  },
+  {
+    "slug": "portland-me",
+    "name": "Portland",
+    "state": "ME",
+    "region": "Southern Maine",
+    "blurb": "Portland's restaurants, Old Port shops and studios draw visitors in summer and depend on locals through the long winter.",
+    "nearby": [
+      "South Portland",
+      "Westbrook",
+      "Falmouth",
+      "Cape Elizabeth"
+    ],
+    "image": "town-portland.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "salons-spas"
+    ],
+    "featuredWork": "Portland owners use AI to handle the summer flood of calls, reservations and questions without extra staff, and to keep in touch with locals year-round.",
+    "photo": {
+      "credit": "AlexiusHoratius",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Portland_17.JPG"
+    }
+  },
+  {
+    "slug": "bangor-me",
+    "name": "Bangor",
+    "state": "ME",
+    "region": "Central Maine",
+    "blurb": "Bangor is the service hub for a huge stretch of central and northern Maine, with practices, shops and contractors covering long distances.",
+    "nearby": [
+      "Brewer",
+      "Hampden",
+      "Orono",
+      "Old Town"
+    ],
+    "image": "town-bangor.jpg",
+    "focusIndustries": [
+      "healthcare",
+      "plumbing",
+      "auto-restoration-detailing"
+    ],
+    "featuredWork": "Across a territory this big, every call matters. We set up AI answering, scheduling and route-friendly reminders so Bangor-area businesses can book and confirm work without phone tag.",
+    "photo": {
+      "credit": "DrStew82",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Bangor_in_Winter_2018_image_4.jpg"
+    }
+  },
+  {
+    "slug": "burlington-vt",
+    "name": "Burlington",
+    "state": "VT",
+    "region": "Northern Vermont",
+    "blurb": "Burlington's Church Street shops, restaurants and studios serve students, tourists and a community that cares about buying local.",
+    "nearby": [
+      "South Burlington",
+      "Winooski",
+      "Essex",
+      "Shelburne"
+    ],
+    "image": "town-burlington.jpg",
+    "focusIndustries": [
+      "restaurants-cafes",
+      "retail-shops",
+      "fitness-studios"
+    ],
+    "featuredWork": "Burlington businesses want AI that feels personal, not robotic. We train assistants on your tone and values and keep a human in the loop for anything sensitive.",
+    "photo": {
+      "credit": "Sdkb",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Church_Street_Marketplace_in_autumn.jpg"
+    }
+  },
+  {
+    "slug": "montpelier-vt",
+    "name": "Montpelier",
+    "state": "VT",
+    "region": "Central Vermont",
+    "blurb": "Montpelier, the country's smallest state capital, has a tight-knit downtown of shops, offices and practices.",
+    "nearby": [
+      "Barre",
+      "Berlin",
+      "Middlesex",
+      "East Montpelier"
+    ],
+    "image": "town-montpelier.jpg",
+    "focusIndustries": [
+      "professional-services",
+      "retail-shops",
+      "healthcare"
+    ],
+    "featuredWork": "In a small market every customer counts. For Montpelier businesses we set up simple, low-cost automations: answering, reminders, reviews and follow-up, without a big tech stack.",
+    "photo": {
+      "credit": "David Wilson",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Main_Street_sidewalk_downtown_Montpelier_VT_September_2012.jpg"
     }
   }
 ]
