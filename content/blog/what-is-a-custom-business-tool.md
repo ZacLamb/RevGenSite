@@ -22,10 +22,10 @@ faq:
   - q: Who owns the code if I pay someone to build a tool?
     a: That depends on your contract, so ask before work starts. Make sure you know who owns the code, where it's hosted, and how you'd get a copy if you ever changed developers.
 photo:
-  id: 5dc948d9-4dfd-4576-9203-a88c86dd4999
-  credit: Direct Media
+  id: 64981eb6-06a1-4722-8ad0-a90e42e36707
+  credit: Marc Chouinard
   license: CC0
-  source: https://stocksnap.io/photo/doctor-working-WTWX4BZ4FD
+  source: https://stocksnap.io/photo/ipad-tablet-4SGERWWL1U
 ---
 
 "Custom software" sounds like something only big companies need. But most small businesses that end up building a tool didn't go looking for one. They started with a spreadsheet, a workaround or three apps taped together, and eventually the tape stopped holding. This guide explains what a custom tool is, how to tell whether you need one, and how to scope it so it solves the actual problem.

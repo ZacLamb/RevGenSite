@@ -83,13 +83,18 @@ function queriesFor(front) {
   return [...new Set([firstWords, ind && INDUSTRY[ind], CAT[front.category], 'business', 'workspace', 'phone', 'desk', 'team', 'city'].filter(Boolean))];
 }
 
+// Some creator names arrive %-escaped ("Krzysztof%20Puszczy%u0144ski").
+function cleanName(n) {
+  try { return unescape(String(n || '')).trim(); } catch { return String(n || '').trim(); }
+}
+
 async function photoFor(post, used = usedPhotoIds()) {
   for (const q of queriesFor(post.front)) {
     for (const source of ['stocksnap']) {
       const pick = (await search(q, source)).find((r) => r.id && !used.has(String(r.id)) && usable(r));
       if (pick) {
         const lic = String(pick.license || '').toLowerCase();
-        return { id: String(pick.id), url: sizedUrl(pick), credit: pick.creator || pick.source, license: lic === 'cc0' ? 'CC0' : `CC ${lic.toUpperCase()}${pick.license_version ? ' ' + pick.license_version : ''}`, source: pick.foreign_landing_url || pick.url, query: q };
+        return { id: String(pick.id), url: sizedUrl(pick), credit: cleanName(pick.creator) || pick.source, license: lic === 'cc0' ? 'CC0' : `CC ${lic.toUpperCase()}${pick.license_version ? ' ' + pick.license_version : ''}`, source: pick.foreign_landing_url || pick.url, query: q };
       }
     }
   }

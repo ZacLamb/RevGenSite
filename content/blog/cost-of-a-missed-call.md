@@ -21,7 +21,7 @@ faq:
     a: Both can work. Compare them on how fast they answer, whether they can book directly on your calendar, how they handle emergencies, and whether every call ends up as a lead in your CRM.
 photo:
   id: ec138cf1-6216-49ae-85a3-81d109757472
-  credit: Krzysztof%20Puszczy%u0144ski
+  credit: Krzysztof Puszczyński
   license: CC0
   source: https://stocksnap.io/photo/wrench-tools-F91K0WLE2D
 ---
