@@ -3,6 +3,7 @@
 # problem, it opens a pull request instead so nothing broken goes live.
 #
 # Setup: add the repository secret ANTHROPIC_API_KEY (Settings › Secrets and variables › Actions).
+# Each new post gets its own openly licensed photo from Openverse (scripts/blog-photos.js); no key needed.
 # Optional repository variable ANTHROPIC_MODEL. To pause it: Actions › Daily article › "..." › Disable.
 # To run one now: Actions › Daily article › Run workflow (you can give it a topic).
 name: Daily article
@@ -60,7 +61,7 @@ jobs:
         run: |
           git config user.name "RGS daily article"
           git config user.email "actions@users.noreply.github.com"
-          git add content public
+          git add content public data
           git commit -m "Daily article: $TITLE"
           git push origin HEAD:main
 
@@ -75,7 +76,7 @@ jobs:
           git config user.name "RGS daily article"
           git config user.email "actions@users.noreply.github.com"
           git checkout -b "$BR"
-          git add content public
+          git add content public data
           git commit -m "Daily article (needs review): $TITLE"
           git push origin "$BR"
           {

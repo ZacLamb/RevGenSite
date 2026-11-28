@@ -5,10 +5,24 @@
     "state": "MA",
     "region": "Southeastern Massachusetts",
     "blurb": "Raynham and the surrounding Route 44 corridor are home to a dense mix of home service businesses competing for the same searches. We've built websites and CRM systems for HVAC and contracting companies based right in town.",
-    "nearby": ["Taunton", "Bridgewater", "Easton", "Middleborough"],
-    "image": "town-suburban.jpg",
-    "focusIndustries": ["hvac", "plumbing", "electrical"],
-    "featuredWork": "Most of our Raynham work has centered on HVAC and mechanical contractors — building out a CRM that tracks recurring maintenance contracts, not just one-off installs, and a website built to win the \"AC repair near me\" searches that spike every July."
+    "nearby": [
+      "Taunton",
+      "Bridgewater",
+      "Easton",
+      "Middleborough"
+    ],
+    "image": "town-raynham.jpg",
+    "focusIndustries": [
+      "hvac",
+      "plumbing",
+      "electrical"
+    ],
+    "featuredWork": "Most of our Raynham work has centered on HVAC and mechanical contractors — building out a CRM that tracks recurring maintenance contracts, not just one-off installs, and a website built to win the \"AC repair near me\" searches that spike every July.",
+    "photo": {
+      "credit": "Kenneth C. Zirkel",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Raynham,_Massachusetts_town_line_Welcome_sign.jpg"
+    }
   },
   {
     "slug": "lynn-ma",
@@ -16,10 +30,24 @@
     "state": "MA",
     "region": "North Shore, Massachusetts",
     "blurb": "Lynn's mix of dense residential neighborhoods and older housing stock keeps hardscaping, tree service, and remodeling crews busy year-round — and makes local search visibility especially competitive.",
-    "nearby": ["Swampscott", "Saugus", "Salem", "Revere"],
-    "image": "town-coastal.jpg",
-    "focusIndustries": ["hardscaping-tree-service", "landscaping", "deck-building"],
-    "featuredWork": "For hardscaping and tree crews in Lynn, the win is usually a photo-first website — before/after project galleries load fast and rank locally — paired with a CRM that keeps estimates from falling through the cracks during the spring rush."
+    "nearby": [
+      "Swampscott",
+      "Saugus",
+      "Salem",
+      "Revere"
+    ],
+    "image": "town-lynn.jpg",
+    "focusIndustries": [
+      "hardscaping-tree-service",
+      "landscaping",
+      "deck-building"
+    ],
+    "featuredWork": "For hardscaping and tree crews in Lynn, the win is usually a photo-first website — before/after project galleries load fast and rank locally — paired with a CRM that keeps estimates from falling through the cracks during the spring rush.",
+    "photo": {
+      "credit": "Terageorge",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Lynn,_MA_(May_2021).jpg"
+    }
   },
   {
     "slug": "rehoboth-ma",
@@ -27,10 +55,24 @@
     "state": "MA",
     "region": "Bristol County, Massachusetts",
     "blurb": "Rehoboth's larger residential lots make it a strong market for hardscaping, patios, and outdoor living projects — the kind of work that sells on photos and a fast-loading project gallery.",
-    "nearby": ["Seekonk", "Dighton", "Attleboro", "Swansea"],
-    "image": "town-suburban.jpg",
-    "focusIndustries": ["hardscaping-tree-service", "landscaping", "deck-building"],
-    "featuredWork": "Rehoboth's larger properties mean bigger-ticket hardscape and patio projects — so the sites we build here lean hard on visual proof of work and a lead form built to pre-qualify project size before the first phone call."
+    "nearby": [
+      "Seekonk",
+      "Dighton",
+      "Attleboro",
+      "Swansea"
+    ],
+    "image": "town-rehoboth.jpg",
+    "focusIndustries": [
+      "hardscaping-tree-service",
+      "landscaping",
+      "deck-building"
+    ],
+    "featuredWork": "Rehoboth's larger properties mean bigger-ticket hardscape and patio projects — so the sites we build here lean hard on visual proof of work and a lead form built to pre-qualify project size before the first phone call.",
+    "photo": {
+      "credit": "John Phelan",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tremont_Street,_North_Rehoboth_MA.jpg"
+    }
   },
   {
     "slug": "south-yarmouth-ma",
@@ -38,10 +80,23 @@
     "state": "MA",
     "region": "Cape Cod, Massachusetts",
     "blurb": "Cape Cod's seasonal population swings mean local service businesses in South Yarmouth need marketing that ramps up ahead of summer and a CRM that keeps second-home clients on the books year after year.",
-    "nearby": ["Dennis", "Hyannis", "Barnstable", "West Yarmouth"],
-    "image": "town-coastal.jpg",
-    "focusIndustries": ["painting", "carpentry-remodeling"],
-    "featuredWork": "Painting and remodeling crews on this stretch of Cape Cod deal with a hard seasonal calendar — we build marketing that ramps ahead of the summer rush and a CRM that keeps second-home owners on the books year after year instead of starting from zero each spring."
+    "nearby": [
+      "Dennis",
+      "Hyannis",
+      "Barnstable",
+      "West Yarmouth"
+    ],
+    "image": "town-south-yarmouth.jpg",
+    "focusIndustries": [
+      "painting",
+      "carpentry-remodeling"
+    ],
+    "featuredWork": "Painting and remodeling crews on this stretch of Cape Cod deal with a hard seasonal calendar — we build marketing that ramps ahead of the summer rush and a CRM that keeps second-home owners on the books year after year instead of starting from zero each spring.",
+    "photo": {
+      "credit": "Dougtone",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cape_Cod,_Massachusetts_-_8302730272.jpg"
+    }
   },
   {
     "slug": "plymouth-ma",
@@ -49,10 +104,23 @@
     "state": "MA",
     "region": "South Shore, Massachusetts",
     "blurb": "Plymouth's mix of historic homes and new construction keeps carpentry, painting, and remodeling contractors busy with two very different kinds of projects — and two very different kinds of customers to market to.",
-    "nearby": ["Kingston", "Duxbury", "Carver", "Plympton"],
-    "image": "town-coastal.jpg",
-    "focusIndustries": ["carpentry-remodeling", "painting"],
-    "featuredWork": "Plymouth's split between historic-home restoration and new-construction finish work means the carpentry and remodeling businesses we work with here usually need two distinct pitches on one site — we build the pages and CRM pipelines to keep both leads separated and followed up on correctly."
+    "nearby": [
+      "Kingston",
+      "Duxbury",
+      "Carver",
+      "Plympton"
+    ],
+    "image": "town-plymouth.jpg",
+    "focusIndustries": [
+      "carpentry-remodeling",
+      "painting"
+    ],
+    "featuredWork": "Plymouth's split between historic-home restoration and new-construction finish work means the carpentry and remodeling businesses we work with here usually need two distinct pitches on one site — we build the pages and CRM pipelines to keep both leads separated and followed up on correctly.",
+    "photo": {
+      "credit": "Raime",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Court_Street_Plymouth_MA2.JPG"
+    }
   },
   {
     "slug": "northborough-ma",
@@ -60,10 +128,22 @@
     "state": "MA",
     "region": "MetroWest, Massachusetts",
     "blurb": "Northborough sits at the center of a MetroWest market with strong demand for both residential and commercial glass and glazing work, from storefront installs to custom shower enclosures.",
-    "nearby": ["Westborough", "Marlborough", "Shrewsbury", "Southborough"],
-    "image": "town-suburban.jpg",
-    "focusIndustries": ["glass-glazing"],
-    "featuredWork": "Glass and glazing work in Northborough splits between commercial storefront bids and residential shower/mirror installs — we build separate service pages and CRM pipelines for each, since a $40,000 storefront job and a $600 shower enclosure need completely different follow-up."
+    "nearby": [
+      "Westborough",
+      "Marlborough",
+      "Shrewsbury",
+      "Southborough"
+    ],
+    "image": "town-northborough.jpg",
+    "focusIndustries": [
+      "glass-glazing"
+    ],
+    "featuredWork": "Glass and glazing work in Northborough splits between commercial storefront bids and residential shower/mirror installs — we build separate service pages and CRM pipelines for each, since a $40,000 storefront job and a $600 shower enclosure need completely different follow-up.",
+    "photo": {
+      "credit": "John Phelan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Main_Street,_Northborough_MA.jpg"
+    }
   },
   {
     "slug": "harwich-ma",
@@ -71,10 +151,22 @@
     "state": "MA",
     "region": "Cape Cod, Massachusetts",
     "blurb": "Harwich's classic-car and craftsman community supports specialty trades that sell on reputation and visible quality of work — exactly the kind of business a portfolio-driven website is built for.",
-    "nearby": ["Chatham", "Brewster", "Dennis", "Orleans"],
-    "image": "town-coastal.jpg",
-    "focusIndustries": ["auto-restoration-detailing"],
-    "featuredWork": "Classic car and restoration shops in Harwich sell almost entirely on visible craftsmanship, so the sites we build here are portfolio-first — high-resolution project galleries and a CRM built around long, relationship-driven restoration timelines instead of quick one-off jobs."
+    "nearby": [
+      "Chatham",
+      "Brewster",
+      "Dennis",
+      "Orleans"
+    ],
+    "image": "town-harwich.jpg",
+    "focusIndustries": [
+      "auto-restoration-detailing"
+    ],
+    "featuredWork": "Classic car and restoration shops in Harwich sell almost entirely on visible craftsmanship, so the sites we build here are portfolio-first — high-resolution project galleries and a CRM built around long, relationship-driven restoration timelines instead of quick one-off jobs.",
+    "photo": {
+      "credit": "Dougtone",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Harwich,_Massachusetts_-_5711982416.jpg"
+    }
   },
   {
     "slug": "rockland-ma",
@@ -82,10 +174,23 @@
     "state": "MA",
     "region": "South Shore, Massachusetts",
     "blurb": "Rockland and the surrounding South Shore towns are steady territory for masonry and hardscape contractors, with enough new construction and renovation work to keep a well-marketed crew booked solid.",
-    "nearby": ["Abington", "Hanover", "Whitman", "Weymouth"],
-    "image": "town-suburban.jpg",
-    "focusIndustries": ["masonry", "hardscaping-tree-service"],
-    "featuredWork": "Masonry crews around Rockland run on steady South Shore renovation and new-construction demand — the sites and CRM systems we build here are focused on turning estimate requests into a real scheduled pipeline instead of a pile of unanswered texts."
+    "nearby": [
+      "Abington",
+      "Hanover",
+      "Whitman",
+      "Weymouth"
+    ],
+    "image": "town-rockland.jpg",
+    "focusIndustries": [
+      "masonry",
+      "hardscaping-tree-service"
+    ],
+    "featuredWork": "Masonry crews around Rockland run on steady South Shore renovation and new-construction demand — the sites and CRM systems we build here are focused on turning estimate requests into a real scheduled pipeline instead of a pile of unanswered texts.",
+    "photo": {
+      "credit": "Dougtone",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rockland,_Massachusetts_-_5242073343.jpg"
+    }
   },
   {
     "slug": "beverly-ma",
@@ -93,10 +198,23 @@
     "state": "MA",
     "region": "North Shore, Massachusetts",
     "blurb": "Beverly and the North Shore combine coastal weather exposure with older housing stock — a market where masonry, exterior, and restoration businesses stay busy if they can be found by the right searches.",
-    "nearby": ["Salem", "Danvers", "Manchester-by-the-Sea", "Wenham"],
-    "image": "town-coastal.jpg",
-    "focusIndustries": ["masonry", "gutter-pressure-washing"],
-    "featuredWork": "Coastal weather exposure keeps masonry, gutter, and exterior-restoration businesses on the North Shore busy — the challenge in Beverly is usually just being found first, so we lean on local service pages and review-driven marketing to win that first call."
+    "nearby": [
+      "Salem",
+      "Danvers",
+      "Manchester-by-the-Sea",
+      "Wenham"
+    ],
+    "image": "town-beverly.jpg",
+    "focusIndustries": [
+      "masonry",
+      "gutter-pressure-washing"
+    ],
+    "featuredWork": "Coastal weather exposure keeps masonry, gutter, and exterior-restoration businesses on the North Shore busy — the challenge in Beverly is usually just being found first, so we lean on local service pages and review-driven marketing to win that first call.",
+    "photo": {
+      "credit": "Quintin Soloviev",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Beverly,_Massachusetts.jpg"
+    }
   },
   {
     "slug": "derry-nh",
@@ -104,9 +222,23 @@
     "state": "NH",
     "region": "Southern New Hampshire",
     "blurb": "Derry anchors a fast-growing corner of southern New Hampshire where masonry, tree work, and remodeling businesses are competing against a wave of new residents searching for local contractors online for the first time.",
-    "nearby": ["Londonderry", "Windham", "Salem NH", "Manchester"],
-    "image": "town-suburban.jpg",
-    "focusIndustries": ["masonry", "hardscaping-tree-service", "carpentry-remodeling"],
-    "featuredWork": "Derry's growth means a wave of new residents searching for a local contractor for the first time — the masonry, tree, and remodeling businesses we work with here win by showing up first in those searches and following up fast enough to lock in the job before a competitor calls back."
+    "nearby": [
+      "Londonderry",
+      "Windham",
+      "Salem NH",
+      "Manchester"
+    ],
+    "image": "town-derry.jpg",
+    "focusIndustries": [
+      "masonry",
+      "hardscaping-tree-service",
+      "carpentry-remodeling"
+    ],
+    "featuredWork": "Derry's growth means a wave of new residents searching for a local contractor for the first time — the masonry, tree, and remodeling businesses we work with here win by showing up first in those searches and following up fast enough to lock in the job before a competitor calls back.",
+    "photo": {
+      "credit": "John Phelan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:NH_Route_102,_Derry_NH.jpg"
+    }
   }
 ]

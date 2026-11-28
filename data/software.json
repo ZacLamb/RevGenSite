@@ -3,7 +3,8 @@
   "bundle": {
     "name": "All Tools Bundle",
     "monthly": 149,
-    "trialDays": 7
+    "trialDays": 7,
+    "trialFee": 1
   },
   "tools": [
     {

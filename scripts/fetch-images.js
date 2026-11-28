@@ -22,7 +22,8 @@ const outDir = path.join(__dirname, '..', 'public', 'images');
 
 function download(url, destPath) {
   return new Promise((resolve, reject) => {
-    const request = https.get(url, (res) => {
+    // A real User-Agent: Wikimedia (town photos) refuses requests without one.
+    const request = https.get(url, { headers: { 'User-Agent': 'RevenueGeneratingSolutions-site/1.0 (https://www.revenuegeneratingsolutions.com; hello@revenuegeneratingsolutions.com)' } }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         download(res.headers.location, destPath).then(resolve, reject);
         return;

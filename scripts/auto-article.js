@@ -92,21 +92,24 @@ async function pickTopic() {
   const count = Object.fromEntries(industries.map((i) => [i.slug, 0]));
   all.forEach((p) => (p.relatedIndustries || []).forEach((i) => { if (count[i] != null) count[i]++; }));
   const focus = industries.slice().sort((a, b) => count[a.slug] - count[b.slug]).slice(0, 3);
-  const text = await claude(system(), `Suggest 8 new article topics that owners of local service businesses actually search for, that this blog has NOT covered yet. Existing titles and keywords: ${all.map((p) => `${p.title} (${p.keyword || ''})`).join('; ')}.
-Prefer topics for these less-covered trades: ${focus.map((i) => i.name).join(', ')}. Each topic must be genuinely useful even to someone who never hires us, and must connect naturally to one of our services: ${services.map((s) => s.slug).join(', ')}.
+  // Positioning: New England's AI consultancy for growing local businesses of every kind, not only the trades.
+  const KINDS = ['home services and trades', 'medical, dental and wellness practices', 'restaurants and cafes', 'salons, spas and studios', 'retail and specialty shops', 'law, accounting, insurance and real estate offices', 'fitness studios and gyms', 'auto repair shops'];
+  const kind = KINDS[Math.floor(Date.now() / 864e5) % KINDS.length];
+  const text = await claude(system(), `Suggest 8 new article topics that owners of small and growing local businesses actually search for, that this blog has NOT covered yet. Existing titles and keywords: ${all.map((p) => `${p.title} (${p.keyword || ''})`).join('; ')}.
+We are an AI consultancy for local businesses across New England (Massachusetts, New Hampshire, Rhode Island, Connecticut, Maine, Vermont). At least 5 of the 8 topics must be about using AI or automation practically in a small business (answering calls, follow-up, scheduling, reviews, quotes, paperwork, staff using ChatGPT or Claude, AI costs, AI risks and privacy). Today, favor ${kind}; the trades that have the fewest articles so far are ${focus.map((i) => i.name).join(', ')}. A New England angle (state rules, seasons, local search) is welcome when it is real, never forced. Each topic must be genuinely useful even to someone who never hires us, and must connect naturally to one of our services: ${services.map((s) => s.slug).join(', ')}. Use an empty industries list when no trade page fits.
 Answer with only a JSON array, no prose: [{"topic": "...", "keyword": "...", "industries": ["<industry slug>"], "service": "<service slug>"}]`, { maxTokens: 3000, search: false });
   const ideas = firstJsonArray(text);
   const seen = all.map((p) => `${p.title} ${p.keyword || ''} ${p.slug}`);
   const fresh = ideas.filter((x) => x && x.topic && !seen.some((s) => overlap(`${x.topic} ${x.keyword}`, s) >= 0.7));
   if (!fresh.length) throw new Error('No new topic found that the blog has not already covered');
-  return fresh.find((x) => (x.industries || []).some((i) => focus.some((f) => f.slug === i))) || fresh[0];
+  return fresh[0];
 }
 
 async function main() {
   const idea = await pickTopic();
   console.log(`Topic: ${idea.topic}`);
   const text = await claude(system(), `Write one new blog post in the spec's blog format about: ${idea.topic}
-${idea.keyword ? `Primary keyword: ${idea.keyword}\n` : ''}${idea.industries?.length ? `Trades to focus on: ${idea.industries.join(', ')}\n` : ''}${idea.service ? `Main related service: ${idea.service}\n` : ''}Use date: ${today}. Add a short keyword-rich \`slug:\` to the front matter. Check any platform or legal facts with web search and link your sources.
+${idea.keyword ? `Primary keyword: ${idea.keyword}\n` : ''}${idea.industries?.length ? `Industries to focus on: ${idea.industries.join(', ')}\n` : ''}${idea.service ? `Main related service: ${idea.service}\n` : ''}Use date: ${today}. Add a short keyword-rich \`slug:\` to the front matter. Check any platform or legal facts with web search and link your sources.
 Output only the Markdown file, starting with the --- front matter line. No commentary before or after.`);
   const md = text.trim().replace(/^```(?:markdown|md)?\s*/i, '').replace(/```\s*$/, '').trim();
   const m = md.slice(md.indexOf('---')).match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
@@ -121,6 +124,13 @@ Output only the Markdown file, starting with the --- front matter line. No comme
   const out = `---\n${yaml.dump(front, { lineWidth: -1, quotingType: '"' }).trim()}\n---\n\n${m[2].trim()}\n`;
   fs.writeFileSync(path.join(BLOG, `${slug}.md`), out);
   console.log(`Wrote content/blog/${slug}.md (${m[2].split(/\s+/).length} words)`);
+  // Its own real photo from Openverse; if none is found it keeps the image Claude picked.
+  try {
+    const bp = require('./blog-photos');
+    const post = bp.readPost(slug);
+    const ph = await bp.photoFor(post);
+    if (ph) { bp.apply(post, ph); console.log(`Photo: ${ph.credit} (${ph.query})`); } else console.log('Photo: no match; kept the listed image');
+  } catch (e) { console.warn(`Photo step skipped: ${e.message}`); }
   if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `slug=${slug}\ntitle=${String(front.title || slug).replace(/\n/g, ' ')}\n`);
 }
 
