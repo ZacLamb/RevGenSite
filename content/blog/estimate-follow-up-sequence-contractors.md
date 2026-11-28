@@ -22,7 +22,7 @@ faq:
     a: Stop the active sequence when the customer replies, signs, says no, or asks you to stop. Pause it whenever a real conversation is happening, and restart only if they go quiet again.
 photo:
   id: dd580493-9ff8-4e9d-b922-a44b7f7f438a
-  credit: Krzysztof%20Puszczy%u0144ski
+  credit: Krzysztof Puszczyński
   license: CC0
   source: https://stocksnap.io/photo/painting-paintroller-CMUNDXFEWK
 ---
