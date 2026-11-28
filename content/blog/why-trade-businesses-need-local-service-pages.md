@@ -1,20 +1,31 @@
 ---
 title: "Local Service Pages: Why Trade Websites Need a Page per Town"
-description: "Why contractors need real town and service pages, what each page should include, and how to avoid the thin doorway pages Google's spam policies warn about."
-date: 2026-08-17
-updated: 2026-10-18
-category: "Web Design & SEO"
+description: Why contractors need real town and service pages, what each page should include, and how to avoid the thin doorway pages Google's spam policies warn about.
+date: "2026-08-17"
+updated: "2026-10-18"
+category: Web Design & SEO
 keyword: local service area pages
-image: blog-local-service-pages.jpg
-relatedServices: [web-design, digital-marketing]
-relatedIndustries: [masonry, landscaping, deck-building, plumbing]
+image: blog-why-trade-businesses-need-local-service-pages.jpg
+relatedServices:
+  - web-design
+  - digital-marketing
+relatedIndustries:
+  - masonry
+  - landscaping
+  - deck-building
+  - plumbing
 faq:
-  - q: "How many town pages should a contractor website have?"
-    a: "Start with the towns where you actually do the most work and want more jobs, usually a handful. Add more only when you can write something specific for each one. A few strong pages beat dozens of thin ones."
-  - q: "Are location pages against Google's rules?"
-    a: "Not when they're genuinely useful. Google's spam policies call out doorway pages, meaning near-identical pages built for different cities that funnel people to one place. Pages with real, specific content for each town are a different thing."
-  - q: "Do I need a town page if my Google Business Profile lists my service areas?"
-    a: "They do different jobs. Your profile's service areas help with map results, while a town page on your website gives Google and the homeowner a full page about your work in that place, which supports both organic results and your profile."
+  - q: How many town pages should a contractor website have?
+    a: Start with the towns where you actually do the most work and want more jobs, usually a handful. Add more only when you can write something specific for each one. A few strong pages beat dozens of thin ones.
+  - q: Are location pages against Google's rules?
+    a: Not when they're genuinely useful. Google's spam policies call out doorway pages, meaning near-identical pages built for different cities that funnel people to one place. Pages with real, specific content for each town are a different thing.
+  - q: Do I need a town page if my Google Business Profile lists my service areas?
+    a: They do different jobs. Your profile's service areas help with map results, while a town page on your website gives Google and the homeowner a full page about your work in that place, which supports both organic results and your profile.
+photo:
+  id: 51f54121-b12d-4ef7-9a59-40362ca42081
+  credit: Creative Vix
+  license: CC0
+  source: https://stocksnap.io/photo/bricks-stones-RIN5IUBGVX
 ---
 
 Search a service plus a town, like "masonry contractor Rockland MA," and look at what comes up. You'll often see businesses with a page built for that search, not a homepage that mentions the town once in a footer. This post explains why town and service pages matter for contractors, what goes on a good one, and how to build them without creating the thin, copy-pasted pages that Google's spam policies warn against.

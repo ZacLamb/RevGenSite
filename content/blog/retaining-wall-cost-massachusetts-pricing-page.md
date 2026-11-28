@@ -4,7 +4,7 @@ description: Retaining wall cost in Massachusetts depends on height, access, dra
 date: "2026-11-03"
 category: Web Design & SEO
 keyword: retaining wall cost massachusetts
-image: industry-hardscaping-tree.jpg
+image: blog-retaining-wall-cost-massachusetts-pricing-page.jpg
 relatedServices:
   - web-design
 relatedIndustries:
@@ -16,6 +16,11 @@ faq:
     a: As of 2026, the state building code generally exempts walls up to 4 feet, measured from the bottom of the footing to the top of the wall, unless the wall supports a surcharge such as a driveway or slope. Taller walls generally need a permit and engineered design, and your town's building department makes the final call.
   - q: Should a hardscaping company publish prices on its website?
     a: You don't have to publish a fixed price, but showing ranges, typical project scopes and what moves the price helps screen out shoppers who can't afford the work. It also makes the leads who do call better informed.
+photo:
+  id: c36511e6-f6a1-4d16-84bf-8624a6619ea0
+  credit: Sebastian Unrau
+  license: CC0
+  source: https://stocksnap.io/photo/trees-forest-WJQJCRV961
 ---
 
 Every hardscaper gets the call that starts with "how much for a retaining wall?" and ends 20 minutes later with someone who had a $3,000 budget for a project that costs several times that. A good pricing page answers that question before the phone rings, so the people who call already know the neighborhood they're in.

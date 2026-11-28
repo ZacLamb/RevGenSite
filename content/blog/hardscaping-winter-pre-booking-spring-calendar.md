@@ -4,7 +4,7 @@ description: "Hardscaping winter pre-booking for patio, wall and walkway crews: 
 date: "2026-11-10"
 category: CRM & Systems
 keyword: hardscaping winter pre-booking
-image: industry-hardscaping-tree.jpg
+image: blog-hardscaping-winter-pre-booking-spring-calendar.jpg
 relatedServices:
   - crm-build-management
 relatedIndustries:
@@ -16,6 +16,11 @@ faq:
     a: Under the Massachusetts Home Improvement Contractor law, a deposit before work starts can't exceed one-third of the contract price, or the actual cost of special-order materials if that is greater. Confirm how it applies to your jobs with the Office of Consumer Affairs or an attorney.
   - q: Can I schedule Dig Safe in winter for a spring job?
     a: Not that far ahead. Massachusetts requires notice at least 72 hours before digging, excluding weekends and legal holidays, but not more than 30 days before the excavation. Pre-book the job in winter and pull the ticket close to the actual start.
+photo:
+  id: 8b6323a9-48d5-4f27-933d-e653dc927099
+  credit: Negative Space
+  license: CC0
+  source: https://stocksnap.io/photo/tree-field-ONV344KX9K
 ---
 
 Hardscaping crews get phone calls in March and April from people who want a patio "this spring." By then your calendar is either full of last year's leftovers or empty because nobody followed up in January. Winter pre-booking fixes that by selling, scheduling and sequencing spring work while the ground is still frozen.

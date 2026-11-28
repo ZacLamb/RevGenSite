@@ -1,19 +1,30 @@
 ---
-title: "CRM Pipeline Stages for a Service Business (With Automations)"
-description: "How to design CRM pipeline stages for a service business, from new lead to review requested, with the automation to run at each stage and example tables."
-date: 2026-10-18
-category: "CRM & Systems"
+title: CRM Pipeline Stages for a Service Business (With Automations)
+description: How to design CRM pipeline stages for a service business, from new lead to review requested, with the automation to run at each stage and example tables.
+date: "2026-10-18"
+category: CRM & Systems
 keyword: crm pipeline stages service business
-image: service-crm.jpg
-relatedServices: [crm-build-management, ai-services-automations]
-relatedIndustries: [hvac, plumbing, painting, landscaping]
+image: blog-crm-pipeline-stages-service-business.jpg
+relatedServices:
+  - crm-build-management
+  - ai-services-automations
+relatedIndustries:
+  - hvac
+  - plumbing
+  - painting
+  - landscaping
 faq:
-  - q: "How many stages should a sales pipeline have for a contractor?"
-    a: "Most service businesses do well with six to nine stages. Fewer and you can't see where jobs stall; more and nobody keeps them updated. Each stage should represent a real change in what the customer or your team needs to do next."
-  - q: "Should I have separate pipelines for sales and jobs?"
-    a: "Often, yes. A sales pipeline tracks a lead until it's won or lost, and a jobs or production pipeline tracks scheduling, completion, invoicing and reviews. Small shops can keep it in one pipeline as long as the stages are clear."
-  - q: "What is the difference between a pipeline stage and a tag in a CRM?"
-    a: "A stage is where an opportunity sits right now, and it can only be in one at a time. Tags are labels that can stack, like the lead source, the service type or 'maintenance plan member.' Use stages for progress and tags for categories."
+  - q: How many stages should a sales pipeline have for a contractor?
+    a: Most service businesses do well with six to nine stages. Fewer and you can't see where jobs stall; more and nobody keeps them updated. Each stage should represent a real change in what the customer or your team needs to do next.
+  - q: Should I have separate pipelines for sales and jobs?
+    a: Often, yes. A sales pipeline tracks a lead until it's won or lost, and a jobs or production pipeline tracks scheduling, completion, invoicing and reviews. Small shops can keep it in one pipeline as long as the stages are clear.
+  - q: What is the difference between a pipeline stage and a tag in a CRM?
+    a: A stage is where an opportunity sits right now, and it can only be in one at a time. Tags are labels that can stack, like the lead source, the service type or 'maintenance plan member.' Use stages for progress and tags for categories.
+photo:
+  id: d1eb442c-37dc-41b5-81e8-7e183450eacd
+  credit: Kristin Hardwick
+  license: CC0
+  source: https://stocksnap.io/photo/house-plant-MUNCW5ZFUZ
 ---
 
 A CRM pipeline is just a picture of how a stranger becomes a paying customer. When the stages match how your business actually runs, you can see at a glance where money is stuck. When they don't, the pipeline turns into a junk drawer that nobody updates.

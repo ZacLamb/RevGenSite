@@ -4,7 +4,7 @@ description: "How a small practice can text patients under HIPAA: what to put in
 date: "2026-10-30"
 category: AI & Automations
 keyword: hipaa compliant text messaging small practice
-image: blog-automating-followup.jpg
+image: blog-hipaa-text-messaging-small-practice.jpg
 relatedServices:
   - ai-services-automations
   - crm-build-management
@@ -17,6 +17,11 @@ faq:
     a: No. No government agency certifies texting platforms, so a vendor's 'HIPAA compliant' label is their own claim. What you can check is whether they will sign a BAA and what safeguards they offer.
   - q: Does A2P 10DLC registration make my texts HIPAA compliant?
     a: No. A2P 10DLC is a carrier registration that gets your business texts delivered, and it is separate from HIPAA. You still need to handle message content, consent and vendor agreements yourself.
+photo:
+  id: d7a2c748-9f1f-4f87-abe1-bcd9fe996df1
+  credit: EVG Photos
+  license: CC0
+  source: https://stocksnap.io/photo/doctor-looking-GSBJXWRSDV
 ---
 
 Patients would rather get a text than a voicemail, and most practices know it. The worry is that one wrong message could reveal a diagnosis to the wrong person. HIPAA doesn't ban texting, but it does expect you to set it up on purpose. This is general information, not legal advice, so run your final setup past a compliance advisor.

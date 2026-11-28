@@ -1,19 +1,30 @@
 ---
 title: "A2P 10DLC Registration for Small Businesses: A Plain-English Guide"
 description: "A plain-English guide to A2P 10DLC registration for small businesses that text customers: brand and campaign setup, opt-in rules, blocked texts and timelines."
-date: 2026-10-18
-category: "CRM & Systems"
+date: "2026-10-18"
+category: CRM & Systems
 keyword: a2p 10dlc registration small business
-image: service-ai-automations.jpg
-relatedServices: [crm-build-management, ai-services-automations]
-relatedIndustries: [plumbing, hvac, healthcare, auto-restoration-detailing]
+image: blog-a2p-10dlc-texting-registration-small-business.jpg
+relatedServices:
+  - crm-build-management
+  - ai-services-automations
+relatedIndustries:
+  - plumbing
+  - hvac
+  - healthcare
+  - auto-restoration-detailing
 faq:
-  - q: "Do I need A2P 10DLC registration if I only text a few customers?"
-    a: "If you send texts from a business software platform or CRM using a regular 10-digit number to U.S. customers, yes. As of 2026, major U.S. carriers block unregistered 10DLC business traffic regardless of volume. Texting from your personal phone's messaging app is a different situation."
-  - q: "How long does A2P 10DLC registration take?"
-    a: "Brand registration often clears within a few business days. Campaign review commonly takes one to three weeks, and each rejection and resubmission adds more time, so it's worth getting the details right the first time."
-  - q: "Why was my A2P campaign rejected?"
-    a: "The most common reasons are business details that don't exactly match IRS records, a website without a visible SMS opt-in and consent language, a missing or non-compliant privacy policy, and sample messages that don't match the use case you described."
+  - q: Do I need A2P 10DLC registration if I only text a few customers?
+    a: If you send texts from a business software platform or CRM using a regular 10-digit number to U.S. customers, yes. As of 2026, major U.S. carriers block unregistered 10DLC business traffic regardless of volume. Texting from your personal phone's messaging app is a different situation.
+  - q: How long does A2P 10DLC registration take?
+    a: Brand registration often clears within a few business days. Campaign review commonly takes one to three weeks, and each rejection and resubmission adds more time, so it's worth getting the details right the first time.
+  - q: Why was my A2P campaign rejected?
+    a: The most common reasons are business details that don't exactly match IRS records, a website without a visible SMS opt-in and consent language, a missing or non-compliant privacy policy, and sample messages that don't match the use case you described.
+photo:
+  id: 64ef2ad9-f2b5-4561-8f01-97732eb3b0e2
+  credit: Barn Images
+  license: CC0
+  source: https://stocksnap.io/photo/tools-workshop-KD30XPQR0A
 ---
 
 If your business sends texts through a CRM, scheduling tool or phone system (appointment reminders, missed-call text-backs, estimate follow-ups), the phone carriers want to know who you are and what you're sending. That's what A2P 10DLC registration is. Skip it, or do it sloppily, and your messages get filtered or blocked without you ever knowing.

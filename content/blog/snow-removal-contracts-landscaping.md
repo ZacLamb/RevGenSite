@@ -4,7 +4,7 @@ description: "How landscapers can sell, renew and manage snow removal contracts:
 date: "2026-11-06"
 category: CRM & Systems
 keyword: snow removal contracts
-image: blog-crm-checklist.jpg
+image: blog-snow-removal-contracts-landscaping.jpg
 relatedServices:
   - crm-build-management
   - ai-services-automations
@@ -18,6 +18,11 @@ faq:
   - q: Can a snow removal contractor be held liable for a slip and fall in Massachusetts?
     a: Possibly. Property owners owe a duty of reasonable care and can't hand it off entirely by hiring someone, and a contractor can also be liable for its own negligence or missed contract duties. Have an attorney and your insurance broker review your contract language.
 relatedIndustries_note: ""
+photo:
+  id: 1cb8cedb-6433-4586-a37c-10039d6c0df6
+  credit: Elijah Hail
+  license: CC0
+  source: https://stocksnap.io/photo/sunflowers-garden-0X9YF0HB4B
 ---
 
 Snow work can fill the slow months for a landscaping company, but only if the accounts are sold on clear terms, renewed on time and tracked storm by storm. Most of the headaches come from loose contracts and scattered paperwork, not from the snow.

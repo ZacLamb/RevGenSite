@@ -4,7 +4,7 @@ description: "How to set up a Google Business Profile for medical practices: pic
 date: "2026-11-20"
 category: Digital Marketing
 keyword: google business profile for medical practices
-image: industry-healthcare.jpg
+image: blog-google-business-profile-medical-practices.jpg
 relatedServices:
   - digital-marketing
 relatedIndustries:
@@ -16,6 +16,11 @@ faq:
     a: Yes, but keep the reply generic. Don't confirm the reviewer was a patient or mention any details of their care, even if they shared those details themselves.
   - q: Can patients book an appointment straight from my Google listing?
     a: Yes. You can add your own appointment link, or connect a scheduling provider that supports Google's Book button. Check that the link opens a working page where the patient can finish booking.
+photo:
+  id: 5f0e95e2-2b69-46b1-a85f-69c9cb75fb47
+  credit: Direct Media
+  license: CC0
+  source: https://stocksnap.io/photo/male-doctor-KN1OCKC4Y2
 ---
 
 When someone searches "dentist near me" or "physical therapist open Saturday," the Google listing is often the first thing they see, and sometimes the only thing. For a medical or wellness practice, a few settings do most of the work: the categories, the services list, the appointment link and how you handle reviews. Details below reflect Google's tools as of November 2026, so check the settings in your own dashboard.

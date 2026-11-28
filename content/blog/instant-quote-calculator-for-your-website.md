@@ -1,19 +1,30 @@
 ---
-title: "Instant Quote Calculators for Trade Business Websites"
-description: "When a quote or price-range calculator on your website makes sense for a trade business, what to ask, how to avoid underquoting, and how to connect it to a CRM."
-date: 2026-10-18
-category: "Custom Tools"
+title: Instant Quote Calculators for Trade Business Websites
+description: When a quote or price-range calculator on your website makes sense for a trade business, what to ask, how to avoid underquoting, and how to connect it to a CRM.
+date: "2026-10-18"
+category: Custom Tools
 keyword: instant quote calculator for website
-image: service-custom-tools.jpg
-relatedServices: [custom-tool-building, web-design, crm-build-management]
-relatedIndustries: [gutter-pressure-washing, painting, auto-restoration-detailing]
+image: blog-instant-quote-calculator-for-your-website.jpg
+relatedServices:
+  - custom-tool-building
+  - web-design
+  - crm-build-management
+relatedIndustries:
+  - gutter-pressure-washing
+  - painting
+  - auto-restoration-detailing
 faq:
-  - q: "Should I show exact prices or a price range on my website calculator?"
-    a: "For most trades a range is safer. It sets expectations and filters out people with a much smaller budget, while leaving room for what you find on site. Exact prices work for highly standardized services like a detail package for a given vehicle size."
-  - q: "Will a price calculator attract only cheap customers?"
-    a: "Not if it's built well. A calculator that shows an honest range tends to scare off people who were never going to pay your price, and the people who submit already know roughly what to expect, which makes the follow-up call easier."
-  - q: "Can a quote calculator connect to my CRM?"
-    a: "Yes. A good calculator sends the contact info, every answer and the estimated range into your CRM as a new lead, tags it by service, and triggers your normal follow-up so someone confirms the quote quickly."
+  - q: Should I show exact prices or a price range on my website calculator?
+    a: For most trades a range is safer. It sets expectations and filters out people with a much smaller budget, while leaving room for what you find on site. Exact prices work for highly standardized services like a detail package for a given vehicle size.
+  - q: Will a price calculator attract only cheap customers?
+    a: Not if it's built well. A calculator that shows an honest range tends to scare off people who were never going to pay your price, and the people who submit already know roughly what to expect, which makes the follow-up call easier.
+  - q: Can a quote calculator connect to my CRM?
+    a: Yes. A good calculator sends the contact info, every answer and the estimated range into your CRM as a new lead, tags it by service, and triggers your normal follow-up so someone confirms the quote quickly.
+photo:
+  id: cd32a1a0-86d8-4502-8168-69dbfc6e8dc3
+  credit: Nathan Fertig
+  license: CC0
+  source: https://stocksnap.io/photo/house-interior-WDVIQZEXML
 ---
 
 "How much does it cost?" is the first question most homeowners have and the last thing most trade websites answer. A quote calculator lets visitors get a ballpark on your site, any time of day, and hands you a lead who already knows roughly what the job costs.

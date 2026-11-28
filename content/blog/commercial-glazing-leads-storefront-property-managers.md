@@ -4,7 +4,7 @@ description: "How glazing contractors get commercial bids: win property managers
 date: "2026-10-20"
 category: Digital Marketing
 keyword: commercial glazing leads
-image: industry-glass.jpg
+image: blog-commercial-glazing-leads-storefront-property-managers.jpg
 relatedServices:
   - digital-marketing
   - web-design
@@ -20,6 +20,11 @@ faq:
 relatedPosts:
   - google-business-profile-checklist-contractors
   - estimate-follow-up-sequence-contractors
+photo:
+  id: a8a18a4f-041c-400c-942a-82cb05fbb4dc
+  credit: Nuno Silva
+  license: CC0
+  source: https://stocksnap.io/photo/windows-washing-92J05OP590
 ---
 
 Commercial glazing work is won differently than residential window replacement. The buyer is often a property manager with a broken storefront at 7 a.m., a general contractor building a bid list, or a facilities person who wants one vendor they never have to think about again. Here is how to get in front of each of them and stay there.

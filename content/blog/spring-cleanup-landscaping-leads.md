@@ -4,7 +4,7 @@ description: Spring cleanup landscaping leads arrive all at once. Here is how to
 date: "2026-11-22"
 category: AI & Automations
 keyword: spring cleanup landscaping leads
-image: industry-landscaping.jpg
+image: blog-spring-cleanup-landscaping-leads.jpg
 relatedServices:
   - ai-services-automations
   - crm-build-management
@@ -18,6 +18,11 @@ faq:
   - q: How do I quote spring cleanups without visiting every property?
     a: Use a short intake form that asks for lot size, number of beds, leaf and debris load, and a few photos. Price from your own tiers, then visit only the odd properties, such as heavy storm damage or large lots.
 relatedIndustriesNote: none
+photo:
+  id: 981469f8-4bf7-430c-b150-6610059dfdd6
+  credit: Suzy Hazelwood
+  license: CC0
+  source: https://stocksnap.io/photo/garden-park-SJKYD4OJQB
 ---
 
 Spring cleanup is the first big wave of the year, and it doesn't arrive politely. One warm weekend can bring in more calls and web forms than your office handled all of February, and the crew is out on a mower or a rake when they land.

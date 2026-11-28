@@ -1,20 +1,31 @@
 ---
 title: "CRM Checklist for Contractors: What to Check Before You Buy"
 description: "A practical CRM checklist for contractors: the features that matter for a trade business, questions to ask in the demo, and how to avoid a failed migration."
-date: 2026-08-10
-updated: 2026-10-18
-category: "CRM & Systems"
+date: "2026-08-10"
+updated: "2026-10-18"
+category: CRM & Systems
 keyword: crm for contractors
-image: blog-crm-checklist.jpg
-relatedServices: [crm-build-management, ai-services-automations]
-relatedIndustries: [hvac, carpentry-remodeling, landscaping, electrical]
+image: blog-crm-checklist-for-contractors.jpg
+relatedServices:
+  - crm-build-management
+  - ai-services-automations
+relatedIndustries:
+  - hvac
+  - carpentry-remodeling
+  - landscaping
+  - electrical
 faq:
-  - q: "Do small contractors really need a CRM?"
-    a: "If leads come in by phone, text, web form and social messages, and more than one person touches them, yes. A CRM is the one place where every lead, estimate and follow-up lives, so nothing depends on someone's memory or a group text."
-  - q: "What is the difference between a CRM and field service software?"
+  - q: Do small contractors really need a CRM?
+    a: If leads come in by phone, text, web form and social messages, and more than one person touches them, yes. A CRM is the one place where every lead, estimate and follow-up lives, so nothing depends on someone's memory or a group text.
+  - q: What is the difference between a CRM and field service software?
     a: "Field service tools focus on dispatch, work orders and invoicing. A CRM focuses on the path from inquiry to booked job: lead capture, follow-up, pipeline stages and marketing. Some shops use both, connected, and some platforms do a bit of each."
-  - q: "How long does a CRM migration take?"
-    a: "It depends on how messy your current data is and how many automations you need. Plan for a cleanup step before import, a short testing period, and training time for your team, rather than a same-day switch."
+  - q: How long does a CRM migration take?
+    a: It depends on how messy your current data is and how many automations you need. Plan for a cleanup step before import, a short testing period, and training time for your team, rather than a same-day switch.
+photo:
+  id: 2b739227-2ec6-4440-99db-9f5df808d1e3
+  credit: Binyamin Mellish
+  license: CC0
+  source: https://stocksnap.io/photo/house-home-LJ515CPAKI
 ---
 
 Most CRM software is designed for sales teams selling software, not for a five-person crew running service calls or a landscaper juggling weekly maintenance and one-off design jobs. That mismatch is why so many contractors buy a CRM, use it for three months and quietly go back to a spreadsheet. This checklist helps you pick one that fits how a trade business actually runs, and set it up so your team keeps using it.

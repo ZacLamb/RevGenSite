@@ -1,19 +1,30 @@
 ---
 title: "Missed-Call Text-Back: Setup, Example Texts and Compliance"
-description: "How missed-call text-back works for contractors, three example texts, A2P 10DLC and consent basics, and the setup mistakes that cost you jobs."
-date: 2026-10-18
-category: "AI & Automations"
+description: How missed-call text-back works for contractors, three example texts, A2P 10DLC and consent basics, and the setup mistakes that cost you jobs.
+date: "2026-10-18"
+category: AI & Automations
 keyword: missed call text back
-image: blog-missed-call-cost.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [plumbing, hvac, electrical, gutter-pressure-washing]
+image: blog-missed-call-text-back-setup.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - plumbing
+  - hvac
+  - electrical
+  - gutter-pressure-washing
 faq:
-  - q: "Is missed-call text-back legal?"
-    a: "Generally yes, when it's a one-time reply to someone who just called you, it identifies your business, and it offers a way to opt out. You still need a registered business texting number, and you shouldn't add those callers to marketing campaigns without their consent. Confirm your setup with your attorney or compliance advisor."
-  - q: "Do I need A2P 10DLC registration for missed-call text-back?"
-    a: "Yes. As of 2026, US carriers block unregistered application-to-person traffic on 10-digit local numbers, so automated texts from your business line need a registered brand and campaign."
-  - q: "What happens if the caller was on a landline?"
-    a: "The text won't be delivered. Many systems can check whether a number is mobile before sending, and you can route landline callers to a callback task instead."
+  - q: Is missed-call text-back legal?
+    a: Generally yes, when it's a one-time reply to someone who just called you, it identifies your business, and it offers a way to opt out. You still need a registered business texting number, and you shouldn't add those callers to marketing campaigns without their consent. Confirm your setup with your attorney or compliance advisor.
+  - q: Do I need A2P 10DLC registration for missed-call text-back?
+    a: Yes. As of 2026, US carriers block unregistered application-to-person traffic on 10-digit local numbers, so automated texts from your business line need a registered brand and campaign.
+  - q: What happens if the caller was on a landline?
+    a: The text won't be delivered. Many systems can check whether a number is mobile before sending, and you can route landline callers to a callback task instead.
+photo:
+  id: 2d6ee928-ebcb-489a-b1e5-6b196156489e
+  credit: Leeroy
+  license: CC0
+  source: https://stocksnap.io/photo/tools-level-0AD8F7B5B6
 ---
 
 When a homeowner calls a contractor and nobody picks up, most of them don't leave a voicemail. They call the next company on the list. Missed-call text-back is a simple automation that sends a text to that caller within seconds, so the conversation keeps going while you're on a roof, under a sink or driving between jobs. Here's how it works, what to say, and how to stay on the right side of the texting rules.

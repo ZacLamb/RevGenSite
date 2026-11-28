@@ -4,7 +4,7 @@ description: "Set up rain delay rescheduling for customers on outdoor jobs: weat
 date: "2026-11-26"
 category: AI & Automations
 keyword: rain delay rescheduling customers outdoor jobs
-image: blog-automating-followup.jpg
+image: blog-rain-delay-rescheduling-outdoor-jobs.jpg
 relatedServices:
   - ai-services-automations
   - crm-build-management
@@ -19,6 +19,11 @@ faq:
     a: You can, but most outdoor crews are better off with an automation that flags at-risk jobs and waits for a crew lead to approve the move. Forecasts miss, and a wrongly canceled day costs you a crew's worth of billable hours.
   - q: Do weather delay texts need customer consent?
     a: You need a texting setup that follows carrier registration and consent rules, and every message should tell people how to opt out. Rules vary by situation, so ask your texting provider or an attorney about your specific setup.
+photo:
+  id: 08815549-8f45-4ba3-9cf5-26345f6a6151
+  credit: Olu Eletu
+  license: CC0
+  source: https://stocksnap.io/photo/house-home-36UBBAQB99
 ---
 
 Every outdoor trade has the same wet-morning routine. The crew lead checks the radar at 5:30, the owner makes a call, and then the office spends two hours phoning customers who are already at work. You can automate most of that without taking the decision away from the people who know the job.

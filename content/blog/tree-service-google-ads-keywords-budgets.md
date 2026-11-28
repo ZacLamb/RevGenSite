@@ -4,7 +4,7 @@ description: "Tree service Google Ads guide: keywords for removal, pruning and s
 date: "2026-11-21"
 category: Digital Marketing
 keyword: tree service google ads
-image: industry-hardscaping-tree.jpg
+image: blog-tree-service-google-ads-keywords-budgets.jpg
 relatedServices:
   - digital-marketing
   - crm-build-management
@@ -17,6 +17,11 @@ faq:
     a: Start with job seekers (jobs, hiring, careers), DIY and equipment terms (rental, for sale, chainsaw, stump killer), and tree meanings you don't serve (family tree, Christmas tree, palm tree). Then add to the list weekly from your search terms report, since negatives don't match plurals or synonyms on their own.
   - q: Should a tree service use Google Ads or Local Services Ads?
     a: Many tree companies run both. As of 2026, tree services is an eligible Local Services Ads category, and those ads charge per lead instead of per click, while search ads give you control over keywords and landing pages. Compare the two with your own cost per booked job.
+photo:
+  id: 79817077-f1b8-4e42-8e1b-a55b4552ebd8
+  credit: Skitter Photo
+  license: CC0
+  source: https://stocksnap.io/photo/tree-green-K91LZQUBJI
 ---
 
 Most tree service Google Ads accounts waste money in the same three places. They lump removal, pruning and stump grinding into one campaign, they let "tree" match everything from family trees to Christmas trees, and they set a budget by guessing. This guide covers how to fix each one, and you can use it whether or not you ever hire anyone.

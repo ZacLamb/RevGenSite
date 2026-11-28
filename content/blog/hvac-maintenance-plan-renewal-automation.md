@@ -1,19 +1,27 @@
 ---
 title: "HVAC Maintenance Plan Renewals: How to Automate Them"
-description: "How HVAC companies can automate maintenance agreement renewals and seasonal tune-up reminders, with timelines, sample texts and the CRM fields you need."
-date: 2026-10-18
-category: "CRM & Systems"
+description: How HVAC companies can automate maintenance agreement renewals and seasonal tune-up reminders, with timelines, sample texts and the CRM fields you need.
+date: "2026-10-18"
+category: CRM & Systems
 keyword: hvac maintenance plan renewal automation
-image: industry-hvac.jpg
-relatedServices: [crm-build-management, ai-services-automations]
-relatedIndustries: [hvac]
+image: blog-hvac-maintenance-plan-renewal-automation.jpg
+relatedServices:
+  - crm-build-management
+  - ai-services-automations
+relatedIndustries:
+  - hvac
 faq:
-  - q: "When should HVAC companies start reminding customers about maintenance plan renewals?"
-    a: "Start about 60 days before the agreement expires, with reminders at 30, 14 and 7 days and on the expiration date. Members on auto-renew only need a heads-up before their card is charged."
-  - q: "What's the best time to schedule HVAC tune-ups for maintenance members?"
-    a: "Most companies book cooling tune-ups in spring and heating tune-ups in early fall, before the first heat wave or cold snap fills the schedule with emergency calls."
-  - q: "Should HVAC maintenance agreements auto-renew?"
-    a: "Auto-renewal with a card on file usually keeps more members, but it needs clear disclosure at signup and a reminder before each charge. Check your state's automatic renewal rules before switching."
+  - q: When should HVAC companies start reminding customers about maintenance plan renewals?
+    a: Start about 60 days before the agreement expires, with reminders at 30, 14 and 7 days and on the expiration date. Members on auto-renew only need a heads-up before their card is charged.
+  - q: What's the best time to schedule HVAC tune-ups for maintenance members?
+    a: Most companies book cooling tune-ups in spring and heating tune-ups in early fall, before the first heat wave or cold snap fills the schedule with emergency calls.
+  - q: Should HVAC maintenance agreements auto-renew?
+    a: Auto-renewal with a card on file usually keeps more members, but it needs clear disclosure at signup and a reminder before each charge. Check your state's automatic renewal rules before switching.
+photo:
+  id: e1b65705-297b-43e3-974a-50833150db88
+  credit: NeONBRAND
+  license: CC0
+  source: https://stocksnap.io/photo/house-interior-APBDJIC32G
 ---
 
 Maintenance agreements are the steadiest money in an HVAC business. They fill the schedule in shoulder seasons, they give you first shot at the replacement job when an old system dies, and they turn a one-time service call into a customer for years. But most of them don't fail because customers cancel. They fail because nobody remembered to renew them or book the visit. This post walks through how to automate both.

@@ -4,7 +4,7 @@ description: Homeowners comparing shower door installers look for real photos, c
 date: "2026-10-27"
 category: Web Design & SEO
 keyword: shower door installer website
-image: industry-glass.jpg
+image: blog-shower-door-installer-website.jpg
 relatedServices:
   - web-design
 relatedIndustries:
@@ -16,6 +16,11 @@ faq:
     a: You don't have to post exact prices, but a ranges-and-factors explanation helps. Say what moves the price (glass thickness, hardware finish, door style, wall conditions) and how quickly you can give a firm quote.
   - q: Do I need to show a license number on my glass company website in Massachusetts?
     a: If your residential work falls under the state's Home Improvement Contractor program, Massachusetts requires your registration number in your advertising, and that includes your website. Check Mass.gov or ask the state whether your jobs are covered.
+photo:
+  id: 4357e366-ccb2-4a09-b3d4-baecc3a1f7a2
+  credit: Kasia Serbin
+  license: CC0
+  source: https://stocksnap.io/photo/shutters-window-FMTH1CJ4X1
 ---
 
 A homeowner looking at a new shower door is about to spend real money on something they'll see every day. Before they call, they'll scroll through three or four glass companies' sites and quietly rank them. This post covers what they check, so your site passes the test.

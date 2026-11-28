@@ -4,7 +4,7 @@ description: "Ceramic coating marketing that lands high-ticket jobs without disc
 date: "2026-10-31"
 category: Digital Marketing
 keyword: ceramic coating marketing
-image: industry-auto-restoration.jpg
+image: blog-ceramic-coating-marketing-detailers.jpg
 relatedServices:
   - digital-marketing
   - web-design
@@ -18,6 +18,11 @@ faq:
   - q: Can I advertise a lifetime ceramic coating warranty?
     a: Only if the written terms back it up and you can show those terms before the sale. The FTC has guides on advertising warranties and on the word "lifetime." Have an attorney review your warranty language before it goes on your website.
 relatedIndustriesNote: ""
+photo:
+  id: 16a7fb0d-5c18-471d-825e-ebae68be22a7
+  credit: Maxwell Davis
+  license: CC0
+  source: https://stocksnap.io/photo/bmw-car-2A1RBTLS50
 ---
 
 Ceramic coating is one of the best jobs a detailing shop can sell, and one of the easiest to discount into a bad deal. Most owners who run "10% off coatings this month" ads end up attracting people who shop on price and complain about everything else.

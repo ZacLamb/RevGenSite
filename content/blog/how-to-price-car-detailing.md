@@ -4,7 +4,7 @@ description: Learn how to price car detailing by vehicle size and condition, bui
 date: "2026-11-27"
 category: Custom Tools
 keyword: how to price car detailing
-image: blog-custom-business-tool.jpg
+image: blog-how-to-price-car-detailing.jpg
 relatedServices:
   - custom-tool-building
   - web-design
@@ -17,6 +17,11 @@ faq:
     a: Yes, at least ranges. Publishing starting prices by vehicle size, plus a short list of what raises the price, filters out bad-fit leads and saves you from answering the same price question by phone all day.
   - q: How do I price a car I haven't seen?
     a: Quote a range based on size and the customer's answers about condition, ask for three or four photos, and state that the final price is confirmed at drop-off or on arrival. Keep the add-on rules written down so you can apply them the same way every time.
+photo:
+  id: 76f3142f-b2f5-4753-b55a-290d3748ed71
+  credit: Martin Vorel
+  license: CC0
+  source: https://stocksnap.io/photo/car-dashboard-TFX66XBXTM
 ---
 
 Most detailers get asked the same question all day: "How much for a detail?" The honest answer is "it depends," and a price that ignores vehicle size and condition will lose you money on the big, dirty jobs. This guide shows how to build a price from your own time, set size and condition tiers, and put the result in an online quote form.

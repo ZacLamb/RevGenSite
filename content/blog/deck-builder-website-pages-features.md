@@ -4,7 +4,7 @@ description: A deck builder website needs more than a photo gallery. Here are th
 date: "2026-11-05"
 category: Web Design & SEO
 keyword: deck builder website
-image: industry-deck-building.jpg
+image: blog-deck-builder-website-pages-features.jpg
 relatedServices:
   - web-design
   - digital-marketing
@@ -18,6 +18,11 @@ faq:
   - q: Do I have to show my contractor registration number on my website?
     a: In Massachusetts, home improvement advertising generally has to carry your HIC registration number, and a website counts as advertising. Check the current rules on mass.gov, and check your own state's rules if you work elsewhere.
 relatedBlogs: []
+photo:
+  id: 4730df8a-9f22-4e5a-9df1-62e48dd7d574
+  credit: Andyone
+  license: CC0
+  source: https://stocksnap.io/photo/wood-iphone-X0R5VP6BSB
 ---
 
 Most deck builders have a website that is a logo, a gallery of nice photos, and a contact form. That gets you looked at, but it doesn't get you hired. A homeowner spending five figures on a deck wants to know what it will cost, whether you'll pull the permit, and whether you'll show up.

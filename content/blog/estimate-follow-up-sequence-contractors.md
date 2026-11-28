@@ -1,19 +1,30 @@
 ---
 title: "Estimate Follow-Up Sequence for Contractors: Day-by-Day Plan"
-description: "A day-by-day estimate follow-up sequence for contractors using text, email and calls, with example messages, when to stop, and how to track it in your CRM."
-date: 2026-10-18
-category: "CRM & Systems"
+description: A day-by-day estimate follow-up sequence for contractors using text, email and calls, with example messages, when to stop, and how to track it in your CRM.
+date: "2026-10-18"
+category: CRM & Systems
 keyword: estimate follow up for contractors
-image: service-crm.jpg
-relatedServices: [crm-build-management, ai-services-automations]
-relatedIndustries: [painting, carpentry-remodeling, deck-building, masonry]
+image: blog-estimate-follow-up-sequence-contractors.jpg
+relatedServices:
+  - crm-build-management
+  - ai-services-automations
+relatedIndustries:
+  - painting
+  - carpentry-remodeling
+  - deck-building
+  - masonry
 faq:
-  - q: "How many times should a contractor follow up on an estimate?"
-    a: "A reasonable sequence is six to eight touches over about three weeks, mixing texts, emails and calls. After that, move the lead to a slower monthly nurture instead of continuing to chase."
-  - q: "Should estimate follow-up be automated?"
-    a: "The reminders and simple texts can be automated, but calls and replies should come from a real person. Automation's main job is making sure follow-up happens at all."
-  - q: "When should I stop following up on an estimate?"
-    a: "Stop the active sequence when the customer replies, signs, says no, or asks you to stop. Pause it whenever a real conversation is happening, and restart only if they go quiet again."
+  - q: How many times should a contractor follow up on an estimate?
+    a: A reasonable sequence is six to eight touches over about three weeks, mixing texts, emails and calls. After that, move the lead to a slower monthly nurture instead of continuing to chase.
+  - q: Should estimate follow-up be automated?
+    a: The reminders and simple texts can be automated, but calls and replies should come from a real person. Automation's main job is making sure follow-up happens at all.
+  - q: When should I stop following up on an estimate?
+    a: Stop the active sequence when the customer replies, signs, says no, or asks you to stop. Pause it whenever a real conversation is happening, and restart only if they go quiet again.
+photo:
+  id: dd580493-9ff8-4e9d-b922-a44b7f7f438a
+  credit: Krzysztof%20Puszczy%u0144ski
+  license: CC0
+  source: https://stocksnap.io/photo/painting-paintroller-CMUNDXFEWK
 ---
 
 Most contractors don't lose estimates to cheaper competitors. They lose them to silence. The estimate goes out, the homeowner gets busy, and two weeks later they've hired whoever followed up. A consistent follow-up sequence fixes that without making you feel like a used car salesman. Here's a day-by-day plan you can copy, with example messages and the CRM setup to run it.

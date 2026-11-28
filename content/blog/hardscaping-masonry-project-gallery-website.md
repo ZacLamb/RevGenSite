@@ -1,19 +1,29 @@
 ---
-title: "Project Gallery Websites for Masonry and Hardscaping Companies"
+title: Project Gallery Websites for Masonry and Hardscaping Companies
 description: "How masonry and hardscaping companies can build a project gallery that sells: before/after pairs, project pages by type and town, captions, photos and speed."
-date: 2026-10-18
-category: "Web Design & SEO"
+date: "2026-10-18"
+category: Web Design & SEO
 keyword: masonry hardscaping project gallery website
-image: industry-masonry.jpg
-relatedServices: [web-design, digital-marketing]
-relatedIndustries: [masonry, hardscaping-tree-service, deck-building]
+image: blog-hardscaping-masonry-project-gallery-website.jpg
+relatedServices:
+  - web-design
+  - digital-marketing
+relatedIndustries:
+  - masonry
+  - hardscaping-tree-service
+  - deck-building
 faq:
-  - q: "How many photos should a masonry project page have?"
+  - q: How many photos should a masonry project page have?
     a: "Enough to tell the story of one job: usually a before shot, two or three in-progress shots that show the base and the craftsmanship, and three to six finished shots from different angles. More than that tends to slow the page without adding anything."
-  - q: "Should my project gallery be one big page or separate pages?"
-    a: "Use both. Keep a main gallery page that people can filter by project type, and give your best jobs their own pages with a written description, town and materials. The individual pages are what give search engines something to rank."
-  - q: "Can I use photos from my phone for my website gallery?"
-    a: "Yes. A recent phone shoots plenty of resolution for the web. What matters more is good light, a clean site, a level horizon and resizing the files before upload so the page stays fast."
+  - q: Should my project gallery be one big page or separate pages?
+    a: Use both. Keep a main gallery page that people can filter by project type, and give your best jobs their own pages with a written description, town and materials. The individual pages are what give search engines something to rank.
+  - q: Can I use photos from my phone for my website gallery?
+    a: Yes. A recent phone shoots plenty of resolution for the web. What matters more is good light, a clean site, a level horizon and resizing the files before upload so the page stays fast.
+photo:
+  id: e842ea32-a75e-4b0a-9cd4-5f83555f35bd
+  credit: Pawel Kadysz
+  license: CC0
+  source: https://stocksnap.io/photo/bricks-wall-M9Q1QVQ9B9
 ---
 
 Homeowners buying a patio, retaining wall or chimney rebuild are spending real money on something they'll look at every day for twenty years. They don't trust adjectives. They trust photos of work you've actually done, ideally on a house that looks like theirs, in a town near them.

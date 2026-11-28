@@ -4,7 +4,7 @@ description: "How to price, sell and bill car detailing membership plans: a cost
 date: "2026-11-11"
 category: CRM & Systems
 keyword: car detailing membership plans
-image: industry-auto-restoration.jpg
+image: blog-car-detailing-membership-plans.jpg
 relatedServices:
   - crm-build-management
   - ai-services-automations
@@ -17,6 +17,11 @@ faq:
     a: In Massachusetts, as of 2026, cancellation has to be a simple process that is at least as easy as signing up and uses the same medium, such as the same website if they joined online. Rules differ by state, so check your terms with a lawyer.
   - q: What happens when a member's card fails?
     a: Turn on automatic retries in your billing tool, then send the member a text or email with a link to update their card. Hold the next appointment slot for a few days, but don't keep detailing for free.
+photo:
+  id: e556021d-397e-40cc-8f73-346f1bb1141e
+  credit: Travis Soule
+  license: CC0
+  source: https://stocksnap.io/photo/auto-headlight-KEPSFKGIL9
 ---
 
 Most detailers live on one-off jobs, which means the calendar resets to zero every month. A membership plan turns your best customers into recurring revenue: the same car, the same slot, a card on file. Here is how to price it, sell it and bill it without creating a collections headache.

@@ -1,20 +1,30 @@
 ---
 title: "AI Automation for Service Businesses: Where the Hours Really Go"
-description: "Where AI automation actually saves time for plumbers, HVAC techs and electricians, where it doesn't, and the order to set it up so it pays off in weeks."
-date: 2026-08-03
-updated: 2026-10-18
-category: "AI & Automations"
+description: Where AI automation actually saves time for plumbers, HVAC techs and electricians, where it doesn't, and the order to set it up so it pays off in weeks.
+date: "2026-08-03"
+updated: "2026-10-18"
+category: AI & Automations
 keyword: ai automation for service businesses
-image: blog-ai-automation-saves-hours.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [plumbing, hvac, electrical]
+image: blog-ai-automation-saves-service-businesses-hours.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - plumbing
+  - hvac
+  - electrical
 faq:
-  - q: "What is the easiest thing to automate first in a trade business?"
-    a: "Missed-call text-back and post-job review requests. Both run on simple triggers, both are easy to test, and you can see whether they work within a couple of weeks."
-  - q: "Is AI automation the same as a chatbot?"
+  - q: What is the easiest thing to automate first in a trade business?
+    a: Missed-call text-back and post-job review requests. Both run on simple triggers, both are easy to test, and you can see whether they work within a couple of weeks.
+  - q: Is AI automation the same as a chatbot?
     a: "No. Most useful automation is rules-based: when a job is marked complete, send the review text. AI adds value where a message has to be understood or written, like answering a call, sorting an inquiry or drafting a reply."
-  - q: "Will automation replace my office manager?"
-    a: "It shouldn't. Automation takes the repetitive keystrokes off their plate so they can spend time on scheduling problems, upset customers and pricing questions that need a person."
+  - q: Will automation replace my office manager?
+    a: It shouldn't. Automation takes the repetitive keystrokes off their plate so they can spend time on scheduling problems, upset customers and pricing questions that need a person.
+photo:
+  id: 9e4fb99a-7da7-46ae-9d8a-91f9b22cbb92
+  credit: m0851
+  license: CC0
+  source: https://stocksnap.io/photo/tools-people-ERNYCFWP8I
 ---
 
 Most owners hear "AI automation" and picture a chatbot or a slide deck. In a plumbing, HVAC or electrical shop, the real time savings come from a short list of boring, repetitive tasks that nobody tracks because each one only takes a minute. This post shows you how to find those tasks in your own week, which ones are worth automating, and which ones you should leave to a person.

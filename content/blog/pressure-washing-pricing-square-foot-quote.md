@@ -4,7 +4,7 @@ description: "Pressure washing pricing that protects your margin: how to quote b
 date: "2026-11-17"
 category: Custom Tools
 keyword: pressure washing pricing
-image: blog-custom-business-tool.jpg
+image: blog-pressure-washing-pricing-square-foot-quote.jpg
 relatedServices:
   - custom-tool-building
   - web-design
@@ -18,6 +18,11 @@ faq:
     a: Showing a range or a 'from' price usually saves you from phone calls with people who were never going to buy, and it sets expectations for the ones who will. Pair the range with a note on what moves the price up or down.
   - q: Do I need a written contract for a pressure washing job in Massachusetts?
     a: Massachusetts requires written contracts for registered home improvement work over $1,000, but whether your specific services fall under that law depends on the work and the property. Check with the state's Office of Consumer Affairs and Business Regulation before you assume you are in or out.
+photo:
+  id: 613306f6-12f5-41d4-8061-f636638fb579
+  credit: Mike Birdy
+  license: CC0
+  source: https://stocksnap.io/photo/house-home-6KJ12UWOKQ
 ---
 
 Most pressure washing owners quote by feel, then wonder why some jobs make money and others eat a Saturday. A square-foot rate gives you a repeatable starting point, and a published range gets customers to the estimate already knowing the ballpark. Here is how to build both.

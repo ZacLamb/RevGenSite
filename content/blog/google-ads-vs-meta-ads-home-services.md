@@ -1,20 +1,31 @@
 ---
 title: "Google Ads vs. Meta Ads for Home Services: Where to Spend First"
-description: "Google Ads, Local Services Ads or Meta? How home service businesses should pick a first ad channel by job type, and how to judge it by cost per booked job."
-date: 2026-08-24
-updated: 2026-10-18
-category: "Digital Marketing"
+description: Google Ads, Local Services Ads or Meta? How home service businesses should pick a first ad channel by job type, and how to judge it by cost per booked job.
+date: "2026-08-24"
+updated: "2026-10-18"
+category: Digital Marketing
 keyword: google ads vs meta ads home services
-image: blog-google-ads-vs-meta.jpg
-relatedServices: [digital-marketing, crm-build-management]
-relatedIndustries: [hvac, electrical, plumbing, carpentry-remodeling]
+image: blog-google-ads-vs-meta-ads-home-services.jpg
+relatedServices:
+  - digital-marketing
+  - crm-build-management
+relatedIndustries:
+  - hvac
+  - electrical
+  - plumbing
+  - carpentry-remodeling
 faq:
-  - q: "Should a plumber start with Google Ads or Facebook ads?"
-    a: "For emergency and repair work, start on Google, either Local Services Ads or search campaigns, because the customer is already searching. Facebook and Instagram fit better for planned, higher-ticket projects where photos do the selling."
-  - q: "How are Google Local Services Ads charged?"
-    a: "As of 2026, Local Services Ads charge per lead rather than per click. Google's help pages explain which calls and messages count as charged leads and that leads later judged invalid can be credited."
-  - q: "How long should I test an ad channel before deciding?"
-    a: "Long enough to see booked jobs, not just leads. For repair work that can be a few weeks. For remodels and installs with a long decision cycle, give it a couple of months and track each lead through to a signed job."
+  - q: Should a plumber start with Google Ads or Facebook ads?
+    a: For emergency and repair work, start on Google, either Local Services Ads or search campaigns, because the customer is already searching. Facebook and Instagram fit better for planned, higher-ticket projects where photos do the selling.
+  - q: How are Google Local Services Ads charged?
+    a: As of 2026, Local Services Ads charge per lead rather than per click. Google's help pages explain which calls and messages count as charged leads and that leads later judged invalid can be credited.
+  - q: How long should I test an ad channel before deciding?
+    a: Long enough to see booked jobs, not just leads. For repair work that can be a few weeks. For remodels and installs with a long decision cycle, give it a couple of months and track each lead through to a signed job.
+photo:
+  id: e57ad1ca-41ae-4419-80a5-55f8afc9ca65
+  credit: Joshua Ness
+  license: CC0
+  source: https://stocksnap.io/photo/house-home-CLD6T4J9VZ
 ---
 
 Every home service owner eventually asks the same thing: Google or Facebook? They solve different problems, and most businesses end up using both. If your budget is limited, though, your first channel should depend on the kind of job you're trying to fill. Here's how to decide, how each platform charges, and the one number that should settle the argument.

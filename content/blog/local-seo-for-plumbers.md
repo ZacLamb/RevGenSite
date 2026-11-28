@@ -1,19 +1,27 @@
 ---
 title: "Local SEO for Plumbers: A Practical Playbook for 2026"
 description: "A local SEO playbook for plumbing companies: Google Business Profile, service and town pages, emergency keywords, reviews, citations and where LSAs fit."
-date: 2026-10-18
-category: "Web Design & SEO"
+date: "2026-10-18"
+category: Web Design & SEO
 keyword: local seo for plumbers
-image: industry-plumbing.jpg
-relatedServices: [digital-marketing, web-design]
-relatedIndustries: [plumbing]
+image: blog-local-seo-for-plumbers.jpg
+relatedServices:
+  - digital-marketing
+  - web-design
+relatedIndustries:
+  - plumbing
 faq:
-  - q: "How long does local SEO take to work for a plumbing company?"
-    a: "Fixes to your Google Business Profile can show up within weeks, while new service and town pages usually take a few months to build steady traffic. Paid options like Local Services Ads bring calls faster while SEO builds."
-  - q: "Do plumbers need a separate page for every town they serve?"
-    a: "A page for each town you actively want work in helps you show up for searches in those towns, as long as each page has real local content and isn't a copy with the town name swapped."
-  - q: "Should a plumber run Local Services Ads if they already rank in the map pack?"
-    a: "Often yes, because LSAs appear above the map pack for many plumbing searches. Treat them as a complement that you pay for per lead, while your profile and website keep earning free calls."
+  - q: How long does local SEO take to work for a plumbing company?
+    a: Fixes to your Google Business Profile can show up within weeks, while new service and town pages usually take a few months to build steady traffic. Paid options like Local Services Ads bring calls faster while SEO builds.
+  - q: Do plumbers need a separate page for every town they serve?
+    a: A page for each town you actively want work in helps you show up for searches in those towns, as long as each page has real local content and isn't a copy with the town name swapped.
+  - q: Should a plumber run Local Services Ads if they already rank in the map pack?
+    a: Often yes, because LSAs appear above the map pack for many plumbing searches. Treat them as a complement that you pay for per lead, while your profile and website keep earning free calls.
+photo:
+  id: c2b81afd-d736-4544-b5b7-48284063f513
+  credit: energepic.com
+  license: CC0
+  source: https://stocksnap.io/photo/tools-hammer-12ZHB0V43M
 ---
 
 When a pipe bursts, the homeowner doesn't browse. They search "emergency plumber near me," call one of the first three results, and hire whoever answers. Local SEO for plumbers is about being one of those three results in every town you serve, and then making sure the call gets answered. Here's the playbook, in the order we'd tackle it.

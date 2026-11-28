@@ -1,19 +1,28 @@
 ---
 title: "Landscaping Marketing Calendar: A Month-by-Month Plan for New England"
 description: "A month-by-month marketing and operations calendar for New England landscapers: spring cleanups, maintenance contracts, fall cleanups, snow and the off-season."
-date: 2026-10-18
-category: "Digital Marketing"
+date: "2026-10-18"
+category: Digital Marketing
 keyword: landscaping marketing calendar
-image: industry-landscaping.jpg
-relatedServices: [digital-marketing, crm-build-management]
-relatedIndustries: [landscaping, hardscaping-tree-service]
+image: blog-landscaping-seasonal-marketing-calendar.jpg
+relatedServices:
+  - digital-marketing
+  - crm-build-management
+relatedIndustries:
+  - landscaping
+  - hardscaping-tree-service
 faq:
-  - q: "When should landscapers start marketing spring cleanups in New England?"
-    a: "Start in February. Past customers should get an early booking offer before the snow melts, so your spring schedule is mostly full before new leads start calling in March and April."
-  - q: "When should landscapers sell maintenance contracts?"
-    a: "Renew existing contracts in January and February, and sell new ones from February through April when homeowners are thinking about the season ahead."
-  - q: "What should a landscaping company do for marketing in winter?"
-    a: "Winter is for contract renewals, snow services if you offer them, design consultations for spring installs, review collection, and updating your website and Google Business Profile with last season's best work."
+  - q: When should landscapers start marketing spring cleanups in New England?
+    a: Start in February. Past customers should get an early booking offer before the snow melts, so your spring schedule is mostly full before new leads start calling in March and April.
+  - q: When should landscapers sell maintenance contracts?
+    a: Renew existing contracts in January and February, and sell new ones from February through April when homeowners are thinking about the season ahead.
+  - q: What should a landscaping company do for marketing in winter?
+    a: Winter is for contract renewals, snow services if you offer them, design consultations for spring installs, review collection, and updating your website and Google Business Profile with last season's best work.
+photo:
+  id: a17b99f4-5429-4a30-92e5-1e81107d7e1f
+  credit: Neslihan Gunaydin
+  license: CC0
+  source: https://stocksnap.io/photo/gardening-pots-WV6Q25F8ZJ
 ---
 
 Landscaping in New England runs on a calendar the weather writes for you. The phones ring all at once in April, go quiet in July, spike again in October, and then it snows. Most landscapers market when they're slow and stop when they're busy, which is exactly backward. This calendar lays out what to do each month, both for marketing and for the operations that make the marketing pay off.

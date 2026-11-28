@@ -1,19 +1,30 @@
 ---
-title: "Reactivate Past Customers With Text and Email Campaigns"
+title: Reactivate Past Customers With Text and Email Campaigns
 description: "How to reactivate past customers with text and email: seasonal reminders, maintenance checks and referral asks, with sample texts, consent rules and frequency."
-date: 2026-10-18
-category: "AI & Automations"
+date: "2026-10-18"
+category: AI & Automations
 keyword: reactivate past customers text campaign
-image: blog-automating-followup.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [hvac, landscaping, gutter-pressure-washing, auto-restoration-detailing]
+image: blog-reactivate-past-customers-text-campaign.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - hvac
+  - landscaping
+  - gutter-pressure-washing
+  - auto-restoration-detailing
 faq:
-  - q: "Can I text past customers who never opted in to marketing texts?"
-    a: "Be careful. Marketing texts generally require the customer's prior written consent, and a phone number on an old invoice isn't the same thing. Use email or a consent-request message where the rules allow, and check your plan with a lawyer familiar with the TCPA and your state's rules."
-  - q: "How often should I text past customers?"
-    a: "For most service businesses, a few well-timed messages a year tied to real seasons or maintenance intervals is plenty. Monthly promotional texts tend to drive opt-outs. Email can go a bit more often if it's useful."
-  - q: "What should a reactivation text say?"
-    a: "Keep it short, name the business, mention the specific service they had and why now is a good time, and give one easy action like replying YES or booking through a link. Always include a way to opt out."
+  - q: Can I text past customers who never opted in to marketing texts?
+    a: Be careful. Marketing texts generally require the customer's prior written consent, and a phone number on an old invoice isn't the same thing. Use email or a consent-request message where the rules allow, and check your plan with a lawyer familiar with the TCPA and your state's rules.
+  - q: How often should I text past customers?
+    a: For most service businesses, a few well-timed messages a year tied to real seasons or maintenance intervals is plenty. Monthly promotional texts tend to drive opt-outs. Email can go a bit more often if it's useful.
+  - q: What should a reactivation text say?
+    a: Keep it short, name the business, mention the specific service they had and why now is a good time, and give one easy action like replying YES or booking through a link. Always include a way to opt out.
+photo:
+  id: 77d72470-723c-4be9-b0e3-d61d733c1754
+  credit: Binyamin Mellish
+  license: CC0
+  source: https://stocksnap.io/photo/house-home-L9VZ6SOGBB
 ---
 
 Your past customers are the easiest people to sell to. They already know your crew showed up, did good work and charged what you said. Yet most service businesses spend everything chasing strangers with ads while a list of hundreds or thousands of past customers sits untouched in a spreadsheet or old invoicing software.

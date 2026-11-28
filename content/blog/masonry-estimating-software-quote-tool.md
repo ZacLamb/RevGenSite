@@ -4,7 +4,7 @@ description: Masonry estimating software doesn't have to be off-the-shelf. Learn
 date: "2026-11-14"
 category: Custom Tools
 keyword: masonry estimating software
-image: blog-custom-business-tool.jpg
+image: blog-masonry-estimating-software-quote-tool.jpg
 relatedServices:
   - custom-tool-building
   - web-design
@@ -17,6 +17,11 @@ faq:
     a: Standard modular brick with 3/8-inch joints works out to about 6.75 to 6.9 bricks per square foot of single-wythe wall, and many masons use 7 as a shortcut. Bigger or smaller units, thicker joints and heavy cutting all change that number, so your tool should calculate it from the unit size.
   - q: Do I need a written contract for a masonry job in Massachusetts?
     a: For residential home improvement work over $1,000, Massachusetts requires a written contract with specific terms under the Home Improvement Contractor law. Confirm the exact requirements for your job type with the state or an attorney, because the estimate and the contract need to agree.
+photo:
+  id: fc91b39b-aeeb-4279-bce4-9a8e94e5d326
+  credit: Martin Wessely
+  license: CC0
+  source: https://stocksnap.io/photo/brick-wall-637F0E57B1
 ---
 
 Most masons estimate in their head, on a pad, or in a spreadsheet that only one person understands. That works until you're pricing six jobs a week in March, or until the person who knows the formulas is on a scaffold and a homeowner wants a number today. This post walks through how to build a quote tool for brick, block and stone jobs, whether you do it in a spreadsheet, hire it out, or end up with something close to custom masonry estimating software.

@@ -1,19 +1,30 @@
 ---
-title: "Google Local Services Ads vs. Google Ads for Home Services"
+title: Google Local Services Ads vs. Google Ads for Home Services
 description: "Google Local Services Ads vs. Google Search Ads for home service businesses: how each charges, verification, control, the 2026 changes, and when to use which."
-date: 2026-10-18
-category: "Digital Marketing"
+date: "2026-10-18"
+category: Digital Marketing
 keyword: google local services ads vs google ads
-image: blog-google-ads-vs-meta.jpg
-relatedServices: [digital-marketing, ai-services-automations]
-relatedIndustries: [plumbing, hvac, electrical, gutter-pressure-washing]
+image: blog-google-local-services-ads-vs-google-ads.jpg
+relatedServices:
+  - digital-marketing
+  - ai-services-automations
+relatedIndustries:
+  - plumbing
+  - hvac
+  - electrical
+  - gutter-pressure-washing
 faq:
-  - q: "Do you pay per click or per lead with Google Local Services Ads?"
-    a: "Per lead. As of 2026, Local Services Ads charge for valid leads such as calls, messages and bookings, while regular Google Search Ads charge per click whether or not the visitor contacts you."
-  - q: "Is Google Guaranteed still a thing?"
-    a: "Google consolidated Google Guaranteed, Google Screened and its other LSA trust badges into a single Google Verified badge starting in October 2025. Businesses earn it by passing the screening and verification checks required for their category and area."
-  - q: "Can I run Local Services Ads and Google Search Ads at the same time?"
-    a: "Yes, and many home service businesses do. They show in different spots on the results page, so running both can give you more presence for the same search, as long as you track which one produces booked jobs."
+  - q: Do you pay per click or per lead with Google Local Services Ads?
+    a: Per lead. As of 2026, Local Services Ads charge for valid leads such as calls, messages and bookings, while regular Google Search Ads charge per click whether or not the visitor contacts you.
+  - q: Is Google Guaranteed still a thing?
+    a: Google consolidated Google Guaranteed, Google Screened and its other LSA trust badges into a single Google Verified badge starting in October 2025. Businesses earn it by passing the screening and verification checks required for their category and area.
+  - q: Can I run Local Services Ads and Google Search Ads at the same time?
+    a: Yes, and many home service businesses do. They show in different spots on the results page, so running both can give you more presence for the same search, as long as you track which one produces booked jobs.
+photo:
+  id: 358f0820-8c4c-44b5-b8b4-a7b317e28648
+  credit: Ales Krivec
+  license: CC0
+  source: https://stocksnap.io/photo/tools-materials-DB12E2B128
 ---
 
 When a homeowner searches "furnace repair near me," Google can show two very different kinds of paid ads: Local Services Ads with a badge, your star rating and a call button, and regular Search ads that look like text results and send people to your website. They charge differently, give you different levels of control, and suit different businesses.

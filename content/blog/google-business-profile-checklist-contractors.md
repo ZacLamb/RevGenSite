@@ -1,19 +1,30 @@
 ---
-title: "Google Business Profile Checklist for Contractors (2026 Edition)"
+title: Google Business Profile Checklist for Contractors (2026 Edition)
 description: "A section-by-section Google Business Profile checklist for contractors: categories, service areas, services, photos, posts, reviews and suspension risks."
-date: 2026-10-18
-category: "Web Design & SEO"
+date: "2026-10-18"
+category: Web Design & SEO
 keyword: google business profile checklist for contractors
-image: blog-google-reviews.jpg
-relatedServices: [digital-marketing, web-design]
-relatedIndustries: [plumbing, electrical, hvac, painting]
+image: blog-google-business-profile-checklist-contractors.jpg
+relatedServices:
+  - digital-marketing
+  - web-design
+relatedIndustries:
+  - plumbing
+  - electrical
+  - hvac
+  - painting
 faq:
-  - q: "Should a contractor show their home address on Google Business Profile?"
-    a: "No. If customers don't visit your location, Google's guidelines say to hide the address and list service areas instead. Your address is still used for verification and ranking, it just isn't displayed."
-  - q: "How many service areas can I add to my Google Business Profile?"
-    a: "As of 2026, Google allows up to 20 service areas, and recommends keeping them within roughly two hours of driving time from your base."
-  - q: "Can I put keywords like my town or service in my business name on Google?"
-    a: "Only if they are part of your real business name as it appears on your signage, trucks and paperwork. Adding extra keywords to the name is against Google's guidelines and is a common reason profiles get suspended."
+  - q: Should a contractor show their home address on Google Business Profile?
+    a: No. If customers don't visit your location, Google's guidelines say to hide the address and list service areas instead. Your address is still used for verification and ranking, it just isn't displayed.
+  - q: How many service areas can I add to my Google Business Profile?
+    a: As of 2026, Google allows up to 20 service areas, and recommends keeping them within roughly two hours of driving time from your base.
+  - q: Can I put keywords like my town or service in my business name on Google?
+    a: Only if they are part of your real business name as it appears on your signage, trucks and paperwork. Adding extra keywords to the name is against Google's guidelines and is a common reason profiles get suspended.
+photo:
+  id: b7990c9c-29ed-4392-876b-76cc9d376965
+  credit: Ales Krivec
+  license: CC0
+  source: https://stocksnap.io/photo/tools-supplies-0E83D47E18
 ---
 
 For many trade businesses, the Google Business Profile drives more phone calls than the website does, and your Performance insights will tell you whether that's true for yours. It's free, it sits at the top of the map results, and most contractors set it up once and never touch it again. This checklist walks through every section in order, with the settings that matter, the ones that don't, and the mistakes that get profiles suspended.

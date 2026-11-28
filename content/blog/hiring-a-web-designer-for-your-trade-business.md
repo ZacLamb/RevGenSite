@@ -1,19 +1,30 @@
 ---
 title: "Hiring a Web Designer for Your Trade Business: Questions to Ask"
-description: "Before you hire a web designer for your trade business, ask who owns the domain and site, how hosting works, what pages you get, and what the contract says."
-date: 2026-10-18
-category: "Web Design & SEO"
+description: Before you hire a web designer for your trade business, ask who owns the domain and site, how hosting works, what pages you get, and what the contract says.
+date: "2026-10-18"
+category: Web Design & SEO
 keyword: hiring a web designer for a trade business
-image: service-web-design.jpg
-relatedServices: [web-design, digital-marketing]
-relatedIndustries: [plumbing, electrical, painting, carpentry-remodeling]
+image: blog-hiring-a-web-designer-for-your-trade-business.jpg
+relatedServices:
+  - web-design
+  - digital-marketing
+relatedIndustries:
+  - plumbing
+  - electrical
+  - painting
+  - carpentry-remodeling
 faq:
-  - q: "Who should own my business domain name?"
-    a: "You should. The domain should be registered in your business's name, in an account you control, with your email as the owner contact. A designer can have delegated access, but never let them be the registered owner."
-  - q: "What happens to my website if I fire my web designer?"
-    a: "That depends on the contract and where the site is hosted. If you own the domain and the site files or platform account, you can move to someone else. If the designer owns the hosting account or built on a proprietary system, you may only be able to keep the domain and start over."
-  - q: "Should a web designer for contractors also do SEO?"
+  - q: Who should own my business domain name?
+    a: You should. The domain should be registered in your business's name, in an account you control, with your email as the owner contact. A designer can have delegated access, but never let them be the registered owner.
+  - q: What happens to my website if I fire my web designer?
+    a: That depends on the contract and where the site is hosted. If you own the domain and the site files or platform account, you can move to someone else. If the designer owns the hosting account or built on a proprietary system, you may only be able to keep the domain and start over.
+  - q: Should a web designer for contractors also do SEO?
     a: "At minimum they should build the technical basics: page structure, titles, fast loading, mobile layout and a page for each service and service area. Ongoing SEO work like reviews and content can be separate, but the site needs to be built so it can rank."
+photo:
+  id: c70a47cb-9985-4fb9-94ef-0d0139ce8e8c
+  credit: The World is a Stage
+  license: CC0
+  source: https://stocksnap.io/photo/construction-tools-ZEYJ3YBEGP
 ---
 
 Most trade owners hire a web designer the same way they'd pick a sub they've never worked with: a referral, a decent-looking sample, a price that seems fine. Then a year later they find out they don't own their domain, can't change a phone number without a support ticket, and have a five-page site that never shows up for anything.

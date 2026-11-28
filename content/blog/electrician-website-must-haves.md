@@ -1,19 +1,27 @@
 ---
 title: "Electrician Website Must-Haves: 10 Things Every Site Needs"
 description: "What an electrician's website needs to win calls: license display, service pages, emergency CTA, panel upgrade and EV charger pages, fast forms and trust."
-date: 2026-10-18
-category: "Web Design & SEO"
+date: "2026-10-18"
+category: Web Design & SEO
 keyword: electrician website
-image: industry-electrical.jpg
-relatedServices: [web-design, digital-marketing]
-relatedIndustries: [electrical]
+image: blog-electrician-website-must-haves.jpg
+relatedServices:
+  - web-design
+  - digital-marketing
+relatedIndustries:
+  - electrical
 faq:
-  - q: "Should an electrician put their license number on their website?"
-    a: "Yes. Show your license number and the license holder's name in the footer and on the About page. Check your state licensing board's advertising rules, since some states have specific requirements for how licenses appear in ads."
-  - q: "Do electricians need separate pages for residential and commercial work?"
-    a: "Yes. Homeowners and property managers search differently and ask different questions, so separate pages rank better and convert better than one combined page."
-  - q: "What should an EV charger installation page include?"
-    a: "Explain the charger types you install, how you check panel capacity, what permits and inspections are involved, typical timelines, and what photos or details you need to give an estimate."
+  - q: Should an electrician put their license number on their website?
+    a: Yes. Show your license number and the license holder's name in the footer and on the About page. Check your state licensing board's advertising rules, since some states have specific requirements for how licenses appear in ads.
+  - q: Do electricians need separate pages for residential and commercial work?
+    a: Yes. Homeowners and property managers search differently and ask different questions, so separate pages rank better and convert better than one combined page.
+  - q: What should an EV charger installation page include?
+    a: Explain the charger types you install, how you check panel capacity, what permits and inspections are involved, typical timelines, and what photos or details you need to give an estimate.
+photo:
+  id: 56f80962-bc27-468d-8b8d-b467586a52a2
+  credit: Michal Jarmoluk
+  license: CC0
+  source: https://stocksnap.io/photo/electrician-electricity-QJ55PI34SY
 ---
 
 An electrician's website has two jobs: get found by people who need an electrician in your area, and convince them in about thirty seconds that you're licensed, reliable and easy to reach. Most electrical contractor sites do neither well. Here are the ten things we'd put on every electrician website, in rough order of importance.

@@ -1,19 +1,30 @@
 ---
 title: "AI Receptionist for Contractors: An Honest Look"
-description: "What AI call answering does well for trades, where it fails, how to set up handoffs, what to script, and how to test an AI receptionist before going live."
-date: 2026-10-18
-category: "AI & Automations"
+description: What AI call answering does well for trades, where it fails, how to set up handoffs, what to script, and how to test an AI receptionist before going live.
+date: "2026-10-18"
+category: AI & Automations
 keyword: ai receptionist for contractors
-image: service-ai-automations.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [plumbing, electrical, hvac, hardscaping-tree-service]
+image: blog-ai-receptionist-for-contractors.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - plumbing
+  - electrical
+  - hvac
+  - hardscaping-tree-service
 faq:
-  - q: "Can an AI receptionist book appointments for a contractor?"
-    a: "Yes, if it's connected to your calendar with clear rules about job types, service areas and time slots. It works best for standard appointments like estimates and service calls, with anything unusual handed to a person."
-  - q: "Should an AI receptionist tell callers it's an AI?"
-    a: "Yes. A short disclosure in the greeting builds trust, and if calls are recorded, Massachusetts and several other states require that all parties know about it. Confirm the exact wording with your attorney."
-  - q: "Will an AI receptionist replace my office manager?"
-    a: "Usually not. It's best at covering after-hours calls, overflow and simple intake so your office staff can focus on scheduling, customers with active jobs and anything complicated."
+  - q: Can an AI receptionist book appointments for a contractor?
+    a: Yes, if it's connected to your calendar with clear rules about job types, service areas and time slots. It works best for standard appointments like estimates and service calls, with anything unusual handed to a person.
+  - q: Should an AI receptionist tell callers it's an AI?
+    a: Yes. A short disclosure in the greeting builds trust, and if calls are recorded, Massachusetts and several other states require that all parties know about it. Confirm the exact wording with your attorney.
+  - q: Will an AI receptionist replace my office manager?
+    a: Usually not. It's best at covering after-hours calls, overflow and simple intake so your office staff can focus on scheduling, customers with active jobs and anything complicated.
+photo:
+  id: dc8caa9c-6e80-4b24-819e-4d6116825811
+  credit: Todd Quackenbush
+  license: CC0
+  source: https://stocksnap.io/photo/wood-tools-00F7DB5857
 ---
 
 AI receptionists have gone from novelty to something plenty of contractors are actually running. They can answer every call, gather the details, and book the appointment at 11 p.m. on a Saturday. They can also frustrate a caller with a bad connection, give a wrong answer with total confidence, or fumble a gas leak call. This is an honest look at what they do well, where they fail, and how to set one up so it helps more than it hurts.

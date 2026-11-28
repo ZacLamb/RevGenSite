@@ -1,20 +1,29 @@
 ---
-title: "The Real Cost of a Missed Call for Plumbers and Electricians"
-description: "How to calculate what missed calls cost your plumbing or electrical business, why voicemail doesn't fix it, and the automation steps that catch more of them."
-date: 2026-08-31
-updated: 2026-10-18
-category: "AI & Automations"
+title: The Real Cost of a Missed Call for Plumbers and Electricians
+description: How to calculate what missed calls cost your plumbing or electrical business, why voicemail doesn't fix it, and the automation steps that catch more of them.
+date: "2026-08-31"
+updated: "2026-10-18"
+category: AI & Automations
 keyword: missed calls plumbing business
-image: blog-missed-call-cost.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [plumbing, electrical]
+image: blog-cost-of-a-missed-call.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - plumbing
+  - electrical
 faq:
-  - q: "How do I find out how many calls I'm missing?"
-    a: "Your phone provider or call tracking system logs every inbound call, answered or not. Export a month of call logs, filter for unanswered calls, and remove repeat callers and spam to get a real count."
-  - q: "Is missed-call text-back legal?"
-    a: "Replying by text to someone who just called your business is common, but US carriers require business texting from local numbers to be registered under A2P 10DLC as of 2026. Keep the message transactional, honor opt-out replies and confirm your setup with your attorney."
-  - q: "Should I use an answering service or an AI agent?"
-    a: "Both can work. Compare them on how fast they answer, whether they can book directly on your calendar, how they handle emergencies, and whether every call ends up as a lead in your CRM."
+  - q: How do I find out how many calls I'm missing?
+    a: Your phone provider or call tracking system logs every inbound call, answered or not. Export a month of call logs, filter for unanswered calls, and remove repeat callers and spam to get a real count.
+  - q: Is missed-call text-back legal?
+    a: Replying by text to someone who just called your business is common, but US carriers require business texting from local numbers to be registered under A2P 10DLC as of 2026. Keep the message transactional, honor opt-out replies and confirm your setup with your attorney.
+  - q: Should I use an answering service or an AI agent?
+    a: Both can work. Compare them on how fast they answer, whether they can book directly on your calendar, how they handle emergencies, and whether every call ends up as a lead in your CRM.
+photo:
+  id: ec138cf1-6216-49ae-85a3-81d109757472
+  credit: Krzysztof%20Puszczy%u0144ski
+  license: CC0
+  source: https://stocksnap.io/photo/wrench-tools-F91K0WLE2D
 ---
 
 A missed call doesn't feel like much in the moment. You were under a sink or in a panel, your hands were full, you'll call back later. But for a plumbing or electrical shop, those calls add up to real money over a year. This post shows you how to calculate your own number, why voicemail doesn't solve it, and the setup that catches more of those calls.

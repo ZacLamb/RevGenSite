@@ -4,7 +4,7 @@ description: "Lawn care route scheduling that works: build dense routes by zone 
 date: "2026-11-16"
 category: Custom Tools
 keyword: lawn care route scheduling
-image: blog-custom-business-tool.jpg
+image: blog-lawn-care-route-scheduling.jpg
 relatedServices:
   - custom-tool-building
   - crm-build-management
@@ -17,6 +17,11 @@ faq:
     a: Work out what the extra drive time costs you per visit, add it to your normal price, and quote that number. If the customer won't pay it, either offer a specific day when you're already nearby or pass on the job.
   - q: Can I use Google Maps to plan lawn care routes?
     a: For a single day with a handful of stops, yes. Google Maps caps a route at about 10 stops and doesn't reorder them for you, so a full week of routes needs a spreadsheet, a route planner app or a custom tool.
+photo:
+  id: 6a789fc3-1af5-49ba-b020-e7c3ba01e812
+  credit: Daria Nepriakhina
+  license: CC0
+  source: https://stocksnap.io/photo/garden-shrubs-77AD8564CC
 ---
 
 Most lawn care companies don't lose money on the mowing. They lose it on the driving between mowing. This post shows you how to build dense routes by zone and day, find the properties that are costing you money, and price them fairly.

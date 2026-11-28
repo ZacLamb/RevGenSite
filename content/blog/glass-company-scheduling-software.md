@@ -4,7 +4,7 @@ description: How glass shops schedule measure, order and install visits so crews
 date: "2026-11-19"
 category: Custom Tools
 keyword: glass company scheduling software
-image: blog-custom-business-tool.jpg
+image: blog-glass-company-scheduling-software.jpg
 relatedServices:
   - custom-tool-building
   - crm-build-management
@@ -17,6 +17,11 @@ faq:
     a: You can hold a tentative window, but don't confirm it with the customer until the glass is received and inspected. Fabrication dates slip, and a confirmed date you have to cancel costs you trust and a crew day.
   - q: Can a glass company trim tempered glass on site if the size is off?
     a: No. Tempered glass can't be cut, drilled or resized after tempering, so a wrong measurement means reordering. That's why the measure visit needs a checklist and a second set of eyes before anything goes to the fabricator.
+photo:
+  id: 012ee794-a3a8-4ec9-8d67-15ebb2865738
+  credit: Direct Media
+  license: CC0
+  source: https://stocksnap.io/photo/business-woman-0XMV6LYGUZ
 ---
 
 Most double trips in a glass shop are not install problems. They start at the measure visit or the order, and nobody catches them until a crew is standing in a bathroom with the wrong panel. This post covers the scheduling rules, job stages and software questions that keep a job to one measure trip and one install trip.

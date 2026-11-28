@@ -4,7 +4,7 @@ description: Chimney inspection reminders that turn one-time jobs into annual cu
 date: "2026-11-24"
 category: CRM & Systems
 keyword: chimney inspection reminders
-image: industry-masonry.jpg
+image: blog-chimney-inspection-reminders-masonry.jpg
 relatedServices:
   - crm-build-management
   - ai-services-automations
@@ -17,6 +17,11 @@ faq:
     a: "Keep it short and specific: your business name, the customer's first name, that their yearly chimney check is coming up, and one clear way to book. Add a reply option for opting out, and don't use scare language."
   - q: Do I need permission to text past chimney customers?
     a: Yes. Get a clear opt-in when you do the job, and keep a record of it. If you text from a 10-digit business number through software, carrier registration applies too. This is general information, not legal advice, so check your setup with your texting provider or an attorney.
+photo:
+  id: badb5418-a717-40a8-a294-bb8bb14d338d
+  credit: Jonas Nilsson Lee
+  license: CC0
+  source: https://stocksnap.io/photo/bricks-wall-4YCB0VAY1L
 ---
 
 You do a chimney repair or a tuckpointing job, the customer is happy, and you never hear from them again. Meanwhile their chimney keeps weathering, and the next mason they call is whoever shows up first in a search. A simple, well-timed reminder system fixes that without any extra selling.

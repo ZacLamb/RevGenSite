@@ -4,7 +4,7 @@ description: Homeowners mix up tuckpointing and repointing. Here's how masons ca
 date: "2026-10-28"
 category: Digital Marketing
 keyword: tuckpointing repointing marketing
-image: industry-masonry.jpg
+image: blog-tuckpointing-repointing-marketing-masons.jpg
 relatedServices:
   - digital-marketing
   - web-design
@@ -17,6 +17,11 @@ faq:
     a: Explain the signs of failing joints, how you remove old mortar and match the new mortar to the brick, and what drives the price. Add real project photos from your own jobs and your HIC number if you do residential work in Massachusetts.
   - q: Do I have to show my HIC number on my website?
     a: In Massachusetts, residential contracting advertising must display the registration number, and the state says that includes websites. Check the exact rules and exemptions for your work with the Office of Consumer Affairs and Business Regulation, since this is not legal advice.
+photo:
+  id: 514d8e74-71ff-40cd-923a-cfc2e315e9df
+  credit: Jay Mantri
+  license: CC0
+  source: https://stocksnap.io/photo/bricks-wall-TUFQ5JUFLE
 ---
 
 Most homeowners don't call a mason because they know they need repointing. They call because a joint is crumbling, water is showing up inside, or a neighbor said something about "tuckpointing." If your marketing doesn't explain the job in plain terms, you spend your phone time educating people who may or may not hire you.

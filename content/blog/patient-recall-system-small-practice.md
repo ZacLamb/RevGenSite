@@ -4,7 +4,7 @@ description: "Build a patient recall system small practice owners can run: defin
 date: "2026-11-12"
 category: CRM & Systems
 keyword: patient recall system small practice
-image: industry-healthcare.jpg
+image: blog-patient-recall-system-small-practice.jpg
 relatedServices:
   - crm-build-management
   - ai-services-automations
@@ -18,6 +18,11 @@ faq:
   - q: Is a recall message considered marketing under HIPAA?
     a: HHS says communications made for the individual's treatment are not marketing, and certain health care operations communications are excluded too. A reminder that a patient is due for their own follow-up fits that. A promotion for something unrelated, or anything paid for by a third party, can change the answer.
 relatedIndustriesNote: ""
+photo:
+  id: abdb7f6b-5b8d-46dd-8a14-cff60f18a0cf
+  credit: Direct Media
+  license: CC0
+  source: https://stocksnap.io/photo/doctor-mask-9BIAIEZCTX
 ---
 
 Most small practices have a few hundred patients who were seen once or twice and then quietly disappeared. Nobody decided to leave. They just never rebooked, and nobody asked them to.

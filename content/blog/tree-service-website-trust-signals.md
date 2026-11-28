@@ -4,7 +4,7 @@ description: "Tree service website trust signals that win estimates: show insura
 date: "2026-10-29"
 category: Web Design & SEO
 keyword: tree service website trust signals
-image: industry-hardscaping-tree.jpg
+image: blog-tree-service-website-trust-signals.jpg
 relatedServices:
   - web-design
 relatedIndustries:
@@ -17,6 +17,11 @@ faq:
   - q: Is an ISA Certified Arborist badge enough to prove a tree company is qualified?
     a: No. The ISA credential belongs to a person, not the company, and it says nothing about whether the company carries insurance. Name the certified person, show their number, and pair it with your insurance and licensing details.
 relatedBlogNote: none
+photo:
+  id: 41287980-3845-40e1-9f33-a4d2fe1a5f54
+  credit: Dimitri Tyan
+  license: CC0
+  source: https://stocksnap.io/photo/green-trees-HAOETHJSSF
 ---
 
 A homeowner who needs a tree taken down next to the house is making a risky decision with very little information. They can't judge your rigging or your saw work, so they look for proof that you're a safe, legitimate company. This post covers the tree service website trust signals that matter most and how to show each one honestly.

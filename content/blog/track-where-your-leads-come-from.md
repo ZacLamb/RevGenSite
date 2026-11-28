@@ -1,19 +1,30 @@
 ---
-title: "How to Track Where Your Leads Come From (Local Business Guide)"
+title: How to Track Where Your Leads Come From (Local Business Guide)
 description: "Lead source tracking for local businesses: call tracking numbers, UTM links, hidden form fields, 'how did you hear' pitfalls, CRM attribution and reports."
-date: 2026-10-18
-category: "CRM & Systems"
+date: "2026-10-18"
+category: CRM & Systems
 keyword: track where leads come from
-image: service-digital-marketing.jpg
-relatedServices: [crm-build-management, digital-marketing]
-relatedIndustries: [plumbing, hvac, landscaping, gutter-pressure-washing]
+image: blog-track-where-your-leads-come-from.jpg
+relatedServices:
+  - crm-build-management
+  - digital-marketing
+relatedIndustries:
+  - plumbing
+  - hvac
+  - landscaping
+  - gutter-pressure-washing
 faq:
-  - q: "Will call tracking numbers hurt my local SEO?"
-    a: "Not if you set them up carefully. Use dynamic number swapping on your website so search engines still see your main number in the page code, keep one consistent main number across directories, and if you use a tracking number on Google Business Profile, list your main number as an additional phone."
-  - q: "What are UTM parameters?"
-    a: "UTM parameters are tags added to the end of a link, like ?utm_source=facebook&utm_medium=paid, that tell your analytics and CRM where a visitor came from. They don't change the page; they just label the traffic."
-  - q: "Is asking 'how did you hear about us?' enough to track leads?"
-    a: "It's useful as a backup but unreliable on its own. People forget, pick the first option, or say 'Google' when they saw your truck and then searched your name. Combine it with tracking numbers and form source data."
+  - q: Will call tracking numbers hurt my local SEO?
+    a: Not if you set them up carefully. Use dynamic number swapping on your website so search engines still see your main number in the page code, keep one consistent main number across directories, and if you use a tracking number on Google Business Profile, list your main number as an additional phone.
+  - q: What are UTM parameters?
+    a: UTM parameters are tags added to the end of a link, like ?utm_source=facebook&utm_medium=paid, that tell your analytics and CRM where a visitor came from. They don't change the page; they just label the traffic.
+  - q: Is asking 'how did you hear about us?' enough to track leads?
+    a: It's useful as a backup but unreliable on its own. People forget, pick the first option, or say 'Google' when they saw your truck and then searched your name. Combine it with tracking numbers and form source data.
+photo:
+  id: 79804899-10a2-46cc-ba8a-8c5fe2ee128d
+  credit: The World is a Stage
+  license: CC0
+  source: https://stocksnap.io/photo/construction-tools-EJZBX7UMTV
 ---
 
 Ask most service business owners where their jobs come from and you'll hear "mostly word of mouth and Google." Ask how they know, and the answer is usually a gut feeling. That's fine until you're deciding whether to spend another $2,000 a month on ads.

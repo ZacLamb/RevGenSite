@@ -4,7 +4,7 @@ description: "How glass companies can run insurance-paid jobs: intake questions,
 date: "2026-11-25"
 category: CRM & Systems
 keyword: glass repair insurance claim process for glass companies
-image: industry-glass.jpg
+image: blog-glass-repair-insurance-claim-process.jpg
 relatedServices:
   - crm-build-management
 relatedIndustries:
@@ -16,6 +16,11 @@ faq:
     a: When calibration is part of a covered replacement, it is typically included, but coverage and paperwork requirements vary by insurer and policy. Plan to document why the calibration was needed and that it was completed, and tell the customer to confirm with their carrier.
   - q: Do I have to be an insurer's preferred shop to do a glass claim?
     a: It depends on your state and the insurer's rules, so check before you promise anything to a customer. In Massachusetts, as of 2026, the statute limits how insurers can steer customers to a particular registered glass shop. Read it before you build your intake script.
+photo:
+  id: c28470bb-12ba-4da2-85d8-a85b54a79ef4
+  credit: Quino Al
+  license: CC0
+  source: https://stocksnap.io/photo/heat-glass-PSQ9M6C9N7
 ---
 
 An insurance-paid glass job looks like a normal repair until the invoice comes back unpaid because a photo, a claim number or a calibration report was missing. The glass work is the easy part. The money is lost in intake, documentation and follow-up.

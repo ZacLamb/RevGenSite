@@ -4,7 +4,7 @@ description: How medical and wellness practices can ask patients for Google revi
 date: "2026-11-04"
 category: Digital Marketing
 keyword: google reviews for medical practices
-image: blog-google-reviews.jpg
+image: blog-google-reviews-for-medical-practices.jpg
 relatedServices:
   - digital-marketing
   - crm-build-management
@@ -17,6 +17,11 @@ faq:
     a: Yes, but keep the reply generic. Don't confirm the person is a patient, and don't mention any treatment, appointment or diagnosis, even if the reviewer already did. Invite them to call the office instead.
   - q: Can we give a discount or gift card for leaving a review?
     a: No. Google prohibits incentives such as discounts or free services in exchange for reviews. The FTC's review rule also bars compensation conditioned on a positive or negative sentiment.
+photo:
+  id: 373a2ccd-73e0-4e8c-bd07-b0d611b7ac6e
+  credit: Oles kanebckuu
+  license: CC0
+  source: https://stocksnap.io/photo/doctors-hospital-5YUFL6LC0E
 ---
 
 Reviews are how most new patients decide between you and the practice down the road. But a front desk that asks the wrong way can create three problems at once: a Google policy violation, an FTC problem, and a HIPAA problem.

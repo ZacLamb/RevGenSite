@@ -1,19 +1,27 @@
 ---
 title: "Painting Contractor Lead Generation: Where Good Leads Come From"
-description: "Where painting contractors find good leads, from Google Business Profile and referrals to yard signs, Meta, LSAs and Nextdoor, plus how to qualify each job."
-date: 2026-10-18
-category: "Digital Marketing"
+description: Where painting contractors find good leads, from Google Business Profile and referrals to yard signs, Meta, LSAs and Nextdoor, plus how to qualify each job.
+date: "2026-10-18"
+category: Digital Marketing
 keyword: painting contractor lead generation
-image: industry-painting.jpg
-relatedServices: [digital-marketing, crm-build-management]
-relatedIndustries: [painting]
+image: blog-painting-contractor-lead-generation.jpg
+relatedServices:
+  - digital-marketing
+  - crm-build-management
+relatedIndustries:
+  - painting
 faq:
-  - q: "What's the best source of leads for a painting company?"
-    a: "For most painters, referrals and Google Business Profile bring the highest-quality leads at the lowest cost. Paid channels like Meta ads and Local Services Ads add volume, but those leads need more qualifying."
-  - q: "How do painters qualify leads before giving an estimate?"
-    a: "Ask about interior or exterior, residential or commercial, the scope (rooms, square footage or stories), timing, and whether the home was built before 1978. A short form or a few questions on the first call answers most of it."
-  - q: "Do yard signs still work for painting contractors?"
-    a: "Yes, especially on exterior jobs in busy neighborhoods. Add a QR code that links to a tracked page so you can see how many leads they actually bring in, and check your town's sign rules first."
+  - q: What's the best source of leads for a painting company?
+    a: For most painters, referrals and Google Business Profile bring the highest-quality leads at the lowest cost. Paid channels like Meta ads and Local Services Ads add volume, but those leads need more qualifying.
+  - q: How do painters qualify leads before giving an estimate?
+    a: Ask about interior or exterior, residential or commercial, the scope (rooms, square footage or stories), timing, and whether the home was built before 1978. A short form or a few questions on the first call answers most of it.
+  - q: Do yard signs still work for painting contractors?
+    a: Yes, especially on exterior jobs in busy neighborhoods. Add a QR code that links to a tracked page so you can see how many leads they actually bring in, and check your town's sign rules first.
+photo:
+  id: c63dd808-8b7c-46fb-8e53-2043f630296f
+  credit: Bench Accounting
+  license: CC0
+  source: https://stocksnap.io/photo/painting-painter-BEWOYG4VRW
 ---
 
 Painting is one of the easiest trades to get leads for and one of the hardest to get good leads for. Everybody needs a room painted eventually, and everybody gets three quotes. The painters who grow aren't the ones with the most leads. They're the ones with the right mix of sources, and a quick way to sort the whole-house exterior from the "can you paint one bedroom this Saturday" call.

@@ -4,7 +4,7 @@ description: Storm calls spike for hours, not weeks. Here's how tree services ca
 date: "2026-10-19"
 category: Digital Marketing
 keyword: emergency tree removal marketing
-image: industry-hardscaping-tree.jpg
+image: blog-emergency-tree-removal-marketing.jpg
 relatedServices:
   - digital-marketing
   - web-design
@@ -18,6 +18,11 @@ faq:
     a: Yes. As of 2026, Google lists tree services as an eligible home service category for Local Services Ads. You still have to pass Google's screening and verification, which can include business registration, insurance and license checks, so start well before storm season.
   - q: Do I need a state license to advertise tree removal in Massachusetts?
     a: The Massachusetts Arborists Association says Massachusetts has no licensing requirement for arborists, and the Massachusetts Certified Arborist credential is voluntary. Don't imply you hold a state license you don't have, and check with the state about registrations that may apply to the way you do business.
+photo:
+  id: ec27ad8b-7f36-4d83-a637-52057e711160
+  credit: Joel Peel
+  license: CC0
+  source: https://stocksnap.io/photo/still-items-XDIVU6PRUG
 ---
 
 When a nor'easter drops limbs on cars and roofs, the people searching for help aren't comparing five tree companies over a week. They call the first two or three that look legitimate and pick up. This guide covers what to set up before storm season, how to handle the spike while it's happening, and how to keep the work coming afterward.

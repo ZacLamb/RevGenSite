@@ -4,7 +4,7 @@ description: "A practical system for car restoration project updates: what to se
 date: "2026-11-18"
 category: Custom Tools
 keyword: car restoration project updates
-image: blog-custom-business-tool.jpg
+image: blog-car-restoration-project-updates.jpg
 relatedServices:
   - custom-tool-building
   - crm-build-management
@@ -19,6 +19,11 @@ faq:
     a: Yes, but as of 2026 carriers expect businesses that text from a regular 10-digit number through software to complete A2P 10DLC registration. You also need the customer's consent to text, and you should honor STOP requests.
 relatedBlogs:
   - what-is-a-custom-business-tool
+photo:
+  id: a96fd5ab-86bf-4d03-b5c2-dc070b872a01
+  credit: Aral Tasher
+  license: CC0
+  source: https://stocksnap.io/photo/car-hood-5104095BD6
 ---
 
 A restoration owner who hasn't heard from you in two weeks assumes the worst. A shop owner who answers every "how's it going?" call loses hours of bench time. The fix is a simple, repeatable system for car restoration project updates that answers the owner's questions before they ask.

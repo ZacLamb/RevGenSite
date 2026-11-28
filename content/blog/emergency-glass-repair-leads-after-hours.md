@@ -4,7 +4,7 @@ description: Broken windows and smashed storefronts don't wait for business hour
 date: "2026-10-18"
 category: AI & Automations
 keyword: emergency glass repair leads
-image: industry-glass.jpg
+image: blog-emergency-glass-repair-leads-after-hours.jpg
 relatedServices:
   - ai-services-automations
   - crm-build-management
@@ -17,6 +17,11 @@ faq:
     a: You can, but treat call recording carefully. Massachusetts is an all-party consent state, so announce recording at the start of the call or don't record. Check your setup with an attorney if you aren't sure.
   - q: Do I have to register to send automatic text replies to missed calls?
     a: As of 2026, texts sent by software from a standard 10-digit business number generally need A2P 10DLC registration, or carriers may block them. Texts a person sends by hand from their own phone are treated differently.
+photo:
+  id: 1f384bfb-b95e-467b-9d42-8ad7c1df2f10
+  credit: Nathan Fertig
+  license: CC0
+  source: https://stocksnap.io/photo/white-window-LMUGL3LQ7X
 ---
 
 A cracked storefront pane at 11 p.m. or a tree limb through a bedroom window at 2 a.m. is not a problem that waits for a Monday morning call-back. The person searching has no time to compare, and they will call whoever picks up or answers first. This post covers how a glass and glazing company can catch those calls without putting the owner on the phone every night.

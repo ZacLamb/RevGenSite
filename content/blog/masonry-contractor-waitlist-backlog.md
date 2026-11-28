@@ -4,7 +4,7 @@ description: "How a masonry contractor waitlist works: set honest start dates, s
 date: "2026-11-07"
 category: CRM & Systems
 keyword: masonry contractor waitlist
-image: industry-masonry.jpg
+image: blog-masonry-contractor-waitlist-backlog.jpg
 relatedServices:
   - crm-build-management
   - ai-services-automations
@@ -17,6 +17,11 @@ faq:
     a: Massachusetts caps any deposit due before work starts on covered home improvement contracts at the greater of one-third of the contract price or the cost of special-order materials. Whether a separate hold fee fits within that is a question for your attorney, so get that answered before you add one to your process.
   - q: How often should I follow up with leads who are waiting on a masonry job?
     a: A light touch every two to four weeks is a reasonable starting point, with each message carrying something useful such as a schedule update or a confirmation of their window. Stop or slow down for anyone who asks, and always honor opt-outs.
+photo:
+  id: 5d42bda1-fc2f-4d7d-beaa-3e0048eb1b1d
+  credit: Matthew Henry
+  license: CC0
+  source: https://stocksnap.io/photo/surveillance-bricks-VG49081NDD
 ---
 
 Good masons are booked out. That's a nice problem until the people on your list quietly hire someone else because you went silent for six weeks. A masonry contractor waitlist only works if it's organized, honest about timing, and kept warm without a lot of daily effort.

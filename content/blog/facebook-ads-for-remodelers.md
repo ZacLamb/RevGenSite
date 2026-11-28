@@ -1,19 +1,29 @@
 ---
 title: "Facebook Ads for Remodelers: Offers, Creative and Lead Quality"
 description: "How remodeling and carpentry companies can run Facebook and Instagram ads that get real leads: offers, project creative, lead forms, qualifying and follow-up."
-date: 2026-10-18
-category: "Digital Marketing"
+date: "2026-10-18"
+category: Digital Marketing
 keyword: facebook ads for remodelers
-image: industry-carpentry-remodeling.jpg
-relatedServices: [digital-marketing, crm-build-management]
-relatedIndustries: [carpentry-remodeling, deck-building, painting]
+image: blog-facebook-ads-for-remodelers.jpg
+relatedServices:
+  - digital-marketing
+  - crm-build-management
+relatedIndustries:
+  - carpentry-remodeling
+  - deck-building
+  - painting
 faq:
-  - q: "Do Facebook ads work for remodeling contractors?"
-    a: "They can, especially for visual projects like kitchens, baths, decks and basements, because people respond to real before-and-after photos in their feed. The catch is that Meta leads are earlier in the buying process than search leads, so qualifying and fast follow-up matter more."
-  - q: "Should remodelers use Facebook lead forms or a landing page?"
-    a: "Lead forms usually get more leads at a lower cost, and a landing page usually gets fewer but more serious ones. Many remodelers start with a lead form that uses a few qualifying questions, then test a landing page once they know their numbers."
-  - q: "Do remodeling ads have to use Meta's housing special ad category?"
-    a: "Not automatically. As of 2026, Meta's housing category covers housing opportunities and related services, and its definition includes housing repairs, so some remodeling ads may need it. Review Meta's current definitions for your ad, because the category limits your targeting options."
+  - q: Do Facebook ads work for remodeling contractors?
+    a: They can, especially for visual projects like kitchens, baths, decks and basements, because people respond to real before-and-after photos in their feed. The catch is that Meta leads are earlier in the buying process than search leads, so qualifying and fast follow-up matter more.
+  - q: Should remodelers use Facebook lead forms or a landing page?
+    a: Lead forms usually get more leads at a lower cost, and a landing page usually gets fewer but more serious ones. Many remodelers start with a lead form that uses a few qualifying questions, then test a landing page once they know their numbers.
+  - q: Do remodeling ads have to use Meta's housing special ad category?
+    a: Not automatically. As of 2026, Meta's housing category covers housing opportunities and related services, and its definition includes housing repairs, so some remodeling ads may need it. Review Meta's current definitions for your ad, because the category limits your targeting options.
+photo:
+  id: a317b409-cacb-47f9-874f-6d56e0104d18
+  credit: Leeroy
+  license: CC0
+  source: https://stocksnap.io/photo/construction-worker-6B70C91911
 ---
 
 Meta ads (Facebook and Instagram) work differently from Google for a remodeler. Nobody is searching for you. You're interrupting someone scrolling past their cousin's vacation photos, and you have about a second to make them stop on a picture of a kitchen.

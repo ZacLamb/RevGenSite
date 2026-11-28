@@ -4,7 +4,7 @@ description: Homeowners search foggy window repair near me when a seal fails. He
 date: "2026-11-02"
 category: Digital Marketing
 keyword: foggy window repair near me
-image: industry-glass.jpg
+image: blog-foggy-window-repair-near-me.jpg
 relatedServices:
   - digital-marketing
   - web-design
@@ -17,6 +17,11 @@ faq:
     a: Build a dedicated foggy window page, set up a Google Business Profile with accurate service areas, and consider paid search or Local Services Ads if they are available in your area. Then answer calls and photo requests fast, because homeowners usually contact several companies.
   - q: Should a glass company mention manufacturer warranties in its marketing?
     a: Yes, if you will actually help with claims. Many failed seals are still under a manufacturer warranty, and homeowners often don't know to check.
+photo:
+  id: 6a8148f6-1ab7-4b0c-b150-1acee8d5f036
+  credit: Matthew Henry
+  license: CC0
+  source: https://stocksnap.io/photo/buildings-architecture-O6ZKFPOHXN
 ---
 
 When a homeowner sees haze between the panes of a double-pane window, they usually don't know what failed or who fixes it. They type something like "foggy window repair near me" and call whoever looks like they handle it. This guide covers what to put on your site, your Google profile, and your ads so that company is you.

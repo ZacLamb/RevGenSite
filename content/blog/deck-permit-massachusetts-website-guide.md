@@ -4,7 +4,7 @@ description: How Massachusetts deck builders can explain permits, inspections, C
 date: "2026-11-13"
 category: Web Design & SEO
 keyword: deck permit massachusetts
-image: industry-deck-building.jpg
+image: blog-deck-permit-massachusetts-website-guide.jpg
 relatedServices:
   - web-design
   - crm-build-management
@@ -17,6 +17,11 @@ faq:
     a: On an owner-occupied one- or two-family home, a homeowner can use the homeowner exemption and sign an affidavit instead of hiring a licensed Construction Supervisor. The homeowner then takes on the supervisor's responsibility and loses access to the state's Home Improvement Contractor arbitration program and guaranty fund.
   - q: What licenses should a Massachusetts deck builder have?
     a: Building a deck generally calls for a Construction Supervisor License (CSL) and a Home Improvement Contractor (HIC) registration. Homeowners can check both on mass.gov before signing a contract.
+photo:
+  id: c3ffc0b4-a4a0-4cd5-a6b6-6e9c322a6da8
+  credit: Jay Mantri
+  license: CC0
+  source: https://stocksnap.io/photo/wood-planks-HG37JXI4IG
 ---
 
 Most homeowners looking for a deck builder in Massachusetts have the same worry: "Will this turn into a paperwork mess?" If your website answers that clearly, you look like the careful builder in the stack of quotes. If it says nothing, they assume the worst or ask a cheaper competitor who says "no permit needed."

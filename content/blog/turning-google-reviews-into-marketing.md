@@ -1,20 +1,30 @@
 ---
-title: "How to Turn Google Reviews Into Your Best Marketing Asset"
-description: "A system for getting more Google reviews within the rules, replying to good and bad ones, and reusing them on your site, ads and estimates to win more jobs."
-date: 2026-09-21
-updated: 2026-10-18
-category: "Digital Marketing"
+title: How to Turn Google Reviews Into Your Best Marketing Asset
+description: A system for getting more Google reviews within the rules, replying to good and bad ones, and reusing them on your site, ads and estimates to win more jobs.
+date: "2026-09-21"
+updated: "2026-10-18"
+category: Digital Marketing
 keyword: google reviews for contractors
-image: blog-google-reviews.jpg
-relatedServices: [digital-marketing, ai-services-automations]
-relatedIndustries: [painting, gutter-pressure-washing, carpentry-remodeling]
+image: blog-turning-google-reviews-into-marketing.jpg
+relatedServices:
+  - digital-marketing
+  - ai-services-automations
+relatedIndustries:
+  - painting
+  - gutter-pressure-washing
+  - carpentry-remodeling
 faq:
-  - q: "Can I offer a discount for leaving a Google review?"
-    a: "No. Google's policy prohibits offering incentives such as payment, discounts or free services for reviews. The FTC's 2024 rule on reviews also bans incentives conditioned on a review being positive or negative."
-  - q: "Can I only send review requests to happy customers?"
-    a: "No. Google's policy prohibits selectively soliciting positive reviews, a practice often called review gating. Send the same request to every customer after the job."
-  - q: "Can I use my Google reviews on my website?"
-    a: "Quoting reviews accurately on your site is common practice. Use the reviewer's name as it appears publicly or a first name and town, don't edit the meaning, and link to your Google profile so visitors can see the source."
+  - q: Can I offer a discount for leaving a Google review?
+    a: No. Google's policy prohibits offering incentives such as payment, discounts or free services for reviews. The FTC's 2024 rule on reviews also bans incentives conditioned on a review being positive or negative.
+  - q: Can I only send review requests to happy customers?
+    a: No. Google's policy prohibits selectively soliciting positive reviews, a practice often called review gating. Send the same request to every customer after the job.
+  - q: Can I use my Google reviews on my website?
+    a: Quoting reviews accurately on your site is common practice. Use the reviewer's name as it appears publicly or a first name and town, don't edit the meaning, and link to your Google profile so visitors can see the source.
+photo:
+  id: 20abadac-f00b-46a5-8a97-81489cfb1a0a
+  credit: Lia Leslie
+  license: CC0
+  source: https://stocksnap.io/photo/paint-painting-4LB01GZ7EL
 ---
 
 Reviews help your local rankings, but their bigger job is convincing a stranger to trust you with their house before you've spoken to them. Most service businesses have a handful of great reviews sitting on Google doing nothing else. This post covers how to get more of them within the rules, how to reply, and how to put them to work everywhere a customer is deciding.

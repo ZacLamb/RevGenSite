@@ -4,7 +4,7 @@ description: How masonry contractors can win chimney repair and repointing jobs 
 date: "2026-10-26"
 category: Digital Marketing
 keyword: chimney repair marketing
-image: industry-masonry.jpg
+image: blog-chimney-repair-marketing-masons.jpg
 relatedServices:
   - digital-marketing
   - web-design
@@ -17,6 +17,11 @@ faq:
     a: Pick the one that best describes the work you most want. Both categories exist, and Google asks for the most specific primary category with as few extras as possible. A full-service mason usually leads with Masonry contractor and adds Chimney services only if chimney work is a real service line.
   - q: Do I have to show my HIC number in my chimney repair ads in Massachusetts?
     a: Massachusetts says advertising for residential contracting must carry the contractor's active HIC registration number, and the state tells homeowners to look for it on websites and ads. Put it in your site footer, ads, estimates and truck lettering, and check with the state if you are unsure what applies to your jobs.
+photo:
+  id: 722cf655-1f22-4dc1-ab64-564cd3683e59
+  credit: Shoot N' Design
+  license: CC0
+  source: https://stocksnap.io/photo/bricks-wall-G6BSNJW73Y
 ---
 
 Most homeowners don't notice chimney damage until water stains show up on a ceiling or a brick lands in the yard. By then the freeze-thaw cycle has been working for a while, and the homeowner is searching in a hurry. If your marketing only starts when they do, you're competing with every other contractor who answers the phone.

@@ -1,20 +1,31 @@
 ---
 title: "Automating Follow-Up: Why Service Businesses Lose Quoted Jobs"
-description: "Why quoted jobs go quiet, what a good automated estimate follow-up sequence looks like day by day, and the stop rules that keep it helpful instead of pushy."
-date: 2026-09-05
-updated: 2026-10-18
-category: "AI & Automations"
+description: Why quoted jobs go quiet, what a good automated estimate follow-up sequence looks like day by day, and the stop rules that keep it helpful instead of pushy.
+date: "2026-09-05"
+updated: "2026-10-18"
+category: AI & Automations
 keyword: automated estimate follow-up
-image: blog-automating-followup.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [deck-building, carpentry-remodeling, hvac, painting]
+image: blog-automating-follow-up-lost-booked-jobs.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - deck-building
+  - carpentry-remodeling
+  - hvac
+  - painting
 faq:
-  - q: "How many times should I follow up on an estimate?"
-    a: "Three or four touches over two to three weeks works for most residential jobs, with a final message near any quote expiration date. Stop as soon as the customer replies, books or says no."
-  - q: "Should estimate follow-up be by text or email?"
-    a: "Use both. Text for short check-ins, since most homeowners read texts quickly, and email for the estimate itself, photos and longer details like financing or material options."
-  - q: "Won't automated follow-up feel spammy?"
-    a: "Not if each message is short, useful and personal, and the sequence stops the moment the customer responds. The problem is usually messages that keep going after someone already replied."
+  - q: How many times should I follow up on an estimate?
+    a: Three or four touches over two to three weeks works for most residential jobs, with a final message near any quote expiration date. Stop as soon as the customer replies, books or says no.
+  - q: Should estimate follow-up be by text or email?
+    a: Use both. Text for short check-ins, since most homeowners read texts quickly, and email for the estimate itself, photos and longer details like financing or material options.
+  - q: Won't automated follow-up feel spammy?
+    a: Not if each message is short, useful and personal, and the sequence stops the moment the customer responds. The problem is usually messages that keep going after someone already replied.
+photo:
+  id: ec061d4e-30db-4a49-925b-c127c03e9972
+  credit: Dustin Lee
+  license: CC0
+  source: https://stocksnap.io/photo/wood-typewriter-VV0697QWMS
 ---
 
 Ask most contractors what share of their estimates turn into paid work, and the honest answer is lower than they'd like. Often it isn't the price. Nobody followed up after the estimate went out. This post explains where quoted jobs get lost, what a good automated follow-up sequence looks like, and how to set it up so it helps instead of annoys.

@@ -4,7 +4,7 @@ description: "A glass shop's guide to photo estimates: what photos to request fo
 date: "2026-10-23"
 category: Custom Tools
 keyword: photo estimate glass repair
-image: blog-custom-business-tool.jpg
+image: blog-photo-estimate-glass-repair.jpg
 relatedServices:
   - custom-tool-building
   - ai-services-automations
@@ -17,6 +17,11 @@ faq:
     a: Send a wide shot of the whole enclosure, a close-up of the hinges, handle and track or header, and a photo of the permanent etched mark in a glass corner if you can find it. Add a photo with a tape measure across the opening and the door.
   - q: Do I need to register my business to text customers photos and quotes?
     a: If you send texts from software using a standard 10-digit local number, carriers require A2P 10DLC registration as of 2026. Texting a customer back by hand from your phone is a different situation, but keep consent and opt-out rules in mind either way.
+photo:
+  id: 37634ba3-01a3-46cf-b1a8-297111e02f40
+  credit: Scott Webb
+  license: CC0
+  source: https://stocksnap.io/photo/building-windows-DBVYE3XXNS
 ---
 
 Most glass calls start the same way: "I've got a cracked window, how much?" You can't answer that by phone, and driving out to every caller wastes hours. A photo estimate process lets you screen the job, give a realistic range, and only roll a truck when the job is real.

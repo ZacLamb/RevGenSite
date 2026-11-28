@@ -1,20 +1,31 @@
 ---
-title: "What Is a Custom Business Tool, and Does Your Company Need One?"
+title: What Is a Custom Business Tool, and Does Your Company Need One?
 description: "A plain-English guide to custom business tools: the signs you've outgrown off-the-shelf software, when to build vs. buy vs. integrate, and how to scope one."
-date: 2026-09-07
-updated: 2026-10-18
-category: "Custom Tools"
+date: "2026-09-07"
+updated: "2026-10-18"
+category: Custom Tools
 keyword: custom business tool
-image: blog-custom-business-tool.jpg
-relatedServices: [custom-tool-building, crm-build-management]
-relatedIndustries: [healthcare, hvac, auto-restoration-detailing, carpentry-remodeling]
+image: blog-what-is-a-custom-business-tool.jpg
+relatedServices:
+  - custom-tool-building
+  - crm-build-management
+relatedIndustries:
+  - healthcare
+  - hvac
+  - auto-restoration-detailing
+  - carpentry-remodeling
 faq:
-  - q: "What counts as a custom business tool?"
+  - q: What counts as a custom business tool?
     a: "Any piece of software built for one company's specific workflow: a quote calculator, a job tracker, a document generator, a dashboard, a client portal or an integration that moves data between your existing apps."
-  - q: "Is it better to build custom software or buy off-the-shelf?"
-    a: "Buy when a product does what you need with light configuration. Integrate when your existing tools each do their job but don't talk to each other. Build when the gap is specific to how you work and it costs you real time or money every week."
-  - q: "Who owns the code if I pay someone to build a tool?"
-    a: "That depends on your contract, so ask before work starts. Make sure you know who owns the code, where it's hosted, and how you'd get a copy if you ever changed developers."
+  - q: Is it better to build custom software or buy off-the-shelf?
+    a: Buy when a product does what you need with light configuration. Integrate when your existing tools each do their job but don't talk to each other. Build when the gap is specific to how you work and it costs you real time or money every week.
+  - q: Who owns the code if I pay someone to build a tool?
+    a: That depends on your contract, so ask before work starts. Make sure you know who owns the code, where it's hosted, and how you'd get a copy if you ever changed developers.
+photo:
+  id: 5dc948d9-4dfd-4576-9203-a88c86dd4999
+  credit: Direct Media
+  license: CC0
+  source: https://stocksnap.io/photo/doctor-working-WTWX4BZ4FD
 ---
 
 "Custom software" sounds like something only big companies need. But most small businesses that end up building a tool didn't go looking for one. They started with a spreadsheet, a workaround or three apps taped together, and eventually the tape stopped holding. This guide explains what a custom tool is, how to tell whether you need one, and how to scope it so it solves the actual problem.

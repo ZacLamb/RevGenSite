@@ -1,19 +1,30 @@
 ---
-title: "Reduce No-Shows With Appointment Reminders That Actually Work"
+title: Reduce No-Shows With Appointment Reminders That Actually Work
 description: "Reminder sequences that cut no-shows for wellness practices, detailers and estimate visits: timing, confirm and reschedule links, deposits and privacy notes."
-date: 2026-10-18
-category: "AI & Automations"
+date: "2026-10-18"
+category: AI & Automations
 keyword: reduce no-shows appointment reminders
-image: industry-healthcare.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [healthcare, auto-restoration-detailing, hvac, carpentry-remodeling]
+image: blog-reduce-no-shows-appointment-reminders.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - healthcare
+  - auto-restoration-detailing
+  - hvac
+  - carpentry-remodeling
 faq:
-  - q: "When should appointment reminders be sent?"
-    a: "A common pattern is a confirmation right after booking, a reminder two or three days before for longer appointments, another the day before, and a short one two hours before. Adjust for how far out people book and how much prep the appointment needs."
-  - q: "Should I charge a deposit to reduce no-shows?"
-    a: "Deposits work well for long or high-value appointments like full details, ceramic coatings or extended treatment sessions. Keep the policy simple, state it at booking, and make rescheduling easy so the deposit feels fair."
-  - q: "Can healthcare practices send appointment reminders by text?"
-    a: "Many do, but patient messages carry privacy obligations under HIPAA and possibly state law. Keep reminder content minimal, get the right consent, and check your texting setup and vendor agreements with your compliance advisor."
+  - q: When should appointment reminders be sent?
+    a: A common pattern is a confirmation right after booking, a reminder two or three days before for longer appointments, another the day before, and a short one two hours before. Adjust for how far out people book and how much prep the appointment needs.
+  - q: Should I charge a deposit to reduce no-shows?
+    a: Deposits work well for long or high-value appointments like full details, ceramic coatings or extended treatment sessions. Keep the policy simple, state it at booking, and make rescheduling easy so the deposit feels fair.
+  - q: Can healthcare practices send appointment reminders by text?
+    a: Many do, but patient messages carry privacy obligations under HIPAA and possibly state law. Keep reminder content minimal, get the right consent, and check your texting setup and vendor agreements with your compliance advisor.
+photo:
+  id: feb96b11-1a34-4c59-9b31-2677c184d922
+  credit: Direct Media
+  license: CC0
+  source: https://stocksnap.io/photo/doctor-mask-GWE6UQDBTN
 ---
 
 A no-show isn't just an empty hour. It's an hour you turned someone else away from, a crew that drove across town, or a bay that sat empty while the next customer waited until next week. Most no-shows aren't people blowing you off. They forgot, something came up, or rescheduling felt like more trouble than skipping.

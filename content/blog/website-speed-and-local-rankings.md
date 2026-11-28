@@ -1,20 +1,30 @@
 ---
 title: "Website Speed and Local Rankings: Why Slow Sites Lose Leads"
-description: "How page speed affects contractor rankings and calls, the Core Web Vitals thresholds to aim for, how to test your own site, and the fixes that matter most."
-date: 2026-09-28
-updated: 2026-10-18
-category: "Web Design & SEO"
+description: How page speed affects contractor rankings and calls, the Core Web Vitals thresholds to aim for, how to test your own site, and the fixes that matter most.
+date: "2026-09-28"
+updated: "2026-10-18"
+category: Web Design & SEO
 keyword: contractor website speed
-image: blog-website-speed.jpg
-relatedServices: [web-design, digital-marketing]
-relatedIndustries: [masonry, glass-glazing, deck-building]
+image: blog-website-speed-and-local-rankings.jpg
+relatedServices:
+  - web-design
+  - digital-marketing
+relatedIndustries:
+  - masonry
+  - glass-glazing
+  - deck-building
 faq:
-  - q: "Does website speed affect Google rankings?"
-    a: "Yes, but it's not the biggest factor. Google says its ranking systems use Core Web Vitals, and also that it will show the most relevant content even when page experience is weaker. Speed helps most when you're competing with similar pages."
-  - q: "What is a good load time for a contractor website?"
-    a: "Use Google's Core Web Vitals as the target. As of 2026, a good Largest Contentful Paint is 2.5 seconds or less, measured at the 75th percentile of real visits."
-  - q: "Why is my site fast on my office computer and slow on my phone?"
-    a: "Your office computer is usually more powerful and on fast internet. Phones on cellular data have slower processors and connections, so heavy images and scripts hurt much more. Always test on a phone over cellular."
+  - q: Does website speed affect Google rankings?
+    a: Yes, but it's not the biggest factor. Google says its ranking systems use Core Web Vitals, and also that it will show the most relevant content even when page experience is weaker. Speed helps most when you're competing with similar pages.
+  - q: What is a good load time for a contractor website?
+    a: Use Google's Core Web Vitals as the target. As of 2026, a good Largest Contentful Paint is 2.5 seconds or less, measured at the 75th percentile of real visits.
+  - q: Why is my site fast on my office computer and slow on my phone?
+    a: Your office computer is usually more powerful and on fast internet. Phones on cellular data have slower processors and connections, so heavy images and scripts hurt much more. Always test on a phone over cellular.
+photo:
+  id: 8c4addf2-8cf1-45ed-a1a8-b99aee277785
+  credit: Huney Co
+  license: CC0
+  source: https://stocksnap.io/photo/bricks-wall-08SXWXTJWB
 ---
 
 A contractor website built on a heavy template with a dozen plugins can look fine on a desktop monitor and still lose leads every day on a phone with weak signal. That describes a lot of people looking for a contractor, standing in a driveway or a job site. This post explains how speed affects rankings and calls, what Google actually measures, how to test your own site and which fixes make the biggest difference.

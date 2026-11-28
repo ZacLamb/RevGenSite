@@ -4,7 +4,7 @@ description: "How to turn one-time gutter jobs into gutter cleaning recurring cu
 date: "2026-11-08"
 category: CRM & Systems
 keyword: gutter cleaning recurring customers
-image: industry-gutter-pressure-washing.jpg
+image: blog-gutter-cleaning-recurring-customers.jpg
 relatedServices:
   - crm-build-management
   - ai-services-automations
@@ -17,6 +17,11 @@ faq:
     a: Yes, but as of 2026 the Massachusetts Attorney General's rules at 940 CMR 38.00 require clear disclosure of recurring charges and a simple way to cancel. Plans longer than 31 days also need a renewal notice. This is general information, so have a Massachusetts attorney review your plan terms.
   - q: When should I send gutter plan renewal reminders?
     a: Send the first one about three weeks before the renewal date and a second about a week before. That falls inside the notice window described in the Massachusetts rules for longer plans. Put the price, the renewal date and a cancel link in every reminder.
+photo:
+  id: 750a327c-f6d8-427e-b9b2-8bc7090bb05d
+  credit: Breather
+  license: CC0
+  source: https://stocksnap.io/photo/home-house-87ONRC5PWV
 ---
 
 Most gutter companies live job to job. You clean a house in November, the customer is happy, and you never hear from them again unless a gutter overflows next fall. An annual plan fixes that by putting the next visit on the calendar before the customer forgets who you are.

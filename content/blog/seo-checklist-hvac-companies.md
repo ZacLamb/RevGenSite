@@ -1,20 +1,28 @@
 ---
 title: "SEO for HVAC Companies: A Practical Checklist for 2026"
 description: "A practical SEO checklist for HVAC companies: Google Business Profile rules, site structure, reviews, speed, seasonal content and local links, in order."
-date: 2026-09-14
-updated: 2026-10-18
-category: "Web Design & SEO"
+date: "2026-09-14"
+updated: "2026-10-18"
+category: Web Design & SEO
 keyword: hvac seo checklist
-image: blog-seo-checklist-hvac.jpg
-relatedServices: [digital-marketing, web-design]
-relatedIndustries: [hvac]
+image: blog-seo-checklist-hvac-companies.jpg
+relatedServices:
+  - digital-marketing
+  - web-design
+relatedIndustries:
+  - hvac
 faq:
-  - q: "How long does HVAC SEO take to show results?"
-    a: "Fixes to your Google Business Profile and site problems can show up fairly quickly, while new content and links build over months. Plan on a steady effort over at least a few months rather than a one-time project."
-  - q: "Should I put my city in my Google Business Profile name?"
-    a: "Only if it's part of your real business name. Google's guidelines say adding unnecessary information, like keywords or locations, to your business name isn't permitted and can get the profile suspended."
-  - q: "Do I need separate pages for heating and cooling?"
-    a: "Yes. Furnace repair, boiler service, AC installation, heat pumps and maintenance plans are different searches with different customers. Each deserves its own page so Google and the homeowner can find the exact service."
+  - q: How long does HVAC SEO take to show results?
+    a: Fixes to your Google Business Profile and site problems can show up fairly quickly, while new content and links build over months. Plan on a steady effort over at least a few months rather than a one-time project.
+  - q: Should I put my city in my Google Business Profile name?
+    a: Only if it's part of your real business name. Google's guidelines say adding unnecessary information, like keywords or locations, to your business name isn't permitted and can get the profile suspended.
+  - q: Do I need separate pages for heating and cooling?
+    a: Yes. Furnace repair, boiler service, AC installation, heat pumps and maintenance plans are different searches with different customers. Each deserves its own page so Google and the homeowner can find the exact service.
+photo:
+  id: c734d757-c275-41fc-8aca-dd58bc0f7e27
+  credit: Jay Mantri
+  license: CC0
+  source: https://stocksnap.io/photo/woodpaneling-house-582053B25E
 ---
 
 HVAC is one of the more competitive local search categories. Jobs are valuable, demand swings with the weather, and every market has several companies fighting for the same map listings. This checklist covers the fundamentals in the order most HVAC companies should tackle them, with the platform rules checked against Google's own documentation as of 2026.

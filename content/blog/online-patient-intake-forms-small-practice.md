@@ -4,7 +4,7 @@ description: "Online patient intake forms for a small practice: what to collect,
 date: "2026-10-24"
 category: Custom Tools
 keyword: online patient intake forms small practice
-image: blog-custom-business-tool.jpg
+image: blog-online-patient-intake-forms-small-practice.jpg
 relatedServices:
   - custom-tool-building
   - crm-build-management
@@ -19,6 +19,11 @@ faq:
     a: HIPAA requires a covered provider with a direct treatment relationship to make a good faith effort to get a written acknowledgment of receipt. If a patient doesn't sign, you document your effort and the reason rather than refusing care.
   - q: Does an online intake form replace the front desk?
     a: No. It moves data entry out of the waiting room so your staff can spend that time on questions, insurance problems and patients who need help. Keep a paper or phone option for patients who can't or won't use the form.
+photo:
+  id: a4724431-6805-4b40-a80d-d878491dfedc
+  credit: Direct Media
+  license: CC0
+  source: https://stocksnap.io/photo/doctor-patient-EDI8LWKSBB
 ---
 
 Most small practices still start the first visit with a clipboard and fifteen minutes of handwriting that someone later retypes. Online intake moves that work before the appointment, but it also creates new decisions about what you collect, where it's stored and who can see it. This guide covers all three, with the questions to ask any vendor.

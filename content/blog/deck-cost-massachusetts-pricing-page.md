@@ -4,7 +4,7 @@ description: Build a deck pricing page for your Massachusetts business that answ
 date: "2026-11-23"
 category: Web Design & SEO
 keyword: how much does a deck cost in massachusetts
-image: industry-deck-building.jpg
+image: blog-deck-cost-massachusetts-pricing-page.jpg
 relatedServices:
   - web-design
 relatedIndustries:
@@ -17,6 +17,11 @@ faq:
   - q: Do I need to mention permits on a deck pricing page in Massachusetts?
     a: It helps. As of 2026, most decks in Massachusetts need a building permit under 780 CMR, and homeowners are often surprised by that. Saying how you handle permits sets expectations and shows you work legally.
 relatedServicesNote: ""
+photo:
+  id: fadbb6db-fc48-4d78-890d-af309b6c0c03
+  credit: Dustin Lee
+  license: CC0
+  source: https://stocksnap.io/photo/wood-notepad-CK7NEPHVR5
 ---
 
 Homeowners search "how much does a deck cost in Massachusetts" before they call anyone. If your site gives them no answer, they'll get one from a competitor, a national cost calculator or a neighbor who built a deck in 2019. A good pricing page lets you control that conversation and screens out people who were never going to hire you.

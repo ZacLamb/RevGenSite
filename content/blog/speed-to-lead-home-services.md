@@ -1,19 +1,30 @@
 ---
 title: "Speed to Lead: Why the First Contractor to Respond Wins"
-description: "Why response time decides who wins home service jobs, what the research says, and how to set up an instant response system for calls, forms and ads."
-date: 2026-10-18
-category: "AI & Automations"
+description: Why response time decides who wins home service jobs, what the research says, and how to set up an instant response system for calls, forms and ads.
+date: "2026-10-18"
+category: AI & Automations
 keyword: speed to lead home services
-image: blog-automating-followup.jpg
-relatedServices: [ai-services-automations, crm-build-management]
-relatedIndustries: [plumbing, electrical, hvac, painting]
+image: blog-speed-to-lead-home-services.jpg
+relatedServices:
+  - ai-services-automations
+  - crm-build-management
+relatedIndustries:
+  - plumbing
+  - electrical
+  - hvac
+  - painting
 faq:
-  - q: "How fast should a contractor respond to a new lead?"
-    a: "Aim for an automatic acknowledgment within a minute and a real conversation within minutes during business hours. For emergency trades, the first business to actually talk to the customer usually gets the job."
-  - q: "Is an automated text good enough as a first response?"
-    a: "It's a good first step because it stops the customer from moving on, but it isn't the whole response. The text should be followed quickly by a call or a booking link with real availability."
-  - q: "How do I measure my company's lead response time?"
-    a: "Use a CRM that timestamps when each lead arrives and when someone first replies, then review the average weekly. You can also test it yourself by submitting your own web form and calling after hours."
+  - q: How fast should a contractor respond to a new lead?
+    a: Aim for an automatic acknowledgment within a minute and a real conversation within minutes during business hours. For emergency trades, the first business to actually talk to the customer usually gets the job.
+  - q: Is an automated text good enough as a first response?
+    a: It's a good first step because it stops the customer from moving on, but it isn't the whole response. The text should be followed quickly by a call or a booking link with real availability.
+  - q: How do I measure my company's lead response time?
+    a: Use a CRM that timestamps when each lead arrives and when someone first replies, then review the average weekly. You can also test it yourself by submitting your own web form and calling after hours.
+photo:
+  id: 54f21493-2745-438f-8883-d9500c3a0270
+  credit: Savvas Stavrinos
+  license: CC0
+  source: https://stocksnap.io/photo/monochrome-tools-0EM8WBGEVZ
 ---
 
 Most homeowners reach out to more than one contractor. They fill out two or three forms, call a couple of numbers from the map, and then go with whoever gets back to them first with a real answer. Speed to lead is simply the time between a customer reaching out and your business responding. In the trades, it often decides the job before price or reviews ever come up.

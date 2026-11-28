@@ -4,7 +4,7 @@ description: "Custom glass order tracking for glazing shops: the pipeline stages
 date: "2026-11-09"
 category: CRM & Systems
 keyword: custom glass order tracking
-image: industry-glass.jpg
+image: blog-custom-glass-order-tracking-customer-updates.jpg
 relatedServices:
   - crm-build-management
   - ai-services-automations
@@ -17,6 +17,11 @@ faq:
     a: "At minimum: job number, customer contact, final measurements and version, glass specs, supplier and PO number, promised ship date, received date, and the install date. A spreadsheet works to start, but it won't message anyone for you."
   - q: Can I take a bigger deposit on custom glass in Massachusetts?
     a: For covered home improvement work, Massachusetts caps the advance deposit at the greater of one-third of the price or the actual cost of special-order or custom-made materials. Have an attorney confirm how it applies to your contracts.
+photo:
+  id: 9d0af0b8-e518-45be-b7d8-4986cc2e4bce
+  credit: Josh Wilburne
+  license: CC0
+  source: https://stocksnap.io/photo/people-men-ZA95REIPWX
 ---
 
 The slowest part of a custom glass job is the stretch where nothing visible happens. The measure is done, the deposit is in, the supplier has the order, and the customer is wondering whether anyone remembers them.
